@@ -1,48 +1,44 @@
-# Theorem 1.5: long directed cycles in vertex-transitive digraphs
+# Long directed cycles in vertex-transitive digraphs
 
-Lean formalization of Theorem 1.5 of **Long directed cycles in vertex-transitive
-digraphs**, by Bowen Li and Abhishek Methuku.
+**Bowen Li and Abhishek Methuku**
 
-For every real ε > 0, there is n₀ such that every loopless connected
-vertex-transitive digraph on n ≥ n₀ vertices contains a simple directed cycle
-of length at least n^(1−ε). Connectedness means connectedness of the underlying
-undirected graph. See the [exact definitions](directed-cycles-lean/DirectedCycles/Basic.lean)
-and the [main theorem](directed-cycles-lean/DirectedCycles/Theorem15.lean).
+[Manuscript](directed-cycles-lean/manuscript/source.tex) ·
+[Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·
+[Download](https://github.com/methuku-git-hub/Directed-Lovasz-conjecture/releases/tag/v1.0.0) ·
+[Verification](#verification)
 
-The published snapshot records a successful fresh Lean kernel replay of
-`DirectedCycles.theorem_1_5` and its dependency closure on 24 October 2026.
-A separate clean rebuild of the project sources reproduced the constant
-dependency graph. The proof has no `sorry` or additional mathematical axioms;
-its foundational axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+This Lean project formalizes the paper's near-linear directed-cycle theorem
+(Theorem 1.5) and its dependencies:
 
-## Source, certificate, and scope
+> For every $\varepsilon > 0$, every sufficiently large connected
+> vertex-transitive digraph on $n$ vertices contains a simple directed cycle
+> of length at least $n^{1-\varepsilon}$.
 
-- [Download the original certified source ZIP](release/theorem-1-5-lean-certified.zip)
-  and [SHA-256 checksum](release/SHA256SUMS).
-- [Browse the complete project](directed-cycles-lean), including its
-  [detailed verification README](directed-cycles-lean/README.md).
-- [Certificate](directed-cycles-lean/verification/certificate.json),
-  [exact constant dependency graph](directed-cycles-lean/verification/main-constant-closure.json),
-  and [clean rebuild record](directed-cycles-lean/verification/clean-source-rebuild.json).
-- [Blueprint HTML](directed-cycles-lean/blueprint/index.html): download the
-  repository and open this file locally. Its import graph is deliberately an
-  overapproximation; the constant dependency graph records the proof's actual
-  transitive dependencies.
-- [Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) and
-  [statement-to-Lean map](directed-cycles-lean/blueprint/manuscript-map.json).
+Digraphs are loopless, and connectedness refers to the underlying undirected
+graph. The precise definitions are in
+[`Basic.lean`](directed-cycles-lean/DirectedCycles/Basic.lean); the main Lean
+declaration is
+[`DirectedCycles.theorem_1_5`](directed-cycles-lean/DirectedCycles/Theorem15.lean).
+The full proof development is in [`directed-cycles-lean/`](directed-cycles-lean).
 
-The claim concerns **Theorem 1.5 and its actual dependencies**, not every result
-in the manuscript or the full general statements of all cited literature.
-The proof includes repairs and alternative arguments described in the project
-README. Replay uses Lean's own kernel, not a second independently implemented
-kernel. The certificate is a record of checks; readers can rerun those checks
-from the source.
+## Verification
 
-## Reproduce
+The [published certificate](directed-cycles-lean/verification/certificate.json)
+records a successful fresh Lean kernel replay of the main theorem and its
+dependency closure on **24 October 2026**. A separate
+[clean rebuild](directed-cycles-lean/verification/clean-source-rebuild.json)
+of the project sources reproduced the constant dependency graph.
 
-Requirements: Git, Python 3, and [elan](https://github.com/leanprover/elan)
-with its `lean` and `lake` commands on PATH. The project pins Lean 4.34.0 and
-every library revision. Network access is needed to obtain them.
+The proof contains no `sorry` or additional mathematical axioms. Its only
+foundational axioms are `propext`, `Classical.choice`, and `Quot.sound`.
+Replay uses Lean's own kernel. The certificate records the verification;
+the source and pinned dependencies let readers reproduce it.
+
+## Reproduce the verification
+
+Install Git, Python 3, and [elan](https://github.com/leanprover/elan), with
+`lean` and `lake` on your PATH. Lean 4.34.0 and all library revisions are pinned
+in the project.
 
 ```sh
 git clone https://github.com/methuku-git-hub/Directed-Lovasz-conjecture.git
@@ -51,35 +47,48 @@ python3 scripts/check_snapshot.py
 python3 scripts/reproduce.py
 ```
 
-`check_snapshot.py` checks that the published archive, expanded files,
-certificate, and evidence hashes agree. **This is an integrity check, not a
-new proof verification.** `reproduce.py` then copies the snapshot to a new
-directory under `reproduction/` and runs:
+The first script checks the published files against the certified archive.
+The second makes a working copy under `reproduction/` and runs the original
+verification procedure:
 
 ```sh
 lake exe cache get
 python3 scripts/verify.py --certify
 ```
 
-That command builds the Lean sources, checks the exact target and allowed
+This builds the sources, checks the exact theorem statement and allowed
 axioms, extracts the dependency closure, and runs
-`lake env leanchecker --fresh --verbose DirectedCycles`. It issues a new
-certificate only if all checks pass. The original published snapshot stays
-unchanged. A full build and replay can require substantial time and memory;
-the original verification ran on macOS arm64. No hosted-runner resource
-requirement or independent Linux replay is claimed here.
+`lake env leanchecker --fresh --verbose DirectedCycles`. A new certificate
+is written only after all checks pass. The published snapshot is preserved.
 
-For an immutable citation, open the repository's commit history and use the
-full commit permalink. Tags and the default branch can move.
+Network access is needed to obtain the pinned dependencies. A full build and
+replay can require substantial time and memory; the original verification ran
+on macOS arm64. The GitHub workflow checks **snapshot integrity**, rather than
+performing a new kernel replay.
 
-## Provenance
+## Explore the proof
 
-The Lean development and verification tooling were produced with OpenAI
-Codex for Abhishek Methuku. The mathematical manuscript is credited to
-Bowen Li and Abhishek Methuku. The certified project is preserved byte for
-byte under `directed-cycles-lean/`; repository presentation and integrity
-tools live outside that directory and are not part of the old certificate.
-Lean, Mathlib, and other external dependencies retain their own licenses.
+| Resource | Contents |
+| --- | --- |
+| [Detailed project README](directed-cycles-lean/README.md) | Proof route, repaired arguments, and verification details |
+| [Dependency blueprint](directed-cycles-lean/blueprint/index.html) | Navigable import graph; download and open locally |
+| [Constant dependency graph](directed-cycles-lean/verification/main-constant-closure.json) | The main theorem's actual transitive dependencies |
+| [Manuscript correspondence](directed-cycles-lean/blueprint/manuscript-map.json) | Source statements and their Lean declarations |
+| [Certified source archive](release/theorem-1-5-lean-certified.zip) · [SHA-256](release/SHA256SUMS) | Original source package, certificate, and evidence |
 
-The automated repository workflow checks snapshot integrity. Its success
-must not be described as a fresh kernel replay or external registry approval.
+The formalization covers Theorem 1.5 and its actual dependency closure.
+Proof repairs and the scope of the literature inputs are explained in the
+project README. The blueprint's import graph includes helper modules; the
+constant graph records dependencies of the proof itself.
+
+## Credits and provenance
+
+The mathematical paper is by **Bowen Li and Abhishek Methuku**. The Lean
+development and verification tooling were produced with OpenAI Codex for
+Abhishek Methuku. Lean, Mathlib, and other external dependencies retain their
+own licenses.
+
+The certified project under `directed-cycles-lean/` is preserved byte for byte.
+The repository's presentation and integrity tools are maintained separately.
+For an immutable reference, use a full commit permalink from the repository's
+history.
