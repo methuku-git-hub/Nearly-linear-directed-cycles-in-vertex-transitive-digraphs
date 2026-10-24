@@ -1,0 +1,48 @@
+name: Publish retitled certified snapshot
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683
+      - name: Check current snapshot before replacing it
+        run: python3 scripts/check_snapshot.py
+      - name: Verify and expand the recertified title update
+        run: |
+          python3 - <<'PYCODE'
+          import hashlib
+          from pathlib import Path, PurePosixPath
+          import zipfile
+          archive = Path('retitled-repository-payload.zip')
+          assert hashlib.sha256(archive.read_bytes()).hexdigest() == '7bdc948b2845f7e5f40f2e3b7504e64f36b2181aee8894f482eebe63916ded24'
+          allowed = {'README.md', '.gitignore', '.gitattributes', 'scripts', 'release', 'directed-cycles-lean'}
+          with zipfile.ZipFile(archive) as z:
+              assert len(z.namelist()) == len(set(z.namelist()))
+              for name in z.namelist():
+                  p = PurePosixPath(name)
+                  assert not p.is_absolute() and '..' not in p.parts and '\\' not in name
+                  assert p.parts[0] in allowed
+              old = {p.as_posix() for p in Path('directed-cycles-lean').rglob('*') if p.is_file()}
+              new = {n for n in z.namelist() if n.startswith('directed-cycles-lean/')}
+              assert old == new, 'Unexpected snapshot file-set change'
+              for name in old:
+                  if name.endswith('.lean'):
+                      assert Path(name).read_bytes() == z.read(name), 'Unexpected mathematical source change: ' + name
+              z.extractall('.')
+          PYCODE
+          python3 scripts/check_snapshot.py
+      - name: Commit the recertified source package
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -- README.md .gitignore .gitattributes scripts release directed-cycles-lean
+          git rm -- retitled-repository-payload.zip
+          git commit -m 'Retitle manuscript and project with fresh kernel certificate'
+          git push origin HEAD:main
