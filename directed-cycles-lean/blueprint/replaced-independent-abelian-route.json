@@ -1,0 +1,42 @@
+{
+  "status": "UNUSED_REPLACED_ROUTE",
+  "reason": "The weak abelian inverse input is obtained from the common BGT contained model plus Ruzsa covering. Independent Green-Ruzsa and Chang proofs are not required by this replacement route. BGT itself remains open.",
+  "nodes": [
+    {
+      "id": "external:tointon-2.5",
+      "title": "Abelian Freiman theorem used in Tointon normal envelopes",
+      "kind": "external",
+      "status": "unformalized",
+      "dependencies_complete": false,
+      "dependencies": [
+        "external:tointon-2.2",
+        "external:tointon-2.4"
+      ],
+      "lean_declarations": [],
+      "source_url": "https://arxiv.org/html/1211.3989v3",
+      "note": "Unproved and not fully expanded; no theorem is imported as an axiom."
+    },
+    {
+      "id": "external:tointon-2.2",
+      "title": "Abelian Green-Ruzsa coset-progression input",
+      "kind": "external",
+      "status": "unformalized",
+      "dependencies_complete": false,
+      "dependencies": [],
+      "lean_declarations": [],
+      "source_url": "https://arxiv.org/html/1211.3989v3",
+      "note": "Unproved. The abelian inverse theorem and its proof dependencies are not yet formalized or fully expanded."
+    },
+    {
+      "id": "external:tointon-2.4",
+      "title": "Chang covering argument",
+      "kind": "external",
+      "status": "unformalized",
+      "dependencies_complete": false,
+      "dependencies": [],
+      "lean_declarations": [],
+      "source_url": "https://arxiv.org/html/1211.3989v3",
+      "note": "Unproved. Requires a maximal disjoint-translate construction and the cardinal growth argument."
+    }
+  ]
+}

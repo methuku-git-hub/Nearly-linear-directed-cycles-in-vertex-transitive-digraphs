@@ -1,0 +1,22 @@
+{
+  "status": "UNUSED_REPLACED_ROUTE",
+  "reason": "For finite Tointon 7.3, the proof now uses direct relative-height induction for a subgroup. The full general Proposition 7.2 is not required. Shared proved machinery remains active.",
+  "nodes": [
+    {
+      "id": "external:tointon-7.2",
+      "title": "Tointon multilinear-image normal envelope",
+      "kind": "external",
+      "status": "unformalized",
+      "dependencies_complete": false,
+      "dependencies": [
+        "external:tointon-2.5",
+        "external:tointon-6.1",
+        "external:tointon-commutator-calculus",
+        "foundation:central-multihom-envelope"
+      ],
+      "lean_declarations": [],
+      "source_url": "https://arxiv.org/html/1211.3989v3",
+      "note": "Unproved. Its proof uses abelian coset progressions, multilinear finite-group images and induction on central commutator weight. The dependency inventory is still being expanded."
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "status": "unused_literature_route_not_formalized",
+  "reason": "The finite graph specialization is proved conditionally by finite algebra and polynomial crossing. The infinite-graph locally compact reduction and Carolino theorem are unnecessary for this route. BGT classification remains unproved and its own Lie-model dependencies remain active.",
+  "nodes": [
+    {
+      "id": "external:tt-2.4",
+      "title": "tt 2.4",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [
+        "external:tt-8.1",
+        "external:tt-2.3"
+      ],
+      "source_url": "https://arxiv.org/html/1908.06044v3",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    },
+    {
+      "id": "external:tt-8.1",
+      "title": "tt 8.1",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [
+        "external:tt-other-dependencies"
+      ],
+      "source_url": "https://arxiv.org/html/1908.06044v3",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    },
+    {
+      "id": "external:tt-7.1",
+      "title": "tt 7.1",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [
+        "external:bgt-11.2",
+        "external:carolino-1.9",
+        "external:tt-other-dependencies"
+      ],
+      "source_url": "https://arxiv.org/html/1908.06044v3",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    },
+    {
+      "id": "external:carolino-1.9",
+      "title": "carolino 1.9",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [
+        "external:carolino-unexpanded"
+      ],
+      "source_url": "https://arxiv.org/html/1908.06044v3",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    },
+    {
+      "id": "external:carolino-unexpanded",
+      "title": "carolino unexpanded",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [],
+      "source_url": "https://arxiv.org/html/1908.06044v3",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    },
+    {
+      "id": "external:tt-other-dependencies",
+      "title": "tt other dependencies",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [
+        "foundation:finite-coset-growth"
+      ],
+      "source_url": "https://arxiv.org/html/1908.06044v3",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    },
+    {
+      "id": "external:bgt-unexpanded",
+      "title": "bgt unexpanded",
+      "kind": "external",
+      "status": "unformalized",
+      "lean_declarations": [],
+      "dependencies_complete": false,
+      "dependencies": [],
+      "source_url": "https://arxiv.org/html/1110.5008v2",
+      "note": "Literature proof input, not a Lean theorem. Listed external dependencies are a known frontier, not an exhaustive expanded closure."
+    }
+  ]
+}

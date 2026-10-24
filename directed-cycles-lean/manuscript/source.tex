@@ -1,0 +1,1213 @@
+\documentclass[11pt,a4paper,reqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern,amsmath,amssymb,amsthm,mathtools,microtype}
+\usepackage[margin=27mm]{geometry}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{xcolor}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\hypersetup{pdftitle={Long directed cycles in vertex-transitive digraphs},pdfauthor={Bowen Li and Abhishek Methuku}}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{construction}[theorem]{Construction}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+\DeclareMathOperator{\Aut}{Aut}
+\DeclareMathOperator{\Cay}{Cay}
+\DeclareMathOperator{\ord}{ord}
+\DeclareMathOperator{\lcm}{lcm}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\F}{\mathbb F}
+\newcommand{\gen}[1]{\langle #1\rangle}
+\newcommand{\spanZ}[1]{\langle #1\rangle_{\Z}}
+\newcommand{\ab}{\mathrm{ab}}
+\newcommand{\eps}{\varepsilon}
+\setlist[enumerate,1]{label=\textup{(\roman*)},leftmargin=2.5em}
+\setlength{\emergencystretch}{1.5em}
+\raggedbottom
+\setlist{itemsep=3pt,topsep=5pt}
+
+\title{Long directed cycles in vertex-transitive digraphs}
+\author{Bowen Li}
+\address{Department of Mathematics, University of Illinois Urbana--Champaign}
+\email{bowenl6@illinois.edu}
+\thanks{Bowen Li is supported by NSF grant RTG DMS-1937241, UIUC Campus Research Board RB24012, and a University Block Grant Fellowship.}
+\author{Abhishek Methuku}
+\address{Department of Mathematics, University of Illinois Urbana--Champaign}
+\email{methuku@illinois.edu}
+\thanks{Abhishek Methuku is supported by the UIUC Campus Research Board Award RB25050 and Simons Foundation Award SFI-MPS-TSM-00025583.}
+\subjclass[2020]{Primary 05C38; Secondary 05C20, 05C25, 05C45}
+\keywords{Vertex-transitive digraph, directed cycle, circumference, nilpotent group}
+\date{}
+
+\begin{document}
+\begin{abstract}
+The search for Hamiltonian cycles in vertex-transitive graphs and digraphs is a classical problem at the interface of graph theory and group theory. Trotter and Erd\H{o}s showed in 1978 that connected vertex-transitive digraphs need not be Hamiltonian. In light of this result, Alspach asked in 1981 whether their longest directed cycles can miss arbitrarily many vertices. Buci\'c, Hendrey, Mohar, Steiner and Yepremyan recently answered this question by constructing examples in which the longest directed cycle omits $(1-o(1))\log n$ vertices, and conjectured that the number omitted can be linear. We confirm their conjecture by constructing infinitely many connected vertex-transitive digraphs on $n$ vertices whose longest directed cycle omits at least $n/12$ vertices.
+
+We also prove that every connected vertex-transitive digraph on $n$ vertices contains a directed cycle of length $n^{1-o(1)}$. The proof uses a structural theorem of Tessera and Tointon to partition the vertices into equal-sized sets of small undirected diameter. For large parts, we join short directed paths while controlling their intersections. For small parts, we use the group structure of the quotient to construct a long cycle and choose the walks replacing its edges so that the resulting cycle has no repeated vertices.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+Finding long paths and cycles under structural assumptions is a classical problem in graph theory. A cycle containing every vertex is called a \emph{Hamiltonian cycle}, and a graph containing one is said to be \emph{Hamiltonian}. A path containing every vertex is called a \emph{Hamiltonian path}. One of the most intriguing such structural assumptions is symmetry. An \emph{automorphism} is a permutation of the vertices preserving adjacency, and also its direction for a digraph. A graph or digraph is \emph{vertex-transitive} if its automorphisms can send any vertex to any other. Lov\'asz conjectured in 1969 that every connected vertex-transitive graph contains a Hamiltonian path~\cite{Lovasz}, and Thomassen later conjectured that every sufficiently large connected vertex-transitive graph is Hamiltonian; see~\cite{Babai}. These conjectures have attracted considerable attention~\cite{Alspach,CurranGallian,PakRadoicic,WitteGallian}, but remain largely open, and most known results require additional assumptions.
+
+On the other hand, Babai~\cite{Babai} initiated a general approach in 1979: instead of asking for a Hamiltonian cycle, one may ask how long a cycle one can guarantee in every connected vertex-transitive graph without any further assumptions. He proved that every connected vertex-transitive graph on $n$ vertices contains a cycle of length $\Omega(\sqrt n)$. In recent years, several works have improved this result and connected it to a number of other graph-theoretic problems~\cite{DeVos,GLSTY,MaZhaoIntersections,NorinEtAl,BCPS}. Buci\'c, Christoph, Pokrovskiy and Steiner~\cite{BCPS} obtained a bound of $n^{2/3-o(1)}$. More recently, Ma and Zhao~\cite{MaZhaoLinear} proved a linear lower bound in the undirected setting.
+
+The directed analogue asks how long a directed cycle one can guarantee in an $n$-vertex connected vertex-transitive digraph. Here \emph{connected} means that the underlying undirected graph is connected; \emph{strongly connected} means that every vertex reaches every other by a directed path. A directed Cayley graph has the elements of a group $G$ as vertices and the directed edges, also called arcs, $x\to xs$ for an available set $S$ of group elements. A set $S$ generates $G$ if every element of $G$ is a product of elements of $S$ and their inverses. The directed setting allows arbitrary generating sets, without requiring that $s^{-1}$ be available whenever $s$ is available. In this Cayley digraph setting, the search for directed cycles asks for a cyclic sequence of distinct group elements, each obtained from the preceding element by right multiplication by an element of $S$. Indeed, the earliest investigations of this topic were carried out by Rankin~\cite{Rankin} and, independently, by Rapaport-Strasser~\cite{Rapaport}. Both began with precisely this group-theoretic question and then recast it in the language of Cayley digraphs. Both works attribute their motivation to the mathematical study of bell ringing, alongside the knight's tour problem in the latter case. Various instances of this problem had already been solved in practice more than a century prior to these mathematical formalizations (see~\cite[Section 4]{Rankin} or~\cite{White} for historical details).
+
+The directed analogue of Thomassen's conjecture was disproved in 1978 by Trotter and Erd\H{o}s~\cite{TrotterErdos}, who exhibited an infinite family of connected vertex-transitive digraphs without Hamiltonian cycles. Motivated by this result, Alspach asked in 1981 whether such digraphs must at least be nearly Hamiltonian~\cite{Alspach}. To formalize this question, following~\cite{BHMSY}, we use the \emph{perimeter gap}---defined as the difference between the number of vertices and the length of the longest directed cycle in a digraph---as a measure of how far a digraph is from being Hamiltonian. In particular, Alspach~\cite[Question 7]{Alspach} asked if, for any constant $C$, there exists a connected vertex-transitive digraph with a perimeter gap larger than $C$.
+
+Recently, Buci\'c, Hendrey, Mohar, Steiner and Yepremyan answered Alspach's question in the affirmative by constructing connected vertex-transitive digraphs whose perimeter gap tends to infinity.
+\begin{theorem}[Buci\'c, Hendrey, Mohar, Steiner and Yepremyan~\cite{BHMSY}]
+For infinitely many natural numbers $n$, there exists a connected vertex-transitive digraph on $n$ vertices with perimeter gap at least $(1-o(1))\log n$.
+\end{theorem}
+
+They also proposed the following conjecture, remarking that it would already be interesting to improve their logarithmic lower bound to a polynomial one.
+\begin{conjecture}[{\cite[Conjecture 4.1]{BHMSY}}]
+There exists an $\eps>0$ such that, for infinitely many values of $n$, there exists a connected vertex-transitive digraph on $n$ vertices whose perimeter gap is at least $\eps n$.
+\end{conjecture}
+
+The \emph{circumference} of a digraph is the length of its longest directed cycle. Our first result resolves this conjecture in a strong form as follows.
+\begin{theorem}\label{thm:gap}
+For every positive integer $m$, there exists a connected vertex-transitive digraph on $12m$ vertices with circumference at most $11m$, and hence with perimeter gap at least $m$.
+\end{theorem}
+
+Thus, the perimeter gap need not merely tend to infinity: it can be linear in the number of vertices.
+
+To prove Theorem~\ref{thm:gap}, we introduce a combinatorial parity obstruction based on permutations to exclude Hamiltonicity, in contrast to the number-theoretic obstruction used in~\cite{BHMSY}, which relies on Cartesian products of directed cycles and arithmetic constraints on cycle lengths. Roughly speaking, our construction is a cyclically layered directed graph $D$ whose vertex set is partitioned into layers, each identified with the same $12$-element set $X$, with edges running only from one layer to the next in a fixed cyclic order. Crucially, $D$ is designed so that any hypothetical Hamiltonian cycle induces a bijection between consecutive layers that acts as an even permutation on $X$, that is, a product of an even number of swaps. By composing these layer-to-layer bijections along one full round through the layers, the permutation obtained by following the cycle until its next visit to a fixed layer must also be even. However, for the directed cycle to be Hamiltonian, this induced permutation must act transitively on the $12$ elements of the layer, meaning it must be a cyclic permutation of length $12$. Since any cyclic permutation of even length is an odd permutation, this yields a parity contradiction. A detailed overview of this argument is provided in Section~\ref{subsec:gap-overview}.
+
+Having established that connected vertex-transitive digraphs can be far from Hamiltonian, the complementary question becomes even more natural: how long a directed cycle can one always guarantee? Before the work of Buci\'c, Hendrey, Mohar, Steiner and Yepremyan~\cite{BHMSY}, it was not even known whether one can guarantee a directed cycle whose length grows with $n$. They proved the first such bound, establishing a directed analogue of Babai's well-known theorem.
+\begin{theorem}[Buci\'c, Hendrey, Mohar, Steiner and Yepremyan~\cite{BHMSY}]
+Every connected vertex-transitive digraph $D$ on $n\ge2$ vertices contains a directed cycle of length $\Omega(n^{1/3})$.
+\end{theorem}
+
+A fundamental obstacle in translating undirected bounds to digraphs is that a long directed path need not give a long directed cycle. In undirected graphs, many results guaranteeing the existence of long cycles rely heavily on the structural property that in a $2$-connected graph, any two longest cycles must intersect. Here $2$-connected means that the graph has at least three vertices and remains connected after any one vertex is deleted. However, as noted in~\cite{BHMSY}, this intersection property fails entirely for digraphs. Indeed, there exist families of digraphs that remain strongly connected after any one vertex is deleted, have indegree and outdegree two at every vertex (two incoming and two outgoing arcs), and contain arbitrarily many vertex-disjoint longest directed cycles---which can be restricted to a constant length, such as four---even as the maximum length of a directed path in these same graphs grows unboundedly.
+
+Consequently, one cannot infer the existence of long directed cycles merely from strong connectivity and long directed paths. Indeed, while Buci\'c, Hendrey, Mohar, Steiner and Yepremyan successfully established an $\Omega(\sqrt n)$ lower bound for directed paths, finding a long directed cycle required a different approach. They used an auxiliary undirected cycle graph, whose vertices are directed cycles and whose edges record intersections, to obtain a bound of $\Omega(n^{1/3})$ for directed cycles.
+
+In this paper, we prove a nearly linear lower bound.
+\begin{theorem}\label{thm:main}
+For every $\eps>0$, there exists $n_0$ such that every connected vertex-transitive digraph on $n\ge n_0$ vertices contains a directed cycle with at least $n^{1-\eps}$ vertices.
+\end{theorem}
+
+The construction in Theorem~\ref{thm:gap} shows that it is not always possible to find a directed cycle of length $(1-o(1))n$ in a connected vertex-transitive digraph on $n$ vertices.
+
+The proof starts with a partition supplied by the structure theorem of Tessera and Tointon~\cite{TT}. Large parts allow a probabilistic construction from short directed paths. Small parts leave a large quotient, where we use its automorphisms to construct a long cycle. The main new ingredient there is a choice of auxiliary edges and the walks replacing them that controls every possible intersection. See Section~\ref{sec:overview} for a detailed overview of the proof.
+
+\subsection{Notation}
+Throughout the paper, graphs, digraphs and groups acting on them are finite. Auxiliary additive groups need not be finite. A directed edge is also called an arc; in $x\to y$, $x$ is its tail and $y$ its head. Digraphs have no parallel arcs, and loops are omitted except in explicitly stated one-vertex auxiliary constructions. A directed path has no repeated vertex. A directed cycle repeats only its initial vertex at its end; cycles of length two are permitted. The length of a path or cycle is its number of arcs. For a cycle this also equals its number of distinct vertices, and we write $|C|=|V(C)|$. A directed walk may repeat vertices. We use $V(X)$ and $A(X)$ for the vertex and arc sets of a digraph $X$.
+
+A digraph is strongly connected if every vertex reaches every other by a directed path. It is connected if its underlying undirected graph is connected. In a vertex-transitive digraph the two notions coincide: transitivity and equality of the total indegrees and outdegrees give equal indegree and outdegree at every vertex. A strongly connected component is a maximal set of vertices mutually reachable by directed paths. Contracting these components gives a digraph with no directed cycle, so it has a component with no incoming arc from another component. Summing the degree balance over that component shows that it has no outgoing arc either. Connectedness forces it to be the whole graph.
+
+For a set $S\subseteq V(X)$, let $\partial^+S$ be the vertices outside $S$ receiving an arc from $S$, and let $\partial^-S$ be the vertices outside $S$ sending an arc to $S$. The group of all automorphisms of $X$ is denoted by $\Aut(X)$. The circumference is the length of a longest directed cycle. We write $[k]=\{1,\ldots,k\}$ and $\Z/m\Z$, or $\Z_m$, for the integers modulo $m$. All logarithms are natural unless a base is displayed. Constants may depend on the fixed parameters listed in a statement, but never on the graph order unless explicitly indicated. We sometimes identify a path or subgraph with its vertex set. The density of a set in a finite set is the proportion of elements it contains; in particular, a cycle has density equal to its length divided by the order of the digraph. A bound of $n^{1-o(1)}$ means that, for every $\eta>0$, there is a constant $b_\eta>0$ giving a lower bound of $b_\eta n^{1-\eta}$ uniformly over the objects under consideration. A strict margin in the exponent absorbs this constant in Theorem~\ref{thm:main}.
+
+
+\section{Proof overview}\label{sec:overview}
+\subsection{Proof of the upper bound: a linear perimeter gap}\label{subsec:gap-overview}
+We now sketch the proof of Theorem~\ref{thm:gap}. For each positive integer $m$, we construct a digraph on $12m$ vertices in which every directed cycle has length divisible by $m$, but no Hamiltonian cycle exists. These two properties force the longest cycle to have length at most $11m$, giving a perimeter gap of at least $m$. The divisibility comes from arranging the vertices in $m$ layers, with every edge going to the next layer. We rule out Hamiltonian cycles by examining the parity of the permutations that their edges would define between consecutive layers. Thus, as in~\cite{BHMSY}, we combine a divisibility condition with an obstruction to Hamiltonicity; here the obstruction comes from permutation parity. A transposition swaps two elements and fixes all others. Recall that an even permutation is a product of an even number of transpositions, whereas an odd permutation is a product of an odd number. The sign of a permutation is $1$ if it is even and $-1$ if it is odd. A cyclic permutation of length $k$ has sign $(-1)^{k-1}$. More precisely, the digraph $D$ has vertex set
+\[
+ X\times\Z_m,\qquad X=\{(a,b):a,b\in[4],\ a\ne b\}.
+\]
+The set $X\times\{t\}$ is layer $t$. The edges always move from layer $t$ to layer $t+1$, and have the form
+\[
+ (a,b,t)\longrightarrow(b,c,t+1),\qquad c\notin\{a,b\}.
+\]
+Thus every directed cycle has length divisible by $m$. The main point is to show that a cycle of length $12m$ cannot exist. If there were such a Hamiltonian cycle, then the edges it uses from one layer to the next would induce a bijection of the $12$-element set $X$. Each of these local bijections has the same parity: in fact, the calculation in Lemma~\ref{lem:parity} shows that it is always an even permutation of $X$. Now follow the supposed Hamiltonian cycle for $m$ steps starting from a fixed layer. Since the layer coordinate has returned to where it started, these $m$ local bijections compose to a permutation of that same copy of $X$, which must still be even. On the other hand, because the Hamiltonian cycle is a single cycle through all $12m$ vertices, its successive returns to the fixed layer must pass through all $12$ vertices of that layer before returning to the starting vertex. The resulting permutation is therefore a $12$-cycle, which is odd. This parity contradiction rules out Hamiltonian cycles. Because every directed cycle in $D$ has length divisible by $m$, the longest directed cycle can have length at most $11m$. Hence, the perimeter gap is at least $m=|V(D)|/12$.
+
+\subsection{The nearly linear lower bound}
+We now explain the proof of Theorem~\ref{thm:main}. Fix $0<\eps<1$, let $X$ be a connected vertex-transitive digraph on $n$ vertices, and put $\lambda=\eps/10$. We assume that $n$ is sufficiently large in terms of $\eps$. Our aim is to find a directed cycle with at least $n^{1-\eps}$ vertices. All bounds described as constant in this overview may depend on $\eps$, but not on $n$.
+
+The structure theorem of Tessera and Tointon~\cite{TT} supplies a normal subgroup $H\le\Aut(X)$, meaning that $gHg^{-1}=H$ for every $g\in\Aut(X)$. The orbit $Hv=\{hv:h\in H\}$ consists of the vertices obtainable from $v$ by applying elements of $H$. These orbits partition the vertices into parts of equal size $m$. Any two vertices in one part can be joined by an undirected path of length at most $n^\lambda$ in $X$; the path may leave the part and need not follow the arc directions. Normality gives $g(Hv)=H(gv)$ for every automorphism $g$, so automorphisms permute the parts. The quotient $Q=X/H$ has these parts as vertices, with an arc $A\to B$ between distinct parts whenever $X$ has an arc from $A$ to $B$. It is connected and vertex-transitive, with $q=n/m$ vertices.
+
+The theorem also controls the induced automorphism group on $Q$: the subgroup fixing a given vertex, called its stabilizer, has bounded order, and the induced group contains a nilpotent subgroup of bounded index, with boundedly many generators and bounded class. Here the index of a subgroup $N\le G$ is the number of cosets $Nx=\{ax:a\in N\}$ as $x$ ranges over $G$. For group elements $x,y$, their commutator is $xyx^{-1}y^{-1}$. A group is nilpotent of class at most $c$ if every nested commutator involving $c+1$ elements is the identity.
+
+These properties serve different purposes in the two cases. If $m\ge n^{4\lambda}$, the short undirected paths and bounded stabilizers yield many short directed connections that can be joined into a cycle. Otherwise $q>n^{1-4\lambda}$, and the nilpotent subgroup lets us construct a long cycle in the large quotient.
+
+\medskip
+\noindent\textbf{Large parts: directed expansion and an Euler tour.}
+The strategy is to join randomly chosen vertices along repeated visits to the parts. As in the undirected argument~\cite[Section 4]{LiMethuku}, symmetry will keep intersections under control. The directed setting requires both short connections in the correct direction and a directed order in which to use them.
+
+\smallskip
+\noindent\emph{Step 1: from undirected diameter to directed expansion.}
+The key input is Lemma~\ref{lem:directed-expansion}, which shows that if $S$ contains at most half of each part, then
+\[
+ |\partial^+S|,\ |\partial^-S|\ge\frac{|S|}{2n^\lambda}.
+\]
+Choose one short undirected path for each ordered pair of distinct vertices in the same part, and call this family $\mathcal P$. Apply a uniformly random automorphism to every path in $\mathcal P$, and give each edge weight equal to the expected number of resulting paths using it. Assign this weight to its available direction, splitting it equally if both directions occur. The weights are unchanged by automorphisms, so the total incoming weight is the same at every vertex, as is the total outgoing weight. These two totals agree because their sums over all vertices both count every arc weight once. Summing over $S$ and removing the contributions from arcs within $S$ shows that the total weight entering $S$ equals that leaving it. The paths joining $S$ to vertices outside $S$ in the same part force at least $m|S|$ total weight across the boundary. Half of this weight leaves $S$. The sum of the path lengths, distributed equally over all vertices by symmetry, bounds the incoming weight at any vertex by $mn^\lambda$. Hence at least $|S|/(2n^\lambda)$ vertices outside $S$ receive an arc from it. The same argument with directions reversed gives the other bound; see Section~\ref{sec:large} for details.
+
+Starting from any vertex, the set reached by directed paths grows by a factor of at least $1+1/(2n^\lambda)$ at each step until it contains more than half of some part. This takes at most $u=O(n^\lambda\log(2n))$ steps. If $q=1$, the same lemma bounds both $|\partial^+S|$ and $|\partial^-S|$ below by $|S|/(3n^\lambda)$ for every $|S|\le2n/3$, and~\cite[Lemma 2.4]{BHMSY} directly supplies a cycle of length $\Omega(n^{1-\lambda})$. We may henceforth assume $q\ge2$.
+
+\smallskip
+\noindent\emph{Step 2: short directed paths with prescribed endpoints.}
+If a vertex $x\in C$ reaches more than half of $A$ within $u$ steps, every vertex $x'\in C$ does: an element of $H$ sending $x$ to $x'$ maps $A$ to itself and gives a bijection between the two reachable sets. The same argument shows that the number of vertices in $C$ that can reach a given vertex of $A$ is constant over $A$. Counting reachable pairs, and using $|C|=|A|$, shows that this number also exceeds half of $|C|$. Moreover, the arcs of $X$ from $A$ to $B$ form a bipartite graph preserved by $H$. Whenever $A\to B$ is a quotient arc, Lemma~\ref{lem:symmetry-matching} gives a perfect matching from $A$ to $B$. This is a bijection $M:A\to B$ such that $a\to M(a)$ is an arc for every $a\in A$.
+
+Suppose a prescribed vertex $x$ reaches more than half of $A$, while more than half of $B$ can reach a prescribed vertex $y$, in each case within $u$ steps. The matching images of the vertices reached in $A$ occupy more than half of $B$, so one of them can reach $y$. The two short paths and this matching arc give a directed walk of length at most $t=2u+1$; deleting repetitions gives a path no longer than this. If $A=B$, the two sets intersect and no matching arc is needed. We now define a new digraph $Q^*$ whose vertices are the parts. Include an arc $C\to E$ precisely when $C\ne E$ and there are intermediate parts $A,B$ as above for some $x\in C$ and $y\in E$. Since $H$ can send any vertex of $C$ to any other vertex of $C$ while mapping $A$ to itself, every vertex of $C$ reaches more than half of $A$ within $u$ steps. Similarly, every vertex of $E$ can be reached from more than half of $B$ within $u$ steps. In other words, if $C\to E$ is an arc of $Q^*$, then for every $x\in C$ and $y\in E$ there is a directed path in $X$ from $x$ to $y$ of length at most $t$. Lemma~\ref{lem:short-directed-connections} shows that $Q^*$ is strongly connected and preserved by every automorphism of $X$.
+
+\smallskip
+\noindent\emph{Step 3: an Euler tour in place of a tree traversal.}
+At each visit to a part, we will choose a vertex of that part uniformly at random, independently of the other choices. To join these vertices into a cycle, we first need a cyclic order of visits to the parts, allowing repeated visits. Each consecutive pair of parts, including the last and first, must allow the short connections from Step~2. In our proof from~\cite[Section 4]{LiMethuku}, we obtain this order by walking along a spanning tree of the quotient graph, traversing its edges in both directions. In a digraph, the reverse of an arc need not be available. Recall that the stabilizer of a part in the permutation group induced by $\Aut(X)$ on the parts has bounded order. Hence the images of one arc under $\Aut(X)$ contribute only boundedly many outgoing arcs at each part. Lemma~\ref{lem:sparse-quotient} uses this bound to retain a strongly connected subdigraph $Q_0\subseteq Q^*$ on all the parts, preserved by every automorphism of $X$, of outdegree $d=O(\log(2n))$. Transitivity ensures that its indegree is also equal to $d$. Since $Q_0$ is strongly connected, it therefore has an Euler tour, which is a closed directed walk using every arc exactly once.
+
+Repeating this tour visits every part equally often and uses every arc of $Q_0$ equally often. Choose the number of repetitions so that the total number $N\ge4$ of steps is of order $n/(t+1)^2$, with a sufficiently small constant factor. The assumption $m\ge n^{4\lambda}$ ensures that a tour, of length $qd$, is short enough to allow this choice.
+
+\smallskip
+\noindent\emph{Step 4: avoiding intersections and closing the cycle.}
+At each visit choose an independent uniform vertex of its part. Given these vertices, sample the short connecting paths independently. Choose the distributions so that applying an automorphism to a sampled path gives the distribution used between the transformed endpoints. As in~\cite[Lemmas 4.5 and 4.6]{LiMethuku}, each vertex then lies on the same expected number of sampled paths. Nonconsecutive paths depend on disjoint endpoint choices and independent path choices, so they are independent. Their short lengths and the chosen bound on $N$ allow the Lov\'asz local lemma to exclude every intersection between them.
+
+Consecutive paths may still meet. Lemma~\ref{lem:shortening}, adapting the first-intersection argument of~\cite[Lemma 2.8]{BHMSY}, shortens them to a simple directed cycle without losing any of the $N$ connections. Consequently its length is at least
+\[
+ N=\Omega\left(\frac{n^{1-2\lambda}}{\log^2(2n)}\right).
+\]
+Since $\lambda=\eps/10$, this exceeds $n^{1-\eps}$ for sufficiently large $n$.
+
+\medskip
+\noindent\textbf{Small parts: nilpotent lifting with controlled loss.}
+Now $Q$ has more than $n^{1-4\lambda}$ vertices. The structural theorem and Lemma~\ref{lem:freequotient} let us contract sets of bounded size so that the resulting strongly connected digraph $Y$ admits a nilpotent automorphism group $G$ acting freely, with boundedly many generators, bounded class and boundedly many orbits. Here acting freely means that no element other than the identity fixes a vertex. Choosing one representative in each orbit gives coordinates $(x,i)$, where $x\in G$ and $i$ is the orbit. Applying $G$ to one arc gives arcs of the form $(x,i)\to(xs,j)$ for some $s\in G$, called their label. With one orbit this is a Cayley digraph.
+
+The broad scheme follows the nilpotent induction and contraction method in~\cite[Sections 6 and 7]{LiMethuku}. We need directed versions that preserve a long cycle: we need to gain length when lifting a quotient cycle, and replacing an auxiliary edge by a walk must not introduce repeated vertices. Once we find a cycle of length $|V(Y)|^{1-o(1)}$, the matching argument of Lemma~\ref{lem:cyclelift} lifts it through $Q$ to $X$ without decreasing its length.
+
+\smallskip
+\noindent\emph{Step 1: a directed lift through a cyclic factor.}
+First consider a Cayley digraph on $G$. For an available label $a\ne1$, let $K$ be its normal closure, the subgroup generated by all $gag^{-1}$ with $g\in G$, and let $B$ be generated by the commutators $gag^{-1}a^{-1}$. Both subgroups are normal in $G$. Passing to a quotient by a normal subgroup means identifying elements in the same coset. Lemma~\ref{lem:normalclosure} shows that $K/B$ is cyclic, generated by $aB$, and $B$ has smaller nilpotency class. If $K=G$, then $a$ generates $G$ and its successive powers give a Hamiltonian cycle. Otherwise we seek to lift a cycle from $G/K$.
+
+Ordinary cycle lifting guarantees the length of the quotient cycle, but does not guarantee that the lift meets a substantial proportion of each coset of $K$. Theorem~\ref{thm:directed-lifting} provides the quantitative lift. If $|K/B|$ is bounded, then $|K|$ is bounded and ordinary lifting loses only a constant factor in density. If $|K/B|$ is large, we take long runs of edges $x\to xa$, called $a$-edges, above the quotient-cycle vertices. Moving a connecting label among a bounded number of copies of $a$ uses only available forward arcs and changes its product by an element of $B$. These alternatives produce a cyclic layer digraph: copies of a subgroup of $B$ arranged in cyclic order, with arcs going to the next copy.
+
+For a quotient cycle of density $\delta$, the subgroup has index in $B$ at most a fixed power of $\delta^{-1}$, up to a constant factor. Induction on the smaller nilpotency class gives a long cycle in the layer digraph. Reserving disjoint intervals of powers of $a$ for the incoming and outgoing connecting walks makes its expansion simple. The resulting density is at least a constant times $\delta^{\kappa+1}|B|^{-\eta}$, where $\kappa$ is fixed and $0<\eta<1$ can be arbitrarily small. We also arrange that every $a$-edge between vertices of the expanded cycle belongs to it.
+
+This explains why we prove the Cayley and cyclic layer bounds together: a Cayley lift uses layers over a group of smaller class, while a walk that passes once through all layers is later treated as a single Cayley edge. A group is abelian if any two elements commute. The induction starts with the classical Hamiltonian-path theorem for abelian Cayley digraphs~\cite[Lemma 2.1]{Morris}; Lemma~\ref{lem:abelian} supplies the cycle bound used to start our induction.
+
+\smallskip
+\noindent\emph{Step 2: preventing losses along the quotient chain.}
+We successively quotient by normal closures of available labels, then reconstruct the cycle in reverse order. The number of quotients can be unbounded. Replacing the current density $\delta$ by a multiple of $\delta^{\kappa+1}$ at every lift would therefore destroy the desired estimate.
+
+To avoid this, we preserve an additional spanning condition: the images of the cycle vertices generate a specified additive group associated with $G$, using integer linear combinations. This group is defined in Section~\ref{sec:local}. The condition forces the auxiliary subgroup in Step~1 to be all of $B$, removing the extra power of $\delta$ from the loss. When all prime divisors of the group order exceed a fixed threshold, the condition holds in the base case and is preserved by lifting.
+
+Lemma~\ref{lem:primechain} selects a prime divisor of the current group order at each quotient step and ensures that each prime is selected only boundedly often. Thus only boundedly many steps involve small primes, where we can afford the density-dependent estimate. At the remaining steps, spanning leaves only a constant loss and the factor $|B|^{-\eta}$. For any chosen $\eta$, introduce a second, larger threshold so that the fixed multiplicative constant is at least $|K|^{-\eta}$ whenever $|K|$ exceeds it. Only boundedly many steps select primes below this second threshold. Since $B\le K$ and the orders of the successive $K$'s multiply to at most $|G|$, the total loss, apart from a constant factor, is an arbitrarily small power of $|G|$. Section~\ref{sec:nilpotent} carries out this induction.
+
+\smallskip
+\noindent\emph{Step 3: a directed version of Babai's contraction.}
+Suppose $G$ has several orbits in $Y$. Choose a simple directed cycle in $Y/G$, based at a root orbit, and lift it from a vertex $v$ to $av$. Form $K$ and $B$ from $a$ as before, taking $K=B=1$ if $a=1$. If $K=G$, then $G$ is generated by $a$, and repeating this walk gives a simple cycle of length at least $|G|$. We may assume $K\ne G$.
+
+When $|K/B|$ is bounded, $|K|$ is bounded. In $Y/K$ the chosen walk closes, and its images under $G/K$ are disjoint directed cycles. Contracting these cycles preserves the free $G/K$-action and reduces the number of orbits, so induction applies with only a constant loss in the number of vertices.
+
+This is the directed adaptation of Babai's contraction method~\cite{BabaiContractions}: the contracted parts must allow a directed path from any entry vertex to any exit vertex. A directed cycle has this property, so the cycle found after contraction can be expanded by following each contracted cycle forward. Lemma~\ref{lem:free-reduction} gives the precise statement. Connectivity alone would not justify this expansion in a digraph.
+
+\smallskip
+\noindent\emph{Step 4: replacing root-orbit edges by disjoint paths.}
+When $|K/B|$ is large, we use the same cyclic lifting construction, now with labels represented by walks through the other orbits. Extend the outward and returning portions of the initial orbit cycle to two directed spanning trees, one away from the root and one towards it. Keep the labels of all arcs, including those within a single orbit. Each labelled arc gives a closed sequence of orbit transitions: follow the outward tree to its tail orbit, take the arc, and return along the inward tree from its head orbit. Its label product describes the endpoints of its lift in the root orbit; the lift itself need not be closed. These products generate $G$.
+
+For each represented nonidentity coset modulo $K$, retain a shortest such walk. Their products modulo $K$ generate $G/K$, so the Cayley result from Steps~1--2 supplies a cycle of length $|G/K|^{1-o(1)}$. We lift this quotient cycle using the chosen walks as labels. Lemma~\ref{lem:return-lifting} shows that each chosen walk lifts to a simple path after quotienting by $K$, and that its translates starting in a single $K$-orbit are disjoint. Different chosen walks can still meet outside the root orbit, even when the Cayley cycle has distinct vertices. This is the additional intersection problem caused by several orbits.
+
+We use the freedom to place the long runs of $a$-edges in Construction~\ref{con:cycliclift}. For each orbit and each fixed quotient-cycle position, there are at most two other positions whose walks could meet its walks. Each such possibility excludes only boundedly many differences between the chosen run positions. As there are boundedly many orbits, we can choose these positions successively while retaining long runs of $a$-edges. The choice also accounts for the final transition back to the initial quotient vertex. On the initial orbit cycle, the $a$-edge property from Step~1 handles the remaining possible intersections: each would force two edges of the selected Cayley cycle to coincide. Lemma~\ref{lem:walk-expansion} records this simple test. Thus Lemma~\ref{lem:return-lifting} provides run lengths for which the cyclic lifting construction gives a strongly connected layer digraph over a subgroup of $B$. The theorem for groups of smaller nilpotency class gives a long cycle in this layer digraph. First expand it to a cycle in the Cayley digraph on $G$, then replace its edges by the chosen walks in $Y$. The intersection checks above ensure that the result is a simple cycle. Since $G$ has boundedly many orbits, the resulting length $|G|^{1-o(1)}$ gives the required bound in $Y$ and hence in $X$.
+
+
+\subsection{Organization}
+Section~\ref{sec:prelim} states the structural theorem, explains how to lift cycles from quotient digraphs, and deduces Theorem~\ref{thm:main} from the two main intermediate results. Section~\ref{sec:large} proves the short-path result used when the $H$-orbits supplied by the structural theorem are large, with $m\ge n^{4\lambda}$. For the case $m<n^{4\lambda}$, Section~\ref{sec:local} establishes the algebraic estimates needed to lift cycles. Section~\ref{sec:nilpotent} uses these estimates to construct long directed cycles in nilpotent Cayley digraphs and in cyclic arrangements of layers. Section~\ref{sec:free} extends this construction to digraphs on which a nilpotent group acts freely with boundedly many orbits, completing the lower-bound proof. Finally, Section~\ref{sec:gap} proves Theorem~\ref{thm:gap} by constructing digraphs with perimeter gap at least $n/12$.
+
+
+\section{Structural reduction}\label{sec:prelim}
+We reduce Theorem~\ref{thm:main} to the large-orbit bound in Theorem~\ref{thm:large} and the free-action bound in Theorem~\ref{thm:free}. This is the structural reduction used for undirected graphs in~\cite[Section 7]{LiMethuku}, based on the finitary structure theorem of Tessera and Tointon~\cite{TT}. We give the directed reduction below, including the removal of bounded stabilizers.
+
+We first record the quotient-lifting and group facts used in the reduction. After stating the structural input and the two intermediate theorems, we remove bounded stabilizers and deduce Theorem~\ref{thm:main}.
+
+\subsection{Groups, actions and quotients}
+For a group $G$, let $\gen S$ denote the subgroup generated by $S$, allowing inverses, and let $\ord(g)$ be the order of an element $g$. Put $[x,y]=xyx^{-1}y^{-1}$, and let $[U,W]$ be the subgroup generated by these commutators for $x\in U$, $y\in W$. The lower central series is
+\[
+ \gamma_1(G)=G,\qquad \gamma_{j+1}(G)=[G,\gamma_j(G)].
+\]
+The group has nilpotency class at most $c$ if $\gamma_{c+1}(G)=1$. Abelian groups have class at most one; the trivial group is also assigned class zero. We write $G'=[G,G]$ and call $G/G'$ the abelianization. A subgroup $H$ is normal, written $H\lhd G$, if it is preserved by conjugation. Its index $[G:H]$ is the number of cosets, and its normal closure is the subgroup generated by its conjugates.
+
+For an action of $G$ on a set $\Omega$, write $Gv=\{gv:g\in G\}$ for the orbit of $v$ and $G_v=\{g\in G:gv=v\}$ for its stabilizer. The action is \emph{semiregular}, or \emph{free}, if every vertex stabilizer is trivial; these two terms will be used interchangeably. An action is \emph{faithful} if only the identity fixes every point. Freeness implies faithfulness on a nonempty set, but the converse need not hold. If $H\lhd\Gamma\le\Aut(X)$, then $g(Hv)=H(gv)$ for $g\in\Gamma$. Thus a transitive $\Gamma$ permutes the $H$-orbits, which all have the same size. The quotient $X/H$ has these orbits as vertices, with an arc between distinct orbits whenever $X$ has such an arc. We use $\Omega/H$ similarly for the set of $H$-orbits. A fibre of a quotient map is the inverse image of one quotient vertex. The induced action of $\Gamma/H$ is faithful precisely when the elements of $\Gamma$ fixing every orbit as a set are exactly those in $H$; we identify the induced group with $\Gamma/H$ only after this is established.
+
+The Cayley digraph $\Cay(G,S)$ has arcs $x\to xs$ for $s\in S$. It is strongly connected when $S$ generates $G$, since inverses are positive powers in a finite group. All constructed walks nevertheless use only available arc labels. A word is a sequence of such labels, and its product is their product in the stated order. A \emph{prefix product} is the product of its first $i$ labels for some $i\ge0$, with the empty product equal to $1$.
+
+\begin{lemma}[Symmetry and perfect matchings]\label{lem:symmetry-matching}
+Let a group $H$ act transitively on each of two finite sets $A,B$ with $|A|=|B|=m\ge1$. Let $E\subseteq A\times B$ be a nonempty relation preserved by $H$, meaning that $(x,y)\in E$ if and only if $(h(x),h(y))\in E$ for every $h\in H$. Form a bipartite graph with a left copy of $A$ and a right copy of $B$, joining $x$ to $y$ exactly when $(x,y)\in E$; use disjoint copies even when $A=B$. Then every vertex on either side has the same positive degree. Moreover, this graph has a perfect matching: a bijection $M:A\to B$ such that $(x,M(x))\in E$ for every $x\in A$.
+\end{lemma}
+\begin{proof}
+For $x,x'\in A$, choose $h\in H$ with $h(x)=x'$. The map $y\mapsto h(y)$ gives a bijection between the right neighbor sets of $x$ and $x'$, with inverse induced by $h^{-1}$. Thus all left vertices have a common degree $d_A$. The same argument on $B$ gives a common right degree $d_B$. Counting edges from the two sides gives $md_A=md_B$. Write $d=d_A=d_B$; it is positive because $E$ is nonempty.
+
+For $U\subseteq A$, let $N(U)\subseteq B$ be its set of neighbors. The $d|U|$ edges from $U$ end in $N(U)$, and each vertex there is incident with at most $d$ of them. Hence $d|U|\le d|N(U)|$, so $|U|\le|N(U)|$. Hall's theorem gives a matching covering the left side. Since the two sides have equal size, it covers the right side as well, giving the required bijection.
+\end{proof}
+
+The following matching argument is also the first step of the proof of~\cite[Lemma 3.3]{MaZhaoLinear}. We record its directed form; we only need a cycle whose length is at least that of the quotient cycle.
+\begin{lemma}[Lifting cycles]\label{lem:cyclelift}
+Suppose a group $H$ acts by automorphisms on $X$ with equal-sized orbits. A simple directed cycle of length $s\ge2$ in $X/H$ lifts to a simple directed cycle of length at least $s$ in $X$.
+\end{lemma}
+\begin{proof}
+For a quotient arc $A\to B$, let $E\subseteq A\times B$ consist of the pairs $(x,y)$ for which $x\to y$ is an arc of $X$. This relation is nonempty and preserved by $H$, which acts transitively on each of the equal-sized orbits. Lemma~\ref{lem:symmetry-matching} gives a perfect matching from $A$ to $B$.
+
+Choose such a matching for each arc of the quotient cycle. Their union has indegree and outdegree one at every vertex of its parts, so it is a disjoint union of directed cycles. Each cycle visits the parts in the prescribed order and therefore has length a positive multiple of $s$.
+\end{proof}
+
+For a normal quotient of a Cayley digraph there is also a direct description. Let $H\lhd G$ and translate the quotient cycle to start at the identity coset. Choose an available label for each successive arc of this cycle, and follow the resulting word from $1\in G$. Write $g_0=1,g_1,\ldots,g_s=t\in H$ for its successive prefix products. Repeat the word $\ord(t)$ times. At quotient position $i<s$, the lifted vertices are $t^j g_i$ for $0\le j<\ord(t)$, which are distinct; different positions are distinct modulo $H$. The repeated lift is therefore simple.
+
+\begin{lemma}[Lifting through strongly connected parts]\label{lem:blocklift}
+Partition the vertices of a digraph $X$ into parts, each inducing a strongly connected digraph. Form a quotient with an arc between distinct parts whenever $X$ has such an arc. Every simple quotient cycle of length $s\ge2$ lifts to a simple cycle in $X$ of length at least $s$.
+\end{lemma}
+\begin{proof}
+Choose an actual arc for each quotient-cycle edge. Inside each visited part, join the incoming endpoint to the outgoing endpoint by a simple directed path, using a path of length zero when they coincide. The parts are distinct, so these paths and the chosen arcs form a simple cycle. Its length is at least the number of arcs between parts, namely $s$.
+\end{proof}
+
+\subsection{Elementary nilpotent-group estimates}\label{subsec:groupfacts}
+A commutator of weight $j$ is an iterated commutator in $j$ group elements. A bound on the number of generators does not require that those generators be available arc labels. We use the standard facts $[\gamma_i(G),\gamma_j(G)]\le\gamma_{i+j}(G)$ and the following multilinearity property: modulo $\gamma_{j+1}(G)$, a weight-$j$ commutator is additive in each entry from $G/G^{\prime}$, when the abelian factors are written additively; see~\cite[Theorems 5.1.11 and 5.2.5]{Robinson}. In particular, if $G$ has at most $r$ generators, then $\gamma_j(G)/\gamma_{j+1}(G)$ has at most $r^j$ generators. The \emph{exponent} of a finite group is the least positive integer $e$ such that $g^e=1$ for every element $g$; for an additively written group, the condition is $eg=0$. If $G/G'$ has exponent dividing $e$, multilinearity shows that every lower central factor does too.
+
+\begin{lemma}[Elementary nilpotent-group bounds]\label{lem:coordinates}
+Let $G$ be a finite group with at most $r$ generators and nilpotency class at most $c$, and put
+\[
+ R=\sum_{j=1}^{c}r^j.
+\]
+Every subgroup of $G$ has at most $R$ generators. There are $R'\le R$ elements $u_1,\ldots,u_{R'}$ such that
+\[
+ G=\{u_1^{t_1}\cdots u_{R'}^{t_{R'}}:t_1,\ldots,t_{R'}\in\Z\}.
+\]
+Moreover, if $G/G'$ has exponent dividing $e$, then $|G|\le e^R$.
+\end{lemma}
+\begin{proof}
+Intersect a subgroup with the lower central series. Each resulting factor embeds in an abelian group generated by at most $r^j$ elements, and hence has at most that many generators. Lifting these generators gives the first claim. For the second, lift generators of the lower central factors in order, and successively express an element modulo the next factor. This gives the displayed ordered product; uniqueness is unnecessary. The exponent bound follows by multiplying the orders of the lower central factors.
+\end{proof}
+
+We also use the Frattini generation criterion for finite nilpotent groups~\cite[Section 5.3]{Robinson}: the Frattini subgroup $\Phi(G)$, the intersection of the maximal proper subgroups, contains $G'$, so
+\begin{equation}\label{eq:frattini-generation}
+ UG'=G\quad\Longrightarrow\quad U=G\qquad(U\le G).
+\end{equation}
+Indeed, a proper subgroup $U$ lies in a maximal proper subgroup, which contains $G'$ and hence $UG'$, contradicting $UG'=G$.
+
+\subsection{The structural input and the two cases}
+\begin{theorem}[Tessera--Tointon]\label{thm:structure}
+For every $0<\lambda<1$, there are constants $B_0,r,c,I_0,n_0$ such that the following holds. Let $X$ be a connected vertex-transitive digraph on $n\ge n_0$ vertices, and let $\Gamma\le\Aut(X)$ be transitive. There is $H\lhd\Gamma$ such that:
+\begin{enumerate}
+\item vertices in the same $H$-orbit have distance at most $n^\lambda$ in the underlying undirected graph of $X$;
+\item the induced group on $X/H$ is $\Gamma/H$, with stabilizers of order at most $B_0$;
+\item $\Gamma/H$ has a normal nilpotent subgroup of index at most $I_0$, with at most $r$ generators and class at most $c$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Apply~\cite[Corollary 2.4]{TT} to the underlying undirected graph and the given transitive group $\Gamma$. Write $\beta(t)$ for the size of an undirected ball of radius $t$. With radius parameter $n$ and growth exponent one, its growth hypothesis holds because $\beta(n)=n\le n\beta(1)$. The cited corollary gives the diameter bound, the faithful induced action, bounded stabilizers, and a normal nilpotent subgroup with a bounded number of generators, bounded class and bounded index.
+\end{proof}
+
+The size of the normal orbits determines which of the following two results we use. For large normal orbits, short paths yield the required cycle bound. Here an orbit has \emph{ambient undirected diameter} at most $r$ if any two of its vertices can be joined by an undirected path of length at most $r$ in $X$, possibly leaving the orbit. We prove the bound in Section~\ref{sec:large}.
+
+\begin{theorem}[Large normal orbits]\label{thm:large}
+Fix $0<\lambda<1/4$ and $B_0\ge1$. For all sufficiently large $n$, the following holds. Let $X$ be a connected vertex-transitive digraph on $n=qm$ vertices, let $\Gamma\le\Aut(X)$ be transitive, and suppose $H\lhd\Gamma$ has $q$ orbits of size $m\ge n^{4\lambda}$. Suppose each orbit has ambient undirected diameter at most $n^\lambda$, and stabilizers in the induced permutation group on the orbits have order at most $B_0$. Then $X$ has a directed cycle of length at least $\tfrac12 n^{1-3\lambda}$.
+\end{theorem}
+
+For small normal orbits, the quotient is large. After removing its bounded stabilizers, we will apply the following result, proved in Section~\ref{sec:free}.
+\begin{theorem}[Semiregular nilpotent actions with boundedly many orbits]\label{thm:free}
+Fix positive integers $r,c,Q$ and $\eps>0$. There is $b>0$ such that every strongly connected digraph $X$ on $n\ge2$ vertices admitting a semiregular nilpotent automorphism group with at most $r$ generators, class at most $c$ and at most $Q$ orbits has a directed cycle of length at least $bn^{1-\eps}$.
+\end{theorem}
+
+The theorem does not require vertex-transitivity. In particular, it gives the following consequence for groups containing a nilpotent subgroup of bounded index.
+
+\begin{corollary}[Cayley digraphs with a nilpotent subgroup of bounded index]\label{cor:bounded-index}
+Fix positive integers $r,c,Q$ and $\eps>0$. There is $b=b(r,c,Q,\eps)>0$ such that the following holds. Let $H$ be a finite group of order at least two with a nilpotent subgroup $N\le H$ of index at most $Q$, having at most $r$ generators and class at most $c$. Every connected Cayley digraph on $H$ has a directed cycle of length at least $b|H|^{1-\eps}$. The subgroup $N$ need not be normal.
+\end{corollary}
+\begin{proof}
+In the convention $x\to xs$, left multiplication by $N$ is a semiregular automorphism action. Its orbits are the right cosets $Nx$, of which there are $[H:N]\le Q$. A connected Cayley digraph of a finite group is strongly connected, so Theorem~\ref{thm:free} applies.
+\end{proof}
+
+The example in Section~\ref{sec:gap} shows that even an abelian normal subgroup of index three does not guarantee cycles of length $(1-o(1))|H|$.
+
+\subsection{Removing bounded stabilizers}
+The next lemma makes the nilpotent action free while reducing the order of the digraph by only a bounded factor.
+
+\begin{lemma}[Removing bounded stabilizers]\label{lem:freequotient}
+Suppose $G$ acts transitively on $\Omega$, its stabilizers have order at most $B_0$, and $N\lhd G$ is nilpotent with at most $r$ generators and class at most $c$. There is $L\lhd G$, contained in $N$, of order bounded in terms of $B_0,r,c$, such that $N/L$ acts freely on $\Omega/L$. It has at most $[G:N]$ orbits, and $|\Omega/L|\ge |\Omega|/|L|$.
+\end{lemma}
+\begin{proof}
+Fix $v\in\Omega$, put $A=N\cap G_v$, and take the normal closure $L$ of $A$ in $G$. It lies in $N$ and has at most $R=\sum_{j=1}^c r^j$ generators. The images of the conjugates of $A$ generate $L/L'$, whose exponent divides $|A|$: every element of $A$ and every conjugate of such an element has order dividing $|A|$, and their images generate this abelian quotient. Thus Lemma~\ref{lem:coordinates} gives
+\[
+ |L|\le B_0^{\sum_{j=1}^c R^j}.
+\]
+For $w=gv$, we have $N\cap G_w=gAg^{-1}\le L$. If $n\in N$ fixes $Lw$, then $nw=lw$ for some $l\in L$, so $l^{-1}n\in N\cap G_w\le L$. This proves freeness. Each $L$-orbit has at most $|L|$ vertices, and quotienting by $L\le N$ preserves the number $[G:NG_v]\le[G:N]$ of $N$-orbits.
+\end{proof}
+
+\subsection{Deduction of the main theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Take $0<\eps<1$, set $\lambda=\eps/10$, and apply Theorem~\ref{thm:structure} with $\Gamma=\Aut(X)$. Let $m$ be the common $H$-orbit size and $q=n/m$.
+
+If $m\ge n^{4\lambda}$, Theorem~\ref{thm:large} supplies a cycle of length at least $\tfrac12 n^{1-3\lambda}$, which exceeds $n^{1-\eps}$ for large $n$.
+
+Otherwise $Z=X/H$ has more than $n^{1-4\lambda}$ vertices. Let $N$ be the normal nilpotent subgroup of $\Gamma/H$ given by Theorem~\ref{thm:structure}. Lemma~\ref{lem:freequotient} gives $L\lhd\Gamma/H$ of order at most a constant $C_\lambda$, contained in $N$, such that $N/L$ acts freely on $Y=Z/L$ with boundedly many orbits. Its generator and class bounds are fixed, and
+\[
+ |V(Y)|\ge C_\lambda^{-1}n^{1-4\lambda}.
+\]
+For large $n$, this order is at least two. The digraph is strongly connected, so Theorem~\ref{thm:free} with error $\eps/3$ gives a cycle of length at least
+\[
+ b_\eps C_\lambda^{-(1-\eps/3)}
+ n^{(1-4\lambda)(1-\eps/3)}.
+\]
+Since $(1-4\lambda)(1-\eps/3)>1-\eps$, this is at least $n^{1-\eps}$ for sufficiently large $n$. Both normal orbit partitions have equal-sized parts. Apply Lemma~\ref{lem:cyclelift} first to lift the cycle from $Y=Z/L$ to $Z$, and then from $Z=X/H$ to $X$. Neither lift decreases its length.
+\end{proof}
+
+
+\section{Joining short directed paths across large orbits}\label{sec:large}
+We prove Theorem~\ref{thm:large} by adapting the large-orbit argument of~\cite[Lemmas 4.2, 4.5 and 4.6]{LiMethuku}. As there, we choose random short connections and use the Lov\'asz local lemma to avoid intersections between nonconsecutive paths. Here the diameter hypothesis concerns undirected paths. We first derive a directed cut estimate and short directed connections, then use a repeated closed walk through a digraph on the orbits with few arcs, preserved by the group action, in place of the repeated tree traversal in~\cite{LiMethuku}.
+
+Throughout the section, $\Gamma\le\Aut(X)$ is transitive and $H\lhd\Gamma$ has $q$ orbits of size $m\ge2$, where $n=qm$. Suppose their ambient undirected diameters are at most an integer $\rho\ge1$. Write $\Omega$ for the orbit set and $Q=X/H$ for the orbit quotient.
+
+\subsection{From undirected paths to directed expansion}
+We use the automorphism-averaging method for short paths that appears, for example, in~\cite[Proposition 2.2]{Skresanov}. The estimate below retains the contribution of each normal orbit. Assigning the averaged edge weights to the available orientations and using transitivity to balance incoming and outgoing weight gives both directed boundaries.
+
+\begin{lemma}[A weighted cut estimate]\label{lem:directed-expansion}
+Let $\Gamma\le\Aut(X)$ be transitive, and let $H\lhd\Gamma$ have an orbit set $\Omega$ whose parts have size $m\ge2$ and ambient undirected diameter at most $\rho\ge1$. For $S\subseteq V(X)$, put $s_A=|S\cap A|$. Then
+\begin{equation}\label{eq:orbitboundary}
+ |\partial^+S|,\ |\partial^-S|
+ \ \ge\ \frac{\sum_{A\in\Omega}s_A(m-s_A)}{(m-1)\rho}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+For each ordered pair $(x,y)$ of distinct vertices in one $H$-orbit, choose an undirected path $P_{x,y}$ of length at most $\rho$, and let $\mathcal P=(P_{x,y})$ be this indexed family. Choose a uniformly random $g\in\Gamma$ and apply it to every vertex of every path, obtaining $g\mathcal P=(gP_{x,y})$. For an undirected edge $e$, let its weight $L_e$ be the expected number of paths in $g\mathcal P$ using $e$, counting each indexed path separately. Applying any fixed element of $\Gamma$ to the random family has the same distribution, so $L_{g(e)}=L_e$ for every $g\in\Gamma$. Thus the weights are $\Gamma$-invariant, meaning unchanged by this action, and
+\[
+ \sum_e L_e\le n(m-1)\rho.
+\]
+Assign the weight of an edge to its available orientation, dividing it equally if both orientations occur. The resulting arc weights are invariant. Transitivity makes the incoming weight constant at every vertex and the outgoing weight constant at every vertex. Their totals agree, so these two constants equal some $a_0\le(m-1)\rho$.
+
+Normality of $H$ ensures that each translated family still has one path for every ordered pair of distinct vertices in a common orbit. Exactly $2\sum_A s_A(m-s_A)$ of these pairs have endpoints on opposite sides of $S$. Each corresponding path crosses the cut. Thus the total undirected cut weight is at least $2\sum_A s_A(m-s_A)$. The total incoming weight equals the total outgoing weight at each vertex, so their sums over $S$ agree. An arc with both endpoints in $S$ contributes its weight once to each sum. Removing those contributions shows that the total weight of arcs entering $S$ equals that of arcs leaving $S$. Each is therefore at least $\sum_A s_A(m-s_A)$. Every vertex of $\partial^+S$ receives weight at most $a_0$, and every vertex of $\partial^-S$ sends weight at most $a_0$. This proves~\eqref{eq:orbitboundary}.
+
+\end{proof}
+
+We can now prove the case $q=1$ in Theorem~\ref{thm:large}. Take $\rho=\lceil n^\lambda\rceil$. Since $m=n$,~\eqref{eq:orbitboundary} gives, for every $S$ with $|S|\le2n/3$,
+\[
+ |\partial^+S|,\ |\partial^-S|\ge |S|/(3\rho).
+\]
+By~\cite[Lemma 2.4]{BHMSY}, the bounds $|\partial^+S|,|\partial^-S|\ge\alpha|S|$ for all such sets gives a directed cycle of length at least $\alpha n/3$. We obtain a cycle of length at least $n/(9\rho)$, which exceeds $\tfrac12n^{1-3\lambda}$ for sufficiently large $n$. Henceforth assume $q\ge2$.
+
+We will also use the following reachability consequence of the cut estimate. If $s_A\le m/2$ for every orbit, the right side is at least $|S|/(2\rho)$. Put
+\[
+ u=\lceil4\rho\log(2n)\rceil.
+\]
+Starting from any vertex, let $S_j$ be the set reached within $j$ arcs. Until $S_j$ contains more than half of an orbit, its size increases by a factor at least $1+1/(2\rho)$ at each step. Since
+\[
+ \log\bigl(1+1/(2\rho)\bigr)\ge1/(4\rho),
+\]
+this cannot continue for $u$ steps: it would give $|S_u|\ge2n$. Thus every vertex reaches more than half of some orbit within $u$ arcs.
+
+
+\subsection{Short connections on a sparse orbit digraph}
+We first find a strongly connected digraph on $\Omega$ whose arcs allow short connections with arbitrary endpoints. The connection length will be
+\begin{equation}\label{eq:connectionlength}
+ t=2u+1.
+\end{equation}
+
+\begin{lemma}[Connections between prescribed endpoints]\label{lem:short-directed-connections}
+Let $X$ be a connected digraph on $n$ vertices, let $\Gamma\le\Aut(X)$ be transitive, and let $H\lhd\Gamma$ have $q\ge2$ orbits, each of size at least two and ambient undirected diameter at most $\rho\ge1$. On the orbit set $\Omega$ there is a loopless, strongly connected, $\Gamma$-invariant digraph $Q^*$ such that every arc $A\to B$ permits a directed path from each vertex of $A$ to each vertex of $B$ of length at most $t=2\lceil4\rho\log(2n)\rceil+1$.
+\end{lemma}
+\begin{proof}
+Define $A\mathcal R B$ if some vertex of $A$ reaches more than half of $B$ within $u$ arcs; allow $A=B$. Form a bipartite graph with disjoint left and right copies of $A$ and $B$, joining $x\in A$ to $y\in B$ when a directed path of length at most $u$ goes from $x$ to $y$. When $x=y$, allow the path of length zero. Applying $h\in H$ to a path gives one of the same length from $h(x)$ to $h(y)$, and applying $h^{-1}$ gives the converse. Thus $H$ preserves this relation. By Lemma~\ref{lem:symmetry-matching}, every vertex on either side has the same degree. If $A\mathcal R B$, one left degree exceeds $m/2$, so all degrees do. Hence every vertex of $A$ reaches more than half of $B$, and every vertex of $B$ is reachable from more than half of $A$, within $u$ arcs.
+
+Every $g\in\Gamma$ permutes the $H$-orbits and preserves directed path lengths, so $A\mathcal R B$ if and only if $g(A)\mathcal R g(B)$; this is what it means for the relation to be $\Gamma$-invariant. The action on $\Omega$ is transitive: an automorphism sending a vertex of $A$ to one of $A'$ sends $A$ to $A'$. The reachability consequence of Lemma~\ref{lem:directed-expansion} gives $\mathcal R$ positive outdegree at every orbit. Apply Lemma~\ref{lem:symmetry-matching} to $\mathcal R$ on two disjoint copies of $\Omega$. Its left degrees are the outdegrees of $\mathcal R$, and its right degrees are the indegrees, so they are equal positive constants. The lemma also gives a perfect matching by Hall's theorem. If $F(A)$ is the orbit matched to $A$, then $F$ is a permutation of $\Omega$ with $A\mathcal R F(A)$ for every $A$; a matched pair of copies of the same orbit gives $F(A)=A$.
+
+Let $\mathcal I=\{(A,A):A\in\Omega\}$ be the identity relation, and identify $Q$ with its arc relation. For relations $\mathcal U,\mathcal V$, their product $\mathcal U\mathcal V$ consists of pairs $(A,B)$ for which some $C$ satisfies $A\mathcal U C$ and $C\mathcal V B$; thus products are read from left to right. If $(A,B)$ belongs to
+\[
+ \mathcal R(\mathcal I\cup Q)\mathcal R,
+\]
+then every vertex of $A$ reaches every vertex of $B$ within $2u+1=t$ arcs. Indeed, fix the endpoints. There are intermediate orbits $C,D$ with $A\mathcal R C$, either $C=D$ or $C\to D$ in $Q$, and $D\mathcal R B$. The first endpoint reaches more than half of $C$, and more than half of $D$ can reach the final endpoint, each within $u$ arcs. If $C\to D$, the arcs of $X$ from $C$ to $D$ form a nonempty relation preserved by $H$, which is transitive on both equal-sized orbits. Lemma~\ref{lem:symmetry-matching} gives a perfect matching formed by these arcs. This matching sends the first set to a set meeting the second. For an identity step use the identity matching. Concatenate the resulting walks and erase repetitions.
+
+Define $Q^*$ by deleting the diagonal from this relation. It is $\Gamma$-invariant and has the required short connections. To prove strong connectivity, suppose a nonempty proper set $U\subset\Omega$ has no outgoing arc in $Q^*$. The relation before deleting the diagonal contains both $F^2$ and $FQF$. Thus $F^2(U)\subseteq U$, and equality follows because $F$ is a permutation. If $A\in F(U)$ and $A\to B$ in $Q$, the relation $FQF$ gives $F(B)\in U$, so
+\[
+ B\in F^{-1}(U)=F(U).
+\]
+This makes $F(U)$ a nonempty proper set with no outgoing arc in the strongly connected digraph $Q$, a contradiction.
+\end{proof}
+
+The next lemma uses the bounded stabilizers to keep the number of connections small.
+
+\begin{lemma}[A sparse invariant subdigraph]\label{lem:sparse-quotient}
+Let a finite group $G$ act transitively on a strongly connected loopless digraph on $q\ge2$ vertices, with point stabilizers of order at most $B_0$. The digraph contains a spanning $G$-invariant strongly connected subdigraph $Q_0$ whose common indegree and outdegree $d$ satisfy
+\begin{equation}\label{eq:sparsedegree}
+ 1\le d\le B_0\lceil\log_2q\rceil.
+\end{equation}
+\end{lemma}
+\begin{proof}
+Fix a vertex $A$. For $j\in G$, write $j(A)$ for the vertex to which $j$ sends $A$. For a subgroup $J\le G$, write $J(A)=\{j(A):j\in J\}$ for the orbit of $A$ under $J$, the set of vertices to which elements of $J$ can send $A$. Start with $J=G_A=\{j\in G:j(A)=A\}$, the stabilizer of $A$, so initially $J(A)=\{A\}$.
+
+If $J$ is not transitive, choose an arc leaving $J(A)$, which exists by strong connectivity, and apply an element of $J$ sending its tail to $A$. Since $J$ preserves $J(A)$, the translated head is still outside $J(A)$; by transitivity of $G$, it equals $g(A)$ for some $g\in G\setminus J$. Record the arc $A\to g(A)$ and replace $J$ by $\gen{J,g}$. The enlarged subgroup contains the disjoint cosets $J$ and $gJ$, since $g\notin J$, so each step at least doubles $|J|$. After $k$ steps, therefore, $2^k|G_A|\le |J|\le |G|$. The orbit--stabilizer formula gives $[G:G_A]=q$, so the process reaches a transitive subgroup after at most $\lceil\log_2q\rceil$ steps.
+
+At termination, for any $x\in G$, transitivity gives $j\in J$ with $j(A)=x(A)$. Then $j^{-1}x\in G_A\le J$, so $x\in J$. Thus the final subgroup is $G$, generated by the recorded elements together with $G_A$.
+
+Let $Q_0$ be the union of the $G$-orbits of the recorded arcs. Let $U$ be the component containing $A$ after directions are ignored. Every element of $G_A$ fixes $A$ and hence preserves $U$. For a recorded element $g$, the arc $A\to g(A)$ puts $g(A)$ in $U$, so the automorphism $g$ also maps $U$ to itself. Since these elements generate $G$, every element of $G$ preserves $U$. Transitivity makes $Q_0$ connected. It is vertex-transitive, so its indegrees and outdegrees agree and connectedness implies strong connectivity, as shown in the notation subsection. One recorded arc orbit contributes at most $|G_A|$ outneighbors at $A$, giving~\eqref{eq:sparsedegree}.
+\end{proof}
+
+\subsection{Joining the short connections}
+The next observation uses the same first-intersection shortening as the proof of~\cite[Lemma 2.8]{BHMSY}. We state and prove the path version needed here; that lemma is formulated for a cycle in the intersection graph of directed cycles.
+
+\begin{lemma}[Shortening consecutive intersections]\label{lem:shortening}
+Let $N\ge4$. If simple directed paths $P_0,\ldots,P_{N-1}$ concatenate cyclically and nonconsecutive paths are vertex-disjoint, their union contains a simple directed cycle of length at least $N$.
+\end{lemma}
+\begin{proof}
+Among choices of subpaths $P_i'\subseteq P_i$ that still concatenate cyclically, minimize the total length. No $P_i'$ is trivial, since otherwise $P_{i-1}'$ and $P_{i+1}'$ would share its vertex, contrary to disjointness of the corresponding nonconsecutive paths.
+
+If $P_i'$ and $P_{i+1}'$ share a vertex other than their joining endpoint, end $P_i'$ at that vertex and start $P_{i+1}'$ there. This strictly shortens the total length while preserving cyclic concatenation, a contradiction. Thus consecutive subpaths meet only at their joining endpoint, and nonconsecutive subpaths are disjoint. They form a simple cycle with at least one arc from each of the $N$ subpaths.
+\end{proof}
+
+We now apply the local lemma along repeated Euler tours of the sparse orbit digraph. The proof follows the random-translate and vertex-load estimates of~\cite[Lemmas 4.5 and 4.6]{LiMethuku}; the directed connections and the Euler tour are the changes needed here.
+
+\begin{lemma}[Joining short connections]\label{lem:avoid-intersections}
+Let $\Gamma\le\Aut(X)$ be transitive and let $H\lhd\Gamma$ have $q\ge2$ orbits of size $m$, with orbit set $\Omega$ and $n=qm$. Let $Q_0$ be a loopless, strongly connected, $\Gamma$-invariant digraph on $\Omega$, with common indegree and outdegree $d$. Suppose every arc $A\to B$ permits a directed path of length at most $t$ from each vertex of $A$ to each vertex of $B$. If
+\begin{equation}\label{eq:samplinghypothesis}
+ m\ge192d(t+1)^2,
+\end{equation}
+then $X$ has a simple directed cycle of length at least $n/[96(t+1)^2]$.
+\end{lemma}
+\begin{proof}
+For each permissible ordered pair $(x,y)$, choose a simple directed path $P^0_{x,y}$ of length at most $t$. To sample a path from $x$ to $y$, choose a uniformly random $g\in\Gamma$ and use
+\[
+ gP^0_{g^{-1}x,g^{-1}y}.
+\]
+These path distributions respect the action of $\Gamma$. Each sample below uses independent private randomness.
+
+Since $Q_0$ is strongly connected and has equal indegree and outdegree at every vertex, it has an Euler tour, a closed directed walk using each arc exactly once. Repeat this tour exactly
+\[
+ k=\left\lfloor\frac{m}{48d(t+1)^2}\right\rfloor
+\]
+times. Write its successive orbit occurrences as $A_0,\ldots,A_{N-1}$, with indices interpreted modulo $N$, where $N=kqd$. The hypothesis gives $k\ge4$ and
+\begin{equation}\label{eq:Npaths}
+ N\ge\frac{n}{96(t+1)^2}.
+\end{equation}
+Choose independent uniform vertices $X_i\in A_i$, and then use independent private randomness to sample $P_i$ from $X_i$ to $X_{i+1}$.
+
+Put $a_i(v)=\Pr(v\in P_i)$. Each arc of $Q_0$ occurs exactly $k$ times, and applying an element of $\Gamma$ to a sampled path gives the distribution used for its transformed endpoints. Hence $\sum_i a_i(v)$ is $\Gamma$-invariant and therefore constant in $v$. Since every path has at most $t+1$ vertices,
+\begin{equation}\label{eq:load}
+ \sum_i a_i(v)\le\frac{kd(t+1)}m,
+ \qquad \sum_v a_i(v)\le t+1.
+\end{equation}
+For distinct nonconsecutive indices $i,j$, the paths $P_i,P_j$ use disjoint sampled endpoints and private randomness, so they are independent. Let $E_{ij}$ be the event that they intersect and put $p_{ij}=\sum_v a_i(v)a_j(v)$. Then
+\begin{equation}\label{eq:localload}
+ \Pr(E_{ij})\le p_{ij},\qquad
+ \sum_{j\notin\{i-1,i,i+1\}}p_{ij}
+ \le\frac{kd(t+1)^2}{m}\le\frac1{48}.
+\end{equation}
+
+The event $E_{ij}$ depends only on $X_i,X_{i+1},X_j,X_{j+1}$ and the private randomness of $P_i,P_j$. In a dependency graph, join it to events involving at least one path indexed by
+\[
+ i-1,i,i+1,j-1,j,j+1.
+\]
+The sum of $p_{ab}$ over its neighbors is at most $6/48=1/8$, by~\eqref{eq:localload}. Discard events with $p_{ij}=0$ and set $x_{ij}=2p_{ij}$. These numbers lie in $(0,1)$ and satisfy
+\[
+ \prod_{E_{ab}\sim E_{ij}}(1-x_{ab})
+ \ge1-\sum_{E_{ab}\sim E_{ij}}x_{ab}\ge\frac34.
+\]
+In particular, $\Pr(E_{ij})\le x_{ij}\prod_{E_{ab}\sim E_{ij}}(1-x_{ab})$. The asymmetric Lov\'asz local lemma gives a choice avoiding every $E_{ij}$. The resulting paths concatenate cyclically, and nonconsecutive paths are disjoint. Since $N=kqd\ge4$, Lemma~\ref{lem:shortening} gives a simple cycle of length at least $N\ge n/[96(t+1)^2]$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:large}]
+The case $q=1$ was proved immediately after Lemma~\ref{lem:directed-expansion}. Suppose $q\ge2$ and take $\rho=\lceil n^\lambda\rceil$. Lemma~\ref{lem:short-directed-connections} supplies $Q^*$ with connection length $t=O(n^\lambda\log n)$. Apply Lemma~\ref{lem:sparse-quotient} to $Q^*$ and the faithful group induced by $\Gamma$ on $\Omega$. It gives a strongly connected spanning subdigraph $Q_0\subseteq Q^*$ with common indegree and outdegree $d\le B_0\lceil\log_2q\rceil$. Every arc of $Q_0$ retains the short-connection property of $Q^*$.
+
+Since $m\ge n^{4\lambda}$ and $\lambda>0$ is fixed,
+\[
+ 192d(t+1)^2=O_{B_0}(n^{2\lambda}\log^3n)=o(m).
+\]
+Lemma~\ref{lem:avoid-intersections} therefore gives a simple directed cycle of length at least
+\[
+ \frac{n}{96(t+1)^2}
+ \ge \frac12n^{1-3\lambda}
+\]
+for sufficiently large $n$, because $(t+1)^2=O(n^{2\lambda}\log^2n)=o(n^{3\lambda})$. This proves the theorem.
+\end{proof}
+
+
+\section{Directed lifting of quotient cycles}\label{sec:local}
+The goal of this section is to lift a long cycle from a quotient Cayley digraph, with a controlled loss in density. A \emph{cyclic layer digraph} over a finite group $U$, with $s\ge1$ layers and nonempty label sets $S_i\subseteq U$, has vertices $U\times\Z/s\Z$ and arcs
+\begin{equation}\label{eq:layers}
+ (x,i)\longrightarrow(xu,i+1),\qquad u\in S_i.
+\end{equation}
+We allow the loop when $|U|=s=1$.
+
+\begin{theorem}[Directed cycle lifting]\label{thm:directed-lifting}\label{cor:local}
+Fix positive integers $r,c,D$ with $D\ge c+1$. There are constants $A,\kappa\ge1$, depending only on $r,c,D$, with the following property. Let $G$ be a finite nilpotent group with at most $r$ generators and class at most $c$, let $S\subseteq G$, and choose $a\in S\setminus\{1\}$. Put
+\[
+ B=[G,a]:=\gen{[g,a]:g\in G},\qquad K=\gen aB,\qquad h=|K/B|.
+\]
+Suppose $K\ne G$, $h>8D+4$, and $\Cay(G/K,\{sK:s\in S\})$ contains a simple directed cycle of density $\delta$.
+
+Let $0<\eta<1$ and $b>0$. Suppose that, for every subgroup $U\le B$ and every integer $s\ge1$, each strongly connected cyclic layer digraph over $U$ with $s$ layers has a directed cycle of length at least $bs|U|^{1-\eta}$. Then $\Cay(G,S)$ has a simple directed cycle $\mathcal C$ satisfying
+\begin{equation}\label{eq:densityrecurrence}
+ \frac{|\mathcal C|}{|G|}\ge\frac bA\,\delta^{\kappa+1}|B|^{-\eta},
+\end{equation}
+and containing the arc $x\to xa$ whenever both endpoints lie on $\mathcal C$.
+\end{theorem}
+
+The subgroup $B$ has smaller nilpotency class, so the layer hypothesis will be supplied by induction. No generation assumption on $S$ is needed.
+
+The proof has three steps: construct a cyclic layer digraph above the quotient cycle, bound the index of its group in $B$, and expand a cycle without intersections. The quotient cycle need not visit every coset; its density controls the index bound.
+
+\subsection{Constructing the auxiliary digraph}\label{subsec:return}
+We use the following standard commutator calculation in quantitative form; commutator weight and multilinearity are as in~\cite[Sections 5.1 and 5.2]{Robinson}.
+\begin{lemma}[Normal closure of one element]\label{lem:normalclosure}
+Let $G$ be a finite group with at most $r$ generators and nilpotency class at most $c$, and let $a\in G\setminus\{1\}$. Then $B=[G,a]$ and $K=\gen aB$ are normal, $K$ is the normal closure of $a$, $[G,K]=B$, and $K/B$ is cyclic of order $h\ge2$. Moreover, $B$ has class at most $\lfloor c/2\rfloor$ and
+\begin{equation}\label{eq:normalorder}
+ |K|\le h^{M_{r,c}}
+\end{equation}
+for a constant $M_{r,c}$. If $K=G$, then $G=\gen a$.
+\end{lemma}
+\begin{proof}
+The identities $x[g,a]x^{-1}=[xg,a][x,a]^{-1}$ and $gag^{-1}=[g,a]a$ give normality and $[G,K]=B$. Every normal subgroup containing $a$ contains every $[g,a]$, so it contains $K$; this proves the normal-closure assertion. Since $B\le\gamma_2(G)$, its class is at most $\lfloor c/2\rfloor$. If $h=1$, then $K=[G,K]$, contradicting nilpotency and $a\ne1$. If $K=G$, its image in the abelianization is generated by $a$, so the Frattini criterion~\eqref{eq:frattini-generation} gives $G=\gen a$.
+
+For the order bound, write $V=B/B'$ additively, let $T_g(bB')=gbg^{-1}B'$ be conjugation by $g$ on $V$, and put $L=T_a$, with $I$ the identity operator. Since $a^h\in B$, the standard commutator identity gives the following equality in $V$:
+\[
+ (I+L+\cdots+L^{h-1})[g,a]=[g,a^h]=(T_g-I)(a^hB').
+\]
+Modulo $\sum_{g\in G}(T_g-I)V$, this says $h[g,a]=0$. Hence $hV\subseteq\sum_g(T_g-I)V$. For $b\in B\cap\gamma_j(G)$, the element $(T_g-I)(bB')$ is represented by $[g,b]\in B\cap\gamma_{j+1}(G)$. Since $B\le\gamma_2(G)$, every product of $c-1$ conjugation differences vanishes on $V$. Iterating the inclusion gives $h^{c-1}V=0$ when $c\ge2$; when $c=1$, $B=1$. Lemma~\ref{lem:coordinates} now bounds $|B|$, and hence $|K|$, by a fixed power of $h$.
+\end{proof}
+
+A \emph{full round} starts in layer zero and uses one label from each layer. A cyclic layer digraph is strongly connected exactly when its full-round products generate its group: walks returning to layer zero concatenate full rounds, and inverses in a finite group are positive powers. Fixed prefixes and suffixes then connect all layers.
+
+\begin{construction}[The cyclic lift]\label{con:cycliclift}
+Use the notation of Theorem~\ref{thm:directed-lifting}. Fix the simple directed cycle in $\Cay(G/K,\{sK:s\in S\})$ to be lifted, and let $\ell$ be its length. Translate this cycle to start at the identity coset. For each successive arc, choose a label $s_i\in S$ whose image in $G/K$ gives that arc. Follow the word $s_0\cdots s_{\ell-1}$ from $1\in G$, and write its successive prefix products as
+\begin{equation}\label{eq:quotientcycle}
+ g_0=1,\qquad g_{i+1}=g_is_i,\qquad g_\ell=t\in K,
+ \qquad tB=a^\nu B.
+\end{equation}
+Here $\ell\ge2$, the cosets $g_iK$ for $0\le i<\ell$ are distinct, $\nu\in\Z/h\Z$, and $\delta=\ell/|G/K|$. Choose integers $l_i$ such that
+\begin{equation}\label{eq:runconditions}
+ D\le l_i\le h-2D-2,\qquad
+ \sum_{i=0}^{\ell-1}(l_i+D)+\nu\equiv0\pmod h.
+\end{equation}
+The construction applies to any such choice. We choose the lengths when applying it: for length alone in Theorem~\ref{thm:directed-lifting}, and with additional separation in Lemma~\ref{lem:return-lifting}.
+
+An \emph{$a$-run} is a sequence of edges labelled $a$. At quotient position $i$, take a fixed $a$-run of length $l_i$, followed by a \emph{connector}: one of the words
+\begin{equation}\label{eq:words}
+ a^j s_i a^{D-j},\qquad 0\le j\le D.
+\end{equation}
+Use $j=D$ as the baseline choice. The congruence in~\eqref{eq:runconditions} makes the baseline word close modulo $B$. Retain all vertices of the fixed runs and the endpoints of the words~\eqref{eq:words}, and replace each whole word by one auxiliary edge. There are
+\begin{equation}\label{eq:auxlayers}
+ T=\sum_{i=0}^{\ell-1}(l_i+1)
+\end{equation}
+retained positions, indexed cyclically by $j\in\Z/T\Z$. For $0\le j<T$, let $r_j$ be the actual baseline prefix at position $j$, starting with $r_0=1$. Let $v\in B$ be the product of the complete baseline word. Vertices above position $j$ have the form $br_j$ for $b\in B$. Set $r_T=r_0=1$ when defining the closing edge. A word $w$ to the next position then has coordinate label $r_jwr_{j+1}^{-1}\in B$.
+
+All baseline coordinate labels are one except the last, which is $v$. Write $\Lambda_j\subseteq B$ for the set of coordinate labels available at position $j$, and let $\beta_j\in\Lambda_j$ be its baseline label. Replacing it by a label $\mu$ changes the full-round product to $\mu\beta_j^{-1}v$. Thus, if $C\le B$ is generated by all full-round products,
+\begin{equation}\label{eq:Cgeneration}
+ C=\gen{v,\ \mu\beta_j^{-1}:0\le j<T,\ \mu\in\Lambda_j}.
+\end{equation}
+Each baseline label $\beta_j$ is either $1$ or $v$, so it belongs to $C$. For every $\mu\in\Lambda_j$,~\eqref{eq:Cgeneration} then gives $\mu=(\mu\beta_j^{-1})\beta_j\in C$. We can therefore define a digraph $Y$ with vertex set $C\times\Z/T\Z$ and arcs $(b,j)\to(b\mu,j+1)$ for $\mu\in\Lambda_j$. Its full-round products generate $C$, so $Y$ is strongly connected. The digraph $Y$, its group $C$ and its number of layers $T$ are determined by the chosen quotient cycle, its labels and the run lengths.
+\end{construction}
+
+\subsection{Bounding the subgroup reached by the lift}\label{subsec:passi}\label{subsec:determination}
+The construction reaches a subgroup $C\le B$. To bound $[B:C]$, we need an integer interpolation estimate for maps whose sufficiently high differences vanish. The following quotient records these differences.
+
+For a subset of an additive abelian group, $\spanZ{\cdot}$ denotes the subgroup of all integer linear combinations of its elements. The integral group ring $\Z[G]$ consists of formal sums $\sum_{g\in G}n_g g$, with $n_g\in\Z$; addition is coefficientwise and multiplication extends the group law distributively. The \emph{augmentation map} takes such a sum to its total coefficient $\sum_g n_g$. The elements mapped to zero form the \emph{augmentation ideal}:
+\[
+ I_G=\Bigl\{\sum_g n_g g:\sum_g n_g=0\Bigr\}
+     =\spanZ{g-1:g\in G}.
+\]
+An ideal is an additive subgroup closed under multiplication on either side by arbitrary ring elements. For $D\ge1$, the power $I_G^D$ is the additive span of all products $(g_1-1)\cdots(g_D-1)$. Thus
+\[
+ A_D(G)=\Z[G]/I_G^D
+\]
+is obtained by setting every such product equal to zero. For example, in $A_2(G)$ the relation $(g-1)(h-1)=0$ reads $\overline{gh}=\bar g+\bar h-\bar1$. Here bars denote images in $A_D(G)$.
+
+A map $f$ from $G$ to an additive abelian group extends additively to $\Z[G]$. If this extension vanishes on $I_G^D$, it factors through $A_D(G)$. Such a map is called a polynomial map of degree at most $D-1$~\cite[Chapter V, \S1, Definition 1.1 and Example 1.3(ii)]{PassiBook}. The subgroup of $A_D(G)$ whose elements have total coefficient zero is the Passi polynomial group $P_{D-1}(G)=I_G/I_G^D$~\cite{Passi1968}. For nonempty $E\subseteq G$ and $e_0\in E$, put
+\[
+ H_D(E)=\spanZ{e-e_0+I_G^D:e\in E}.
+\]
+Since $A_D(G)=\Z\bar e_0\oplus P_{D-1}(G)$ and $\spanZ{\bar e:e\in E}=\Z\bar e_0\oplus H_D(E)$, the two formulations in the following theorem are equivalent.
+
+\begin{theorem}[Integer generation from a dense set]\label{lem:density}
+Fix positive integers $r,c,D$. There are constants $C_0,A_0\ge1$ such that every nonempty set $E$ of density $\delta=|E|/|G|$ in a finite nilpotent group $G$ with at most $r$ generators and class at most $c$ admits an integer
+\begin{equation}\label{eq:multiplier}
+ 1\le M\le C_0\delta^{-A_0},\qquad
+ MA_D(G)\subseteq\spanZ{\bar e:e\in E}.
+\end{equation}
+Equivalently, $MP_{D-1}(G)\subseteq H_D(E)$, and
+\begin{equation}\label{eq:passi-index}
+ [P_{D-1}(G):H_D(E)]\le M^{\sum_{j=1}^{D-1}r^j}.
+\end{equation}
+\end{theorem}
+The binomial expansion below is a standard way to express maps whose repeated differences vanish; see~\cite[Theorem 2.7]{Schauz}. The translated grid and integer evaluation determinant supply the density-dependent integral multiplier.
+\begin{proof}
+The cases $G=1$ or $D=1$ have $M=1$. Otherwise take ordered coordinates $u_1,\ldots,u_{R'}$ from Lemma~\ref{lem:coordinates}, where $R'\le\sum_{j=1}^c r^j$. In $A_D(G)$, the binomial identity gives
+\[
+ \bar u^{\,t}=(1+(\bar u-1))^t
+ =\sum_{j=0}^{D-1}\binom tj(\bar u-1)^j
+ \qquad(u\in G,\ t\in\Z),
+\]
+with negative powers obtained from the finite geometric series for $\bar u^{-1}$. Multiplying in the prescribed order and discarding terms of total degree at least $D$ gives, for every $z\in G$ and $t\in\Z^{R'}$,
+\begin{equation}\label{eq:polynomialorbit}
+ \overline{zu_1^{t_1}\cdots u_{R'}^{t_{R'}}}
+ =\sum_{|\alpha|<D}\left(\prod_i\binom{t_i}{\alpha_i}\right)
+ \bar z(\bar u_1-1)^{\alpha_1}\cdots(\bar u_{R'}-1)^{\alpha_{R'}}.
+\end{equation}
+Here the $\alpha_i$ are nonnegative integers and $|\alpha|=\sum_i\alpha_i$.
+
+Set $L=\lfloor(D-1)/\delta\rfloor+1$. Averaging over $z\in G$ gives a set
+\[
+ F=\{t\in\{0,\ldots,L-1\}^{R'}:zu_1^{t_1}\cdots u_{R'}^{t_{R'}}\in E\}
+\]
+of size at least $\delta L^{R'}>(D-1)L^{R'-1}$. By the Schwartz--Zippel bound~\cite[Lemma 1 and Corollary 1]{Schwartz}, a nonzero rational polynomial of total degree less than $D$ has at most $(D-1)L^{R'-1}$ zeros on this grid. Thus evaluation on $F$ is injective for these polynomials.
+
+Select $N=\binom{R'+D-1}{R'}$ points $t^{(1)},\ldots,t^{(N)}$ of $F$ for which the integer matrix $\mathcal M$, with entries $\mathcal M_{j,\alpha}=\prod_i\binom{t_i^{(j)}}{\alpha_i}$ indexed by $|\alpha|<D$, is nonsingular. Such points exist by injectivity of evaluation. Its determinant has nonzero integer absolute value
+\[
+ M\le N!L^{(D-1)N}\le C_0\delta^{-A_0}.
+\]
+At these points, the left sides of~\eqref{eq:polynomialorbit} lie in $\spanZ{\bar e:e\in E}$. Write $\operatorname{adj}(\mathcal M)$ for the transpose of its matrix of signed minors and $I$ for the identity matrix. The identity $\operatorname{adj}(\mathcal M)\mathcal M=(\det\mathcal M)I$ puts $M$ times every coefficient on the right in that span. This is an identity with integer coefficients, so it applies even when nonzero elements of $A_D(G)$ have finite additive order. Since the ordered products cover $G$,~\eqref{eq:polynomialorbit} yields~\eqref{eq:multiplier}.
+
+Finally, $P_{D-1}(G)$ is generated additively by monomials of lengths $1,\ldots,D-1$ in $g_1-1,\ldots,g_r-1$, where the $g_i$ generate $G$: expand inverses as truncated geometric series. The quotient by $H_D(E)$ thus has at most $\sum_{j=1}^{D-1}r^j$ generators and is killed by $M$, proving~\eqref{eq:passi-index}.
+\end{proof}
+
+The use of commutators to compare the products of labels along different walks goes back to the methods of Maru\v{s}i\v{c}~\cite{Marusic} and Durnberger~\cite{Durnberger}; see~\cite[Lemma 2.10 and Section 3]{MorrisPQ}. The next proof uses forward words and bounds the subgroup index even when $B$ is noncyclic and the quotient cycle is not spanning.
+
+\begin{lemma}[The index of the auxiliary group]\label{lem:returnindex}
+In Construction~\ref{con:cycliclift}, let $C\le B$ be the subgroup defined by~\eqref{eq:Cgeneration}, and let $\delta=\ell/|G/K|$ be the quotient-cycle density. There are constants $J_0,\kappa\ge1$, depending only on $r,c,D$, such that
+\begin{equation}\label{eq:densityindex}
+ [B:C]\le J_0\delta^{-\kappa}.
+\end{equation}
+If the quotient-cycle vertices generate $A_D(G/K)$ additively, then $C=B$.
+\end{lemma}
+\begin{proof}
+Let $E=\{g_iK:0\le i<\ell\}$ and choose $M$ from Theorem~\ref{lem:density}, with $M=1$ in the spanning case. Write $V=B/B'$ additively and write $\overline C$ for the image of $C$ in $V$. Let $T_g(bB')=gbg^{-1}B'$ denote conjugation on $V$, put $L=T_a$, with $I$ the identity operator, and set $n_i=[g_i,a]B'$ for $0\le i\le\ell$. Since $gag^{-1}\in Ba$, each $T_g$ commutes with $L$. Also $(L-I)^D=0$, because each conjugation difference raises commutator weight.
+
+Consecutive connector words $w_j=a^js_i a^{D-j}$ satisfy
+\begin{equation}\label{eq:reordering}
+ w_{j+1}w_j^{-1}=a^j[a,s_i]a^{-j}
+ \qquad(0\le j<D).
+\end{equation}
+Their common baseline prefix lies in $Kg_i$, so conjugation by that prefix acts on $V$ as $L^{m_i}T_{g_i}$ for some integer $m_i$. The corresponding auxiliary labels lie in $C$. Their differences therefore put
+\[
+ L^{m_i+j}(n_i-n_{i+1})\in\overline C\qquad(0\le j<D),
+\]
+where $T_{g_i}([a,s_i]B')=n_i-n_{i+1}$. Since $(L-I)^D=0$, these $D$ consecutive iterates span the whole $L$-orbit: expanding $(L-I)^D$ gives a recurrence with leading coefficient one and constant coefficient $\pm1$, which can be solved in either direction. Consequently
+\[
+ W:=\spanZ{L^k(n_i-n_{i+1}):0\le i<\ell,\ k\in\Z}
+ \subseteq\overline C.
+\]
+The group $W$ is $L$-invariant by definition, and $n_0=0$ gives $n_i\in W$ for every $i$ by telescoping.
+
+Now put $A=V/(I-L)V$. The map $f(g)$ given by the image of $[g,a]$ in $A$ satisfies
+\begin{equation}\label{eq:commutator-cocycle}
+ f(gh)=f(g)+T_gf(h).
+\end{equation}
+This identity says that $f$ is a $1$-cocycle for the conjugation action~\cite[Chapter IV]{Brown}; only the displayed identity is used below. Both the action and $f$ factor through $G/K$: $K$ acts trivially on $A$, $f(a)=0$, and $f(b)=(I-L)b=0$ for $b\in B$. For $x\in G/K$, write $T_x$ for the induced action on $A$. The additive extension $\widetilde f:\Z[G/K]\to A$ satisfies, for every $x_1,\ldots,x_D\in G/K$,
+\begin{equation}\label{eq:cocycle-differences}
+ \widetilde f((x_1-1)\cdots(x_D-1))
+ =(T_{x_1}-I)\cdots(T_{x_{D-1}}-I)f(x_D)=0,
+\end{equation}
+again because each difference raises commutator weight. Thus it induces an additive map $A_D(G/K)\to A$. It is surjective because the elements $[g,a]$ generate $B$, so their images generate $A$ additively. Since $f(E)$ lies in the image of $W$, applying this map to~\eqref{eq:multiplier} gives
+\[
+ MV\subseteq W+(I-L)V.
+\]
+On $U=V/W$ this reads $MU\subseteq(I-L)U$, so iteration gives $M^DU=0$. Hence $M^DV\subseteq W\subseteq\overline C$.
+
+Finally, put $m=M^D$. Standard commutator multilinearity~\cite[Section 5.2]{Robinson} gives
+\[
+ [B:C]\le m^{\sum_{j=1}^{d}jR^j},
+ \qquad R=\sum_{j=1}^c r^j,\quad d=\lfloor c/2\rfloor.
+\]
+To justify this without assuming that $C$ is normal, choose generators $b_1,\ldots,b_R$ of $B$, padding with identities if necessary. Since $mV\subseteq\overline C$, choose $c_i\in C$ with $c_iB'=b_i^mB'$. A weight-$j$ commutator in the $c_i$ agrees, modulo $\gamma_{j+1}(B)$, with the $m^j$th power of the corresponding commutator in the $b_i$. Consequently,
+\[
+ [\gamma_j(B):(C\cap\gamma_j(B))\gamma_{j+1}(B)]
+ \le m^{jR^j}.
+\]
+The index formula for the chain $C\gamma_j(B)$ gives
+\[
+ [B:C]=\prod_{j=1}^{d}
+ [\gamma_j(B):(C\cap\gamma_j(B))\gamma_{j+1}(B)].
+\]
+Multiplying the bounds and using the bound on $M$ proves~\eqref{eq:densityindex}. If $M=1$, it gives $C=B$.
+\end{proof}
+
+\subsection{Expansion and the proof of the lifting theorem}
+We now check simplicity and preserve the spanning property needed for the long quotient chains in Section~\ref{sec:nilpotent}. For nonempty $E\subseteq G$, this property is
+\begin{equation}\label{eq:determining}
+ \spanZ{\bar e:e\in E}=A_D(G).
+\end{equation}
+When it holds for the quotient cycle, Lemma~\ref{lem:returnindex} gives $C=B$, avoiding the loss in density. When $D=2$, we have $P_1(G)\cong G/G'$. Thus, for nilpotent $G$ and any fixed $e_0\in E$, condition~\eqref{eq:determining} reduces to $\gen{ee_0^{-1}:e\in E}=G$, by the Frattini criterion~\eqref{eq:frattini-generation}.
+
+Translations preserve~\eqref{eq:determining}, since multiplication by a group element is an additive automorphism of $A_D(G)$. The images of any $D$ consecutive powers of $a$ generate $A_D(\gen a)$ additively: $(\bar a-1)^D=0$ is a recurrence with leading coefficient one and constant coefficient $\pm1$. The following fibre argument combines these observations.
+
+\begin{lemma}[Spanning through fibres]\label{lem:fibre-spanning}
+Let $G$ be finite, $K\lhd G$, $D\ge1$, and $E\subseteq G$ nonempty. Suppose the image of $E$ generates $A_D(G/K)$ additively and, for every coset $Kg$ meeting $E$, the images of $(E\cap Kg)g^{-1}$ generate $A_D(K)$ additively. Then the images of $E$ generate $A_D(G)$ additively.
+\end{lemma}
+\begin{proof}
+In $A=A_D(G)$, let $W=\spanZ{\bar e:e\in E}$. The hypothesis inside each coset gives $\spanZ{\overline{kg}:k\in K}\subseteq W$ whenever $Kg$ meets $E$. Thus $W$ is exactly the sum of these full coset spans and is invariant under left multiplication by $K$.
+
+Write $I_KA$ for the additive subgroup generated by $(\bar k-\bar1)u$ with $k\in K$ and $u\in A$. More generally, $I_K^jA$ is generated by products of $j$ such differences applied to elements of $A$. Since $K$ is normal, the natural map $\Z[G]\to\Z[G/K]$ has kernel additively generated by the elements $(k-1)g$, and maps $I_G^D$ onto $I_{G/K}^D$. Hence $A/I_KA\cong A_D(G/K)$, and quotient spanning gives $A=W+I_KA$.
+
+The $K$-invariance of $W$ gives $I_KW\subseteq W$. Substituting the identity for $A$ repeatedly yields $A=W+I_K^jA$ for every $j\ge1$. Finally, $I_K^DA=0$ by the definition of $A_D(G)$, so $A=W$.
+\end{proof}
+
+\begin{lemma}[Expanding a layer cycle]\label{lem:local}
+Let $Y$ be the auxiliary digraph on $C\times\Z/T\Z$ in Construction~\ref{con:cycliclift}, and fix a simple directed cycle in $Y$. Identify each of its vertices $(b,j)$ with $br_j\in G$. For each edge, choose one of the words defining that edge in the construction and follow this word from the corresponding vertex of $G$. Replacing the edges in this way gives a simple directed cycle in $\Cay(G,S)$ of at least the same length. Whenever both $x$ and $xa$ lie on the expanded cycle, the arc $x\to xa$ belongs to it.
+
+If $C=B$, the quotient-cycle vertices generate $A_D(G/K)$ additively, and the auxiliary cycle coordinates generate $A_D(B)$ additively in every layer, then the tails of the expanded $a$-edges generate $A_D(G)$ additively.
+\end{lemma}
+\begin{proof}
+Modulo $B$, a vertex in quotient position $i$ has coordinate $a^u g_iB$, with $u\in\Z/h\Z$. An $a$-edge increases $u$ by one. An $s_i$-edge advances to the next quotient position, adding $\nu$ only on the final transition. Thus the congruence in~\eqref{eq:runconditions} closes the baseline modulo $B$.
+
+Normalize the cyclic coordinate in each quotient position so that its fixed run starts at zero. The fixed run occupies $[0,l_i]$, the outgoing replacement words use the additional coordinates $[l_i+1,l_i+D]$, and the incoming words use coordinates in $[h-D,h-1]$. These intervals are disjoint, and $l_i\le h-2D-2$ leaves at least one unused coordinate between the outgoing and incoming regions. Also $l_i\ge D$ gives $D$ consecutive tails of fixed $a$-edges.
+
+Choose one defining word for each edge of a simple auxiliary cycle, and expand these edges. Count each replacement word with its initial vertex but without its terminal vertex, which is counted as the initial vertex of the next word. In an outgoing region a vertex is $za^j$, where $z$ is the auxiliary-edge start and $j$ is determined by the coordinate modulo $B$; equality therefore forces the same start and hence the same auxiliary edge. In an incoming region a vertex is $wa^{-j}$, where $w$ is the auxiliary-edge end and $j$ is again determined by the coordinate modulo $B$, so equality similarly forces the same edge. The retained vertices are distinct, and the fixed runs and regions at different quotient positions are separated modulo $B$. The same intervals apply at the final transition because the offset $\nu$ is included in~\eqref{eq:runconditions}. Thus the expanded cycle is simple.
+
+These observations also prove the assertion about $a$-edges. Along a fixed run the edge is forced. In an outgoing region, if $za^j$ and $z'a^{j+1}$ are related by an $a$-edge, then $z=z'$, so the unique chosen replacement from that start uses the edge. The same argument applies in an incoming region using its endpoint. These arguments also cover the step leaving the last retained position and the step entering the first retained position. The unused coordinate prevents a jump between those two regions, and an $a$-edge never changes quotient position.
+
+For spanning, let $C=B$. At each fixed $a$-edge tail position, the coordinates of the auxiliary cycle span the corresponding $B$-fibre. Above each $g_iK$, the fixed run supplies $D$ consecutive powers of $a$ modulo $B$, whose images generate $A_D(K/B)$ additively. Lemma~\ref{lem:fibre-spanning}, first for $B\lhd K$ and then for $K\lhd G$, shows that the fixed $a$-edge tails generate $A_D(G)$ additively.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:directed-lifting}]
+Fix the quotient cycle and choose its labels as in Construction~\ref{con:cycliclift}. We first choose the run lengths. Start with $u_i=h-D-2$ and decrease their sum by the residue in $\{0,\ldots,h-1\}$ needed for $\sum_i u_i+\nu\equiv0\pmod h$, keeping each $u_i\ge2D$. This is possible since $h>8D+4$, $\ell\ge2$, and the available decrease is $\ell(h-3D-2)\ge h-1$. Then $l_i=u_i-D$ satisfies~\eqref{eq:runconditions}, and
+\begin{equation}\label{eq:Tbound}
+ T=\sum_i(l_i+1)\ge\ell(h-2D-1)-(h-1)>\ell h/4.
+\end{equation}
+Apply Construction~\ref{con:cycliclift} with these run lengths. It gives a strongly connected auxiliary digraph $Y$ on $C\times\Z/T\Z$ for a subgroup $C\le B$. The hypothesis of the theorem, applied with $U=C$ and $s=T$, gives a simple directed cycle in $Y$ of length at least $bT|C|^{1-\eta}$. Lemma~\ref{lem:local} expands this cycle to a simple cycle in $\Cay(G,S)$ without decreasing its length and gives the required $a$-edge property. Write $L$ for the length of this expanded cycle. Then
+\begin{equation}\label{eq:positionlength}
+ L\ge bT|C|^{1-\eta}
+ \ge\frac b{J_0}\,T|B|^{1-\eta}\delta^\kappa.
+\end{equation}
+Here Lemma~\ref{lem:returnindex} bounds the index, and $(J_0\delta^{-\kappa})^{-(1-\eta)}\ge J_0^{-1}\delta^\kappa$. Using $|G|=|G/K|h|B|$ and~\eqref{eq:Tbound} proves~\eqref{eq:densityrecurrence} with $A=4J_0$.
+\end{proof}
+
+\subsection{Replacing edges by walks}
+The following elementary test explains the edge condition in Theorem~\ref{thm:directed-lifting}. We use it in Sections~\ref{sec:nilpotent} and~\ref{sec:free} to replace cycle edges by walks without creating intersections.
+\begin{lemma}[Expanding edges into walks]\label{lem:walk-expansion}
+Let $X$ be a digraph, let $C$ be a simple directed cycle with $V(C)\subseteq V(X)$, and let $\tau:V(C)\to V(X)$ be a map. Represent each arc $x\to y$ of $C$ by a nontrivial simple directed path $W_{xy}$ in $X$ from $x$ to $y$. Suppose that, after deleting the terminal vertex from each path, an intersection between $W_{xy}$ and $W_{x'y'}$ implies at least one of the following equalities:
+\[
+ x=x',\qquad y=y',\qquad y'=\tau(x),\qquad y=\tau(x').
+\]
+If $C$ contains the arc $x\to\tau(x)$ for every $x\in V(C)$ with $\tau(x)\in V(C)$, replacing the arcs of $C$ by their paths gives a simple directed cycle in $X$. Its length is the sum of the path lengths.
+\end{lemma}
+\begin{proof}
+Equal starts or equal ends force the same cycle edge. If $y'=\tau(x)$, the cycle contains $x\to y'$, and uniqueness of its outgoing edge at $x$ and incoming edge at $y'$ again forces the two edges to coincide. The other mixed equality is symmetric. Distinct representing paths therefore have disjoint vertex sets after their terminal vertices are deleted, proving the claim.
+\end{proof}
+
+
+\Needspace{14\baselineskip}
+\section{Long cycles in nilpotent Cayley digraphs and cyclic layers}\label{sec:nilpotent}
+We prove the Cayley and cyclic layer bounds together by induction on nilpotency class.
+
+\begin{theorem}\label{thm:nilpotent}
+Fix positive integers $r,c$. For every $\eps>0$ there is $b>0$ such that the following hold for every finite nilpotent group $G$ with at most $r$ generators and class at most $c$.
+\begin{enumerate}
+\item If $G\ne1$ and $S$ generates $G$, then $\Cay(G,S)$ has a simple directed cycle of length at least $b|G|^{1-\eps}$.
+\item Let $s\ge1$, and let $S_i\subseteq G$ be nonempty for each $i\in\Z/s\Z$. If the digraph on $G\times\Z/s\Z$ with arcs $(x,i)\to(xa,i+1)$ for $a\in S_i$ is strongly connected, then it has a simple directed cycle of length at least $bs|G|^{1-\eps}$.
+\end{enumerate}
+The constant is independent of the available label sets and of $s$. When $|G|=s=1$, the loop is allowed in \textup{(ii)}.
+\end{theorem}
+
+Morris asks whether every connected Cayley digraph on a finite nilpotent group has a Hamiltonian path~\cite[Remarks 1.3(1)]{MorrisNoPath}. Theorem~\ref{thm:nilpotent} does not settle this question; see~\cite{WittePrimePower,Morris} for Hamiltonian results under additional hypotheses.
+
+The normal-closure induction follows~\cite[Section 6]{LiMethuku}, using the directed lift of Section~\ref{sec:local}. Lower-class layer bounds give the current-class Cayley bound, which then gives the current-class layer bound. To iterate the lift, we prove the following strengthened assertion for each fixed $D\ge c+1$: if every prime divisor of $|G|$ exceeds $P=8D+4$, the cycle vertices in (i), and the coordinates in every layer in (ii), can be chosen to generate $A_D(G)$ additively. This is precisely the invariant in Lemmas~\ref{lem:returnindex} and~\ref{lem:local}.
+
+\subsection{The abelian starting point}
+We use the Hamiltonian-path theorem for abelian Cayley digraphs~\cite[Lemma 2.1]{Morris}.
+\begin{lemma}\label{lem:abelian}
+Let $G\ne1$ be finite abelian, and let $D\ge1$ be an integer.
+\begin{enumerate}
+\item Every connected Cayley digraph on $G$ has a directed cycle of length at least $|G|/2+1$.
+\item Let $s\ge1$, and let $S_i\subseteq G$ be nonempty for each $i\in\Z/s\Z$. If the digraph on $G\times\Z/s\Z$ with arcs $(x,i)\to(xa,i+1)$ for $a\in S_i$ is strongly connected, then it has a directed cycle containing at least $|G|/4$ vertices in each layer.
+\end{enumerate}
+If every prime divisor of $|G|$ exceeds $8D+4$, the cycle vertices in (i), and the coordinates in each layer in (ii), can be chosen to generate $A_D(G)$ additively. Under this same assumption, the cycle in (i) can moreover be ordered so that deleting its final vertex preserves this additive generation property.
+\end{lemma}
+\begin{proof}
+For (i), choose a generating subset of the available labels such that deleting any label leaves a set that no longer generates $G$. Choose $a$ in this subset, and let $H$ be generated by the remaining labels. Then $G/H=\gen{aH}$ has order $m\ge2$. By~\cite[Lemma 2.1]{Morris}, the Cayley digraph on $H$ with those labels has a Hamiltonian path; when $H=1$, use the one-vertex path.
+
+Translate this path successively into $H,aH,\ldots,a^{m-2}H$, starting each copy at the $a$-successor of the previous endpoint. In the last coset, follow the translated Hamiltonian path only until reaching the unique vertex whose $a$-edge returns to the starting vertex. The resulting cycle has at least $(m-1)|H|+1\ge |G|/2+1$ vertices. In its natural order, all vertices in the first $m-1$ cosets occur before its final vertex. If every prime divisor of $|G|$ exceeds $8D+4$, then $m-1\ge D$. The first $D$ complete cosets generate $A_D(G)$ additively by Lemma~\ref{lem:fibre-spanning}, since their images are consecutive powers of $aH$. This remains true after deleting the final vertex. This proves (i).
+
+For (ii), choose a baseline full round $a_0\cdots a_{s-1}=t\ne1$, which exists since the round products generate $G$. Put $k=\ord(t)\ge2$ and $p_i=a_0\cdots a_{i-1}$. Following only baseline labels partitions the vertices into cycles of length $sk$, each with $k$ vertices in every layer. Using the coordinate $xp_i^{-1}$ for a vertex $(x,i)$, these cycles are indexed by $A=G/\gen t$. An alternative label $b\in S_i$ changes the index by $ba_i^{-1}\gen t$. These changes generate $A$, because together with $t$ their lifts generate all full-round products.
+
+If $A=1$, a baseline cycle is Hamiltonian and has all coordinates in each layer. Otherwise apply (i) to the Cayley digraph on $A$ with labels $ba_i^{-1}\gen t$ for $i\in\Z/s\Z$ and $b\in S_i$. Choose the resulting cycle, of length $\ell\ge |A|/2+1$, in the order used in the proof of (i). For each of its edges, choose a layer $i$ and an alternative label $b\in S_i$ that give its label $ba_i^{-1}\gen t$. Start in the layer immediately after the source layer of the final quotient edge. In each of the first $\ell-1$ baseline cycles, follow baseline edges to the last possible departure in the prescribed layer before returning to the entry vertex, then take the prescribed alternative edge. In the final baseline cycle, stop at the unique preimage of the initial vertex under the closing alternative edge.
+
+Different segments lie in different baseline cycles, and each follows at most one traversal of its cycle. Hence the result is simple. Each of the first $\ell-1$ segments contains at least $k-1$ vertices in every layer, giving
+\[
+ (\ell-1)(k-1)\ge\frac{|A|}{2}\frac{k}{2}=\frac{|G|}{4}
+\]
+vertices per layer.
+
+For spanning, $k-1\ge D$. In every layer, each of the first $\ell-1$ segments contains $D$ consecutive powers of $t$ in its $\gen t$-fibre. The fibre coordinates generate $A_D(\gen t)$ additively, and their images in $A$ generate $A_D(A)$ additively by (i), even after deleting the final quotient vertex. Apply Lemma~\ref{lem:fibre-spanning} in each layer.
+\end{proof}
+
+\subsection{The Frattini quotient chain}\label{subsec:frattini}
+A Sylow $p$-subgroup of a finite group has order equal to the largest power of $p$ dividing the group order. A finite nilpotent group $G$ is the direct product of its Sylow subgroups, so each element has a unique component in each of them. Write $G_p$ for its Sylow $p$-subgroup, $G_p^p$ for the subgroup generated by the $p$th powers of its elements, and $d(G_p)$ for its minimum number of generators. The Burnside basis theorem gives $\Phi(G_p)=G_p'G_p^p$ and $d(G_p)=\dim_{\F_p}(G_p/\Phi(G_p))$, where $\F_p$ is the field with $p$ elements and the quotient is viewed as a vector space over $\F_p$~\cite[Theorem 5.3.2]{Robinson}. This bounds the number of quotient steps assigned to each prime, although the total number of steps may be unbounded.
+
+\begin{lemma}[Choosing the quotient chain]\label{lem:primechain}
+Let $S$ generate a nontrivial finite nilpotent group $G$ with at most $r$ generators. There is a chain $G_0=G$, $G_{i+1}=G_i/K_i$ $(0\le i<t)$, ending in a cyclic group generated by an available label, such that $K_i$ is the normal closure of an available label and $|K_i|$ is divisible by the smallest prime $p_i\mid |G_i|$. Each prime is selected at most $r$ times.
+\end{lemma}
+\begin{proof}
+At each step use the images of $S$ as the available labels in the current quotient, which we temporarily denote by $G$. Choose the smallest remaining prime $p$ and an available label $a$ whose $p$-component has nonzero image in $G_p/\Phi(G_p)$. Such a label exists because the available labels generate the current quotient. Let $K$ be its normal closure. If $K=G$, stop: Lemma~\ref{lem:normalclosure} gives $G=\gen a$. Otherwise quotient by $K$.
+
+Conjugation is trivial on the Frattini quotient, so the images of the conjugates of $a$ all have the same $p$-component there. Also, the $p$-component of $a$ is a power of $a$: choose an exponent congruent to one modulo its order and to zero modulo the orders of all other prime components. It therefore belongs to $K\cap G_p$. Thus the image of $K\cap G_p$ in $G_p/\Phi(G_p)$ is precisely the one-dimensional subspace spanned by this nonzero component. The standard identity $\Phi(G_p/L)=\Phi(G_p)L/L$ for $L\lhd G_p$ shows that this step lowers the selected dimension by one. The minimum number of generators of every other Sylow subgroup does not increase on taking a quotient. Each selected prime therefore divides $|K|$ and can be selected at most $r$ times. The strictly decreasing group orders ensure termination.
+\end{proof}
+
+Let $\pi(P)$ be the number of primes at most $P$. In particular, after at most
+\begin{equation}\label{eq:Tzero}
+ T_0=r\pi(P)
+\end{equation}
+steps, the chain has reached its terminal cyclic group or removed all primes at most $P$.
+
+\subsection{Proof of the nilpotent cycle theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:nilpotent}]
+Fix $D\ge c+1$ and prove the strengthened assertion by induction on the nilpotency class, for every generator bound and $0<\eps<1$. The trivial group has the required layer cycle, and Lemma~\ref{lem:abelian} handles class one. Suppose $c\ge2$. Put $R=\sum_{j=1}^c r^j$ and $d=\lfloor c/2\rfloor$. By Lemmas~\ref{lem:coordinates} and~\ref{lem:normalclosure}, every subgroup of $[H,a]$, for a quotient $H$ of $G$, has at most $R$ generators and class at most $d<c$. Induction therefore supplies all lower-class layer inputs, uniformly in $H,a$, with the same $D$ and cutoff $P=8D+4$.
+
+\emph{Cayley digraphs with no small prime divisors.}
+Assume every prime divisor of $|G|$ exceeds $P$, and take the chain of Lemma~\ref{lem:primechain}. Start with the full generator cycle in its terminal cyclic group and reconstruct backwards. Write $\ell_i$ for the length of the chosen cycle in $G_i$, and let $a_i$ be the label whose normal closure is $K_i$. At every step, put $B_i=[G_i,a_i]$ and $h_i=|K_i/B_i|$. Lemma~\ref{lem:normalclosure} gives $h_i\ge2$, and all its prime divisors exceed $P$, so $h_i>P$. At each reconstruction step, start with the chosen cycle in $G_{i+1}=G_i/K_i$. Choose its arc labels and the run lengths as in the proof of~\eqref{eq:Tbound}, then apply Construction~\ref{con:cycliclift} in $G_i$ with distinguished label $a_i$. By Lemma~\ref{lem:returnindex}, the additive spanning property of the quotient cycle makes the group of the resulting auxiliary digraph equal to $B_i$. Use the strengthened lower-class layer bound with error $\eta=\eps/2$ to choose a long cycle in this digraph whose coordinates generate $A_D(B_i)$ additively in every layer. Lemma~\ref{lem:local} expands it to a cycle in $G_i$ and preserves the additive spanning property. The length bound is, for a uniform $0<\alpha\le1$,
+\[
+ \ell_i\ge\alpha\ell_{i+1}|K_i||B_i|^{-\eta}.
+\]
+Choose $P_\eps\ge\max\{P,\alpha^{-1/\eta}\}$. At most $r\pi(P_\eps)$ steps select a prime at most $P_\eps$; at every other step $|K_i|\ge p_i>P_\eps$, so $\alpha\ge|K_i|^{-\eta}$. Since $\ell_t=|G_t|$, $|G_t|\prod_i|K_i|=|G|$, and $B_i\le K_i$, multiplication gives
+\[
+ \ell_0\ge\alpha^{r\pi(P_\eps)}|G|
+       \Bigl(\prod_i|B_i|\Bigr)^{-\eta}
+       \Bigl(\prod_{p_i>P_\eps}|K_i|\Bigr)^{-\eta}
+ \ge\alpha^{r\pi(P_\eps)}|G|^{1-\eps}.
+\]
+This proves the bound while preserving the spanning invariant. The fixed prime cutoff $P$ is independent of $\eps$; the auxiliary threshold $P_\eps$ and the constants in the length bound may depend on $\eps$.
+
+\emph{General Cayley digraphs.}
+Keep just the initial steps that remove primes at most $P$. There are at most $T_0=r\pi(P)$ steps. The remaining group is cyclic with an available generator, or has no small prime divisors, so the preceding case supplies the initial cycle. In a reconstruction step, write $K=\gen aB$ and $h=|K/B|$. If $h\le P$,~\eqref{eq:normalorder} bounds $|K|$ by a constant $K_*$. Repeating the quotient-cycle word until it closes gives a simple lift (as after Lemma~\ref{lem:cyclelift}) and loses at most this constant in density. If $h>P$, apply Theorem~\ref{thm:directed-lifting} to the chosen cycle in the quotient by $K$. The lower-class layer bound supplies its hypothesis, and~\eqref{eq:densityrecurrence} bounds the density of the lifted cycle.
+
+Let $\kappa$ be the exponent in~\eqref{eq:densityindex} and use error $\theta=\eps/(\kappa+1)^{T_0}$ in the initial cycle and the lower-class layer inputs. If a quotient of order $q$ has cycle density at least $c_1q^{-\beta}$, with $\beta\ge\theta$, a large-$h$ lift has density at least
+\[
+ c_2q^{-(\kappa+1)\beta}|B|^{-\theta}
+ \ge c_2(qh|B|)^{-(\kappa+1)\beta}.
+\]
+A small-$h$ lift preserves $\beta$. Thus at most $T_0$ steps increase the exponent error to at most $\eps$, changing the constants only boundedly many times. This proves (i).
+
+\emph{Cyclic layers.}
+Let $S$ be the full-round products; they generate $G$. If every nonidentity $t\in S$ has $|\gen t[G,t]/[G,t]|\le P$,~\eqref{eq:normalorder} bounds every $\ord(t)$ by $K_*$. Then $G/G'$ has exponent dividing the least common multiple $e=\lcm(1,\ldots,K_*)$, so Lemma~\ref{lem:coordinates} bounds $|G|$ by $e^R$. Any simple cycle has length at least $s$, which suffices after adjusting the constant. This case cannot occur for nontrivial $G$ with all prime divisors greater than $P$.
+
+Otherwise choose a baseline round $a_0\cdots a_{s-1}=t$ with $h=|K/B|>P$, where $B=[G,t]$ and $K=\gen tB$. If $K=G$, then $G=\gen t$ and repeating this round is Hamiltonian, with every coordinate in each layer. Suppose $K\ne G$, and put $p_j=a_0\cdots a_{j-1}$. The full-round products
+\[
+ t,\qquad r_{j,a}=p_j a a_{j+1}\cdots a_{s-1}
+ \quad(0\le j<s,\ a\in S_j)
+\]
+generate $G$, since for any available $b_j\in S_j$,
+\[
+ \left(\prod_{j=0}^{s-1}(r_{j,b_j}t^{-1})\right)t
+ =b_0\cdots b_{s-1}.
+\]
+The product on the left is taken in increasing order of $j$; the identity follows by cancellation of the consecutive baseline prefixes. Apply (i), now proved at the current class, to the Cayley digraph on $G/K$ whose labels are the images of $t$ and the $r_{j,a}$, using error $\eps/(\kappa+1)$. Choose the resulting cycle, whose density satisfies $\delta\ge b_1|G/K|^{-\eps/(\kappa+1)}$. Apply Theorem~\ref{thm:directed-lifting} to this cycle, with distinguished label $t$ and available labels $t,r_{j,a}$ in $G$. The lower-class layer bound with error $\eps$ supplies its hypothesis. We obtain a simple cycle in the Cayley digraph on $G$ with these labels, of length at least
+\[
+ b_2\delta^{\kappa+1}|G||B|^{-\eps}
+ \ge b_3|G|^{1-\eps},
+\]
+containing $x\to xt$ whenever both endpoints lie on it. Identify $G$ with layer zero and represent each edge of this Cayley cycle by its chosen round, using the baseline round for label $t$. For an edge $x\to y$, the coordinate in layer $i$ is $xp_i$ before the changed arc and $yt^{-1}p_i$ after it. Thus an intersection between two rounds forces equal starts, equal ends, or $y'=xt$ (or its symmetric counterpart).
+
+After its terminal vertex is deleted, each round visits every layer once. Its two layer-zero endpoints are distinct because it represents an edge of a simple Cayley cycle, so the round is itself a nontrivial simple directed path. Apply Lemma~\ref{lem:walk-expansion} directly to this Cayley cycle with $\tau(x)=xt$. It gives a simple layer cycle of $s$ times the Cayley-cycle length.
+
+When all prime divisors exceed $P$, choose the quotient and lower-class cycles with the spanning invariant. Lemmas~\ref{lem:returnindex} and~\ref{lem:local} give a Cayley cycle whose $t$-edge tails generate $A_D(G)$ additively. In layer $i$, their expanded coordinates are $xp_i$; right translation preserves additive generation. Taking the smaller constant in (i) and (ii) closes the induction.
+\end{proof}
+
+
+\section{From Cayley digraphs to semiregular actions}\label{sec:returns}\label{sec:free}
+We prove Theorem~\ref{thm:free} by induction on the number of orbits. A small normal closure permits contraction; a large cyclic factor permits lifting through the orbit digraph.
+
+\subsection{Reducing the number of orbits}
+The following is the directed form of Babai's contraction step~\cite{BabaiContractions}; see also~\cite[Theorem 7.2]{LiMethuku}.
+
+\begin{lemma}[Reducing the number of orbits]\label{lem:free-reduction}
+Let a finite group $N$ act semiregularly on a strongly connected digraph $X$ with $q$ orbits. Let $W$ be a directed walk from $v$ to $av$, for $a\in N$, whose projection onto the $N$-orbits is a simple directed cycle of length $p\ge2$. If $K$ is a proper normal subgroup of $N$ containing $a$, then there is a strongly connected digraph $Y$ with a semiregular $N/K$-action on $q-p+1$ orbits such that every simple directed cycle of length at least two in $Y$ lifts to one in $X$ without decreasing its length.
+\end{lemma}
+\begin{proof}
+The induced $N/K$-action on $X/K$ is free: $nx=kx$ with $k\in K$ forces $n=k$. Since $a\in K$, the image of $W$ is a directed cycle. Its translates are disjoint: an intersection identifies the position on the projected cycle, and freeness identifies the translate.
+
+Contract these cycles, leaving other vertices as singleton parts. The resulting $Y$ is strongly connected and has $q-p+1$ orbits. An element preserving a contracted cycle fixes its unique vertex above the orbit of $v$, so the action remains free. Lemma~\ref{lem:blocklift} lifts cycles through the contracted parts, and Lemma~\ref{lem:cyclelift} lifts them through the $K$-orbits, without decreasing length.
+\end{proof}
+
+Here $|V(Y)|=(q-p+1)|N/K|\ge |V(X)|/(q|K|)$, so bounded $q$ and $|K|$ cost only a constant factor.
+
+
+\subsection{Lifting through the orbit digraph}
+We apply Construction~\ref{con:cycliclift} with labels obtained from closed directed walks in $X/N$ based at one orbit. Their lifts in $X$ need not be closed. The lemma below uses two directed spanning trees to select the walks. For each cycle in the quotient Cayley digraph, it then chooses run lengths and constructs an auxiliary digraph whose cycles expand to simple cycles in $X$.
+
+\begin{lemma}[Lifting through based closed walks]\label{lem:return-lifting}
+Fix positive integers $r,c,D$ with $D\ge c+1$, and let $J_0,\kappa$ be the constants in Lemma~\ref{lem:returnindex}. Let a finite nilpotent group $N$ with at most $r$ generators and class at most $c$ act semiregularly on a strongly connected digraph $X$ with $q\ge2$ orbits. Let $a\in N$, and let $W_0$ be a directed walk from a vertex $v$ to $av$ whose projection to $X/N$ is a simple cycle of length at least two. Put
+\[
+ B=[N,a],\qquad K=\gen aB,\qquad h=|K/B|,
+\]
+and suppose that $K\ne N$ and $h>8(q+1)(D+1)$.
+
+There is a set $S\subseteq N\setminus K$ such that the Cayley digraph $\Gamma=\Cay(N/K,\{sK:s\in S\})$ is strongly connected. This set can be chosen to have the following additional property.
+
+Fix any simple directed cycle in $\Gamma$, and let $\ell$ be its length and $\delta=\ell/|N/K|$ its density. One can choose its arc labels from $S$ and run lengths $l_0,\ldots,l_{\ell-1}$ satisfying~\eqref{eq:runconditions} so that the construction below has the stated properties.
+
+Apply Construction~\ref{con:cycliclift} to this cycle with $G=N$, available labels $S\cup\{a\}$ and these run lengths. Let $Y$ be the resulting auxiliary digraph. It is strongly connected, has vertex set $C\times\Z/T\Z$ for a subgroup $C\le B$, and satisfies
+\begin{equation}\label{eq:return-lift-bounds}
+ C\le B,\qquad T\ge\ell h/8,\qquad [B:C]\le J_0\delta^{-\kappa}.
+\end{equation}
+Every simple directed cycle in this $Y$ expands to a simple directed cycle in $X$ without decreasing length. To expand it, first replace its edges by their defining words in $\Cay(N,S\cup\{a\})$, then replace the edges of this Cayley cycle by the directed walks in $X$ specified in the proof. The choices of run lengths, and hence $Y$, $C$ and $T$, may depend on the chosen cycle in $\Gamma$.
+\end{lemma}
+\begin{proof}
+\emph{Choosing the walks.}
+Let $Q=X/N$, let $Q_0$ be the labelled projection of $W_0$, and root $Q$ at the orbit $0$ of $v$. Choose orbit representatives, with $v$ at $0$, and write $(x,i)$ for the image of representative $i$ under $x\in N$. Every $N$-orbit of arcs has the form $(x,i)\to(xs,k)$: apply $x^{-1}$ to an arc with tail $(x,i)$, and use freeness to identify its head coordinate. For the walks below, retain all labelled triples $(i,s,k)$, including those with $i=k$. A walk in this labelled orbit diagram is a sequence of consecutive triples. Its underlying loopless digraph is $Q$, but the diagram also records within-orbit arcs and different labels between the same two orbits. The product of the labels along a walk is its \emph{net voltage}, in the terminology of graph coverings~\cite{GrossTucker}.
+
+Choose independently a spanning tree directed away from $0$ (an \emph{out-branching}) containing $Q_0$ minus its last arc, and one directed towards $0$ (an \emph{in-branching}) containing $Q_0$ minus its first arc~\cite[Section 1.7]{BangJensenGutin}. Extend each specified path by adding arcs from the current vertex set to its complement for the out-tree, and in the reverse direction for the in-tree; strong connectivity ensures that this reaches every vertex. Let $P_k$ and $Z_k$ be their paths from $0$ to $k$ and from $k$ to $0$, respectively, with empty paths at $0$.
+
+Choose the representative of orbit $k$ at the endpoint of the lift of $P_k$ from $v$. All outward-tree labels are now $1$. Let $t_k$ be the product along $Z_k$. Then $t_0=1$ and $t_k=a$ for every $k\in V(Q_0)\setminus\{0\}$. For each labelled arc $e=(i,s,k)$, form the walk in the labelled orbit diagram that starts and ends at $0$:
+\begin{equation}\label{eq:returnwalk}
+ R_e=P_i\ ;\ e\ ;\ Z_k.
+\end{equation}
+Its label product is $st_k$, so its lift joins $(x,0)$ to $(xst_k,0)$. These products generate $N$: the outward-tree arc entering $k\ne0$ gives $P_kZ_k$, with product $t_k$, so they generate every arc label $s=(st_k)t_k^{-1}$. Strong connectivity of $X$ then supplies every $x\in N$ as the product of a walk from $(1,0)$ to $(x,0)$.
+
+For a lift from $x$ to $y$ in the root orbit, the coordinate at index $k$ is $x$ on its outward part and $yt_k^{-1}$ on its inward part. Thus two outward occurrences force equal starts, two inward occurrences force equal ends, and a mixed intersection forces
+\begin{equation}\label{eq:collision}
+ y'=xt_k.
+\end{equation}
+
+For each nonidentity coset of $K$ represented by the product of a walk in~\eqref{eq:returnwalk}, choose such a walk $R_e$ of minimum length and put its product in $S$. The images of $S$ generate $N/K$, so the Cayley digraph $\Gamma$ is strongly connected. Continue to represent $a$ by $W_0$.
+
+Each chosen walk lifts to a simple path in $X/K$. Indeed, each tree path visits an orbit at most once, and neither visits the root internally. The root endpoints are distinct modulo $K$, since the chosen product lies outside $K$. Thus any repeated vertex must occur at a nonroot index $k$ once on each tree part. Equation~\eqref{eq:collision} modulo $K$ says that the chosen product lies in $t_kK$. Delete the nonempty segment between these two occurrences. A prefix of the outward path ending at $k$ is $P_k$, and a suffix of the inward path starting at $k$ is $Z_k$, because both come from fixed trees. The remaining walk is therefore $P_kZ_k$, with product $t_k$. This belongs to our permitted family: if $e_k$ is the outward-tree arc entering $k$, then $P_kZ_k=R_{e_k}$. It is strictly shorter and has the same product modulo $K$, contrary to the choice.
+
+Consequently, lifts of one chosen walk from distinct vertices of a single $K$-orbit are disjoint. Their projections to $X/K$ coincide with the same simple path. An intersection must therefore occur at the same position along the two walks. If the label product up to that position is $p$, the intersecting vertices have coordinates $xp$ and $x'p$ in the same orbit. Freeness gives $xp=x'p$, and cancellation gives $x=x'$, contrary to distinct starts.
+
+\smallskip
+\noindent\emph{Choosing the runs.}
+Fix a simple directed cycle in $\Gamma$, and write $\ell$ for its length and $\delta=\ell/|N/K|$ for its density. Translate it to start at the identity coset, and choose labels $s_0,\ldots,s_{\ell-1}\in S$ for its successive arcs. Define the prefix products $g_i$ as in~\eqref{eq:quotientcycle}, with $g_\ell=t\in K$ and $tB=a^\nu B$. We now choose run lengths for this cycle. The cyclic coordinate $u$ above $g_iK$ denotes $a^ug_iB$;~\eqref{eq:collision} becomes a restriction on differences of these coordinates.
+
+Choose residues $v_0,\ldots,v_{\ell-1}$ modulo $h$. Put $\nu_0=\nu$, $\nu_i=0$ for $i\ne0$, and
+\[
+ w_i=v_{i-1}+D+\nu_i\pmod h,\qquad
+ l_i=(v_i-v_{i-1}-D-\nu_i\pmod h)\in\{0,\ldots,h-1\},
+\]
+with indices on the $v_i$ read cyclically. In expressions involving the prefixes $g_i$, we retain $g_\ell=t$, rather than replacing it by $g_0=1$; the residue $\nu$ accounts for this closing transition. We will arrange $w_0=0$ and
+\begin{equation}\label{eq:separatedruns}
+ \lceil h/8\rceil\le l_i\le h-2D-2,\qquad
+ \sum_i(l_i+D)+\nu\equiv0\pmod h.
+\end{equation}
+The fixed run at position $i$ goes from $w_i$ to $v_i$. The possible sources of the non-$a$ edges in connector $i$, whose words are $a^u s_i a^{D-u}$, are
+\begin{equation}\label{eq:allowedsource}
+ \bigcup_{u=0}^{D}Ba^{v_i+u}g_i.
+\end{equation}
+We choose the $v_i$ so that the walks replacing distinct such edges are vertex-disjoint, including their root endpoints.
+
+For each index $k\notin V(Q_0)$ and each $i$ such that $g_it_kK$ lies on the quotient cycle, let $j$ be the unique connector whose target is that coset. Define $e\in\Z/h\Z$ by
+\[
+ g_it_kg_{j+1}^{-1}B=a^eB.
+\]
+When $j\ne i$, impose
+\begin{equation}\label{eq:forbiddenresidues}
+ v_j-v_i\notin e+\{-D,\ldots,D\}\pmod h.
+\end{equation}
+Indeed, an allowed source and target have the form
+\[
+ xB=a^{v_i+u}g_iB,\qquad
+ y'B=a^{v_j+u'}g_{j+1}B,\qquad 0\le u,u'\le D.
+\]
+Since $aB$ commutes with every element of $N/B$, the equation $y'=xt_k$ would imply $v_j-v_i\equiv e+u-u'\pmod h$. For the closing connector, $g_{j+1}=g_\ell=t$ includes the offset $\nu$ in this calculation.
+
+Choose the residues greedily, subject to~\eqref{eq:forbiddenresidues} and the inequalities in~\eqref{eq:separatedruns}. For each fixed $k$, right multiplication by $t_k$ permutes $N/K$, so a variable occurs in at most one restriction as source and one as target. Thus each variable occurs in at most $2q$ restrictions~\eqref{eq:forbiddenresidues}. Each excludes at most $2D+1$ residues. Each of the at most two neighboring run conditions excludes at most $h/8+2D+2$ residues. The total number excluded when a variable is assigned is at most
+\[
+ h/4+4D+4+2q(2D+1)
+ \le h/4+4(q+1)(D+1)<3h/4.
+\]
+Every condition is checked when its second variable is assigned. Finally, subtract $w_0$ from every $v_i$. This makes $w_0=0$ without changing any difference. Summing the defining congruences for $l_i$ gives the closing congruence in~\eqref{eq:separatedruns}.
+
+We now verify disjointness. At quotient position $i$, the possible source coordinates are $[v_i,v_i+D]$, and target coordinates from the preceding connector are $[v_i-l_i-D,v_i-l_i]$, modulo $h$. Relative to $v_i$, the sources are in $[0,D]$, their one-step translates are in $[1,D+1]$, and the targets have representatives in
+\[
+ [h-l_i-D,h-l_i]\subseteq[D+2,h-1].
+\]
+For a fixed connector $i$, the source $x$ determines the non-$a$ edge $x\to xs_i$, and right multiplication by $s_i$ is injective. Different connectors have different source cosets and different target cosets modulo $K$. Thus distinct allowed edges have distinct sources and distinct targets, and these intervals separate sources from targets. They also exclude $y'=xa$ for any allowed source $x$ and target $y'$. This proves disjointness at the root.
+
+Walks within one connector are disjoint by the shortest choice, since their starts lie in a single $K$-orbit. For different connectors, two outward or two inward occurrences at a nonroot index would identify the starts or ends. A mixed collision satisfies~\eqref{eq:collision}: on $Q_0$, it has $t_k=a$, already excluded; outside $Q_0$, it contradicts~\eqref{eq:forbiddenresidues} modulo $B$.
+
+Since $h>8(q+1)(D+1)$, the lower bound $l_i\ge\lceil h/8\rceil$ implies $l_i\ge D$. Thus the chosen lengths satisfy~\eqref{eq:runconditions} and give $T\ge\ell h/8$. Apply Construction~\ref{con:cycliclift} to the fixed quotient cycle with $G=N$, labels $S\cup\{a\}$ and these run lengths. It gives a strongly connected auxiliary digraph $Y$ on $C\times\Z/T\Z$ with $C\le B$. Lemma~\ref{lem:returnindex} gives $[B:C]\le J_0\delta^{-\kappa}$, completing the bounds in~\eqref{eq:return-lift-bounds}.
+
+Fix any simple directed cycle in this $Y$. By Lemma~\ref{lem:local}, it expands to a simple cycle in $\Cay(N,S\cup\{a\})$ containing $x\to xa$ whenever both endpoints lie on it. Identify $N$ with the root orbit. For each edge of this Cayley cycle, use the previously chosen walk with that label, lifted from the edge's initial vertex; for label $a$, use the corresponding translate of $W_0$. The walks replacing its non-$a$ edges are simple and pairwise disjoint by the preceding argument. Each translate of $W_0$ visits each nonroot orbit on $Q_0$ once and has distinct root endpoints, since $a\ne1$. It is therefore a simple path and visits only orbits on $Q_0$.
+
+After deleting terminal vertices, an intersection at the root forces equal starts; at a nonroot index on $Q_0$,~\eqref{eq:collision} gives equal starts, equal ends, or $y'=xa$ (or its symmetric counterpart). Lemma~\ref{lem:walk-expansion}, applied to the selected Cayley cycle with $\tau(x)=xa$, therefore gives a simple directed cycle in $X$, without decreasing length. 
+\end{proof}
+
+\Needspace{10\baselineskip}
+\subsection{Proof of the semiregular-action theorem}
+\begin{proof}[Proof of Theorem~\ref{thm:free}]
+It suffices to consider $0<\eps<1$. Fix $r,c,Q$ and $\eps$ in this range, and put $D=c+1$ and $H_0=8(Q+1)(D+1)$. Let $N$ be the semiregular nilpotent group in the hypothesis and let $q$ be its number of orbits. We induct on $q$. If $N=1$, then $2\le|V(X)|\le Q$, and any directed cycle suffices after reducing the constant. If $q=1$, apply Theorem~\ref{thm:nilpotent}(i).
+
+Suppose $N\ne1$ and $q\ge2$. Lift a simple cycle of length $p\ge2$ in $X/N$ to a walk $W_0$ from $v$ to $av$. Put $B=[N,a]$, $K=\gen aB$ and $h=|K/B|$; if $a=1$, set $B=K=1$ and $h=1$.
+
+If $K=N$, Lemma~\ref{lem:normalclosure} gives $N=\gen a$. Repeating $W_0$ exactly $|N|$ times gives a simple cycle: orbit indices distinguish positions within a round, and successive root coordinates are distinct powers of $a$. Its length is $p|N|\ge2|V(X)|/Q$.
+
+If $K\ne N$ and $h\le H_0$, Lemma~\ref{lem:normalclosure} bounds $|K|$ by a constant $K_0=K_0(r,c,Q)$, also when $a=1$. Lemma~\ref{lem:free-reduction} gives a strongly connected digraph with fewer orbits and at least $|V(X)|/(QK_0)$ vertices. It has at least two vertices since $K\ne N$. Induction gives the required cycle, which lifts to $X$.
+
+It remains that $K\ne N$ and $h>H_0$. Choose $S$ and the quotient Cayley digraph $\Gamma$ as in Lemma~\ref{lem:return-lifting}, and let $J_0,\kappa$ be its constants. Theorem~\ref{thm:nilpotent}(i), with error $\eps/(\kappa+1)$, gives a simple directed cycle in $\Gamma$ of length $\ell$ and density
+\begin{equation}\label{eq:freedensity}
+ \delta=\ell/|N/K|\ge b_1|N/K|^{-\eps/(\kappa+1)}.
+\end{equation}
+Apply Lemma~\ref{lem:return-lifting} to this cycle: choose the run lengths it provides, and form the auxiliary digraph $Y$ using Construction~\ref{con:cycliclift}. Thus $Y$ is strongly connected on $C\times\Z/T\Z$ and satisfies~\eqref{eq:return-lift-bounds}. Every simple directed cycle in this $Y$ expands to a simple directed cycle in $X$ without decreasing length.
+
+By Lemmas~\ref{lem:coordinates} and~\ref{lem:normalclosure}, every subgroup of $B$ has at most $R=\sum_{j=1}^c r^j$ generators and class at most $\lfloor c/2\rfloor$. In particular, these bounds apply to $C\le B$. Apply Theorem~\ref{thm:nilpotent}(ii) to $Y$, with group $C$ and $T$ layers, to obtain a simple directed cycle of length at least $b_0T|C|^{1-\eps}$. Its expansion in $X$ has length
+\begin{align}\label{eq:freelength}
+ L&\ge b_0T|C|^{1-\eps}
+ \ge\frac{b_0}{8J_0}\ell h|B|^{1-\eps}\delta^\kappa\notag\\
+ &\ge b_2|N/K|^{1-\eps}h|B|^{1-\eps}
+ \ge b_2|N|^{1-\eps}.
+\end{align}
+Here we used~\eqref{eq:freedensity} and $|N|=|N/K|h|B|$. Since $|V(X)|=q|N|\le Q|N|$, this proves the required bound. Taking the minimum of the constants needed for the finitely many orbit reductions completes the induction.
+\end{proof}
+
+\section{A linear perimeter gap}\label{sec:gap}
+We prove Theorem~\ref{thm:gap} by constructing a Cayley digraph in which every cycle length is a multiple of $m$, while parity excludes a Hamiltonian cycle. For a positive integer $m$, put
+\[
+ U=\{(a,b):a,b\in[4],\ a\ne b\},
+\]
+and define $X_m$ on $U\times\Z/m\Z$ by
+\begin{equation}\label{eq:construction}
+ (a,b,t)\longrightarrow(b,c,t+1),\qquad c\notin\{a,b\}.
+\end{equation}
+There are $12m$ vertices, and every vertex has indegree and outdegree two. The layer coordinate increases by one on every arc, so every directed cycle has length divisible by $m$. It remains to verify strong connectivity, vertex-transitivity and the absence of a Hamiltonian cycle.
+
+\begin{lemma}[The Cayley representation]\label{lem:exampleconnected}
+For every $m\ge1$, the digraph $X_m$ defined in~\eqref{eq:construction} is strongly connected and vertex-transitive.
+\end{lemma}
+\begin{proof}
+Let $A_4$ be the group of even permutations of $[4]$, with composition read from right to left. Exactly one of the two permutations sending $(1,2)$ to a prescribed ordered pair of distinct elements is even. Hence the map
+\[
+ (g,t)\longmapsto(g(1),g(2),t)
+\]
+identifies $X_m$ with
+\[
+ \Cay\bigl(A_4\times\Z/m\Z,\{\alpha,\beta\}\bigr),
+ \qquad \alpha=((123),1),\quad\beta=((124),1).
+\]
+The two labels give the two possible values $g(3)$ and $g(4)$ for the next symbol. Moreover,
+\[
+ \alpha^3=(1,3),\qquad(\alpha\beta)^2=(1,4),
+\]
+so the generated subgroup contains $(1,1)$ and then $((123),0)$ and $((124),0)$. The permutations $(123)$ and $(124)$ generate $A_4$: their subgroup is transitive on $[4]$, and the stabilizer of $4$ contains the three powers of $(123)$, so the subgroup has at least $4\cdot3=12$ elements. Thus $\alpha,\beta$ generate $A_4\times\Z/m\Z$. In a finite group inverses are positive powers, so the Cayley digraph is strongly connected. Left translations give vertex-transitivity.
+\end{proof}
+
+\begin{lemma}[The parity obstruction]\label{lem:parity}
+For every $m\ge1$, the digraph $X_m$ defined in~\eqref{eq:construction} has no Hamiltonian cycle.
+\end{lemma}
+\begin{proof}
+Suppose a Hamiltonian cycle exists. Its edges from layer $t$ to layer $t+1$ induce a bijection $\pi_t$ of $U$ of the form $(a,b)\mapsto(b,c)$ with $c\notin\{a,b\}$. We first show that every such bijection is even.
+
+Fix $b$. The three vertices $(a,b)$ must map bijectively to the three vertices $(b,c)$. Thus
+\[
+ \pi_t(a,b)=(b,f_b(a)),
+\]
+where $f_b$ is a fixed-point-free permutation of $[4]\setminus\{b\}$. It is a $3$-cycle and hence even. The map $F(a,b)=(f_b(a),b)$ is a product of four disjoint $3$-cycles. The reversal $R(a,b)=(b,a)$ is a product of six disjoint transpositions. Both are even, and $\pi_t=R\circ F$ is even.
+
+The first-return permutation on layer zero is
+\[
+ \Pi=\pi_{m-1}\circ\cdots\circ\pi_0,
+\]
+so it is even. A single Hamiltonian cycle on all $12m$ vertices requires this return permutation to be one $12$-cycle: a smaller orbit would close the original cycle in fewer than $12m$ steps. But a $12$-cycle is odd, a contradiction.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:gap}]
+Lemma~\ref{lem:exampleconnected} gives a connected vertex-transitive digraph on $12m$ vertices. Every directed cycle has length divisible by $m$, and Lemma~\ref{lem:parity} excludes length $12m$. Its circumference is therefore at most $11m$, giving perimeter gap at least $m=|V(X_m)|/12$.
+\end{proof}
+
+
+The group in this construction has the abelian normal subgroup $V_4\times\Z/m\Z$ of index three, where $V_4=\{1,(12)(34),(13)(24),(14)(23)\}$ is the Klein four-group, an abelian normal subgroup of $A_4$. Thus a bounded-index extension of an abelian group need not admit cycles of length $(1-o(1))|G|$.
+
+\begin{samepage}
+\section*{Acknowledgements}
+We are grateful to Matija Buci\'c, Shoham Letzter and Liana Yepremyan for helpful discussions.
+
+The proof of Theorem~\ref{thm:gap} was developed by the authors and is retained from an earlier version of this manuscript. The proof of Theorem~\ref{thm:main} builds on our work on the Lov\'asz conjecture~\cite{LiMethuku}, which we adapted to the directed setting with the help of OpenAI's GPT models. GPT was also used to reorganize and polish parts of the paper and check for typos. The authors take full responsibility for the content of this manuscript.
+
+\end{samepage}
+\begin{thebibliography}{99}
+\bibitem{Lovasz}
+L\'aszl\'o Lov\'asz, Problem 11, \emph{Combinatorial Structures and Their Applications} (1970), 497, Gordon and Breach.
+
+\bibitem{Babai}
+L\'aszl\'o Babai, Long cycles in vertex-transitive graphs, \emph{Journal of Graph Theory} \textbf{3} (1979), 301--304.
+
+\bibitem{Alspach}
+Brian Alspach, The search for long paths and cycles in vertex-transitive graphs and digraphs, \emph{Combinatorial Mathematics, VIII}, Lecture Notes in Mathematics \textbf{884} (1981), 14--22, Springer.
+
+\bibitem{CurranGallian}
+Stephen J. Curran and Joseph A. Gallian, Hamiltonian cycles and paths in Cayley graphs and digraphs---a survey, \emph{Discrete Mathematics} \textbf{156} (1996), 1--18.
+
+\bibitem{PakRadoicic}
+Igor Pak and Rado\v{s} Radoi\v{c}i\'c, Hamiltonian paths in Cayley graphs, \emph{Discrete Mathematics} \textbf{309} (2009), 5501--5508.
+
+\bibitem{WitteGallian}
+Dave Witte and Joseph A. Gallian, A survey: Hamiltonian cycles in Cayley graphs, \emph{Discrete Mathematics} \textbf{51} (1984), 293--304.
+
+\bibitem{DeVos}
+Matt DeVos, Longer cycles in vertex transitive graphs, preprint, \href{https://arxiv.org/abs/2302.04255}{arXiv:2302.04255}, 2023.
+
+\bibitem{GLSTY}
+Carla Groenland, Sean Longbrake, Raphael Steiner, James Turcotte and Liana Yepremyan, Longest cycles in vertex-transitive and highly connected graphs, \emph{Bulletin of the London Mathematical Society} \textbf{57} (2025), 2975--2990.
+
+\bibitem{MaZhaoIntersections}
+Jie Ma and Ziyuan Zhao, Intersections of longest cycles in vertex-transitive and highly connected graphs, preprint, \href{https://arxiv.org/abs/2508.17438}{arXiv:2508.17438}, 2025.
+
+\bibitem{NorinEtAl}
+Sergey Norin, Raphael Steiner, St\'ephan Thomass\'e and Paul Wollan, Small hitting sets for longest paths and cycles, preprint, \href{https://arxiv.org/abs/2505.08634}{arXiv:2505.08634}, 2025.
+
+\bibitem{BCPS}
+Matija Buci\'c, Micha Christoph, Alexey Pokrovskiy and Raphael Steiner, Towards the Lov\'asz conjecture via sublinear expanders, preprint, \href{https://arxiv.org/abs/2606.09742}{arXiv:2606.09742}, 2026.
+
+\bibitem{MaZhaoLinear}
+Jie Ma and Ziyuan Zhao, Linear circumference in vertex-transitive graphs, preprint, \href{https://arxiv.org/abs/2610.02053}{arXiv:2610.02053}, 2026.
+
+\bibitem{Rankin}
+R. A. Rankin, A campanological problem in group theory, \emph{Proceedings of the Cambridge Philosophical Society} \textbf{44} (1948), 17--25.
+
+\bibitem{Rapaport}
+E. Rapaport-Strasser, Cayley color groups and Hamilton lines, \emph{Scripta Mathematica} \textbf{24} (1959), 51--58.
+
+\bibitem{White}
+Arthur T. White, \emph{Graphs, Groups and Surfaces}, second edition, North-Holland Mathematics Studies \textbf{8}, North-Holland, 1984.
+
+\bibitem{TrotterErdos}
+William T. Trotter, Jr. and Paul Erd\H{o}s, When the Cartesian product of directed cycles is Hamiltonian, \emph{Journal of Graph Theory} \textbf{2} (1978), 137--142.
+
+\bibitem{BHMSY}
+Matija Buci\'c, Kevin Hendrey, Bojan Mohar, Raphael Steiner and Liana Yepremyan, Long cycles in vertex transitive digraphs, preprint, \href{https://arxiv.org/abs/2602.16333}{arXiv:2602.16333}, 2026.
+
+\bibitem{TT}
+Romain Tessera and Matthew C. H. Tointon, A finitary structure theorem for vertex-transitive graphs of polynomial growth, \emph{Combinatorica} \textbf{41} (2021), 263--298, \href{https://doi.org/10.1007/s00493-020-4295-6}{doi:10.1007/s00493-020-4295-6}. Corollary 2.4 is cited from \href{https://arxiv.org/abs/1908.06044v3}{arXiv:1908.06044v3}.
+
+\bibitem{Robinson}
+Derek J. S. Robinson, \emph{A Course in the Theory of Groups}, second edition, Graduate Texts in Mathematics \textbf{80}, Springer, 1996.
+
+\bibitem{LiMethuku}
+Bowen Li and Abhishek Methuku, A nearly linear bound for the Lov\'asz conjecture, preprint, \href{https://arxiv.org/abs/2609.38135}{arXiv:2609.38135}, 2026.
+
+\bibitem{Morris}
+Dave Witte Morris, 2-generated Cayley digraphs on nilpotent groups have Hamiltonian paths, \emph{Contributions to Discrete Mathematics} \textbf{7}, no. 1 (2012), 41--47, \href{https://doi.org/10.55016/ojs/cdm.v7i1.62051}{doi:10.55016/ojs/cdm.v7i1.62051}. Numbering follows \href{https://arxiv.org/abs/1103.5293v3}{arXiv:1103.5293v3}.
+
+\bibitem{MorrisNoPath}
+Dave Witte Morris, On Cayley digraphs that do not have Hamiltonian paths, \emph{International Journal of Combinatorics} \textbf{2013} (2013), Article ID 725809, 7 pp., \href{https://doi.org/10.1155/2013/725809}{doi:10.1155/2013/725809}.
+
+\bibitem{WittePrimePower}
+Dave Witte, Cayley digraphs of prime-power order are Hamiltonian, \emph{Journal of Combinatorial Theory, Series B} \textbf{40} (1986), 107--112, \href{https://doi.org/10.1016/0095-8956(86)90068-7}{doi:10.1016/0095-8956(86)90068-7}.
+
+\bibitem{Passi1968}
+I. B. S. Passi, Polynomial maps on groups, \emph{Journal of Algebra} \textbf{9} (1968), 121--151, \href{https://doi.org/10.1016/0021-8693(68)90017-3}{doi:10.1016/0021-8693(68)90017-3}.
+
+\bibitem{PassiBook}
+I. B. S. Passi, \emph{Group Rings and Their Augmentation Ideals}, Lecture Notes in Mathematics \textbf{715}, Springer, 1979; Chapter V, pp. 50--75, \href{https://doi.org/10.1007/BFb0067191}{doi:10.1007/BFb0067191}.
+
+\bibitem{Brown}
+Kenneth S. Brown, \emph{Cohomology of Groups}, Graduate Texts in Mathematics \textbf{87}, Springer, 1982, \href{https://doi.org/10.1007/978-1-4684-9327-6}{doi:10.1007/978-1-4684-9327-6}.
+
+\bibitem{Schauz}
+Uwe Schauz, Classification of polynomial mappings between commutative groups, \emph{Journal of Number Theory} \textbf{139} (2014), 1--28, \href{https://doi.org/10.1016/j.jnt.2013.12.010}{doi:10.1016/j.jnt.2013.12.010}. Theorem numbering refers to \href{https://arxiv.org/abs/1212.5522v3}{arXiv:1212.5522v3}.
+
+\bibitem{Schwartz}
+Jacob T. Schwartz, Probabilistic algorithms for verification of polynomial identities, \emph{Symbolic and Algebraic Computation}, Lecture Notes in Computer Science \textbf{72} (1979), 200--215, Springer, \href{https://doi.org/10.1007/3-540-09519-5_72}{doi:10.1007/3-540-09519-5\_72}.
+
+\bibitem{Marusic}
+Dragan Maru\v{s}i\v{c}, Hamiltonian circuits in Cayley graphs, \emph{Discrete Mathematics} \textbf{46} (1983), 49--54.
+
+\bibitem{Durnberger}
+Erich Durnberger, Connected Cayley graphs of semi-direct products of cyclic groups of prime order by abelian groups are hamiltonian, \emph{Discrete Mathematics} \textbf{46} (1983), 55--68.
+
+\bibitem{MorrisPQ}
+Dave Witte Morris, Odd-order Cayley graphs with commutator subgroup of order $pq$ are hamiltonian, \emph{Ars Mathematica Contemporanea} \textbf{8} (2015), 1--28.
+
+\bibitem{Skresanov}
+Saveliy V. Skresanov, On directed and undirected diameters of vertex-transitive graphs, \emph{Combinatorica} \textbf{44} (2024), 1353--1366, \href{https://doi.org/10.1007/s00493-024-00120-4}{doi:10.1007/s00493-024-00120-4}. Proposition numbering refers to \href{https://arxiv.org/abs/2312.12943v1}{arXiv:2312.12943v1}.
+
+\bibitem{BabaiContractions}
+L\'aszl\'o Babai, Some applications of graph contractions, \emph{Journal of Graph Theory} \textbf{1} (1977), 125--130, \href{https://doi.org/10.1002/jgt.3190010207}{doi:10.1002/jgt.3190010207}.
+
+\bibitem{BangJensenGutin}
+J\o rgen Bang-Jensen and Gregory Z. Gutin, \emph{Digraphs: Theory, Algorithms and Applications}, second edition, Springer Monographs in Mathematics, Springer, 2009, \href{https://doi.org/10.1007/978-1-84800-998-1}{doi:10.1007/978-1-84800-998-1}.
+
+\bibitem{GrossTucker}
+Jonathan L. Gross and Thomas W. Tucker, Generating all graph coverings by permutation voltage assignments, \emph{Discrete Mathematics} \textbf{18} (1977), 273--283, \href{https://doi.org/10.1016/0012-365X(77)90131-5}{doi:10.1016/0012-365X(77)90131-5}.
+\enlargethispage{2\baselineskip}
+\end{thebibliography}
+\end{document}

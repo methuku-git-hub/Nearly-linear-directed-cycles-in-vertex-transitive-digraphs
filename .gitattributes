@@ -1,0 +1,3 @@
+# Preserve the exact certified bytes on every platform.
+directed-cycles-lean/** -text
+release/*.zip binary

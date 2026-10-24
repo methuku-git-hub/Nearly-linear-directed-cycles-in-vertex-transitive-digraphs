@@ -1,0 +1,2 @@
+MAIN_JSON {"axioms":["propext","Classical.choice","Quot.sound"],"exact_target_type":true,"theorem_present":true}
+CLOSURE_JSON {"axioms":["propext","Quot.sound","Classical.choice"],"complete":true,"count":63165}
