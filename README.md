@@ -2,24 +2,50 @@
 
 **Bowen Li and Abhishek Methuku**
 
-[Manuscript](directed-cycles-lean/manuscript/source.tex) ·
+[Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) ·
 [Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·
 [Download](https://github.com/methuku-git-hub/Directed-Lovasz-conjecture/releases/tag/v1.0.0) ·
 [Verification](#verification)
 
-This Lean project formalizes the paper's near-linear directed-cycle theorem
-(Theorem 1.5) and its dependencies:
+This Lean project formalizes the near-linear directed-cycle theorem
+(Theorem 1.5) in the archived revised manuscript and every dependency of its
+Lean proof:
 
-> For every $\varepsilon > 0$, every sufficiently large connected
-> vertex-transitive digraph on $n$ vertices contains a simple directed cycle
-> of length at least $n^{1-\varepsilon}$.
+> For every real $\varepsilon > 0$, there exists $n_0$ such that every
+> connected vertex-transitive digraph on $n \ge n_0$ vertices contains a
+> simple directed cycle of length at least $n^{1-\varepsilon}$.
 
-Digraphs are loopless, and connectedness refers to the underlying undirected
-graph. The precise definitions are in
+Digraphs are finite, have no loops or parallel arcs, and may have arcs in both
+directions. Connectedness refers to the underlying undirected graph. Cycles
+have distinct vertices and include the closing arc; length two is allowed.
+These are the manuscript conventions. The precise Lean definitions are in
 [`Basic.lean`](directed-cycles-lean/DirectedCycles/Basic.lean); the main Lean
 declaration is
 [`DirectedCycles.theorem_1_5`](directed-cycles-lean/DirectedCycles/Theorem15.lean).
 The full proof development is in [`directed-cycles-lean/`](directed-cycles-lean).
+
+## Manuscript version and scope
+
+The reference text is the [archived revised manuscript](directed-cycles-lean/manuscript/source.tex).
+Its title and author order match those above. Theorem numbers and the
+[manuscript correspondence](directed-cycles-lean/blueprint/manuscript-map.json)
+refer to this exact snapshot, identified by SHA-256 in
+[`manuscript/provenance.json`](directed-cycles-lean/manuscript/provenance.json).
+
+The earlier public [arXiv version 2](https://arxiv.org/abs/2607.05807v2), dated
+19 August 2026, states a lower bound of $\Omega(\sqrt n)$. The near-linear
+statement certified here belongs to the revised manuscript archived above.
+The certificate applies to the included Lean sources and pinned dependencies.
+
+The scope is Theorem 1.5 and its actual proof dependencies. Theorem 1.3 and
+Section 8 (the perimeter-gap construction) are outside this formalization.
+The Lean proof includes repaired arguments and replacement lemmas, documented
+in the [project README](directed-cycles-lean/README.md) and
+[blueprint](directed-cycles-lean/blueprint/dependencies.json).
+[Unused stronger source statements](directed-cycles-lean/blueprint/source-statements-not-used.json)
+are identified separately, including the full layer bound in Lemma 6.2 and
+the explicit quotient-chain assertion in Lemma 6.3. The repository name does
+not denote a proof of Hamiltonicity or a resolution of the full Lovász conjecture.
 
 ## Verification
 
@@ -90,5 +116,6 @@ own licenses.
 
 The certified project under `directed-cycles-lean/` is preserved byte for byte.
 The repository's presentation and integrity tools are maintained separately.
-For an immutable reference, use a full commit permalink from the repository's
-history.
+The [immutable certified release snapshot](https://github.com/methuku-git-hub/Directed-Lovasz-conjecture/tree/a8cbf7bd9fa2ed707d2a4ea9eeaf55ea18fcd971/directed-cycles-lean)
+contains the original proof sources and evidence. Presentation updates on
+`main` do not change that snapshot.
