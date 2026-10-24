@@ -45,8 +45,8 @@ with its `lean` and `lake` commands on PATH. The project pins Lean 4.34.0 and
 every library revision. Network access is needed to obtain them.
 
 ```sh
-git clone https://github.com/methuku-git-hub/directed-cycles-theorem-1-5.git
-cd directed-cycles-theorem-1-5
+git clone https://github.com/methuku-git-hub/Directed-Lovasz-conjecture.git
+cd Directed-Lovasz-conjecture
 python3 scripts/check_snapshot.py
 python3 scripts/reproduce.py
 ```
