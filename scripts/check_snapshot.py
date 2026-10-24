@@ -7,8 +7,8 @@ import sys
 import zipfile
 
 ROOT = Path(__file__).resolve().parents[1]
-ARCHIVE_HASH = "b0cffae98cbe6dd4bfa73f52d8657b320bd0e3b1a099f612e9684e13950adbf2"
-CERTIFICATE_HASH = "53ab2addc99a7348db31e3aa8b462bb70a3b92d159d088b9d39ad9cfaa9d3475"
+ARCHIVE_HASH = "68a74340a45818532e8988bab213a4c2112f77b27707de2e451a1cbbdeaf6bcc"
+CERTIFICATE_HASH = "4b02d041d2f9076240f6f02787e36fb27453ddf2411ad1cbf252b719f113f1f3"
 ALLOWED = {"propext", "Classical.choice", "Quot.sound"}
 
 

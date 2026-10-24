@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 def build(declarations, closure):
     historical = json.loads((ROOT / 'blueprint/historical-planned-dependencies.json').read_text())
-    source_hash = historical['source_sha256']
+    source_hash = json.loads((ROOT / 'manuscript/provenance.json').read_text())['sha256']
     by_module = {}
     for row in declarations.values():
         by_module.setdefault(row['module'], []).append(row['name'])

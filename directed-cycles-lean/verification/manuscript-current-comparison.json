@@ -1,10 +1,10 @@
 {
-  "checked_at_utc": "2026-10-24T20:02:27.681264+00:00",
-  "manuscript_path": "/Users/Methuku/Documents/Codex/2026-09-17/ca/output/pdf/long_directed_cycles_updated.tex",
-  "pinned_snapshot_sha256": "d78f34ca5ff88d6d3d5eac3f8dd83beb513c2cb6805ad13c6e0085c16fad20ec",
-  "current_manuscript_sha256": "390e19ac59df885b0b9449856e8691bd71eede26ed6782582dc81d86c15da594",
-  "all_theorem_lemma_proposition_corollary_definition_blocks_identical": true,
-  "statement_block_count": 32,
+  "checked_at_utc": "2026-10-24T21:43:21.668838+00:00",
+  "title": "Nearly linear directed cycles in vertex-transitive digraphs",
+  "pinned_snapshot_sha256": "ec10beaeb937736b36c081a4ca7fb25b1b1ea34f8a614acda7a4ee45cded9543",
+  "current_retitled_manuscript_sha256": "7a3ae41069fae7a9cdcdbadbf3cb18a06ff14be11720603b275b39da6f9fcb5e",
+  "all_statement_blocks_identical": true,
+  "statement_block_count": 34,
   "target": "thm:main",
-  "interpretation": "The live manuscript has expository edits relative to the pinned formalization snapshot. The theorem, lemma, proposition, corollary and definition blocks are compared byte for byte. The formal certificate binds the pinned snapshot."
+  "interpretation": "The latest retitled manuscript has expository edits relative to the pinned retitled snapshot. All theorem, lemma, proposition, corollary, definition, construction and conjecture blocks agree byte for byte. The certificate binds the pinned snapshot."
 }

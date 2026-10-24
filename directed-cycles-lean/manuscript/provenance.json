@@ -1,7 +1,11 @@
 {
   "source_path": "/Users/Methuku/Documents/Codex/2026-09-17/ca/output/pdf/long_directed_cycles_updated.tex",
-  "sha256": "d78f34ca5ff88d6d3d5eac3f8dd83beb513c2cb6805ad13c6e0085c16fad20ec",
+  "sha256": "ec10beaeb937736b36c081a4ca7fb25b1b1ea34f8a614acda7a4ee45cded9543",
   "target_label": "thm:main",
   "target_number": "1.5",
-  "original_modified": false
+  "original_modified": false,
+  "title": "Nearly linear directed cycles in vertex-transitive digraphs",
+  "previous_title": "Long directed cycles in vertex-transitive digraphs",
+  "previous_snapshot_sha256": "d78f34ca5ff88d6d3d5eac3f8dd83beb513c2cb6805ad13c6e0085c16fad20ec",
+  "revision_note": "Title and PDF-title metadata changed at the author's request; the remaining manuscript bytes and all mathematical statements are unchanged."
 }

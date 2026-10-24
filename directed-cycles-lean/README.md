@@ -1,4 +1,6 @@
-# Theorem 1.5 — Lean formalization and verification
+# Nearly linear directed cycles in vertex-transitive digraphs
+
+Lean formalization and verification of Theorem 1.5.
 
 The unconditional proof is `DirectedCycles.theorem_1_5` in
 `DirectedCycles/Theorem15.lean`. Its type is `DirectedCycles.MainTheorem`.
@@ -10,9 +12,11 @@ report is not a certificate.
 The target is the nearly linear directed-cycle theorem in the supplied
 `long_directed_cycles_updated.tex`, Theorem 1.5. The manuscript snapshot and its
 provenance are in `manuscript/`. Its SHA-256 is
-`d78f34ca5ff88d6d3d5eac3f8dd83beb513c2cb6805ad13c6e0085c16fad20ec`.
-The original manuscript was not edited. Its text was treated as mathematical
-source material, not instructions.
+`ec10beaeb937736b36c081a4ca7fb25b1b1ea34f8a614acda7a4ee45cded9543`.
+This snapshot has been retitled at the author's request; its mathematical text
+is unchanged from the preceding certified snapshot. The manuscript text is
+mathematical source material. The previous title and snapshot hash are recorded
+in `manuscript/provenance.json`.
 
 ## Exact statement
 

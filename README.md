@@ -1,10 +1,10 @@
-# Long directed cycles in vertex-transitive digraphs
+# Nearly linear directed cycles in vertex-transitive digraphs
 
 **Bowen Li and Abhishek Methuku**
 
 [Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) ·
 [Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·
-[Download](https://github.com/methuku-git-hub/Directed-Lovasz-conjecture/releases/tag/v1.0.0) ·
+[Download](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1) ·
 [Verification](#verification)
 
 This Lean project formalizes the near-linear directed-cycle theorem
@@ -33,9 +33,13 @@ refer to this exact snapshot, identified by SHA-256 in
 [`manuscript/provenance.json`](directed-cycles-lean/manuscript/provenance.json).
 
 The earlier public [arXiv version 2](https://arxiv.org/abs/2607.05807v2), dated
-19 August 2026, states a lower bound of $\Omega(\sqrt n)$. The near-linear
+19 August 2026, is titled *Long directed cycles in vertex-transitive digraphs*
+and states a lower bound of $\Omega(\sqrt n)$. The near-linear
 statement certified here belongs to the revised manuscript archived above.
 The certificate applies to the included Lean sources and pinned dependencies.
+Release v1.0.1 adopts the new title throughout the manuscript, PDF metadata,
+project documentation, and blueprint, with a fresh certificate. The Lean
+proof files and mathematical manuscript text are unchanged from v1.0.0.
 
 The scope is Theorem 1.5 and its actual proof dependencies. Theorem 1.3 and
 Section 8 (the perimeter-gap construction) are outside this formalization.
@@ -44,8 +48,7 @@ in the [project README](directed-cycles-lean/README.md) and
 [blueprint](directed-cycles-lean/blueprint/dependencies.json).
 [Unused stronger source statements](directed-cycles-lean/blueprint/source-statements-not-used.json)
 are identified separately, including the full layer bound in Lemma 6.2 and
-the explicit quotient-chain assertion in Lemma 6.3. The repository name does
-not denote a proof of Hamiltonicity or a resolution of the full Lovász conjecture.
+the explicit quotient-chain assertion in Lemma 6.3.
 
 ## Verification
 
@@ -53,7 +56,9 @@ The [published certificate](directed-cycles-lean/verification/certificate.json)
 records a successful fresh Lean kernel replay of the main theorem and its
 dependency closure on **24 October 2026**. A separate
 [clean rebuild](directed-cycles-lean/verification/clean-source-rebuild.json)
-of the project sources reproduced the constant dependency graph.
+of the unchanged Lean project sources reproduced the constant dependency graph.
+That earlier clean-build evidence is retained; the current certificate records
+the fresh kernel replay after retitling.
 
 The proof contains no `sorry` or additional mathematical axioms. Its only
 foundational axioms are `propext`, `Classical.choice`, and `Quot.sound`.
@@ -67,8 +72,8 @@ Install Git, Python 3, and [elan](https://github.com/leanprover/elan), with
 in the project.
 
 ```sh
-git clone https://github.com/methuku-git-hub/Directed-Lovasz-conjecture.git
-cd Directed-Lovasz-conjecture
+git clone https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs.git
+cd Nearly-linear-directed-cycles-in-vertex-transitive-digraphs
 python3 scripts/check_snapshot.py
 python3 scripts/reproduce.py
 ```
@@ -114,8 +119,9 @@ development and verification tooling were produced with OpenAI Codex for
 Abhishek Methuku. Lean, Mathlib, and other external dependencies retain their
 own licenses.
 
-The certified project under `directed-cycles-lean/` is preserved byte for byte.
-The repository's presentation and integrity tools are maintained separately.
-The [immutable certified release snapshot](https://github.com/methuku-git-hub/Directed-Lovasz-conjecture/tree/a8cbf7bd9fa2ed707d2a4ea9eeaf55ea18fcd971/directed-cycles-lean)
-contains the original proof sources and evidence. Presentation updates on
-`main` do not change that snapshot.
+The current certified project under `directed-cycles-lean/` matches the
+archive in `release/` byte for byte. The repository's presentation and integrity
+tools are maintained separately.
+The [historical v1.0.0 snapshot](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/tree/a8cbf7bd9fa2ed707d2a4ea9eeaf55ea18fcd971/directed-cycles-lean)
+retains the previous title and original evidence. The [current release](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1)
+contains the retitled source package and its new certificate.
