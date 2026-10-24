@@ -26,6 +26,10 @@ The full proof development is in [`directed-cycles-lean/`](directed-cycles-lean)
 
 ## Manuscript version and scope
 
+**Publication status:** This revised manuscript is not yet on arXiv. The authors
+plan to upload it soon as a replacement for
+[arXiv version 2](https://arxiv.org/abs/2607.05807v2).
+
 The reference text is the [archived revised manuscript](directed-cycles-lean/manuscript/source.tex).
 Its title and author order match those above. Theorem numbers and the
 [manuscript correspondence](directed-cycles-lean/blueprint/manuscript-map.json)
