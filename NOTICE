@@ -1,0 +1,14 @@
+Nearly linear directed cycles in vertex-transitive digraphs
+Copyright 2026 Abhishek Methuku
+
+The Lean development and verification tools are licensed under Apache-2.0.
+Mathematical authorship of the manuscript belongs to Bowen Li and Abhishek
+Methuku. The archived manuscript is included as mathematical source material
+and retains its existing rights; this software licence does not relicense it.
+Cited papers, dependencies, and reused material retain their original rights
+and notices. In particular, TotallyDisconnectedNeighbourhoods.lean retains
+its attribution for material adapted from Mathlib under Apache-2.0.
+
+The formalization and verification tooling were produced with OpenAI Codex
+at Abhishek Methuku's direction. This notice does not claim independent human
+review of every formal proof or of the complete manuscript.

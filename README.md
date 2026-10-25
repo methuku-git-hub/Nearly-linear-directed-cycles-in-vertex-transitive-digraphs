@@ -4,6 +4,11 @@
 
 **First publicly released: 24 October 2026**
 
+**Palomar preparation branch:** The sources here are being ported to Lean
+4.35.0 for Palomar's statement comparison and independent kernel checks.
+The earlier certificate applies to release v1.0.1. It does not certify this
+port, and no Palomar verification or registration is claimed at this stage.
+
 [Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) ·
 [Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·
 [Download](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1) ·
@@ -42,7 +47,7 @@ The earlier public [arXiv version 2](https://arxiv.org/abs/2607.05807v2), dated
 19 August 2026, is titled *Long directed cycles in vertex-transitive digraphs*
 and states a lower bound of $\Omega(\sqrt n)$. The near-linear
 statement certified here belongs to the revised manuscript archived above.
-The certificate applies to the included Lean sources and pinned dependencies.
+The historical certificate applies to the v1.0.1 sources and pinned dependencies.
 Release v1.0.1 adopts the new title throughout the manuscript, PDF metadata,
 project documentation, and blueprint, with a fresh certificate. The Lean
 proof files and mathematical manuscript text are unchanged from v1.0.0.
@@ -58,50 +63,62 @@ the explicit quotient-chain assertion in Lemma 6.3.
 
 ## Verification
 
-The [published certificate](directed-cycles-lean/verification/certificate.json)
-records a successful fresh Lean kernel replay of the main theorem and its
-dependency closure on **24 October 2026**. A separate
-[clean rebuild](directed-cycles-lean/verification/clean-source-rebuild.json)
-of the unchanged Lean project sources reproduced the constant dependency graph.
-That earlier clean-build evidence is retained; the current certificate records
-the fresh kernel replay after retitling.
+The [v1.0.1 release](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1)
+records a successful fresh Lean kernel replay on **24 October 2026** using
+Lean 4.34.0, along with separate clean-build evidence. Its archive remains
+unchanged. Historical evidence is labelled in
+[`verification/`](directed-cycles-lean/verification/README.md).
 
-The proof contains no `sorry` or additional mathematical axioms. Its only
-foundational axioms are `propext`, `Classical.choice`, and `Quot.sound`.
-Replay uses Lean's own kernel. The certificate records the verification;
-the source and pinned dependencies let readers reproduce it.
+The Palomar port uses Lean 4.35.0 and matching pinned Mathlib dependencies.
+[`Challenge.lean`](directed-cycles-lean/Challenge.lean) independently spells
+out the theorem using ordinary relations, permutations, and an injective cycle
+sequence. Its one deliberate statement-only `sorry` is excluded from the
+proof. [`Solution.lean`](directed-cycles-lean/Solution.lean) proves that exact
+statement using the existing development and does not import Challenge.
+Comparator must check the same declaration name and type and allow only
+`propext`, `Classical.choice`, and `Quot.sound` in the proved result.
+
+The [Palomar workflow](.github/workflows/palomar-preflight.yml) invokes the
+registry's complete pinned mechanical pipeline in Linux. A passing preflight,
+registry verification, editorial review, and registration are separate stages.
+This branch currently claims none of those outcomes. See
+[`PALOMAR.md`](PALOMAR.md) for submission paths and the verification procedure.
 
 ## Reproduce the verification
 
 Install Git, Python 3, and [elan](https://github.com/leanprover/elan), with
-`lean` and `lake` on your PATH. Lean 4.34.0 and all library revisions are pinned
-in the project.
+`lean` and `lake` on your PATH. The current project pins Lean 4.35.0 and all
+library revisions. To check the current port:
 
 ```sh
-git clone https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs.git
+git clone --branch palomar-verification https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs.git
 cd Nearly-linear-directed-cycles-in-vertex-transitive-digraphs
 python3 scripts/check_snapshot.py
-python3 scripts/reproduce.py
+cd directed-cycles-lean
+lake exe cache get
+lake build
+lake build Palomar
+# Linux with bubblewrap installed:
+./scripts/verify-comparator.sh
 ```
 
-The first script checks the published files against the certified archive.
-The second makes a working copy under `reproduction/` and runs the original
-verification procedure:
+The archive-integrity script checks only the historical release package.
+To replay that original package with Lean 4.34.0, return to the repository root
+and run `python3 scripts/reproduce.py`; it extracts a new copy under
+`reproduction/`. To run the project's own fresh Lean kernel replay on the
+current port, use this inside `directed-cycles-lean/`:
 
 ```sh
-lake exe cache get
 python3 scripts/verify.py --certify
 ```
 
-This builds the sources, checks the exact theorem statement and allowed
-axioms, extracts the dependency closure, and runs
-`lake env leanchecker --fresh --verbose DirectedCycles`. A new certificate
-is written only after all checks pass. The published snapshot is preserved.
+That procedure checks the exact main statement and axioms, extracts the actual
+constant dependency graph, and runs fresh replay using Lean's own kernel.
+It writes a new certificate only after all its checks succeed. It is separate
+from Palomar's Comparator and independently implemented kernel checks.
 
-Network access is needed to obtain the pinned dependencies. A full build and
-replay can require substantial time and memory; the original verification ran
-on macOS arm64. The GitHub workflow checks **snapshot integrity**, rather than
-performing a new kernel replay.
+Network access is required to obtain pinned dependencies. Full builds and
+verification can require substantial time, disk space, and memory.
 
 ## Explore the proof
 
@@ -109,7 +126,7 @@ performing a new kernel replay.
 | --- | --- |
 | [Detailed project README](directed-cycles-lean/README.md) | Proof route, repaired arguments, and verification details |
 | [Dependency blueprint](directed-cycles-lean/blueprint/index.html) | Navigable import graph; download and open locally |
-| [Constant dependency graph](directed-cycles-lean/verification/main-constant-closure.json) | The main theorem's actual transitive dependencies |
+| [Constant dependency graph](directed-cycles-lean/verification/historical-v1.0.1/main-constant-closure.json) | Historical v1.0.1 theorem dependency graph; regeneration pending |
 | [Manuscript correspondence](directed-cycles-lean/blueprint/manuscript-map.json) | Source statements and their Lean declarations |
 | [Certified source archive](release/theorem-1-5-lean-certified.zip) · [SHA-256](release/SHA256SUMS) | Original source package, certificate, and evidence |
 
@@ -125,9 +142,12 @@ development and verification tooling were produced with OpenAI Codex for
 Abhishek Methuku. Lean, Mathlib, and other external dependencies retain their
 own licenses.
 
-The current certified project under `directed-cycles-lean/` matches the
-archive in `release/` byte for byte. The repository's presentation and integrity
-tools are maintained separately.
-The [historical v1.0.0 snapshot](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/tree/a8cbf7bd9fa2ed707d2a4ea9eeaf55ea18fcd971/directed-cycles-lean)
-retains the previous title and original evidence. The [current release](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1)
-contains the retitled source package and its new certificate.
+The historical certified project is preserved in the archive in `release/`.
+The working sources in `directed-cycles-lean/` are the
+Palomar port under verification; see the status above for checks actually completed. The
+[v1.0.1 release](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1)
+retains the certified source package and its original evidence.
+
+The Lean code and verification tools are licensed under [Apache-2.0](LICENSE).
+The manuscript, cited papers, and dependencies retain their existing rights;
+see [NOTICE](NOTICE).
