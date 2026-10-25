@@ -1,5 +1,9 @@
-import DirectedCycles.ConnectorEndpointSeparation
-import DirectedCycles.CollisionConstraintDegree
+module
+
+public import DirectedCycles.ConnectorEndpointSeparation
+public import DirectedCycles.CollisionConstraintDegree
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

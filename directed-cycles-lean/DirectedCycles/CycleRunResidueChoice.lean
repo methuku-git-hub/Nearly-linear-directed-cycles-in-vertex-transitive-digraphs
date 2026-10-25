@@ -1,5 +1,9 @@
-import DirectedCycles.ClosingResidueOffsets
-import DirectedCycles.CollisionSeparatedRuns
+module
+
+public import DirectedCycles.ClosingResidueOffsets
+public import DirectedCycles.CollisionSeparatedRuns
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

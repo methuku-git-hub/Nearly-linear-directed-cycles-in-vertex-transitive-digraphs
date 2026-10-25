@@ -1,6 +1,10 @@
-import DirectedCycles.CompactRepresentationAverage
-import DirectedCycles.InvariantSubspaceRepresentation
-import DirectedCycles.CompactNSSFromSeparatingHoms
+module
+
+public import DirectedCycles.CompactRepresentationAverage
+public import DirectedCycles.InvariantSubspaceRepresentation
+public import DirectedCycles.CompactNSSFromSeparatingHoms
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

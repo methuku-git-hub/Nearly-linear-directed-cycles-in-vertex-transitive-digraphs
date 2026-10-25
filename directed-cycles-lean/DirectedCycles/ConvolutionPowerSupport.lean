@@ -1,4 +1,8 @@
-import DirectedCycles.NormalizedConvolution
+module
+
+public import DirectedCycles.NormalizedConvolution
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

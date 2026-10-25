@@ -1,4 +1,8 @@
-import DirectedCycles.ConjugationModule
+module
+
+public import DirectedCycles.ConjugationModule
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

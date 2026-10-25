@@ -1,5 +1,9 @@
-import DirectedCycles.CycleContractionProjection
-import DirectedCycles.BlockLift
+module
+
+public import DirectedCycles.CycleContractionProjection
+public import DirectedCycles.BlockLift
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

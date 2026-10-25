@@ -1,5 +1,9 @@
-import DirectedCycles.Basic
-import Mathlib.Algebra.MvPolynomial.SchwartzZippel
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Algebra.MvPolynomial.SchwartzZippel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

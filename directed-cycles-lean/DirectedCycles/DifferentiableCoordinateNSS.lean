@@ -1,7 +1,11 @@
-import DirectedCycles.DifferentiableDoubling
-import DirectedCycles.NormGrowthNSS
-import DirectedCycles.LocalEscapeMaps
-import DirectedCycles.LocalSubgroupTransport
+module
+
+public import DirectedCycles.DifferentiableDoubling
+public import DirectedCycles.NormGrowthNSS
+public import DirectedCycles.LocalEscapeMaps
+public import DirectedCycles.LocalSubgroupTransport
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

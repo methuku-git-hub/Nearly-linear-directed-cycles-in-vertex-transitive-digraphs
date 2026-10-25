@@ -1,5 +1,9 @@
-import DirectedCycles.CompactKernelCyclicWindow
-import DirectedCycles.CompactPowerTrapping
+module
+
+public import DirectedCycles.CompactKernelCyclicWindow
+public import DirectedCycles.CompactPowerTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

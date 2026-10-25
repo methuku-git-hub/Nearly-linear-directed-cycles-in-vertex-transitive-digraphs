@@ -1,4 +1,8 @@
-import DirectedCycles.ActionCoordinates
+module
+
+public import DirectedCycles.ActionCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

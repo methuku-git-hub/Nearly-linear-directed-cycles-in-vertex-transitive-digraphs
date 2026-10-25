@@ -1,5 +1,9 @@
-import DirectedCycles.DenseCoordinates
-import DirectedCycles.NilpotentCoordinates
+module
+
+public import DirectedCycles.DenseCoordinates
+public import DirectedCycles.NilpotentCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,7 +1,11 @@
-import Mathlib.Geometry.Manifold.ChartedSpace
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
-import Mathlib.Topology.Connected.TotallyDisconnected
+module
+
+public import Mathlib.Geometry.Manifold.ChartedSpace
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+public import Mathlib.Topology.Connected.TotallyDisconnected
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

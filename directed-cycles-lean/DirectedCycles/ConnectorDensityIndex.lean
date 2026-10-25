@@ -1,5 +1,9 @@
-import DirectedCycles.ConnectorSystemIndex
-import DirectedCycles.DenseBounds
+module
+
+public import DirectedCycles.ConnectorSystemIndex
+public import DirectedCycles.DenseBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

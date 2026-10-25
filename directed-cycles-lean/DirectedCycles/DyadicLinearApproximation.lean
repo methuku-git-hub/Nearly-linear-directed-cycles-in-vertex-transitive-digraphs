@@ -1,5 +1,9 @@
-import DirectedCycles.DyadicCurveAdditivity
-import DirectedCycles.LocalAdditiveCurveLinear
+module
+
+public import DirectedCycles.DyadicCurveAdditivity
+public import DirectedCycles.LocalAdditiveCurveLinear
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

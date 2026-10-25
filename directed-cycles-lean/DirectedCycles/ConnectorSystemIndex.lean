@@ -1,5 +1,9 @@
-import DirectedCycles.ConnectorContainment
-import DirectedCycles.ElementCocycleMultiplier
+module
+
+public import DirectedCycles.ConnectorContainment
+public import DirectedCycles.ElementCocycleMultiplier
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

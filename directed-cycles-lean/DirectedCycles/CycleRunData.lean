@@ -1,5 +1,9 @@
-import DirectedCycles.CayleyCycleLabels
-import DirectedCycles.ConnectorPositions
+module
+
+public import DirectedCycles.CayleyCycleLabels
+public import DirectedCycles.ConnectorPositions
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

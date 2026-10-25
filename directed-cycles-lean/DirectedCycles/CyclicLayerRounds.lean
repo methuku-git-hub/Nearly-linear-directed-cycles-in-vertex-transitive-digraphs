@@ -1,4 +1,8 @@
-import DirectedCycles.CyclicLayerConnectivity
+module
+
+public import DirectedCycles.CyclicLayerConnectivity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

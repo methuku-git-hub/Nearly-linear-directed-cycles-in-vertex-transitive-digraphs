@@ -1,8 +1,12 @@
-import Mathlib.MeasureTheory.Function.LpSpace.DomAct.Continuous
-import Mathlib.MeasureTheory.Function.LpSpace.ContinuousFunctions
-import Mathlib.MeasureTheory.Function.L2Space
-import Mathlib.MeasureTheory.Group.Measure
-import Mathlib.Topology.UrysohnsLemma
+module
+
+public import Mathlib.MeasureTheory.Function.LpSpace.DomAct.Continuous
+public import Mathlib.MeasureTheory.Function.LpSpace.ContinuousFunctions
+public import Mathlib.MeasureTheory.Function.L2Space
+public import Mathlib.MeasureTheory.Group.Measure
+public import Mathlib.Topology.UrysohnsLemma
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

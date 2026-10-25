@@ -1,5 +1,9 @@
-import DirectedCycles.NormalizedLayerLabels
-import DirectedCycles.ConnectorAlgebra
+module
+
+public import DirectedCycles.NormalizedLayerLabels
+public import DirectedCycles.ConnectorAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.CosetProgressionHomWords
-import DirectedCycles.SurjectiveTupleGeneration
+module
+
+public import DirectedCycles.CosetProgressionHomWords
+public import DirectedCycles.SurjectiveTupleGeneration
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

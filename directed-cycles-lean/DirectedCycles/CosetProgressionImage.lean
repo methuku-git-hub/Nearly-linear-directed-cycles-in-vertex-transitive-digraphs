@@ -1,4 +1,8 @@
-import DirectedCycles.CosetProgressionHomWords
+module
+
+public import DirectedCycles.CosetProgressionHomWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

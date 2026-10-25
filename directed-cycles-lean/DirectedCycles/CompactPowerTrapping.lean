@@ -1,7 +1,11 @@
-import Mathlib.Topology.Algebra.Group.Basic
-import Mathlib.Topology.Compactness.Compact
-import Mathlib.Topology.Separation.Hausdorff
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Algebra.Group.Basic
+public import Mathlib.Topology.Compactness.Compact
+public import Mathlib.Topology.Separation.Hausdorff
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,4 +1,8 @@
-import DirectedCycles.ResidueCollision
+module
+
+public import DirectedCycles.ResidueCollision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

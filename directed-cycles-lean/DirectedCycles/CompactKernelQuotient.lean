@@ -1,5 +1,9 @@
-import Mathlib.Topology.Algebra.Group.Quotient
-import Mathlib.Topology.Maps.Proper.Basic
+module
+
+public import Mathlib.Topology.Algebra.Group.Quotient
+public import Mathlib.Topology.Maps.Proper.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

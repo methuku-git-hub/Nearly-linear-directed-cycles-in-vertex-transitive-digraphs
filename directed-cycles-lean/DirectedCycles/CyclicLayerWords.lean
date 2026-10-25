@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.GroupTheory.OrderOfElement
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.GroupTheory.OrderOfElement
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

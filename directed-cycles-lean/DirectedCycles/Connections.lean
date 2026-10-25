@@ -1,5 +1,9 @@
-import DirectedCycles.Basic
-import DirectedCycles.Matching
+module
+
+public import DirectedCycles.Basic
+public import DirectedCycles.Matching
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

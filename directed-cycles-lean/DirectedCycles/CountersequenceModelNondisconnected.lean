@@ -1,7 +1,11 @@
-import DirectedCycles.TotallyDisconnectedRankZero
-import DirectedCycles.GlobalGoodLocallyCompactModel
-import DirectedCycles.CosetModelBounds
-import DirectedCycles.SubgroupEscapeNorm
+module
+
+public import DirectedCycles.TotallyDisconnectedRankZero
+public import DirectedCycles.GlobalGoodLocallyCompactModel
+public import DirectedCycles.CosetModelBounds
+public import DirectedCycles.SubgroupEscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

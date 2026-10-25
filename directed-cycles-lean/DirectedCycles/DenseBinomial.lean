@@ -1,7 +1,11 @@
-import DirectedCycles.DenseGrid
-import DirectedCycles.BinomialGrid
-import DirectedCycles.IntegerGram
-import Mathlib.Data.Nat.Choose.Bounds
+module
+
+public import DirectedCycles.DenseGrid
+public import DirectedCycles.BinomialGrid
+public import DirectedCycles.IntegerGram
+public import Mathlib.Data.Nat.Choose.Bounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Matrix

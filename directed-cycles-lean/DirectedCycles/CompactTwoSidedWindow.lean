@@ -1,5 +1,9 @@
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Topology.Compactness.Compact
+module
+
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

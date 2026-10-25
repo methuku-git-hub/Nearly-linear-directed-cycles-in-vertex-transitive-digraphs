@@ -1,6 +1,10 @@
-import DirectedCycles.CentralConnectedModel
-import DirectedCycles.ShortProgressionModelEquality
-import DirectedCycles.CentralCurveTopologicalQuotient
+module
+
+public import DirectedCycles.CentralConnectedModel
+public import DirectedCycles.ShortProgressionModelEquality
+public import DirectedCycles.CentralCurveTopologicalQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

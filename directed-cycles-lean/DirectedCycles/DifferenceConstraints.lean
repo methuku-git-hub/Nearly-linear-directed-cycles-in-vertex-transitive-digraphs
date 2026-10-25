@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteConstraints
+module
+
+public import DirectedCycles.FiniteConstraints
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import Mathlib.Topology.Algebra.Group.Subgroup
-import Mathlib.Topology.Algebra.OpenSubgroup
-import Mathlib.Topology.Connected.LocallyConnected
-import Mathlib.Topology.Compactness.Compact
+module
+
+public import Mathlib.Topology.Algebra.Group.Subgroup
+public import Mathlib.Topology.Algebra.OpenSubgroup
+public import Mathlib.Topology.Connected.LocallyConnected
+public import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

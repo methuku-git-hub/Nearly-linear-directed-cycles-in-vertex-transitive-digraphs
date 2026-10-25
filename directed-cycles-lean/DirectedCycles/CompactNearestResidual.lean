@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonOneParameterWindow
-import Mathlib.Topology.Order.Compact
+module
+
+public import DirectedCycles.GleasonOneParameterWindow
+public import Mathlib.Topology.Order.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

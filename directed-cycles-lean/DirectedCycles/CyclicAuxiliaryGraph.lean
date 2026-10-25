@@ -1,4 +1,8 @@
-import DirectedCycles.CyclicLiftSlots
+module
+
+public import DirectedCycles.CyclicLiftSlots
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

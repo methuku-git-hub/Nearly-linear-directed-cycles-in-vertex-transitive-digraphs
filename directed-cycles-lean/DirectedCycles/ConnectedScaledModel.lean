@@ -1,6 +1,10 @@
-import DirectedCycles.ConnectedSmallPowers
-import DirectedCycles.MinimalEscapeUnbounded
-import DirectedCycles.ScaledPowerModel
+module
+
+public import DirectedCycles.ConnectedSmallPowers
+public import DirectedCycles.MinimalEscapeUnbounded
+public import DirectedCycles.ScaledPowerModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise Topology
