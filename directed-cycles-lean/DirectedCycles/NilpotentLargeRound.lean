@@ -1,7 +1,11 @@
-import DirectedCycles.SpanningCycleLift
-import DirectedCycles.DirectedLifting
-import DirectedCycles.DensityPowerArithmetic
-import DirectedCycles.RoundSpanning
+module
+
+public import DirectedCycles.SpanningCycleLift
+public import DirectedCycles.DirectedLifting
+public import DirectedCycles.DensityPowerArithmetic
+public import DirectedCycles.RoundSpanning
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

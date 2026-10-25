@@ -1,4 +1,8 @@
-import DirectedCycles.EscapeNormDerivatives
+module
+
+public import DirectedCycles.EscapeNormDerivatives
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

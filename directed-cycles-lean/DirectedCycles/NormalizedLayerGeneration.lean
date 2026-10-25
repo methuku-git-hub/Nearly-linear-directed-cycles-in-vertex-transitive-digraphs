@@ -1,4 +1,8 @@
-import DirectedCycles.RestrictedLayerGroup
+module
+
+public import DirectedCycles.RestrictedLayerGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

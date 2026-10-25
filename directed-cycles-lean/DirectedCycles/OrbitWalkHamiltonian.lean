@@ -1,6 +1,10 @@
-import DirectedCycles.CayleyCycleLabels
-import DirectedCycles.OrbitCycleLabels
-import DirectedCycles.BaselineHamiltonian
+module
+
+public import DirectedCycles.CayleyCycleLabels
+public import DirectedCycles.OrbitCycleLabels
+public import DirectedCycles.BaselineHamiltonian
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

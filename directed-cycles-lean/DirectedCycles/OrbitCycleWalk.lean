@@ -1,5 +1,9 @@
-import DirectedCycles.VoltageQuotients
-import DirectedCycles.CycleContraction
+module
+
+public import DirectedCycles.VoltageQuotients
+public import DirectedCycles.CycleContraction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

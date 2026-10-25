@@ -1,6 +1,10 @@
-import DirectedCycles.PowerCoordinates
-import DirectedCycles.NilpotentRanks
-import DirectedCycles.NilpotentOrder
+module
+
+public import DirectedCycles.PowerCoordinates
+public import DirectedCycles.NilpotentRanks
+public import DirectedCycles.NilpotentOrder
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

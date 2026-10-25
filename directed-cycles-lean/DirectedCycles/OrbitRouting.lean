@@ -1,5 +1,9 @@
-import DirectedCycles.RoutingWeights
-import DirectedCycles.Averaging
+module
+
+public import DirectedCycles.RoutingWeights
+public import DirectedCycles.Averaging
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

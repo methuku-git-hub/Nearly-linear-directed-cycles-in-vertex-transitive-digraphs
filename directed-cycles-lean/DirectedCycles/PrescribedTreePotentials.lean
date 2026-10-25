@@ -1,5 +1,9 @@
-import DirectedCycles.OrbitCycleLabels
-import DirectedCycles.TreePotentials
+module
+
+public import DirectedCycles.OrbitCycleLabels
+public import DirectedCycles.TreePotentials
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

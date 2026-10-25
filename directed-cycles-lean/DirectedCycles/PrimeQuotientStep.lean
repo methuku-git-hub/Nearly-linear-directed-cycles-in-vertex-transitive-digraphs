@@ -1,4 +1,8 @@
-import DirectedCycles.PrimeCharacterQuotients
+module
+
+public import DirectedCycles.PrimeCharacterQuotients
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

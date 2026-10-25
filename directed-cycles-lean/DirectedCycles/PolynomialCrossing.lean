@@ -1,5 +1,9 @@
-import DirectedCycles.Thresholds
-import Mathlib.Data.Nat.Find
+module
+
+public import DirectedCycles.Thresholds
+public import Mathlib.Data.Nat.Find
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.AugmentationWords
-import DirectedCycles.PassiAugmentation
+module
+
+public import DirectedCycles.AugmentationWords
+public import DirectedCycles.PassiAugmentation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

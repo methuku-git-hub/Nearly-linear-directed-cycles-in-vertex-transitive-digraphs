@@ -1,8 +1,12 @@
-import DirectedCycles.SignedCoordinateBox
-import Mathlib.Order.Filter.AtTopBot.Basic
-import Mathlib.Algebra.Order.BigOperators.Group.Finset
-import Mathlib.Tactic.Linarith
-import Mathlib.Tactic.Ring
+module
+
+public import DirectedCycles.SignedCoordinateBox
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import Mathlib.Algebra.Order.BigOperators.Group.Finset
+public import Mathlib.Tactic.Linarith
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

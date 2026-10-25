@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.Data.List.ChainOfFn
-import Mathlib.Data.List.Nodup
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Data.List.ChainOfFn
+public import Mathlib.Data.List.Nodup
+
+@[expose] public section
 
 set_option autoImplicit false
 

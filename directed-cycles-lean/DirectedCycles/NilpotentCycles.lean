@@ -1,5 +1,9 @@
-import DirectedCycles.NilpotentInduction
-import DirectedCycles.SingleLayerCycles
+module
+
+public import DirectedCycles.NilpotentInduction
+public import DirectedCycles.SingleLayerCycles
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

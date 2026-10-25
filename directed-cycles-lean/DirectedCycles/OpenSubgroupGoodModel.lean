@@ -1,6 +1,10 @@
-import DirectedCycles.InternalGoodModel
-import Mathlib.Topology.Algebra.OpenSubgroup
-import Mathlib.Topology.Metrizable.Basic
+module
+
+public import DirectedCycles.InternalGoodModel
+public import Mathlib.Topology.Algebra.OpenSubgroup
+public import Mathlib.Topology.Metrizable.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,6 +1,10 @@
-import DirectedCycles.OperatorExponentialAverage
-import DirectedCycles.LipschitzRiemannSum
-import Mathlib.Analysis.Calculus.MeanValue
+module
+
+public import DirectedCycles.OperatorExponentialAverage
+public import DirectedCycles.LipschitzRiemannSum
+public import Mathlib.Analysis.Calculus.MeanValue
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

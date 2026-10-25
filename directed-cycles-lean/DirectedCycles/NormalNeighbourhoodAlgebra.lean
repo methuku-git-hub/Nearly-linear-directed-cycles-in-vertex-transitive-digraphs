@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteAlmostPeriods
+module
+
+public import DirectedCycles.FiniteAlmostPeriods
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

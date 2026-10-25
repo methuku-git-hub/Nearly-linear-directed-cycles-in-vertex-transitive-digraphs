@@ -1,6 +1,10 @@
-import DirectedCycles.PrimeCharacterQuotients
-import DirectedCycles.ReturnLabelGeneration
-import Mathlib.GroupTheory.PGroup
+module
+
+public import DirectedCycles.PrimeCharacterQuotients
+public import DirectedCycles.ReturnLabelGeneration
+public import Mathlib.GroupTheory.PGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

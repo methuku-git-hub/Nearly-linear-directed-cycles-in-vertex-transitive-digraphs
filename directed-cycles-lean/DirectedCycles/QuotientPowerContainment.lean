@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteStructuralAlgebra
+module
+
+public import DirectedCycles.FiniteStructuralAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

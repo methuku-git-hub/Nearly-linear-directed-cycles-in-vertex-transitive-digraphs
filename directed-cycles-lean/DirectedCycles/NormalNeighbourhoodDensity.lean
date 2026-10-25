@@ -1,5 +1,9 @@
-import DirectedCycles.ApproximateIntersectionDensity
-import DirectedCycles.NormalNeighbourhoodAlgebra
+module
+
+public import DirectedCycles.ApproximateIntersectionDensity
+public import DirectedCycles.NormalNeighbourhoodAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

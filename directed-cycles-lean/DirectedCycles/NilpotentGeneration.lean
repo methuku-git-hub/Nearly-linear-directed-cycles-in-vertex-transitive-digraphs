@@ -1,7 +1,11 @@
-import DirectedCycles.Basic
-import Mathlib.GroupTheory.Nilpotent
-import Mathlib.GroupTheory.Frattini
-import Mathlib.GroupTheory.QuotientGroup.Simple
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.GroupTheory.Nilpotent
+public import Mathlib.GroupTheory.Frattini
+public import Mathlib.GroupTheory.QuotientGroup.Simple
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

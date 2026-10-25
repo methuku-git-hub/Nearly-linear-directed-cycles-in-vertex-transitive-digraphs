@@ -1,5 +1,9 @@
-import DirectedCycles.NormSetDistance
-import Mathlib.Algebra.Order.Group.MinMax
+module
+
+public import DirectedCycles.NormSetDistance
+public import Mathlib.Algebra.Order.Group.MinMax
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

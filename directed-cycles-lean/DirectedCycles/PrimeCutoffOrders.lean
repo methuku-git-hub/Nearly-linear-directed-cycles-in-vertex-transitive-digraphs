@@ -1,4 +1,8 @@
-import DirectedCycles.AbelianNormalClosure
+module
+
+public import DirectedCycles.AbelianNormalClosure
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

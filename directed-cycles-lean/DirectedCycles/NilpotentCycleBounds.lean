@@ -1,5 +1,9 @@
-import DirectedCycles.AbelianLayerBounds
-import DirectedCycles.LayerEquivalence
+module
+
+public import DirectedCycles.AbelianLayerBounds
+public import DirectedCycles.LayerEquivalence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

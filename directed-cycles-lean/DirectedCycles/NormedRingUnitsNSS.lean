@@ -1,7 +1,11 @@
-import DirectedCycles.NormGrowthNSS
-import DirectedCycles.SubgroupNSSBasics
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Topology.Algebra.Group.Units
+module
+
+public import DirectedCycles.NormGrowthNSS
+public import DirectedCycles.SubgroupNSSBasics
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Topology.Algebra.Group.Units
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

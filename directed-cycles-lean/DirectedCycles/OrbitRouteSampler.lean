@@ -1,6 +1,10 @@
-import DirectedCycles.TwistedRoutes
-import DirectedCycles.UniformFinite
-import DirectedCycles.NormalPartitions
+module
+
+public import DirectedCycles.TwistedRoutes
+public import DirectedCycles.UniformFinite
+public import DirectedCycles.NormalPartitions
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

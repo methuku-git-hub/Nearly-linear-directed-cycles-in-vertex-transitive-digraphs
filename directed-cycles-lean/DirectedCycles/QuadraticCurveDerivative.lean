@@ -1,5 +1,9 @@
-import Mathlib.Analysis.Calculus.Deriv.Basic
-import Mathlib.Tactic
+module
+
+public import Mathlib.Analysis.Calculus.Deriv.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

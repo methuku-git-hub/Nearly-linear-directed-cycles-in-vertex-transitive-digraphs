@@ -1,5 +1,9 @@
-import DirectedCycles.NilpotentSpanning
-import Mathlib.Algebra.Group.Pointwise.Set.ListOfFn
+module
+
+public import DirectedCycles.NilpotentSpanning
+public import Mathlib.Algebra.Group.Pointwise.Set.ListOfFn
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

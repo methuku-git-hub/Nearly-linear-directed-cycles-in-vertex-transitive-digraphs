@@ -1,7 +1,11 @@
-import Mathlib.Analysis.Normed.Module.HahnBanach
-import Mathlib.Analysis.Normed.Module.FiniteDimension
-import Mathlib.Analysis.Normed.Operator.Banach
-import Mathlib.Tactic
+module
+
+public import Mathlib.Analysis.Normed.Module.HahnBanach
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+public import Mathlib.Analysis.Normed.Operator.Banach
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

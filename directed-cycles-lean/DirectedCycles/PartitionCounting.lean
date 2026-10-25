@@ -1,4 +1,8 @@
-import DirectedCycles.OrbitRouting
+module
+
+public import DirectedCycles.OrbitRouting
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

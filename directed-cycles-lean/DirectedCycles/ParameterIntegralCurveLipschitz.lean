@@ -1,4 +1,8 @@
-import DirectedCycles.SmoothParameterIntegralCurves
+module
+
+public import DirectedCycles.SmoothParameterIntegralCurves
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

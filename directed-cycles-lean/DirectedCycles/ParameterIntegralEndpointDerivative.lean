@@ -1,6 +1,10 @@
-import DirectedCycles.ParameterIntegralCurveBounds
-import DirectedCycles.OperatorFieldDifference
-import Mathlib.Analysis.Calculus.FDeriv.Basic
+module
+
+public import DirectedCycles.ParameterIntegralCurveBounds
+public import DirectedCycles.OperatorFieldDifference
+public import Mathlib.Analysis.Calculus.FDeriv.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

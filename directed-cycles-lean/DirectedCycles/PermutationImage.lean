@@ -1,4 +1,8 @@
-import DirectedCycles.SparseInvariant
+module
+
+public import DirectedCycles.SparseInvariant
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

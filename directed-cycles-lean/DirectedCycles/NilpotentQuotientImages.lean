@@ -1,4 +1,8 @@
-import DirectedCycles.NilpotentRanks
+module
+
+public import DirectedCycles.NilpotentRanks
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

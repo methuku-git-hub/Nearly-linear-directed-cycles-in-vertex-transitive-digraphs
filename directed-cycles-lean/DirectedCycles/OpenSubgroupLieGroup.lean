@@ -1,5 +1,9 @@
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
-import Mathlib.Topology.Algebra.OpenSubgroup
+module
+
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+public import Mathlib.Topology.Algebra.OpenSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Manifold ContDiff

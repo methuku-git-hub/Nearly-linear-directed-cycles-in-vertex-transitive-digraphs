@@ -1,6 +1,10 @@
-import DirectedCycles.GroupMultihomOperations
-import DirectedCycles.PrimeComponentHom
-import Mathlib.Algebra.Group.Pointwise.Set.BigOperators
+module
+
+public import DirectedCycles.GroupMultihomOperations
+public import DirectedCycles.PrimeComponentHom
+public import Mathlib.Algebra.Group.Pointwise.Set.BigOperators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

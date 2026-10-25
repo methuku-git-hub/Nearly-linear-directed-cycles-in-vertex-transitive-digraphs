@@ -1,5 +1,9 @@
-import DirectedCycles.OrbitCycleWalk
-import DirectedCycles.BranchingPaths
+module
+
+public import DirectedCycles.OrbitCycleWalk
+public import DirectedCycles.BranchingPaths
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
