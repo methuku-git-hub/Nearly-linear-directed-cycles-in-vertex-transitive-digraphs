@@ -1,5 +1,9 @@
-import DirectedCycles.LocalApproximateGroups
-import DirectedCycles.LocalProductRestriction
+module
+
+public import DirectedCycles.LocalApproximateGroups
+public import DirectedCycles.LocalProductRestriction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

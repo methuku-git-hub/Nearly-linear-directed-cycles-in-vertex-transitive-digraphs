@@ -1,8 +1,12 @@
-import DirectedCycles.LocalInternalWindowCompactSandwich
-import DirectedCycles.LocalInternalQuotientSandwich
-import DirectedCycles.LocalCentralModelQuotientMap
-import DirectedCycles.LocalCentralQuotientUltraHom
-import DirectedCycles.LocalQuotientTopology
+module
+
+public import DirectedCycles.LocalInternalWindowCompactSandwich
+public import DirectedCycles.LocalInternalQuotientSandwich
+public import DirectedCycles.LocalCentralModelQuotientMap
+public import DirectedCycles.LocalCentralQuotientUltraHom
+public import DirectedCycles.LocalQuotientTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,5 +1,9 @@
-import DirectedCycles.LieOneParameterCoordinateDerivative
-import DirectedCycles.OneParameterLocalTriviality
+module
+
+public import DirectedCycles.LieOneParameterCoordinateDerivative
+public import DirectedCycles.OneParameterLocalTriviality
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

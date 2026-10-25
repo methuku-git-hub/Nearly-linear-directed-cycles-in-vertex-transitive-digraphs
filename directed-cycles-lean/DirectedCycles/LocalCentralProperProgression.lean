@@ -1,7 +1,11 @@
-import DirectedCycles.LocalCentralOrderedGrid
-import DirectedCycles.LocalOrderedGridRestriction
-import DirectedCycles.LocalCentralProgressionWords
-import DirectedCycles.ProgressionShrinkingArithmetic
+module
+
+public import DirectedCycles.LocalCentralOrderedGrid
+public import DirectedCycles.LocalOrderedGridRestriction
+public import DirectedCycles.LocalCentralProgressionWords
+public import DirectedCycles.ProgressionShrinkingArithmetic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

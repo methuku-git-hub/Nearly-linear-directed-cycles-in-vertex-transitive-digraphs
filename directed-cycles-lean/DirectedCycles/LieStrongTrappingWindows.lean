@@ -1,5 +1,9 @@
-import DirectedCycles.LieExponentialTrapping
-import DirectedCycles.LieExponentialRadialControl
+module
+
+public import DirectedCycles.LieExponentialTrapping
+public import DirectedCycles.LieExponentialRadialControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

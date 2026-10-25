@@ -1,6 +1,10 @@
-import DirectedCycles.LieGroupNSS
-import DirectedCycles.CompactNSSCurve
-import Mathlib.Topology.Compactness.LocallyCompact
+module
+
+public import DirectedCycles.LieGroupNSS
+public import DirectedCycles.CompactNSSCurve
+public import Mathlib.Topology.Compactness.LocallyCompact
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

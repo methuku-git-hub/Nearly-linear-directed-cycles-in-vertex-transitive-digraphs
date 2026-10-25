@@ -1,8 +1,12 @@
-import DirectedCycles.LocalFiniteDefect
-import DirectedCycles.LocalTranslateEnergy
-import DirectedCycles.LocalSmallCostProducts
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalFiniteDefect
+public import DirectedCycles.LocalTranslateEnergy
+public import DirectedCycles.LocalSmallCostProducts
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

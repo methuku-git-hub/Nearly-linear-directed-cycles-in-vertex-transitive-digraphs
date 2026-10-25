@@ -1,5 +1,9 @@
-import DirectedCycles.LieCurveProductSmoothDomain
-import DirectedCycles.SmoothInverseNeighbourhood
+module
+
+public import DirectedCycles.LieCurveProductSmoothDomain
+public import DirectedCycles.SmoothInverseNeighbourhood
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

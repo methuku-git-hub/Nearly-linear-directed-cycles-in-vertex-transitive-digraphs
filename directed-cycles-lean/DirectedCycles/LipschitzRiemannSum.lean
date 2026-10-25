@@ -1,6 +1,10 @@
-import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
-import Mathlib.Topology.MetricSpace.Lipschitz
-import Mathlib.Analysis.SpecificLimits.Basic
+module
+
+public import Mathlib.MeasureTheory.Integral.IntervalIntegral.Basic
+public import Mathlib.Topology.MetricSpace.Lipschitz
+public import Mathlib.Analysis.SpecificLimits.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

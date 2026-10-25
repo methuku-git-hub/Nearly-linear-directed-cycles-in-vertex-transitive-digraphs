@@ -1,6 +1,10 @@
-import DirectedCycles.LocalEquivalenceWindow
-import DirectedCycles.LocalProductSwap
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalEquivalenceWindow
+public import DirectedCycles.LocalProductSwap
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

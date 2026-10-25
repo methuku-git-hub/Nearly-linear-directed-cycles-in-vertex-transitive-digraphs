@@ -1,7 +1,11 @@
-import DirectedCycles.LieIdentityCoordinateMultiplication
-import DirectedCycles.LocalMultiplicativeCurveUniqueness
-import DirectedCycles.OneParameterGermUniqueness
-import DirectedCycles.GroupCurveCoordinateLaw
+module
+
+public import DirectedCycles.LieIdentityCoordinateMultiplication
+public import DirectedCycles.LocalMultiplicativeCurveUniqueness
+public import DirectedCycles.OneParameterGermUniqueness
+public import DirectedCycles.GroupCurveCoordinateLaw
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

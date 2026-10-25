@@ -1,7 +1,11 @@
-import DirectedCycles.LocalFiniteProductCard
-import DirectedCycles.LocalSubgroupTransport
-import DirectedCycles.LocalWordPowerMonotonicity
-import DirectedCycles.LocalTwoProducts
+module
+
+public import DirectedCycles.LocalFiniteProductCard
+public import DirectedCycles.LocalSubgroupTransport
+public import DirectedCycles.LocalWordPowerMonotonicity
+public import DirectedCycles.LocalTwoProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

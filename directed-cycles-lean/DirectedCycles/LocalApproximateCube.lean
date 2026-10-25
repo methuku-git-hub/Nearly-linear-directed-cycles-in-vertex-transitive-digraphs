@@ -1,7 +1,11 @@
-import DirectedCycles.LocalFiniteProductCard
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalFiniteProductCard
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

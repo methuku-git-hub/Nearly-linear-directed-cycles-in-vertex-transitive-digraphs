@@ -1,7 +1,11 @@
-import DirectedCycles.LieModelPrescribedCentralQuotient
-import DirectedCycles.LocalCentralQuotientLocalSandwich
-import DirectedCycles.LocalComponentProjectedEscapeKernel
-import DirectedCycles.LocalModelEscapeControl
+module
+
+public import DirectedCycles.LieModelPrescribedCentralQuotient
+public import DirectedCycles.LocalCentralQuotientLocalSandwich
+public import DirectedCycles.LocalComponentProjectedEscapeKernel
+public import DirectedCycles.LocalModelEscapeControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

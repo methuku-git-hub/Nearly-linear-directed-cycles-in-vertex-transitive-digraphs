@@ -1,4 +1,8 @@
-import DirectedCycles.LocalApproximateCube
+module
+
+public import DirectedCycles.LocalApproximateCube
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

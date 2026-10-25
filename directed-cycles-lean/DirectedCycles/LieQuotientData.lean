@@ -1,7 +1,11 @@
-import DirectedCycles.CompactKernelGoodModel
-import DirectedCycles.OpenSubgroupGoodModel
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
-import Mathlib.Analysis.InnerProductSpace.PiL2
+module
+
+public import DirectedCycles.CompactKernelGoodModel
+public import DirectedCycles.OpenSubgroupGoodModel
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.NormalClosureCommutators
-import DirectedCycles.TerminalCommutatorMaps
+module
+
+public import DirectedCycles.NormalClosureCommutators
+public import DirectedCycles.TerminalCommutatorMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

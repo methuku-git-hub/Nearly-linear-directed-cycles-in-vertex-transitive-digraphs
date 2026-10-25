@@ -1,5 +1,9 @@
-import DirectedCycles.LieExponentialLocalCoordinates
-import DirectedCycles.LocalRadialNormControl
+module
+
+public import DirectedCycles.LieExponentialLocalCoordinates
+public import DirectedCycles.LocalRadialNormControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

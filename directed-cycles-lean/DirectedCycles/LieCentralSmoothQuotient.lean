@@ -1,8 +1,12 @@
-import DirectedCycles.LieOneParameterSmoothCoordinates
-import DirectedCycles.LocalSliceSmoothQuotient
-import DirectedCycles.CentralCurveSliceRelation
-import DirectedCycles.CentralCurveRelativeDifference
-import DirectedCycles.LocalSliceQuotientManifold
+module
+
+public import DirectedCycles.LieOneParameterSmoothCoordinates
+public import DirectedCycles.LocalSliceSmoothQuotient
+public import DirectedCycles.CentralCurveSliceRelation
+public import DirectedCycles.CentralCurveRelativeDifference
+public import DirectedCycles.LocalSliceQuotientManifold
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

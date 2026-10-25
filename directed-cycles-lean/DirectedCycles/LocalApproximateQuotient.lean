@@ -1,6 +1,10 @@
-import DirectedCycles.LocalApproximateRestriction
-import DirectedCycles.LocalQuotientHom
-import DirectedCycles.GlobalToLocalApproximate
+module
+
+public import DirectedCycles.LocalApproximateRestriction
+public import DirectedCycles.LocalQuotientHom
+public import DirectedCycles.GlobalToLocalApproximate
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

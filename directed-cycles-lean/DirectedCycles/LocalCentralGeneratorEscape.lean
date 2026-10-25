@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNestedSegmentComparison
-import DirectedCycles.LocalUltraproductEscape
+module
+
+public import DirectedCycles.LocalNestedSegmentComparison
+public import DirectedCycles.LocalUltraproductEscape
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,6 +1,10 @@
-import DirectedCycles.LieExponentialLocalCoordinates
-import DirectedCycles.LieExponentialSymmetry
-import Mathlib.Analysis.Normed.Module.FiniteDimension
+module
+
+public import DirectedCycles.LieExponentialLocalCoordinates
+public import DirectedCycles.LieExponentialSymmetry
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

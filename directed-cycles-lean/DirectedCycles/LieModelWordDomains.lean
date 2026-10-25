@@ -1,5 +1,9 @@
-import DirectedCycles.LocalModelWordDomains
-import DirectedCycles.LieExponentialWordControl
+module
+
+public import DirectedCycles.LocalModelWordDomains
+public import DirectedCycles.LieExponentialWordControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

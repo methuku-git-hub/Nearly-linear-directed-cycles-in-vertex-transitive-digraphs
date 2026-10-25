@@ -1,7 +1,11 @@
-import DirectedCycles.LocalFiniteSelectedCentralQuotient
-import DirectedCycles.LocalCentralQuotientUltraData
-import DirectedCycles.LocalCentralModelQuotientMap
-import DirectedCycles.LocalModelEscapeControl
+module
+
+public import DirectedCycles.LocalFiniteSelectedCentralQuotient
+public import DirectedCycles.LocalCentralQuotientUltraData
+public import DirectedCycles.LocalCentralModelQuotientMap
+public import DirectedCycles.LocalModelEscapeControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

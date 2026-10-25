@@ -1,6 +1,10 @@
-import DirectedCycles.LieExponentialStrictDerivative
-import DirectedCycles.LieExponentialContinuity
-import Mathlib.Analysis.Calculus.InverseFunctionTheorem.FDeriv
+module
+
+public import DirectedCycles.LieExponentialStrictDerivative
+public import DirectedCycles.LieExponentialContinuity
+public import Mathlib.Analysis.Calculus.InverseFunctionTheorem.FDeriv
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

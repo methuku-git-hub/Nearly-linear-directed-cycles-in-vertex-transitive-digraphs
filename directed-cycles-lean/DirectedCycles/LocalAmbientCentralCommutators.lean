@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGeneratorCommutatorRestriction
-import DirectedCycles.LocalGeneratorCommutatorIdentity
+module
+
+public import DirectedCycles.LocalGeneratorCommutatorRestriction
+public import DirectedCycles.LocalGeneratorCommutatorIdentity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

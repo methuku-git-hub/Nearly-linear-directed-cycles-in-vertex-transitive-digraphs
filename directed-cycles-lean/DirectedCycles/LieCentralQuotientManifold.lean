@@ -1,7 +1,11 @@
-import DirectedCycles.LieOneParameterProductCoordinates
-import DirectedCycles.CentralCurveSliceRelation
-import DirectedCycles.CentralCurveRelativeDifference
-import DirectedCycles.LocalSliceQuotientManifold
+module
+
+public import DirectedCycles.LieOneParameterProductCoordinates
+public import DirectedCycles.CentralCurveSliceRelation
+public import DirectedCycles.CentralCurveRelativeDifference
+public import DirectedCycles.LocalSliceQuotientManifold
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

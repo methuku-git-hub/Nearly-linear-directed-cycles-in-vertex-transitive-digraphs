@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralProgressionStep
-import DirectedCycles.LocalProgressionWitness
-import DirectedCycles.ProgressionLengthNondegeneracy
+module
+
+public import DirectedCycles.LocalCentralProgressionStep
+public import DirectedCycles.LocalProgressionWitness
+public import DirectedCycles.ProgressionLengthNondegeneracy
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 500000

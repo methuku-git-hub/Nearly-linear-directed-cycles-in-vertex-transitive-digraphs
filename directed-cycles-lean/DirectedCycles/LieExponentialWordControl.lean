@@ -1,5 +1,9 @@
-import DirectedCycles.LieExponentialProductCoordinates
-import DirectedCycles.LocalExponentialWordBound
+module
+
+public import DirectedCycles.LieExponentialProductCoordinates
+public import DirectedCycles.LocalExponentialWordBound
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

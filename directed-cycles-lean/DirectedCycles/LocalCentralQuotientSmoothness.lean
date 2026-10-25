@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralQuotientSmoothInverse
-import DirectedCycles.LocalCentralQuotientSmoothMultiplication
-import DirectedCycles.LocalSmoothnessFromOperationGerms
+module
+
+public import DirectedCycles.LocalCentralQuotientSmoothInverse
+public import DirectedCycles.LocalCentralQuotientSmoothMultiplication
+public import DirectedCycles.LocalSmoothnessFromOperationGerms
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

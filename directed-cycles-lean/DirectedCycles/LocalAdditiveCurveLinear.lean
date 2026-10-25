@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCurveExtension
-import Mathlib.Topology.Instances.RealVectorSpace
+module
+
+public import DirectedCycles.LocalCurveExtension
+public import Mathlib.Topology.Instances.RealVectorSpace
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

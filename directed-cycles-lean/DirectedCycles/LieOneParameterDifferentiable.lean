@@ -1,5 +1,9 @@
-import DirectedCycles.LieOneParameterCoordinateDerivative
-import Mathlib.Geometry.Manifold.MFDeriv.FDeriv
+module
+
+public import DirectedCycles.LieOneParameterCoordinateDerivative
+public import Mathlib.Geometry.Manifold.MFDeriv.FDeriv
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

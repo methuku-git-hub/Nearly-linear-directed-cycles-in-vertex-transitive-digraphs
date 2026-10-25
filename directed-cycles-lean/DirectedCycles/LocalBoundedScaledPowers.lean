@@ -1,4 +1,8 @@
-import DirectedCycles.LocalScaledPowers
+module
+
+public import DirectedCycles.LocalScaledPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,9 +1,13 @@
-import DirectedCycles.NilpotentLargeRound
-import DirectedCycles.NilpotentBoundedRounds
-import DirectedCycles.LowerClassInputs
-import DirectedCycles.BaselineHamiltonian
-import DirectedCycles.SubsingletonLayers
-import DirectedCycles.PrimeCutoffFactors
+module
+
+public import DirectedCycles.NilpotentLargeRound
+public import DirectedCycles.NilpotentBoundedRounds
+public import DirectedCycles.LowerClassInputs
+public import DirectedCycles.BaselineHamiltonian
+public import DirectedCycles.SubsingletonLayers
+public import DirectedCycles.PrimeCutoffFactors
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u
