@@ -1,6 +1,10 @@
-import DirectedCycles.LocalQuotientContinuity
-import Mathlib.Topology.Separation.Hausdorff
-import Mathlib.Topology.Compactness.LocallyCompact
+module
+
+public import DirectedCycles.LocalQuotientContinuity
+public import Mathlib.Topology.Separation.Hausdorff
+public import Mathlib.Topology.Compactness.LocallyCompact
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

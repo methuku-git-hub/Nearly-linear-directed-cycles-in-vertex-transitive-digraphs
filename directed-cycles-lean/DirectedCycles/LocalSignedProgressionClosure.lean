@@ -1,5 +1,9 @@
-import DirectedCycles.LocalShortPowerReturns
-import DirectedCycles.LocalSignedProgressionProducts
+module
+
+public import DirectedCycles.LocalShortPowerReturns
+public import DirectedCycles.LocalSignedProgressionProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

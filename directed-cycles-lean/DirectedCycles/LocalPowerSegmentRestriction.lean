@@ -1,6 +1,10 @@
-import DirectedCycles.LocalAdditivePowerSegment
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalCentralQuotientData
+module
+
+public import DirectedCycles.LocalAdditivePowerSegment
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalCentralQuotientData
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

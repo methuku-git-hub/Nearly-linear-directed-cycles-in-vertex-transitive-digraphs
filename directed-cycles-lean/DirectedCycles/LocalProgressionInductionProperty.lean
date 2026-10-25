@@ -1,5 +1,9 @@
-import DirectedCycles.LocalProgressionFamilyChoice
-import DirectedCycles.LocalLargeIndex
+module
+
+public import DirectedCycles.LocalProgressionFamilyChoice
+public import DirectedCycles.LocalLargeIndex
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

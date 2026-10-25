@@ -1,5 +1,9 @@
-import DirectedCycles.LocalPowerPeriod
-import DirectedCycles.LocalPowerSegmentDouble
+module
+
+public import DirectedCycles.LocalPowerPeriod
+public import DirectedCycles.LocalPowerSegmentDouble
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

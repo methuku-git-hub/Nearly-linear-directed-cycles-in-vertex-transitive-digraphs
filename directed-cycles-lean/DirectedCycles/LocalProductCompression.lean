@@ -1,5 +1,9 @@
-import DirectedCycles.LocalProductSplits
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.LocalProductSplits
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

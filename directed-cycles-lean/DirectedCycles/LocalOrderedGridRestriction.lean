@@ -1,5 +1,9 @@
-import DirectedCycles.LocalOrderedGrid
-import DirectedCycles.LocalEscapeNorm
+module
+
+public import DirectedCycles.LocalOrderedGrid
+public import DirectedCycles.LocalEscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

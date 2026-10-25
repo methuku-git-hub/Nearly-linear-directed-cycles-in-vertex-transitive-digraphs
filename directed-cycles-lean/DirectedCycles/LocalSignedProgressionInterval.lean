@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedPowers
-import DirectedCycles.LocalSignedProgression
+module
+
+public import DirectedCycles.LocalSignedPowers
+public import DirectedCycles.LocalSignedProgression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

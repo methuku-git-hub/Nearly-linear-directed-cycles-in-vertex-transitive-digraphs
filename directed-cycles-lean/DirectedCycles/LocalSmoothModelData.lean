@@ -1,5 +1,9 @@
-import DirectedCycles.LocalLargeIndexModels
-import Mathlib.Topology.Compactness.Compact
+module
+
+public import DirectedCycles.LocalLargeIndexModels
+public import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

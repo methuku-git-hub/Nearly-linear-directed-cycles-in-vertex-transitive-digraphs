@@ -1,5 +1,9 @@
-import DirectedCycles.LocalProductCancellation
-import DirectedCycles.LocalMinimalEscape
+module
+
+public import DirectedCycles.LocalProductCancellation
+public import DirectedCycles.LocalMinimalEscape
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

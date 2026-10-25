@@ -1,5 +1,9 @@
-import DirectedCycles.LocalPowerGrid
-import Mathlib.Data.Nat.ModEq
+module
+
+public import DirectedCycles.LocalPowerGrid
+public import Mathlib.Data.Nat.ModEq
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

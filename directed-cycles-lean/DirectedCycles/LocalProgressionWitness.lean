@@ -1,6 +1,10 @@
-import DirectedCycles.LocalOrderedGrid
-import DirectedCycles.LocalIteratedGeneratorCommutators
-import DirectedCycles.LocalOrderedGridRestriction
+module
+
+public import DirectedCycles.LocalOrderedGrid
+public import DirectedCycles.LocalIteratedGeneratorCommutators
+public import DirectedCycles.LocalOrderedGridRestriction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

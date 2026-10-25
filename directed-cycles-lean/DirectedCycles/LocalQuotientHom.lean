@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalQuotientAssociativity
+module
+
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalQuotientAssociativity
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

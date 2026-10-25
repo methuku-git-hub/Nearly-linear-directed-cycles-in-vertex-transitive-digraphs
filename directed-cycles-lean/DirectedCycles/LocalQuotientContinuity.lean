@@ -1,4 +1,8 @@
-import DirectedCycles.LocalQuotientTopology
+module
+
+public import DirectedCycles.LocalQuotientTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

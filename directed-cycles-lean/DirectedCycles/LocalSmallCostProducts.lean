@@ -1,7 +1,11 @@
-import DirectedCycles.LocalProductSplits
-import DirectedCycles.LocalTwoProducts
-import DirectedCycles.LocalWordPowers
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
+module
+
+public import DirectedCycles.LocalProductSplits
+public import DirectedCycles.LocalTwoProducts
+public import DirectedCycles.LocalWordPowers
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalSliceSmoothProjection
-import DirectedCycles.LocalSliceSmoothSection
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
+module
+
+public import DirectedCycles.LocalSliceSmoothProjection
+public import DirectedCycles.LocalSliceSmoothSection
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

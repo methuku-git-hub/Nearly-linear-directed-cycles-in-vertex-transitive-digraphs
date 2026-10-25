@@ -1,7 +1,11 @@
-import DirectedCycles.FiniteFamilyPacking
-import DirectedCycles.LocalFiniteLeftTranslate
-import DirectedCycles.LocalWordPowerIteration
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.FiniteFamilyPacking
+public import DirectedCycles.LocalFiniteLeftTranslate
+public import DirectedCycles.LocalWordPowerIteration
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

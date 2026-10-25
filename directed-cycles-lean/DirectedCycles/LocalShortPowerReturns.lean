@@ -1,6 +1,10 @@
-import DirectedCycles.LocalPowerMultiples
-import DirectedCycles.LocalPowerSegmentCompression
-import DirectedCycles.LocalWordPowerIteration
+module
+
+public import DirectedCycles.LocalPowerMultiples
+public import DirectedCycles.LocalPowerSegmentCompression
+public import DirectedCycles.LocalWordPowerIteration
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

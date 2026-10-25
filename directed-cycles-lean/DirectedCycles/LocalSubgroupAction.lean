@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalWordPowers
-import DirectedCycles.LocalTwoProducts
+module
+
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalWordPowers
+public import DirectedCycles.LocalTwoProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

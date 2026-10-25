@@ -1,6 +1,10 @@
-import DirectedCycles.LocalRestrictedProductNorm
-import DirectedCycles.LocalWordPowers
-import DirectedCycles.LocalOptimalEscapeBump
+module
+
+public import DirectedCycles.LocalRestrictedProductNorm
+public import DirectedCycles.LocalWordPowers
+public import DirectedCycles.LocalOptimalEscapeBump
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

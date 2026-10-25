@@ -1,6 +1,10 @@
-import DirectedCycles.LocalQuotientTopology
-import Mathlib.Topology.Maps.Strict.Basic
-import Mathlib.Topology.OpenPartialHomeomorph.Composition
+module
+
+public import DirectedCycles.LocalQuotientTopology
+public import Mathlib.Topology.Maps.Strict.Basic
+public import Mathlib.Topology.OpenPartialHomeomorph.Composition
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

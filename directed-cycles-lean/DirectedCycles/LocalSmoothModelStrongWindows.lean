@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSmoothModelData
-import DirectedCycles.LargeStrongLocalLieTargetModelExistence
+module
+
+public import DirectedCycles.LocalSmoothModelData
+public import DirectedCycles.LargeStrongLocalLieTargetModelExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

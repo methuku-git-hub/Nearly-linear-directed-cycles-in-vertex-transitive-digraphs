@@ -1,7 +1,11 @@
-import DirectedCycles.LocalLieProgressionStatement
-import DirectedCycles.LocalSmoothModelNormalization
-import DirectedCycles.LocalLieTargetCentralReduction
-import DirectedCycles.LocalCentralProgressionWindowCaller
+module
+
+public import DirectedCycles.LocalLieProgressionStatement
+public import DirectedCycles.LocalSmoothModelNormalization
+public import DirectedCycles.LocalLieTargetCentralReduction
+public import DirectedCycles.LocalCentralProgressionWindowCaller
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

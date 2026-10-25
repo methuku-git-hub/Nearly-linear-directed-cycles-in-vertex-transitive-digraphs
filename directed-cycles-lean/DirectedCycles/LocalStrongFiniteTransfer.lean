@@ -1,7 +1,11 @@
-import DirectedCycles.LocalConjugateTransfer
-import DirectedCycles.LocalPowerTrappingReflection
-import DirectedCycles.LocalApproximateFiniteTransfer
-import DirectedCycles.StrongLocalApproximateGroups
+module
+
+public import DirectedCycles.LocalConjugateTransfer
+public import DirectedCycles.LocalPowerTrappingReflection
+public import DirectedCycles.LocalApproximateFiniteTransfer
+public import DirectedCycles.StrongLocalApproximateGroups
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
