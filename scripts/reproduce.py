@@ -5,6 +5,7 @@ import shutil
 import subprocess
 import sys
 import tempfile
+import zipfile
 from check_snapshot import ROOT, check
 
 
@@ -22,7 +23,9 @@ def main():
     work = ROOT / "reproduction"
     work.mkdir(exist_ok=True)
     destination = Path(tempfile.mkdtemp(prefix="run-", dir=work)) / "directed-cycles-lean"
-    shutil.copytree(ROOT / "directed-cycles-lean", destination)
+    with zipfile.ZipFile(ROOT / "release/theorem-1-5-lean-certified.zip") as archive:
+        # check() already validated every path and the complete archive hash.
+        archive.extractall(destination.parent)
     print(f"Reproduction directory: {destination}", flush=True)
     subprocess.run(["lake", "exe", "cache", "get"], cwd=destination, check=True)
     subprocess.run([sys.executable, "scripts/verify.py", "--certify"],
