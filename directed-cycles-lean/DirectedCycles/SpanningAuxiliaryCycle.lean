@@ -1,8 +1,12 @@
-import DirectedCycles.SpanningEquivalence
-import DirectedCycles.SpanningLiftInput
-import DirectedCycles.AuxiliaryLayerBound
-import DirectedCycles.AuxiliaryGroupIndex
-import DirectedCycles.ActualFixedFibres
+module
+
+public import DirectedCycles.SpanningEquivalence
+public import DirectedCycles.SpanningLiftInput
+public import DirectedCycles.AuxiliaryLayerBound
+public import DirectedCycles.AuxiliaryGroupIndex
+public import DirectedCycles.ActualFixedFibres
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

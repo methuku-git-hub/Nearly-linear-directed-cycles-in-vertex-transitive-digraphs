@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteAlmostPeriods
-import Mathlib.Combinatorics.Additive.Energy
+module
+
+public import DirectedCycles.FiniteAlmostPeriods
+public import Mathlib.Combinatorics.Additive.Energy
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise BigOperators

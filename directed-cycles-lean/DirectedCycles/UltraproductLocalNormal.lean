@@ -1,5 +1,9 @@
-import DirectedCycles.LocalQuotientWindow
-import DirectedCycles.UltraproductInternalSets
+module
+
+public import DirectedCycles.LocalQuotientWindow
+public import DirectedCycles.UltraproductInternalSets
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

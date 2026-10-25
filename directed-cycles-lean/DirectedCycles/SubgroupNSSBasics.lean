@@ -1,6 +1,10 @@
-import Mathlib.Topology.Algebra.Group.Quotient
-import Mathlib.Topology.Algebra.OpenSubgroup
-import Mathlib.GroupTheory.SpecificGroups.Cyclic.Basic
+module
+
+public import Mathlib.Topology.Algebra.Group.Quotient
+public import Mathlib.Topology.Algebra.OpenSubgroup
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

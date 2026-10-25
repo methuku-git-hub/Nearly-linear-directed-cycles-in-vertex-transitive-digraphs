@@ -1,3 +1,5 @@
+module
+
 /-
 The compact clopen-basis argument below is adapted from mathlib's
 Topology/Separation/Profinite.lean, copyright 2017 Johannes Hölzl,
@@ -5,9 +7,11 @@ authors Johannes Hölzl and Mario Carneiro, under the Apache 2.0 license.
 It is reproduced in this namespace because that optional module is absent
 from the pinned compiled dependency cache. The dependency sources are unchanged.
 -/
-import Mathlib.Topology.Separation.Regular
-import Mathlib.Topology.Connected.TotallyDisconnected
-import Mathlib.Tactic
+public import Mathlib.Topology.Separation.Regular
+public import Mathlib.Topology.Connected.TotallyDisconnected
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Function Set Filter Topology TopologicalSpace

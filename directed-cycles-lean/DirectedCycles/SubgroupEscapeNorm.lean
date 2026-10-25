@@ -1,5 +1,9 @@
-import DirectedCycles.EscapeNorm
-import DirectedCycles.ApproximateSmallConstant
+module
+
+public import DirectedCycles.EscapeNorm
+public import DirectedCycles.ApproximateSmallConstant
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

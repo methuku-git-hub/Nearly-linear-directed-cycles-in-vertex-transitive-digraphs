@@ -1,5 +1,9 @@
-import DirectedCycles.StrongApproximateGroups
-import DirectedCycles.SubgroupEscapeNorm
+module
+
+public import DirectedCycles.StrongApproximateGroups
+public import DirectedCycles.SubgroupEscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

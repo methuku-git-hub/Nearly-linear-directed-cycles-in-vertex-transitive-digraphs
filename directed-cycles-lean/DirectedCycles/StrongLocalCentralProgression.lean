@@ -1,5 +1,9 @@
-import DirectedCycles.StrongLocalCentralElement
-import DirectedCycles.LocalCommutingPowers
+module
+
+public import DirectedCycles.StrongLocalCentralElement
+public import DirectedCycles.LocalCommutingPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

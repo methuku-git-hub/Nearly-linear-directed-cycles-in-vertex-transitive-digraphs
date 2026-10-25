@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalCentralCurve
-import DirectedCycles.LieOneParameterSmooth
-import DirectedCycles.LieOneParameterNonzero
+module
+
+public import DirectedCycles.StrongLocalCentralCurve
+public import DirectedCycles.LieOneParameterSmooth
+public import DirectedCycles.LieOneParameterNonzero
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

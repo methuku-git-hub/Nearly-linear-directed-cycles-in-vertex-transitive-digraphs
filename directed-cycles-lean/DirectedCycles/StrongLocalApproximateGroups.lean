@@ -1,7 +1,11 @@
-import DirectedCycles.LocalFiniteGleasonProduct
-import DirectedCycles.LocalConjugates
-import DirectedCycles.LocalApproximateOne
-import DirectedCycles.LocalNSSApproximateQuotient
+module
+
+public import DirectedCycles.LocalFiniteGleasonProduct
+public import DirectedCycles.LocalConjugates
+public import DirectedCycles.LocalApproximateOne
+public import DirectedCycles.LocalNSSApproximateQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

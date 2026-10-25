@@ -1,5 +1,9 @@
-import DirectedCycles.StrongLocalCentralLieCurve
-import DirectedCycles.LieExponentialCurve
+module
+
+public import DirectedCycles.StrongLocalCentralLieCurve
+public import DirectedCycles.LieExponentialCurve
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

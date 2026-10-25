@@ -1,8 +1,12 @@
-import DirectedCycles.StrongLocalCentralProgression
-import DirectedCycles.StrongLocalUniformNSSQuotient
-import DirectedCycles.LocalSignedProgressionClosure
-import DirectedCycles.LocalCentralEquivalence
-import DirectedCycles.LocalEscapePowerCutoff
+module
+
+public import DirectedCycles.StrongLocalCentralProgression
+public import DirectedCycles.StrongLocalUniformNSSQuotient
+public import DirectedCycles.LocalSignedProgressionClosure
+public import DirectedCycles.LocalCentralEquivalence
+public import DirectedCycles.LocalEscapePowerCutoff
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

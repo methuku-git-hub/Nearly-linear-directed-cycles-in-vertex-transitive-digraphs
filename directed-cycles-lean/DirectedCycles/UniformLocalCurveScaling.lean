@@ -1,4 +1,8 @@
-import DirectedCycles.LocalMultiplicativeGermUniqueness
+module
+
+public import DirectedCycles.LocalMultiplicativeGermUniqueness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

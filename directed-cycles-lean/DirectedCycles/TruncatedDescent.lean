@@ -1,6 +1,10 @@
-import DirectedCycles.TruncatedKernel
-import DirectedCycles.OperatorSpans
-import DirectedCycles.TruncatedPowers
+module
+
+public import DirectedCycles.TruncatedKernel
+public import DirectedCycles.OperatorSpans
+public import DirectedCycles.TruncatedPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

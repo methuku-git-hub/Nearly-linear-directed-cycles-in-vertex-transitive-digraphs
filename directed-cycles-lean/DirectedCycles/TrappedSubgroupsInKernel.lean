@@ -1,5 +1,9 @@
-import DirectedCycles.SubgroupNSSBasics
-import Mathlib.Algebra.Group.Subgroup.Map
+module
+
+public import DirectedCycles.SubgroupNSSBasics
+public import Mathlib.Algebra.Group.Subgroup.Map
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

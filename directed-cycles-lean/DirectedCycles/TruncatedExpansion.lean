@@ -1,7 +1,11 @@
-import DirectedCycles.TruncatedPowers
-import DirectedCycles.PowerCoordinates
-import Mathlib.LinearAlgebra.Multilinear.Basic
-import Mathlib.Data.Nat.Choose.Sum
+module
+
+public import DirectedCycles.TruncatedPowers
+public import DirectedCycles.PowerCoordinates
+public import Mathlib.LinearAlgebra.Multilinear.Basic
+public import Mathlib.Data.Nat.Choose.Sum
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteGleasonProduct
-import DirectedCycles.FiniteGleasonCommutator
+module
+
+public import DirectedCycles.FiniteGleasonProduct
+public import DirectedCycles.FiniteGleasonCommutator
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,5 +1,9 @@
-import DirectedCycles.StrongLocalApproximateGroups
-import DirectedCycles.LocalFiniteEscapeNeighbourhoods
+module
+
+public import DirectedCycles.StrongLocalApproximateGroups
+public import DirectedCycles.LocalFiniteEscapeNeighbourhoods
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

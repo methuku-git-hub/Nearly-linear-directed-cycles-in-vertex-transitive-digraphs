@@ -1,5 +1,9 @@
-import DirectedCycles.Paths
-import DirectedCycles.DigraphAutomorphismGroup
+module
+
+public import DirectedCycles.Paths
+public import DirectedCycles.DigraphAutomorphismGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

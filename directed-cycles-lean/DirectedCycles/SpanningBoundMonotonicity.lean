@@ -1,4 +1,8 @@
-import DirectedCycles.NilpotentCycleBounds
+module
+
+public import DirectedCycles.NilpotentCycleBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

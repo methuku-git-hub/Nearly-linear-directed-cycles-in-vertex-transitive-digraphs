@@ -1,7 +1,11 @@
-import Mathlib.Order.Filter.SmallSets
-import Mathlib.Order.Filter.Ultrafilter.Basic
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Tactic
+module
+
+public import Mathlib.Order.Filter.SmallSets
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

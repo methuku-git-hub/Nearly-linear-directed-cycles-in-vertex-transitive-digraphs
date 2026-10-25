@@ -1,4 +1,8 @@
-import DirectedCycles.TemplateCycle
+module
+
+public import DirectedCycles.TemplateCycle
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

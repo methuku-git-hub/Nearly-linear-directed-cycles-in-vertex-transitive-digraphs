@@ -1,5 +1,9 @@
-import DirectedCycles.StabilizerRemoval
-import DirectedCycles.NormalOrbitCycleLift
+module
+
+public import DirectedCycles.StabilizerRemoval
+public import DirectedCycles.NormalOrbitCycleLift
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

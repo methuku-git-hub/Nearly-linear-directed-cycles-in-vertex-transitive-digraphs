@@ -1,4 +1,8 @@
-import DirectedCycles.FibreSpanning
+module
+
+public import DirectedCycles.FibreSpanning
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,13 +1,17 @@
-import DirectedCycles.StrongLocalCentralSegment
-import DirectedCycles.StrongLocalSelectedCentralSet
-import DirectedCycles.LocalLieTargetLongPowerSegments
-import DirectedCycles.LocalMinimalEscapeUnbounded
-import DirectedCycles.LocalToLocalScaledCurve
-import DirectedCycles.LocalToLocalScaledCentrality
-import DirectedCycles.LocalLieTargetEscapeNeighbourhood
-import DirectedCycles.SmoothLocalCurveNonzeroTangent
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalToLocalShortProgressionModel
+module
+
+public import DirectedCycles.StrongLocalCentralSegment
+public import DirectedCycles.StrongLocalSelectedCentralSet
+public import DirectedCycles.LocalLieTargetLongPowerSegments
+public import DirectedCycles.LocalMinimalEscapeUnbounded
+public import DirectedCycles.LocalToLocalScaledCurve
+public import DirectedCycles.LocalToLocalScaledCentrality
+public import DirectedCycles.LocalLieTargetEscapeNeighbourhood
+public import DirectedCycles.SmoothLocalCurveNonzeroTangent
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalToLocalShortProgressionModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

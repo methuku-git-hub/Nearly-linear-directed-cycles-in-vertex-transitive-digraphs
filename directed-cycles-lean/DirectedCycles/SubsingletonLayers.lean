@@ -1,7 +1,11 @@
-import DirectedCycles.FunctionalCycles
-import DirectedCycles.LayerCycleLength
-import DirectedCycles.LayerEquivalence
-import DirectedCycles.RoundCycleExpansion
+module
+
+public import DirectedCycles.FunctionalCycles
+public import DirectedCycles.LayerCycleLength
+public import DirectedCycles.LayerEquivalence
+public import DirectedCycles.RoundCycleExpansion
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

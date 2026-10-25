@@ -1,5 +1,9 @@
-import DirectedCycles.SmoothLocalCompactNSS
-import DirectedCycles.LocalToLocalModelEscapeControl
+module
+
+public import DirectedCycles.SmoothLocalCompactNSS
+public import DirectedCycles.LocalToLocalModelEscapeControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteStructuralTheorems
-import DirectedCycles.MainFromCosetNilprogression
+module
+
+public import DirectedCycles.FiniteStructuralTheorems
+public import DirectedCycles.MainFromCosetNilprogression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

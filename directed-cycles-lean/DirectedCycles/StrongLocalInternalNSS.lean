@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalUniformNSSQuotient
-import DirectedCycles.LocalApproximateUltra
-import DirectedCycles.LocalInternalSubgroups
+module
+
+public import DirectedCycles.StrongLocalUniformNSSQuotient
+public import DirectedCycles.LocalApproximateUltra
+public import DirectedCycles.LocalInternalSubgroups
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

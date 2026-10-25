@@ -1,5 +1,9 @@
-import DirectedCycles.LowerPowerCoverage
-import DirectedCycles.SubgroupSeries
+module
+
+public import DirectedCycles.LowerPowerCoverage
+public import DirectedCycles.SubgroupSeries
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators IsMulCommutative

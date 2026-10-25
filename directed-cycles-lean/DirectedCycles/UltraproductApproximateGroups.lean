@@ -1,7 +1,11 @@
-import DirectedCycles.UltraproductInternalSets
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
-import Mathlib.Algebra.Order.Floor.Ring
-import Mathlib.Data.Fintype.EquivFin
+module
+
+public import DirectedCycles.UltraproductInternalSets
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+public import Mathlib.Algebra.Order.Floor.Ring
+public import Mathlib.Data.Fintype.EquivFin
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

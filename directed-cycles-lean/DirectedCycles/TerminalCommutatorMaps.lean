@@ -1,4 +1,8 @@
-import DirectedCycles.MarkedVariableMultilinearity
+module
+
+public import DirectedCycles.MarkedVariableMultilinearity
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

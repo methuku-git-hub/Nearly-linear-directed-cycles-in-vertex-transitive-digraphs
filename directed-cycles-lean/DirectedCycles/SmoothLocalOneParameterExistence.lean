@@ -1,6 +1,10 @@
-import DirectedCycles.SmoothLocalIntegralCurve
-import DirectedCycles.LocalMultiplicationInvariantField
-import DirectedCycles.LocalIntegralCurveMultiplication
+module
+
+public import DirectedCycles.SmoothLocalIntegralCurve
+public import DirectedCycles.LocalMultiplicationInvariantField
+public import DirectedCycles.LocalIntegralCurveMultiplication
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff
