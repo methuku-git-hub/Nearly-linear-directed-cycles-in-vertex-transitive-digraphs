@@ -1,7 +1,11 @@
-import DirectedCycles.AbelianCycleLift
-import DirectedCycles.AbelianCayleyCycle
-import DirectedCycles.RoundSpanning
-import DirectedCycles.PrimeCutoffOrders
+module
+
+public import DirectedCycles.AbelianCycleLift
+public import DirectedCycles.AbelianCayleyCycle
+public import DirectedCycles.RoundSpanning
+public import DirectedCycles.PrimeCutoffOrders
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

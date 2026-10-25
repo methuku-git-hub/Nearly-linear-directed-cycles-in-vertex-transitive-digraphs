@@ -1,5 +1,9 @@
-import DirectedCycles.CyclicResiduePowers
-import DirectedCycles.RunPrefixResidues
+module
+
+public import DirectedCycles.CyclicResiduePowers
+public import DirectedCycles.RunPrefixResidues
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteAlmostPeriods
-import Mathlib.Combinatorics.Pigeonhole
+module
+
+public import DirectedCycles.FiniteAlmostPeriods
+public import Mathlib.Combinatorics.Pigeonhole
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

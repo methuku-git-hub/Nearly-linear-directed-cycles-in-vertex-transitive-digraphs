@@ -1,5 +1,9 @@
-import DirectedCycles.ActualEdgeExpansion
-import DirectedCycles.TemplateCertifiedEdges
+module
+
+public import DirectedCycles.ActualEdgeExpansion
+public import DirectedCycles.TemplateCertifiedEdges
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

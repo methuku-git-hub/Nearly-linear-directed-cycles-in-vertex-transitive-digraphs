@@ -1,5 +1,9 @@
-import DirectedCycles.CycleLift
-import DirectedCycles.CayleyCycleLabels
+module
+
+public import DirectedCycles.CycleLift
+public import DirectedCycles.CayleyCycleLabels
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

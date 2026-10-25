@@ -1,6 +1,10 @@
-import DirectedCycles.RegularizedEscapeDistance
-import DirectedCycles.ScalarBootstrap
-import DirectedCycles.BoundedDerivativeEscape
+module
+
+public import DirectedCycles.RegularizedEscapeDistance
+public import DirectedCycles.ScalarBootstrap
+public import DirectedCycles.BoundedDerivativeEscape
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

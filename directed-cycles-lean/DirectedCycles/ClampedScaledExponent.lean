@@ -1,5 +1,9 @@
-import DirectedCycles.ShortProgressionProperness
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import DirectedCycles.ShortProgressionProperness
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

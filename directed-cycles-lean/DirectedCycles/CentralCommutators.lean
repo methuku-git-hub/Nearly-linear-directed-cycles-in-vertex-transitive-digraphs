@@ -1,10 +1,14 @@
-import DirectedCycles.Basic
-import DirectedCycles.RankExtension
-import DirectedCycles.NormalClosureExponent
-import Mathlib.GroupTheory.Commutator.Basic
-import Mathlib.GroupTheory.Subgroup.Center
-import Mathlib.GroupTheory.Abelianization.Defs
-import Mathlib.GroupTheory.Rank
+module
+
+public import DirectedCycles.Basic
+public import DirectedCycles.RankExtension
+public import DirectedCycles.NormalClosureExponent
+public import Mathlib.GroupTheory.Commutator.Basic
+public import Mathlib.GroupTheory.Subgroup.Center
+public import Mathlib.GroupTheory.Abelianization.Defs
+public import Mathlib.GroupTheory.Rank
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement Classical IsMulCommutative

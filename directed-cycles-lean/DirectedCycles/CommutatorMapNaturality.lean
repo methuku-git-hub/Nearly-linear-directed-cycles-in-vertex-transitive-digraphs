@@ -1,5 +1,9 @@
-import DirectedCycles.CommutatorWordBounds
-import DirectedCycles.NormalClosureCommutators
+module
+
+public import DirectedCycles.CommutatorWordBounds
+public import DirectedCycles.NormalClosureCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement Pointwise

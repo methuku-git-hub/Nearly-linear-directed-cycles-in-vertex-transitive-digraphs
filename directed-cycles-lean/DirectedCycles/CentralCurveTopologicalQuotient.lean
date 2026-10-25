@@ -1,5 +1,9 @@
-import DirectedCycles.CentralCurveLocalNormal
-import DirectedCycles.OpenSymmetricQuotientWindow
+module
+
+public import DirectedCycles.CentralCurveLocalNormal
+public import DirectedCycles.OpenSymmetricQuotientWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

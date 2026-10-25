@@ -1,7 +1,11 @@
-import DirectedCycles.CyclicResiduePowers
-import DirectedCycles.RunPrefixResidues
-import DirectedCycles.CycleRunData
-import DirectedCycles.RetainedPositions
+module
+
+public import DirectedCycles.CyclicResiduePowers
+public import DirectedCycles.RunPrefixResidues
+public import DirectedCycles.CycleRunData
+public import DirectedCycles.RetainedPositions
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

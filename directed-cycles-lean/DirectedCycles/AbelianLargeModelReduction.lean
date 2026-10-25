@@ -1,4 +1,9 @@
-import DirectedCycles.AbelianShortGeneration
+module
+
+public import Mathlib.Combinatorics.Additive.RuzsaCovering
+public import DirectedCycles.AbelianShortGeneration
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

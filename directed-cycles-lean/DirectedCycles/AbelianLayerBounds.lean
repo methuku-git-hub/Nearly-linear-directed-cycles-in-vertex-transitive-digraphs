@@ -1,7 +1,11 @@
-import DirectedCycles.AbelianLargeRound
-import DirectedCycles.AbelianBoundedRounds
-import DirectedCycles.BaselineHamiltonian
-import DirectedCycles.SubsingletonLayers
+module
+
+public import DirectedCycles.AbelianLargeRound
+public import DirectedCycles.AbelianBoundedRounds
+public import DirectedCycles.BaselineHamiltonian
+public import DirectedCycles.SubsingletonLayers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

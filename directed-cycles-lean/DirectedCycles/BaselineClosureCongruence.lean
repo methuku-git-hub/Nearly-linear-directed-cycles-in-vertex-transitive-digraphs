@@ -1,4 +1,8 @@
-import DirectedCycles.CyclicAuxiliaryGraph
+module
+
+public import DirectedCycles.CyclicAuxiliaryGraph
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

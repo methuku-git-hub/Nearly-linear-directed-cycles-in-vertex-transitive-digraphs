@@ -1,4 +1,8 @@
-import DirectedCycles.DifferenceConstraints
+module
+
+public import DirectedCycles.DifferenceConstraints
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

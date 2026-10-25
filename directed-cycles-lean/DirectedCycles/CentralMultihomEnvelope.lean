@@ -1,4 +1,8 @@
-import DirectedCycles.MultihomSubgroupWidth
+module
+
+public import DirectedCycles.MultihomSubgroupWidth
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

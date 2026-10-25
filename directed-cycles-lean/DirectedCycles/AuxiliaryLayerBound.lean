@@ -1,6 +1,10 @@
-import DirectedCycles.ChosenLiftInput
-import DirectedCycles.LayerEquivalence
-import DirectedCycles.SlotCoordinateMembership
+module
+
+public import DirectedCycles.ChosenLiftInput
+public import DirectedCycles.LayerEquivalence
+public import DirectedCycles.SlotCoordinateMembership
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

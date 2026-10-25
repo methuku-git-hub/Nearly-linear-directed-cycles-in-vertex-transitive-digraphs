@@ -1,6 +1,10 @@
-import DirectedCycles.FunctionalCycles
-import DirectedCycles.LayerWordReplacement
-import DirectedCycles.RoundCycleExpansion
+module
+
+public import DirectedCycles.FunctionalCycles
+public import DirectedCycles.LayerWordReplacement
+public import DirectedCycles.RoundCycleExpansion
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

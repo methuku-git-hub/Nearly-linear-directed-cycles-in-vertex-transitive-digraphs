@@ -1,6 +1,10 @@
-import DirectedCycles.ApproximateSubgroupRestriction
-import DirectedCycles.QuotientPowerContainment
-import DirectedCycles.CommutatorQuotients
+module
+
+public import DirectedCycles.ApproximateSubgroupRestriction
+public import DirectedCycles.QuotientPowerContainment
+public import DirectedCycles.CommutatorQuotients
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise commutatorElement

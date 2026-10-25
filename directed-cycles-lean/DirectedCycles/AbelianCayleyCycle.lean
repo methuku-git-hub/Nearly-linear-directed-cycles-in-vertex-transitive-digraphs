@@ -1,9 +1,13 @@
-import DirectedCycles.AbelianHamiltonianPath
-import DirectedCycles.MinimalGenerators
-import DirectedCycles.CosetPathCycle
-import DirectedCycles.CyclicCosetSpanning
-import Mathlib.GroupTheory.Index
-import Mathlib.GroupTheory.SpecificGroups.Cyclic.Basic
+module
+
+public import DirectedCycles.AbelianHamiltonianPath
+public import DirectedCycles.MinimalGenerators
+public import DirectedCycles.CosetPathCycle
+public import DirectedCycles.CyclicCosetSpanning
+public import Mathlib.GroupTheory.Index
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

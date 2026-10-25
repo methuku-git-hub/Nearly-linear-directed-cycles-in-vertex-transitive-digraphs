@@ -1,10 +1,14 @@
-import DirectedCycles.PrimeBudget
-import DirectedCycles.CyclicGeneratorCycle
-import DirectedCycles.CayleyQuotientLift
-import DirectedCycles.DirectedLifting
-import DirectedCycles.BudgetConstants
-import DirectedCycles.LowerClassInputs
-import DirectedCycles.NilpotentCycleBounds
+module
+
+public import DirectedCycles.PrimeBudget
+public import DirectedCycles.CyclicGeneratorCycle
+public import DirectedCycles.CayleyQuotientLift
+public import DirectedCycles.DirectedLifting
+public import DirectedCycles.BudgetConstants
+public import DirectedCycles.LowerClassInputs
+public import DirectedCycles.NilpotentCycleBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

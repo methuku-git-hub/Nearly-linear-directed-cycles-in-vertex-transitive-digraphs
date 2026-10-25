@@ -1,4 +1,8 @@
-import DirectedCycles.OrbitCycleWalk
+module
+
+public import DirectedCycles.OrbitCycleWalk
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

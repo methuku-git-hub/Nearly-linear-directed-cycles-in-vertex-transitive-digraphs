@@ -1,6 +1,10 @@
-import DirectedCycles.Augmentation
-import Mathlib.Algebra.Module.LinearMap.End
-import Mathlib.Algebra.Group.Subgroup.Map
+module
+
+public import DirectedCycles.Augmentation
+public import Mathlib.Algebra.Module.LinearMap.End
+public import Mathlib.Algebra.Group.Subgroup.Map
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped MonoidAlgebra

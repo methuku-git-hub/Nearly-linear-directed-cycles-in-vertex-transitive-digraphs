@@ -1,4 +1,8 @@
-import DirectedCycles.AbelianShortGeneration
+module
+
+public import DirectedCycles.AbelianShortGeneration
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

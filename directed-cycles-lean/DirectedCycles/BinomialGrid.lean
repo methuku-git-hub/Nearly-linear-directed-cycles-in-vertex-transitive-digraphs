@@ -1,6 +1,10 @@
-import Mathlib.RingTheory.Polynomial.Pochhammer
-import Mathlib.Algebra.MvPolynomial.CommRing
-import Mathlib.Tactic
+module
+
+public import Mathlib.RingTheory.Polynomial.Pochhammer
+public import Mathlib.Algebra.MvPolynomial.CommRing
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

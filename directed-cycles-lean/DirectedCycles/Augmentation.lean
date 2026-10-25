@@ -1,7 +1,11 @@
-import DirectedCycles.Basic
-import Mathlib.Algebra.MonoidAlgebra.Basic
-import Mathlib.RingTheory.Ideal.Operations
-import Mathlib.RingTheory.Ideal.Quotient.Defs
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Algebra.MonoidAlgebra.Basic
+public import Mathlib.RingTheory.Ideal.Operations
+public import Mathlib.RingTheory.Ideal.Quotient.Defs
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped MonoidAlgebra

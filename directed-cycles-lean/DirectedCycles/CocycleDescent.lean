@@ -1,4 +1,8 @@
-import DirectedCycles.QuotientRepresentation
+module
+
+public import DirectedCycles.QuotientRepresentation
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

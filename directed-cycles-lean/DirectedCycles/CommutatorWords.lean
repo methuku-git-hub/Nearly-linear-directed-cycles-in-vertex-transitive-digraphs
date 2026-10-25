@@ -1,5 +1,9 @@
-import DirectedCycles.RelativeCommutatorWeights
-import Mathlib.Algebra.Group.Pointwise.Set.Basic
+module
+
+public import DirectedCycles.RelativeCommutatorWeights
+public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement Pointwise

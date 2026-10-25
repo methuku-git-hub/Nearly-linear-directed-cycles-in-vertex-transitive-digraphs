@@ -1,6 +1,10 @@
-import DirectedCycles.UniformNeighbourhoodChain
-import DirectedCycles.InternalShrinkingNeighbourhoods
-import DirectedCycles.UltraproductApproximateGroups
+module
+
+public import DirectedCycles.UniformNeighbourhoodChain
+public import DirectedCycles.InternalShrinkingNeighbourhoods
+public import DirectedCycles.UltraproductApproximateGroups
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

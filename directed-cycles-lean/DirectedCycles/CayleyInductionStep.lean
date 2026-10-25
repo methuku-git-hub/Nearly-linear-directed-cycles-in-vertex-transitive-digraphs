@@ -1,6 +1,10 @@
-import DirectedCycles.LargePrimeCayley
-import DirectedCycles.BoundedPrimeCayley
-import DirectedCycles.SpanningBoundMonotonicity
+module
+
+public import DirectedCycles.LargePrimeCayley
+public import DirectedCycles.BoundedPrimeCayley
+public import DirectedCycles.SpanningBoundMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

@@ -1,5 +1,9 @@
-import DirectedCycles.CommutatorWords
-import Mathlib.Data.Finset.NAry
+module
+
+public import DirectedCycles.CommutatorWords
+public import Mathlib.Data.Finset.NAry
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

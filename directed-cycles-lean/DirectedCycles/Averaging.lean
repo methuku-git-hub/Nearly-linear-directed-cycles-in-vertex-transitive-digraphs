@@ -1,5 +1,9 @@
-import DirectedCycles.WeightedCuts
-import Mathlib.GroupTheory.GroupAction.Basic
+module
+
+public import DirectedCycles.WeightedCuts
+public import Mathlib.GroupTheory.GroupAction.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

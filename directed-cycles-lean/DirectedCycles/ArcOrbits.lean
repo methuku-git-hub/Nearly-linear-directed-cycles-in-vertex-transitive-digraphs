@@ -1,4 +1,8 @@
-import DirectedCycles.WeakComponents
+module
+
+public import DirectedCycles.WeakComponents
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

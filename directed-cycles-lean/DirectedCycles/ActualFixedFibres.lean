@@ -1,6 +1,10 @@
-import DirectedCycles.ActualCycleExpansion
-import DirectedCycles.TemplateRetainedTails
-import DirectedCycles.FibreSpanning
+module
+
+public import DirectedCycles.ActualCycleExpansion
+public import DirectedCycles.TemplateRetainedTails
+public import DirectedCycles.FibreSpanning
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

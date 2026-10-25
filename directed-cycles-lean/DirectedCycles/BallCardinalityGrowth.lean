@@ -1,5 +1,9 @@
-import DirectedCycles.ActionBallPaths
-import Mathlib.Data.Set.Card
+module
+
+public import DirectedCycles.ActionBallPaths
+public import Mathlib.Data.Set.Card
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

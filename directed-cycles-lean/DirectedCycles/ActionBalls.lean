@@ -1,5 +1,9 @@
-import DirectedCycles.NormalPartitions
-import Mathlib.Algebra.Group.Pointwise.Set.Basic
+module
+
+public import DirectedCycles.NormalPartitions
+public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

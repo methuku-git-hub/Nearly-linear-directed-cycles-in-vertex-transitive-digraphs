@@ -1,4 +1,8 @@
-import DirectedCycles.BoundedGroupDerivative
+module
+
+public import DirectedCycles.BoundedGroupDerivative
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

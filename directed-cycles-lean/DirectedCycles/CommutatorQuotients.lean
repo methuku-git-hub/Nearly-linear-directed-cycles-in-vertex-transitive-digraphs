@@ -1,4 +1,8 @@
-import DirectedCycles.RelativeCommutatorWeights
+module
+
+public import DirectedCycles.RelativeCommutatorWeights
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

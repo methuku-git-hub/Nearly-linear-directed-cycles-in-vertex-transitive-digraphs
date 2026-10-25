@@ -1,5 +1,9 @@
-import DirectedCycles.CayleyWords
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import DirectedCycles.CayleyWords
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
