@@ -1,5 +1,9 @@
-import DirectedCycles.LocalToLocalCentralQuotientMap
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalToLocalCentralQuotientMap
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

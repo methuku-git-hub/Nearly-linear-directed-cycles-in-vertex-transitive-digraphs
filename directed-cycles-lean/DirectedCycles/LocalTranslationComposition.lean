@@ -1,5 +1,9 @@
-import DirectedCycles.LocalFiniteTranslations
-import DirectedCycles.LocalTripleProducts
+module
+
+public import DirectedCycles.LocalFiniteTranslations
+public import DirectedCycles.LocalTripleProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

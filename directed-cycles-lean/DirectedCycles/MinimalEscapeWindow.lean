@@ -1,5 +1,9 @@
-import DirectedCycles.MinimalEscapeCentrality
-import DirectedCycles.CentralEscapeWindow
+module
+
+public import DirectedCycles.MinimalEscapeCentrality
+public import DirectedCycles.CentralEscapeWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteNilpotentLargeModel
-import DirectedCycles.FiniteTerminalPeeling
-import DirectedCycles.MainFromFiniteAlgebra
+module
+
+public import DirectedCycles.FiniteNilpotentLargeModel
+public import DirectedCycles.FiniteTerminalPeeling
+public import DirectedCycles.MainFromFiniteAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

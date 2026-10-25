@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteMultihomWidth
-import DirectedCycles.MultihomAbelianization
+module
+
+public import DirectedCycles.FiniteMultihomWidth
+public import DirectedCycles.MultihomAbelianization
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

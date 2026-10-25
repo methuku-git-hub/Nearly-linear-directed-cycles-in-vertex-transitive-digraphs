@@ -1,4 +1,8 @@
-import DirectedCycles.LocalEquivalenceWindow
+module
+
+public import DirectedCycles.LocalEquivalenceWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

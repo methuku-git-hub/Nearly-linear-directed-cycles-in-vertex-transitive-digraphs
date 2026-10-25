@@ -1,5 +1,9 @@
-import DirectedCycles.CentralPowerCoverage
-import DirectedCycles.LowerCentralFactors
+module
+
+public import DirectedCycles.CentralPowerCoverage
+public import DirectedCycles.LowerCentralFactors
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

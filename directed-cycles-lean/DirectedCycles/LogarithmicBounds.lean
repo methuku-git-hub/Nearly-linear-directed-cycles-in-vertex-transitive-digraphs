@@ -1,4 +1,8 @@
-import DirectedCycles.Thresholds
+module
+
+public import DirectedCycles.Thresholds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNormalSubgroupQuotient
-import DirectedCycles.LocalSubgroupTransport
+module
+
+public import DirectedCycles.LocalNormalSubgroupQuotient
+public import DirectedCycles.LocalSubgroupTransport
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

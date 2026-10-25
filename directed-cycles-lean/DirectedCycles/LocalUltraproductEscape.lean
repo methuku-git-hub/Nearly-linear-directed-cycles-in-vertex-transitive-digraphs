@@ -1,7 +1,11 @@
-import DirectedCycles.LocalUltraproductProducts
-import DirectedCycles.LocalUltraproductDomain
-import DirectedCycles.LocalEscapeNorm
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+module
+
+public import DirectedCycles.LocalUltraproductProducts
+public import DirectedCycles.LocalUltraproductDomain
+public import DirectedCycles.LocalEscapeNorm
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

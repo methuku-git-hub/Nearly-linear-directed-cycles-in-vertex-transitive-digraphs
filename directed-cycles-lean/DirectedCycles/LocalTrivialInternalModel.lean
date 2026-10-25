@@ -1,8 +1,12 @@
-import DirectedCycles.LocalTrivialModel
-import DirectedCycles.LocalInternalSubgroups
-import DirectedCycles.LocalUltraproductProducts
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalApproximateFiniteTransfer
+module
+
+public import DirectedCycles.LocalTrivialModel
+public import DirectedCycles.LocalInternalSubgroups
+public import DirectedCycles.LocalUltraproductProducts
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalApproximateFiniteTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

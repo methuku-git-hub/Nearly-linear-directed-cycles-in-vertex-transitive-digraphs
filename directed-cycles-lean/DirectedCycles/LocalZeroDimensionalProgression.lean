@@ -1,6 +1,10 @@
-import DirectedCycles.LocalTrivialModel
-import DirectedCycles.ConnectedZeroDimensionalManifold
-import DirectedCycles.GlobalProgressionDensity
+module
+
+public import DirectedCycles.LocalTrivialModel
+public import DirectedCycles.ConnectedZeroDimensionalManifold
+public import DirectedCycles.GlobalProgressionDensity
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

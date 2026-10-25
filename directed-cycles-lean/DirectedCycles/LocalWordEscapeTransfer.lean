@@ -1,6 +1,10 @@
-import DirectedCycles.LocalWordEscape
-import DirectedCycles.LocalEscapeEstimateTransfer
-import DirectedCycles.LocalUltraproductProductExistence
+module
+
+public import DirectedCycles.LocalWordEscape
+public import DirectedCycles.LocalEscapeEstimateTransfer
+public import DirectedCycles.LocalUltraproductProductExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

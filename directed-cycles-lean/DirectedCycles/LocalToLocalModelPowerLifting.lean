@@ -1,5 +1,9 @@
-import DirectedCycles.LocalPowerExtension
-import DirectedCycles.LocalPowerSegmentMaps
+module
+
+public import DirectedCycles.LocalPowerExtension
+public import DirectedCycles.LocalPowerSegmentMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

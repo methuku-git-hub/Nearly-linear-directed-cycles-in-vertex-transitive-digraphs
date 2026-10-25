@@ -1,6 +1,10 @@
-import DirectedCycles.LocalSignedWords
-import DirectedCycles.LocalSubwordRestriction
-import DirectedCycles.LocalCentralQuotientData
+module
+
+public import DirectedCycles.LocalSignedWords
+public import DirectedCycles.LocalSubwordRestriction
+public import DirectedCycles.LocalCentralQuotientData
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

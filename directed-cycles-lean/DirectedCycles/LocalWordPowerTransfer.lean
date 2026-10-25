@@ -1,6 +1,10 @@
-import DirectedCycles.LocalWordPowers
-import DirectedCycles.LocalUltraproductProducts
-import DirectedCycles.UltraproductListRepresentatives
+module
+
+public import DirectedCycles.LocalWordPowers
+public import DirectedCycles.LocalUltraproductProducts
+public import DirectedCycles.UltraproductListRepresentatives
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

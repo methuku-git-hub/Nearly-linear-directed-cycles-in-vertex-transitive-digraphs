@@ -1,5 +1,9 @@
-import DirectedCycles.LocalTwoProducts
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.LocalTwoProducts
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalTranslationComposition
-import DirectedCycles.LocalPowerSegment
+module
+
+public import DirectedCycles.LocalTranslationComposition
+public import DirectedCycles.LocalPowerSegment
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.GroupMultihomOperations
-import Mathlib.GroupTheory.Abelianization.Defs
+module
+
+public import DirectedCycles.GroupMultihomOperations
+public import Mathlib.GroupTheory.Abelianization.Defs
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

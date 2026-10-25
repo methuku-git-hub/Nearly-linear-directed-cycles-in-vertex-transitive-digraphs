@@ -1,6 +1,10 @@
-import DirectedCycles.LocalChainBump
-import DirectedCycles.LocalWordPowerMonotonicity
-import DirectedCycles.LocalTripleProducts
+module
+
+public import DirectedCycles.LocalChainBump
+public import DirectedCycles.LocalWordPowerMonotonicity
+public import DirectedCycles.LocalTripleProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

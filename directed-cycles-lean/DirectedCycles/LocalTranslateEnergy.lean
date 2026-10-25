@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteFamilyOverlap
-import DirectedCycles.LocalFiniteRightTranslate
-import DirectedCycles.LocalFiniteProductCard
+module
+
+public import DirectedCycles.FiniteFamilyOverlap
+public import DirectedCycles.LocalFiniteRightTranslate
+public import DirectedCycles.LocalFiniteProductCard
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

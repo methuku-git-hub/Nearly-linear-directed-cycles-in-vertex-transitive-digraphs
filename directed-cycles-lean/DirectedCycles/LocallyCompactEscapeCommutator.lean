@@ -1,5 +1,9 @@
-import DirectedCycles.HaarEscapeCommutator
-import DirectedCycles.LocallyCompactEscapeProduct
+module
+
+public import DirectedCycles.HaarEscapeCommutator
+public import DirectedCycles.LocallyCompactEscapeProduct
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

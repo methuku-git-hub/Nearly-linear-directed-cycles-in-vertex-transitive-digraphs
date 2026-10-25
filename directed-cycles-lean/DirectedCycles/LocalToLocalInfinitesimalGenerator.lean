@@ -1,6 +1,10 @@
-import DirectedCycles.LocalPowerSegmentMaps
-import DirectedCycles.LocalPowerSequence
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalPowerSegmentMaps
+public import DirectedCycles.LocalPowerSequence
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

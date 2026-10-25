@@ -1,5 +1,9 @@
-import DirectedCycles.LocalWindowQuotientAlgebra
-import DirectedCycles.LocalApproximateRestriction
+module
+
+public import DirectedCycles.LocalWindowQuotientAlgebra
+public import DirectedCycles.LocalApproximateRestriction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

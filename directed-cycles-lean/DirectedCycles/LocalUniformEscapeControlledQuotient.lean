@@ -1,5 +1,9 @@
-import DirectedCycles.LocalUniformMinimalLiftEscape
-import DirectedCycles.LocalQuotientEscapeControlledLifts
+module
+
+public import DirectedCycles.LocalUniformMinimalLiftEscape
+public import DirectedCycles.LocalQuotientEscapeControlledLifts
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

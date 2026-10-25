@@ -1,4 +1,8 @@
-import DirectedCycles.LocalProductRestriction
+module
+
+public import DirectedCycles.LocalProductRestriction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

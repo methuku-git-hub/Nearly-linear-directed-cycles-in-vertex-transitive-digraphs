@@ -1,7 +1,11 @@
-import DirectedCycles.MainFromStructure
-import DirectedCycles.FiniteTriplingFromAlgebra
-import DirectedCycles.FiniteBGTCorollary
-import DirectedCycles.FiniteEnvelopeReduction
+module
+
+public import DirectedCycles.MainFromStructure
+public import DirectedCycles.FiniteTriplingFromAlgebra
+public import DirectedCycles.FiniteBGTCorollary
+public import DirectedCycles.FiniteEnvelopeReduction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

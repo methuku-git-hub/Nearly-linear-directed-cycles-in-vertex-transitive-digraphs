@@ -1,8 +1,12 @@
-import DirectedCycles.LocalSignedPowerProducts
-import DirectedCycles.LocalPowerSegmentMaps
-import DirectedCycles.LocalPowerSequence
-import DirectedCycles.LocalInternalSetLogic
-import DirectedCycles.InfinitesimalScaledPowers
+module
+
+public import DirectedCycles.LocalSignedPowerProducts
+public import DirectedCycles.LocalPowerSegmentMaps
+public import DirectedCycles.LocalPowerSequence
+public import DirectedCycles.LocalInternalSetLogic
+public import DirectedCycles.InfinitesimalScaledPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

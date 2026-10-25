@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSmallWordProducts
-import DirectedCycles.LocalRestrictedCostWords
+module
+
+public import DirectedCycles.LocalSmallWordProducts
+public import DirectedCycles.LocalRestrictedCostWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

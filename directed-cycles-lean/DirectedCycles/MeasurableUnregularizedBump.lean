@@ -1,5 +1,9 @@
-import DirectedCycles.OpenSetNormBump
-import DirectedCycles.UnregularizedEscapeBump
+module
+
+public import DirectedCycles.OpenSetNormBump
+public import DirectedCycles.UnregularizedEscapeBump
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

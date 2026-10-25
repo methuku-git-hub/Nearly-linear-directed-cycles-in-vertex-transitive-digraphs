@@ -1,7 +1,11 @@
-import DirectedCycles.LocalFiniteEscapeNeighbourhoods
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalWordPowerTransfer
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalFiniteEscapeNeighbourhoods
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalWordPowerTransfer
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

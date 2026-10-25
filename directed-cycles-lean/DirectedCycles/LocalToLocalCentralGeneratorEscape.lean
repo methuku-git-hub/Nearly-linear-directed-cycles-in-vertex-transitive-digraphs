@@ -1,6 +1,10 @@
-import DirectedCycles.LocalNestedSegmentComparison
-import DirectedCycles.LocalToLocalClosedScaledExponentLimit
-import DirectedCycles.LocalUltraproductEscape
+module
+
+public import DirectedCycles.LocalNestedSegmentComparison
+public import DirectedCycles.LocalToLocalClosedScaledExponentLimit
+public import DirectedCycles.LocalUltraproductEscape
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

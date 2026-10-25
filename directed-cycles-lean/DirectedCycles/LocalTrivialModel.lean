@@ -1,7 +1,11 @@
-import DirectedCycles.LocalApproximateGroups
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalInternalSetLogic
-import DirectedCycles.LocalProgressionWitness
+module
+
+public import DirectedCycles.LocalApproximateGroups
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalInternalSetLogic
+public import DirectedCycles.LocalProgressionWitness
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
