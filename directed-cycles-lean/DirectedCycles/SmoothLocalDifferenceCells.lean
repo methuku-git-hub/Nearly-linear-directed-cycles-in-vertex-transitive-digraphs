@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGroupSmoothness
-import Mathlib.Geometry.Manifold.ContMDiff.NormedSpace
-import Mathlib.Tactic
+module
+
+public import DirectedCycles.LocalGroupSmoothness
+public import Mathlib.Geometry.Manifold.ContMDiff.NormedSpace
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

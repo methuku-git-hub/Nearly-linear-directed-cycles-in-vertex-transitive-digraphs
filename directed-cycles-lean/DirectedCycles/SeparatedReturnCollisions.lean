@@ -1,5 +1,9 @@
-import DirectedCycles.SeparatedInputCoordinates
-import DirectedCycles.ConnectorMixedSeparation
+module
+
+public import DirectedCycles.SeparatedInputCoordinates
+public import DirectedCycles.ConnectorMixedSeparation
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

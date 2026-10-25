@@ -1,5 +1,9 @@
-import DirectedCycles.BoundedDifferenceConstraints
-import DirectedCycles.RunResidues
+module
+
+public import DirectedCycles.BoundedDifferenceConstraints
+public import DirectedCycles.RunResidues
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

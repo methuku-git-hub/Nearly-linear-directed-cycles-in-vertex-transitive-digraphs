@@ -1,5 +1,9 @@
-import DirectedCycles.EmbeddedWalkExpansion
-import DirectedCycles.ReturnPathFamily
+module
+
+public import DirectedCycles.EmbeddedWalkExpansion
+public import DirectedCycles.ReturnPathFamily
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.ScaledUltraproductPowers
-import DirectedCycles.ScaledPowerBounds
+module
+
+public import DirectedCycles.ScaledUltraproductPowers
+public import DirectedCycles.ScaledPowerBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

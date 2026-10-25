@@ -1,5 +1,9 @@
-import DirectedCycles.SmoothLocalGroupNSS
-import Mathlib.Topology.Compactness.LocallyCompact
+module
+
+public import DirectedCycles.SmoothLocalGroupNSS
+public import Mathlib.Topology.Compactness.LocallyCompact
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

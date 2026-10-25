@@ -1,6 +1,10 @@
-import Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff
-import Mathlib.Analysis.Normed.Operator.BoundedLinearMaps
-import Mathlib.Tactic
+module
+
+public import Mathlib.Analysis.Calculus.InverseFunctionTheorem.ContDiff
+public import Mathlib.Analysis.Normed.Operator.BoundedLinearMaps
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

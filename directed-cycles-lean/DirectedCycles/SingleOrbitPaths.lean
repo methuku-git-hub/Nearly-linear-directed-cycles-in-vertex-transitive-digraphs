@@ -1,4 +1,8 @@
-import DirectedCycles.ShortConnections
+module
+
+public import DirectedCycles.ShortConnections
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

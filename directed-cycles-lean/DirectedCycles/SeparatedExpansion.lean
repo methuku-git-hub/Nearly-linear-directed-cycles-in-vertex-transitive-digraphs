@@ -1,5 +1,9 @@
-import DirectedCycles.ExpansionBands
-import DirectedCycles.PowerCosetCoordinates
+module
+
+public import DirectedCycles.ExpansionBands
+public import DirectedCycles.PowerCosetCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

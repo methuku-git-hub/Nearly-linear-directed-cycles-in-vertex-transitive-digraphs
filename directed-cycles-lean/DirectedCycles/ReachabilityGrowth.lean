@@ -1,6 +1,10 @@
-import DirectedCycles.BoundedWalks
-import DirectedCycles.GrowthArithmetic
-import DirectedCycles.WeightedExpansion
+module
+
+public import DirectedCycles.BoundedWalks
+public import DirectedCycles.GrowthArithmetic
+public import DirectedCycles.WeightedExpansion
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,10 +1,14 @@
-import DirectedCycles.SmoothLocalCurveProductCoordinates
-import DirectedCycles.SmoothLocalCurveNonzeroTangent
-import DirectedCycles.LocalCurveKernelGap
-import DirectedCycles.LocalCurveSliceRelation
-import DirectedCycles.LocalCentralQuotientNeighbourhood
-import DirectedCycles.LocalCentralQuotientSmoothness
-import DirectedCycles.LocalCentralQuotientSliceTopology
+module
+
+public import DirectedCycles.SmoothLocalCurveProductCoordinates
+public import DirectedCycles.SmoothLocalCurveNonzeroTangent
+public import DirectedCycles.LocalCurveKernelGap
+public import DirectedCycles.LocalCurveSliceRelation
+public import DirectedCycles.LocalCentralQuotientNeighbourhood
+public import DirectedCycles.LocalCentralQuotientSmoothness
+public import DirectedCycles.LocalCentralQuotientSliceTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

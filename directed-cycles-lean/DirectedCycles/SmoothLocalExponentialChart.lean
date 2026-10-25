@@ -1,6 +1,10 @@
-import DirectedCycles.SmoothLocalIdentityCoordinates
-import DirectedCycles.LocalExponentialCoordinateExistence
-import DirectedCycles.LocalCoordinateChangeMultiplication
+module
+
+public import DirectedCycles.SmoothLocalIdentityCoordinates
+public import DirectedCycles.LocalExponentialCoordinateExistence
+public import DirectedCycles.LocalCoordinateChangeMultiplication
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

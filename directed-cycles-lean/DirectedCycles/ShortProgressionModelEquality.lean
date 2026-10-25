@@ -1,5 +1,9 @@
-import DirectedCycles.ClampedScaledExponent
-import DirectedCycles.ShortProgressionModelImage
+module
+
+public import DirectedCycles.ClampedScaledExponent
+public import DirectedCycles.ShortProgressionModelImage
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise Topology

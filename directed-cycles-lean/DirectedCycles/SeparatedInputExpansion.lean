@@ -1,4 +1,8 @@
-import DirectedCycles.SeparatedInputCoordinates
+module
+
+public import DirectedCycles.SeparatedInputCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

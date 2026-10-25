@@ -1,4 +1,8 @@
-import DirectedCycles.NormalizedLayerLabels
+module
+
+public import DirectedCycles.NormalizedLayerLabels
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

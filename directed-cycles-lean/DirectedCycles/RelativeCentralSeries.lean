@@ -1,5 +1,9 @@
-import DirectedCycles.LowerCentralFactors
-import DirectedCycles.NilpotentRanks
+module
+
+public import DirectedCycles.LowerCentralFactors
+public import DirectedCycles.NilpotentRanks
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical commutatorElement IsMulCommutative

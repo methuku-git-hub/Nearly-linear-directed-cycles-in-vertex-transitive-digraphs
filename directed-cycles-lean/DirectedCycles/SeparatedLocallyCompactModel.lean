@@ -1,6 +1,10 @@
-import DirectedCycles.CountableGroupMetrizability
-import Mathlib.Topology.Algebra.SeparationQuotient.Basic
-import Mathlib.Topology.Algebra.Group.Pointwise
+module
+
+public import DirectedCycles.CountableGroupMetrizability
+public import Mathlib.Topology.Algebra.SeparationQuotient.Basic
+public import Mathlib.Topology.Algebra.Group.Pointwise
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

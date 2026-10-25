@@ -1,5 +1,9 @@
-import DirectedCycles.TrappingExitLimit
-import DirectedCycles.SymmetricSmallWindowFilter
+module
+
+public import DirectedCycles.TrappingExitLimit
+public import DirectedCycles.SymmetricSmallWindowFilter
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

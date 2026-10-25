@@ -1,4 +1,8 @@
-import DirectedCycles.InfinitesimalScaledPowers
+module
+
+public import DirectedCycles.InfinitesimalScaledPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise Topology

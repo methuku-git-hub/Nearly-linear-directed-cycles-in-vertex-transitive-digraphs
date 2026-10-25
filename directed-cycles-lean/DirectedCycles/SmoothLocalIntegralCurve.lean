@@ -1,6 +1,10 @@
-import DirectedCycles.AutonomousCurveSmoothness
-import DirectedCycles.LocalMultiplicationDerivative
-import Mathlib.Analysis.ODE.ExistUnique
+module
+
+public import DirectedCycles.AutonomousCurveSmoothness
+public import DirectedCycles.LocalMultiplicationDerivative
+public import Mathlib.Analysis.ODE.ExistUnique
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

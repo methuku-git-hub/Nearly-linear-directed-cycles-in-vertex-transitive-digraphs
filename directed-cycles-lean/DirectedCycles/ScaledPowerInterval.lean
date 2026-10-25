@@ -1,5 +1,9 @@
-import DirectedCycles.ScaledUltraproductPowers
-import DirectedCycles.ShortProgressionProperness
+module
+
+public import DirectedCycles.ScaledUltraproductPowers
+public import DirectedCycles.ShortProgressionProperness
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

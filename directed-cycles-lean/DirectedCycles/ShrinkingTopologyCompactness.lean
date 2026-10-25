@@ -1,5 +1,9 @@
-import DirectedCycles.ShrinkingGroupNeighbourhoods
-import DirectedCycles.CompactnessFromInternalCovers
+module
+
+public import DirectedCycles.ShrinkingGroupNeighbourhoods
+public import DirectedCycles.CompactnessFromInternalCovers
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

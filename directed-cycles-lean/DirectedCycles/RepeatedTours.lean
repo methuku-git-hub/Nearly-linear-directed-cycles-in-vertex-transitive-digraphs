@@ -1,4 +1,8 @@
-import DirectedCycles.EulerSequence
+module
+
+public import DirectedCycles.EulerSequence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

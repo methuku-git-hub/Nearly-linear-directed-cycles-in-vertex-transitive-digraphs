@@ -1,4 +1,8 @@
-import DirectedCycles.RetainedPositions
+module
+
+public import DirectedCycles.RetainedPositions
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

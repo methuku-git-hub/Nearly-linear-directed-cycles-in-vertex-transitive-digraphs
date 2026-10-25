@@ -1,6 +1,10 @@
-import DirectedCycles.RankExtension
-import DirectedCycles.AbelianExponent
-import Mathlib.GroupTheory.Index
+module
+
+public import DirectedCycles.RankExtension
+public import DirectedCycles.AbelianExponent
+public import Mathlib.GroupTheory.Index
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

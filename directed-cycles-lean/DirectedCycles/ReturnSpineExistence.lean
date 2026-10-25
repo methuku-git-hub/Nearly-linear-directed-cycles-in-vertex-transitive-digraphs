@@ -1,4 +1,8 @@
-import DirectedCycles.ReturnWalks
+module
+
+public import DirectedCycles.ReturnWalks
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.InternalSubgroupTransfer
-import DirectedCycles.InternalSetSandwich
+module
+
+public import DirectedCycles.InternalSubgroupTransfer
+public import DirectedCycles.InternalSetSandwich
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

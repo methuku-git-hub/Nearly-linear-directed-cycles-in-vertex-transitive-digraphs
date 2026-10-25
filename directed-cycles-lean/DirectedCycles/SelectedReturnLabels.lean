@@ -1,4 +1,8 @@
-import DirectedCycles.ShortestReturnWalks
+module
+
+public import DirectedCycles.ShortestReturnWalks
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

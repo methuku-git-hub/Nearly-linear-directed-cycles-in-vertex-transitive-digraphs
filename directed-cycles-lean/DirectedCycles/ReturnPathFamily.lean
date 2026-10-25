@@ -1,5 +1,9 @@
-import DirectedCycles.SelectedReturnLabels
-import DirectedCycles.CayleyStrongConnectivity
+module
+
+public import DirectedCycles.SelectedReturnLabels
+public import DirectedCycles.CayleyStrongConnectivity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

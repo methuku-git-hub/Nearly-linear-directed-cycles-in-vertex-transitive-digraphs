@@ -1,4 +1,8 @@
-import DirectedCycles.RunLengthAllocation
+module
+
+public import DirectedCycles.RunLengthAllocation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

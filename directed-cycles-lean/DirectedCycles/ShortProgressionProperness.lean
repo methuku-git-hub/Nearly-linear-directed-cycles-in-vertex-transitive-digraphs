@@ -1,4 +1,8 @@
-import DirectedCycles.ShortPowerProgression
+module
+
+public import DirectedCycles.ShortPowerProgression
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

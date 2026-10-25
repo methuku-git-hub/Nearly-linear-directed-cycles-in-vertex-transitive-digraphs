@@ -1,6 +1,10 @@
-import DirectedCycles.DifferenceConstraints
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Order.Interval.Finset.Nat
+module
+
+public import DirectedCycles.DifferenceConstraints
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Order.Interval.Finset.Nat
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

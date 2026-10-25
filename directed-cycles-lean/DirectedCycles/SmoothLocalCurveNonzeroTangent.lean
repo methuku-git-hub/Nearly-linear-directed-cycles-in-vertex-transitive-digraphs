@@ -1,6 +1,10 @@
-import DirectedCycles.LocalRelationCurveCoordinates
-import DirectedCycles.LocalRelationCurveGermUniqueness
-import DirectedCycles.LocalMultiplicativeCurveSmooth
+module
+
+public import DirectedCycles.LocalRelationCurveCoordinates
+public import DirectedCycles.LocalRelationCurveGermUniqueness
+public import DirectedCycles.LocalMultiplicativeCurveSmooth
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

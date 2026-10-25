@@ -1,5 +1,9 @@
-import DirectedCycles.TemplateRetainedTails
-import DirectedCycles.RoundExpansionWords
+module
+
+public import DirectedCycles.TemplateRetainedTails
+public import DirectedCycles.RoundExpansionWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

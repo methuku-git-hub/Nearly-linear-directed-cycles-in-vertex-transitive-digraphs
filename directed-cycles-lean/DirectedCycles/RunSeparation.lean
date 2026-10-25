@@ -1,5 +1,9 @@
-import DirectedCycles.RunResidues
-import Mathlib.Data.Int.Interval
+module
+
+public import DirectedCycles.RunResidues
+public import Mathlib.Data.Int.Interval
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,8 +1,12 @@
-import DirectedCycles.OrbitWalkHamiltonian
-import DirectedCycles.OrbitCycleLifting
-import DirectedCycles.ActionOrbitWalks
-import DirectedCycles.OrbitWalkPaths
-import DirectedCycles.StrongCycleExistence
+module
+
+public import DirectedCycles.OrbitWalkHamiltonian
+public import DirectedCycles.OrbitCycleLifting
+public import DirectedCycles.ActionOrbitWalks
+public import DirectedCycles.OrbitWalkPaths
+public import DirectedCycles.StrongCycleExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
