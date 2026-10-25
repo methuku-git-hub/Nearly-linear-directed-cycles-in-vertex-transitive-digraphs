@@ -1,7 +1,11 @@
-import DirectedCycles.GleasonLieAlgebra
-import DirectedCycles.GleasonTrotterContinuity
-import Mathlib.Topology.Algebra.Module.FiniteDimension
-import Mathlib.Analysis.InnerProductSpace.PiL2
+module
+
+public import DirectedCycles.GleasonLieAlgebra
+public import DirectedCycles.GleasonTrotterContinuity
+public import Mathlib.Topology.Algebra.Module.FiniteDimension
+public import Mathlib.Analysis.InnerProductSpace.PiL2
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

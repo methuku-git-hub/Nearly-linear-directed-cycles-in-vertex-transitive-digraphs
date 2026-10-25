@@ -1,5 +1,9 @@
-import DirectedCycles.NilpotentRanks
-import Mathlib.Algebra.Group.Subgroup.Finite
+module
+
+public import DirectedCycles.NilpotentRanks
+public import Mathlib.Algebra.Group.Subgroup.Finite
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

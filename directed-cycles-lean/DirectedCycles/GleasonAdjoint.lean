@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonLieAlgebraFunctor
+module
+
+public import DirectedCycles.GleasonLieAlgebraFunctor
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

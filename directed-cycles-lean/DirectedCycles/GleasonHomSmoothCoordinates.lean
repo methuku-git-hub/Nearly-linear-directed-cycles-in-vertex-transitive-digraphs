@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonHomGenerator
-import DirectedCycles.GleasonAdjointCurves
+module
+
+public import DirectedCycles.GleasonHomGenerator
+public import DirectedCycles.GleasonAdjointCurves
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped ContDiff

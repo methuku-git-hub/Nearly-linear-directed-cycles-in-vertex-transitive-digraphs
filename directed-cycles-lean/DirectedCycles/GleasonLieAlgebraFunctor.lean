@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonExponentialMap
+module
+
+public import DirectedCycles.GleasonExponentialMap
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

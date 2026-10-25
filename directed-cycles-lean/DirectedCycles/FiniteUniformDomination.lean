@@ -1,6 +1,10 @@
-import Mathlib.Data.Finset.Max
-import Mathlib.Order.Filter.Ultrafilter.Basic
-import Mathlib.Tactic
+module
+
+public import Mathlib.Data.Finset.Max
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonOneParameterCompact
-import DirectedCycles.GleasonTrotterAssociative
-import Mathlib.Algebra.Module.Defs
+module
+
+public import DirectedCycles.GleasonOneParameterCompact
+public import DirectedCycles.GleasonTrotterAssociative
+public import Mathlib.Algebra.Module.Defs
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonAdjointAverage
-import DirectedCycles.OperatorExponentialRiemannSum
+module
+
+public import DirectedCycles.GleasonAdjointAverage
+public import DirectedCycles.OperatorExponentialRiemannSum
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.CosetNilprogression
-import DirectedCycles.FiniteNilpotentLargeModel
+module
+
+public import DirectedCycles.CosetNilprogression
+public import DirectedCycles.FiniteNilpotentLargeModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

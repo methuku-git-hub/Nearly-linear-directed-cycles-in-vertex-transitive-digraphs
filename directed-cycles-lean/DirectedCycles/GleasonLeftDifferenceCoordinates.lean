@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonAveragedDifferenceEstimate
-import DirectedCycles.GleasonCoordinateQuadratic
+module
+
+public import DirectedCycles.GleasonAveragedDifferenceEstimate
+public import DirectedCycles.GleasonCoordinateQuadratic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

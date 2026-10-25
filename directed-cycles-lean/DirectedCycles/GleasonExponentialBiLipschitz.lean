@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonCoordinateRootComparison
+module
+
+public import DirectedCycles.GleasonCoordinateRootComparison
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

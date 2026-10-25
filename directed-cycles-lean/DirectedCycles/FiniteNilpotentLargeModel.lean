@@ -1,5 +1,9 @@
-import DirectedCycles.AbelianLargeModelReduction
-import DirectedCycles.FiniteBGTCorollary
+module
+
+public import DirectedCycles.AbelianLargeModelReduction
+public import DirectedCycles.FiniteBGTCorollary
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

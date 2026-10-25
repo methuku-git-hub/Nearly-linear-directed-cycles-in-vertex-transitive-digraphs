@@ -1,6 +1,10 @@
-import DirectedCycles.NormalPartitions
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.GroupTheory.Index
+module
+
+public import DirectedCycles.NormalPartitions
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.GroupTheory.Index
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

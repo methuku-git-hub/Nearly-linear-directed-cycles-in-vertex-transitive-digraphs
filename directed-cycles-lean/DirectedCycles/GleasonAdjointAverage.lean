@@ -1,5 +1,9 @@
-import DirectedCycles.OperatorExponentialAverage
-import DirectedCycles.GleasonHomSmoothCoordinates
+module
+
+public import DirectedCycles.OperatorExponentialAverage
+public import DirectedCycles.GleasonHomSmoothCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

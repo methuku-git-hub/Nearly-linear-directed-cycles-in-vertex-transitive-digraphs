@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonCoordinates
-import DirectedCycles.NormedAlgebraOneParameter
+module
+
+public import DirectedCycles.GleasonCoordinates
+public import DirectedCycles.NormedAlgebraOneParameter
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

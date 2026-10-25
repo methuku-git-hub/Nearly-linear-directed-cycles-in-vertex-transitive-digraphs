@@ -1,5 +1,9 @@
-import DirectedCycles.Basic
-import Mathlib.Data.ZMod.Basic
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Data.ZMod.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

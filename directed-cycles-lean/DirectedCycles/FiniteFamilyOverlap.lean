@@ -1,4 +1,8 @@
-import DirectedCycles.TranslateEnergy
+module
+
+public import DirectedCycles.TranslateEnergy
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

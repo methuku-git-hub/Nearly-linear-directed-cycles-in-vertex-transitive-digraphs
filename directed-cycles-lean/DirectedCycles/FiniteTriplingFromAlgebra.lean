@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteTriplingStructure
-import DirectedCycles.QuotientPowerContainment
+module
+
+public import DirectedCycles.FiniteTriplingStructure
+public import DirectedCycles.QuotientPowerContainment
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,8 +1,12 @@
-import DirectedCycles.RegularizedEscapeDistance
-import DirectedCycles.EscapeSublevelPowers
-import DirectedCycles.CompactConjugateWordWindow
-import DirectedCycles.CompactPowerTrapping
-import Mathlib.Topology.MetricSpace.Basic
+module
+
+public import DirectedCycles.RegularizedEscapeDistance
+public import DirectedCycles.EscapeSublevelPowers
+public import DirectedCycles.CompactConjugateWordWindow
+public import DirectedCycles.CompactPowerTrapping
+public import Mathlib.Topology.MetricSpace.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

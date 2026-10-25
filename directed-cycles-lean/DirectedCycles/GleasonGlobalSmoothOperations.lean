@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonSmoothAtlas
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
+module
+
+public import DirectedCycles.GleasonSmoothAtlas
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

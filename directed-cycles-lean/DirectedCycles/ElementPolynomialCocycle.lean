@@ -1,4 +1,8 @@
-import DirectedCycles.ElementCocycleQuotient
+module
+
+public import DirectedCycles.ElementCocycleQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import DirectedCycles.GleasonExponentialChart
-import DirectedCycles.GleasonAdjoint
-import Mathlib.Analysis.Normed.Module.FiniteDimension
-import Mathlib.Geometry.Manifold.ChartedSpace
+module
+
+public import DirectedCycles.GleasonExponentialChart
+public import DirectedCycles.GleasonAdjoint
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+public import Mathlib.Geometry.Manifold.ChartedSpace
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

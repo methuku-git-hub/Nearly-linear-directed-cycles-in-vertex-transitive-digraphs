@@ -1,5 +1,9 @@
-import DirectedCycles.EscapeNormTrapping
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import DirectedCycles.EscapeNormTrapping
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

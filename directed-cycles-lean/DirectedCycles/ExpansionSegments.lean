@@ -1,4 +1,8 @@
-import DirectedCycles.ExpansionProjection
+module
+
+public import DirectedCycles.ExpansionProjection
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

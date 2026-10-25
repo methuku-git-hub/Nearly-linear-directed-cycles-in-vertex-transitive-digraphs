@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonTranslationDerivative
+module
+
+public import DirectedCycles.GleasonTranslationDerivative
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

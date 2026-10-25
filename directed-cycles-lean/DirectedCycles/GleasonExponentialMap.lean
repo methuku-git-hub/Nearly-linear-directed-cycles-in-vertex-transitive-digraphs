@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonLieAlgebraTopology
-import DirectedCycles.GleasonExponentialInjection
+module
+
+public import DirectedCycles.GleasonLieAlgebraTopology
+public import DirectedCycles.GleasonExponentialInjection
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

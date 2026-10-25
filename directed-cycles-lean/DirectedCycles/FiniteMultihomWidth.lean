@@ -1,5 +1,9 @@
-import DirectedCycles.PrimaryMultihomWidth
-import DirectedCycles.FiniteSylowModel
+module
+
+public import DirectedCycles.PrimaryMultihomWidth
+public import DirectedCycles.FiniteSylowModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

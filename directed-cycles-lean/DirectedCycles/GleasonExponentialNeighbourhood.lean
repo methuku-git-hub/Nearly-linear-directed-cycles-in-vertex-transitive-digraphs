@@ -1,8 +1,12 @@
-import DirectedCycles.GleasonNearestPointContradiction
-import DirectedCycles.CompactNearestResidual
-import DirectedCycles.CompactRoundedPowerLimit
-import DirectedCycles.NormalizedPowerScale
-import Mathlib.Topology.Sequences
+module
+
+public import DirectedCycles.GleasonNearestPointContradiction
+public import DirectedCycles.CompactNearestResidual
+public import DirectedCycles.CompactRoundedPowerLimit
+public import DirectedCycles.NormalizedPowerScale
+public import Mathlib.Topology.Sequences
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

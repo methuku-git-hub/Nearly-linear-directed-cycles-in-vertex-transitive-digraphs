@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonCoordinateHomError
-import DirectedCycles.NormedAlgebraCurveGenerator
-import Mathlib.Analysis.Asymptotics.Lemmas
+module
+
+public import DirectedCycles.GleasonCoordinateHomError
+public import DirectedCycles.NormedAlgebraCurveGenerator
+public import Mathlib.Analysis.Asymptotics.Lemmas
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology Asymptotics

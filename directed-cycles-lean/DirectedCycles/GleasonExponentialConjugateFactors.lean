@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonConjugateProductApproximation
-import DirectedCycles.GleasonCoordinateProductError
-import DirectedCycles.GleasonCoordinateLowerBound
+module
+
+public import DirectedCycles.GleasonConjugateProductApproximation
+public import DirectedCycles.GleasonCoordinateProductError
+public import DirectedCycles.GleasonCoordinateLowerBound
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

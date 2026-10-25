@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonExponentialNeighbourhood
-import DirectedCycles.LocalHomeomorphFromCompactInjection
+module
+
+public import DirectedCycles.GleasonExponentialNeighbourhood
+public import DirectedCycles.LocalHomeomorphFromCompactInjection
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.EscapeWordMetric
-import DirectedCycles.EscapeNormTrapping
+module
+
+public import DirectedCycles.EscapeWordMetric
+public import DirectedCycles.EscapeNormTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

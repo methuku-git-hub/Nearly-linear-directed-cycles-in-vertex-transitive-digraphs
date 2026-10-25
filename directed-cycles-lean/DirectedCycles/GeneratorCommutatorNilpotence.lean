@@ -1,7 +1,11 @@
-import DirectedCycles.NormalClosureCommutators
-import DirectedCycles.CommutatorWords
-import DirectedCycles.QuotientPowerContainment
-import Mathlib.GroupTheory.Subgroup.Centralizer
+module
+
+public import DirectedCycles.NormalClosureCommutators
+public import DirectedCycles.CommutatorWords
+public import DirectedCycles.QuotientPowerContainment
+public import Mathlib.GroupTheory.Subgroup.Centralizer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

@@ -1,5 +1,9 @@
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
-import Mathlib.Tactic
+module
+
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise
