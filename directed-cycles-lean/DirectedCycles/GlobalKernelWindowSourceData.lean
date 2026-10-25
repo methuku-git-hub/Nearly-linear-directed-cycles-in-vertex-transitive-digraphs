@@ -1,5 +1,9 @@
-import DirectedCycles.GlobalKernelWindowLocalModel
-import DirectedCycles.LocalApproximateFiniteTransfer
+module
+
+public import DirectedCycles.GlobalKernelWindowLocalModel
+public import DirectedCycles.LocalApproximateFiniteTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonMetricLieStructure
-import DirectedCycles.GlobalGoodLocallyCompactModel
-import DirectedCycles.ConnectedLieQuotientModel
+module
+
+public import DirectedCycles.GleasonMetricLieStructure
+public import DirectedCycles.GlobalGoodLocallyCompactModel
+public import DirectedCycles.ConnectedLieQuotientModel
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 400000

@@ -1,6 +1,10 @@
-import DirectedCycles.IntegerDeterminant
-import Mathlib.LinearAlgebra.Matrix.Rank
-import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+module
+
+public import DirectedCycles.IntegerDeterminant
+public import Mathlib.LinearAlgebra.Matrix.Rank
+public import Mathlib.LinearAlgebra.Matrix.NonsingularInverse
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators Matrix

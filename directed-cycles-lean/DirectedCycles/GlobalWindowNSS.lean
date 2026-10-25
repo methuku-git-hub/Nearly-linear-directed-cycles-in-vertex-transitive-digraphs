@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSubgroupTransport
-import DirectedCycles.LocalEscapeMaps
+module
+
+public import DirectedCycles.LocalSubgroupTransport
+public import DirectedCycles.LocalEscapeMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

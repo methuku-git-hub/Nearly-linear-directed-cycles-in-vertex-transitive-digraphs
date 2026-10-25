@@ -1,5 +1,9 @@
-import DirectedCycles.ActualEdgeExpansion
-import DirectedCycles.ActualTailSpanning
+module
+
+public import DirectedCycles.ActualEdgeExpansion
+public import DirectedCycles.ActualTailSpanning
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.Order.Filter.Ultrafilter.Basic
-import Mathlib.Algebra.Group.Pointwise.Set.Basic
-import Mathlib.Tactic
+module
+
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

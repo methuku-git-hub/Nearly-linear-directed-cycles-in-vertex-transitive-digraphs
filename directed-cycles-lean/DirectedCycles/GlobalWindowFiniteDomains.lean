@@ -1,6 +1,10 @@
-import DirectedCycles.LocalProductRestriction
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalGlobalWordPowers
+module
+
+public import DirectedCycles.LocalProductRestriction
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalGlobalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

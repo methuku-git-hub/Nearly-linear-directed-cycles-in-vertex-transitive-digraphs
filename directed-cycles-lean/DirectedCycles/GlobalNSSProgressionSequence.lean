@@ -1,8 +1,12 @@
-import DirectedCycles.GlobalStrongApproximateSequence
-import DirectedCycles.LocalLieProgressionInduction
-import DirectedCycles.GlobalWindowProgressionTransfer
-import DirectedCycles.GlobalWindowNSS
-import DirectedCycles.LocalZeroDimensionalProgression
+module
+
+public import DirectedCycles.GlobalStrongApproximateSequence
+public import DirectedCycles.LocalLieProgressionInduction
+public import DirectedCycles.GlobalWindowProgressionTransfer
+public import DirectedCycles.GlobalWindowNSS
+public import DirectedCycles.LocalZeroDimensionalProgression
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1200000

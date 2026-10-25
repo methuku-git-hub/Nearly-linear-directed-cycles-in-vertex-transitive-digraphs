@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonMultiplicationDerivative
+module
+
+public import DirectedCycles.GleasonMultiplicationDerivative
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

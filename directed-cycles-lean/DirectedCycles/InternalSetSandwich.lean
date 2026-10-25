@@ -1,5 +1,9 @@
-import DirectedCycles.InternalFiniteSetFamily
-import Mathlib.Topology.Compactness.Compact
+module
+
+public import DirectedCycles.InternalFiniteSetFamily
+public import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

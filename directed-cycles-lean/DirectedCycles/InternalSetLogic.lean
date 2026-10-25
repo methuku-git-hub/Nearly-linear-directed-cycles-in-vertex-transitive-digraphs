@@ -1,4 +1,8 @@
-import DirectedCycles.UltraproductInternalSets
+module
+
+public import DirectedCycles.UltraproductInternalSets
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

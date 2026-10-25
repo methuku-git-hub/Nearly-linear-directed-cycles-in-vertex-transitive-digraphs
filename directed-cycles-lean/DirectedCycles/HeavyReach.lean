@@ -1,7 +1,11 @@
-import DirectedCycles.MajorityConnections
-import DirectedCycles.NormalPartitions
-import DirectedCycles.CycleLift
-import DirectedCycles.ReachabilityGrowth
+module
+
+public import DirectedCycles.MajorityConnections
+public import DirectedCycles.NormalPartitions
+public import DirectedCycles.CycleLift
+public import DirectedCycles.ReachabilityGrowth
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

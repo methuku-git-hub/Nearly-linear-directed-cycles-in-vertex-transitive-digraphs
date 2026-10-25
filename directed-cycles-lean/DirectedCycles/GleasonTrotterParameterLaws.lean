@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonTrotterLimit
+module
+
+public import DirectedCycles.GleasonTrotterLimit
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

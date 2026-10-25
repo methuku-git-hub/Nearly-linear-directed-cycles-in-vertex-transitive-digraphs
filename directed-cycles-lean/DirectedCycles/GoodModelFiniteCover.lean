@@ -1,6 +1,10 @@
-import DirectedCycles.InternalGoodModel
-import DirectedCycles.OpenSubgroupGoodModel
-import Mathlib.Topology.Algebra.Group.Pointwise
+module
+
+public import DirectedCycles.InternalGoodModel
+public import DirectedCycles.OpenSubgroupGoodModel
+public import Mathlib.Topology.Algebra.Group.Pointwise
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

@@ -1,7 +1,11 @@
-import DirectedCycles.GlobalGoodModelKernelWindows
-import DirectedCycles.GlobalWindowFiniteDomains
-import DirectedCycles.EmbeddedWindowGoodModel
-import DirectedCycles.LocalSmoothModelData
+module
+
+public import DirectedCycles.GlobalGoodModelKernelWindows
+public import DirectedCycles.GlobalWindowFiniteDomains
+public import DirectedCycles.EmbeddedWindowGoodModel
+public import DirectedCycles.LocalSmoothModelData
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

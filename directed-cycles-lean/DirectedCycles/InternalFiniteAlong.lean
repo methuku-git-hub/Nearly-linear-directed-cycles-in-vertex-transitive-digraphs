@@ -1,5 +1,9 @@
-import DirectedCycles.InternalFiniteSetFamily
-import DirectedCycles.OpenSubgroupGoodModel
+module
+
+public import DirectedCycles.InternalFiniteSetFamily
+public import DirectedCycles.OpenSubgroupGoodModel
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

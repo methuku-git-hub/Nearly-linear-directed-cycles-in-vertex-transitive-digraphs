@@ -1,6 +1,10 @@
-import DirectedCycles.WindowUltraproductEquiv
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.WindowUltraproductEquiv
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

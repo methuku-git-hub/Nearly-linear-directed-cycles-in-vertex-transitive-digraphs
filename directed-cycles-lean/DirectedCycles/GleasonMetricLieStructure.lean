@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonGlobalSmoothOperations
-import DirectedCycles.LocallyCompactSubgroupTrapping
+module
+
+public import DirectedCycles.GleasonGlobalSmoothOperations
+public import DirectedCycles.LocallyCompactSubgroupTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Manifold ContDiff

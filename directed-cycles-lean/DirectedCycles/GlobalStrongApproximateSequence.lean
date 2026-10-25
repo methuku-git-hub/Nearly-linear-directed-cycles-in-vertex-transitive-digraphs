@@ -1,7 +1,11 @@
-import DirectedCycles.GlobalKernelWindowSourceData
-import DirectedCycles.GlobalLieLocalSmoothness
-import DirectedCycles.LocalSmoothModelStrongSubmodel
-import DirectedCycles.StrongGlobalWindowTransfer
+module
+
+public import DirectedCycles.GlobalKernelWindowSourceData
+public import DirectedCycles.GlobalLieLocalSmoothness
+public import DirectedCycles.LocalSmoothModelStrongSubmodel
+public import DirectedCycles.StrongGlobalWindowTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

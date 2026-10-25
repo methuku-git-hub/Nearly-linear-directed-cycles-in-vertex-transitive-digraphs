@@ -1,6 +1,10 @@
-import DirectedCycles.GlobalCoarseProgressionSequence
-import DirectedCycles.FiniteSmallNeighbourhoods
-import DirectedCycles.PositiveDensityNatBound
+module
+
+public import DirectedCycles.GlobalCoarseProgressionSequence
+public import DirectedCycles.FiniteSmallNeighbourhoods
+public import DirectedCycles.PositiveDensityNatBound
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

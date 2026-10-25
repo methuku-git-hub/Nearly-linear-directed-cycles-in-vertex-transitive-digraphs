@@ -1,8 +1,12 @@
-import DirectedCycles.ReturnLiftDensity
-import DirectedCycles.SemiregularReturnLifting
-import DirectedCycles.NilpotentUniformBounds
-import DirectedCycles.LowerClassInputs
-import DirectedCycles.DensityPowerArithmetic
+module
+
+public import DirectedCycles.ReturnLiftDensity
+public import DirectedCycles.SemiregularReturnLifting
+public import DirectedCycles.NilpotentUniformBounds
+public import DirectedCycles.LowerClassInputs
+public import DirectedCycles.DensityPowerArithmetic
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u v

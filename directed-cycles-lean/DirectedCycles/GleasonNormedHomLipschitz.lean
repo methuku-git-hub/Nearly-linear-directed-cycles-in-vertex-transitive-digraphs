@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonNormedHomBound
+module
+
+public import DirectedCycles.GleasonNormedHomBound
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.GleasonMetricData

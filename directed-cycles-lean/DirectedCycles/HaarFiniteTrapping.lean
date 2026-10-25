@@ -1,6 +1,10 @@
-import DirectedCycles.HaarFiniteTrappingCore
-import DirectedCycles.CompactConjugateWordWindow
-import Mathlib.MeasureTheory.Measure.Haar.Basic
+module
+
+public import DirectedCycles.HaarFiniteTrappingCore
+public import DirectedCycles.CompactConjugateWordWindow
+public import Mathlib.MeasureTheory.Measure.Haar.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

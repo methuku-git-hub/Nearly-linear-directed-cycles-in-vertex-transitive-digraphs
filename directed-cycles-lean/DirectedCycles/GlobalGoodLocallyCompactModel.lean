@@ -1,5 +1,9 @@
-import DirectedCycles.InternalLocallyCompactTopology
-import DirectedCycles.InternalGoodModel
+module
+
+public import DirectedCycles.InternalLocallyCompactTopology
+public import DirectedCycles.InternalGoodModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

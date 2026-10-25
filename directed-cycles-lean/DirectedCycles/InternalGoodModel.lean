@@ -1,5 +1,9 @@
-import DirectedCycles.SeparatedLocallyCompactModel
-import DirectedCycles.InternalSetSandwich
+module
+
+public import DirectedCycles.SeparatedLocallyCompactModel
+public import DirectedCycles.InternalSetSandwich
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

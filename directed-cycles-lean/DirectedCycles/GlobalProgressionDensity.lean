@@ -1,4 +1,8 @@
-import DirectedCycles.GlobalProgressionFromLocalLaws
+module
+
+public import DirectedCycles.GlobalProgressionFromLocalLaws
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

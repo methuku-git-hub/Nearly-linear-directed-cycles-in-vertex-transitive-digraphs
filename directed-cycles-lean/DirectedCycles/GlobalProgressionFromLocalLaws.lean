@@ -1,7 +1,11 @@
-import DirectedCycles.LocalGeneratorNilpotence
-import DirectedCycles.CosetProgressionFromLeftCommutators
-import DirectedCycles.LeftGeneratorCommutatorMaps
-import DirectedCycles.LocalOrderedGrid
+module
+
+public import DirectedCycles.LocalGeneratorNilpotence
+public import DirectedCycles.CosetProgressionFromLeftCommutators
+public import DirectedCycles.LeftGeneratorCommutatorMaps
+public import DirectedCycles.LocalOrderedGrid
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

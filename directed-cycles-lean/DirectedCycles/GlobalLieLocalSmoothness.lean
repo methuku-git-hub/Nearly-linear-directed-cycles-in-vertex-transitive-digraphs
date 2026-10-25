@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupSmoothness
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
+module
+
+public import DirectedCycles.LocalGroupSmoothness
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

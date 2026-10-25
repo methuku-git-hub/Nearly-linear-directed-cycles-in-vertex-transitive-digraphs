@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonDifferenceChart
+module
+
+public import DirectedCycles.GleasonDifferenceChart
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.InternalCountableSaturation
-import DirectedCycles.InternalSetLogic
+module
+
+public import DirectedCycles.InternalCountableSaturation
+public import DirectedCycles.InternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

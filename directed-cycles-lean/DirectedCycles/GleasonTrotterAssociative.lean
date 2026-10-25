@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonPowerApproximation
-import DirectedCycles.GleasonTrotterLinearLaws
+module
+
+public import DirectedCycles.GleasonPowerApproximation
+public import DirectedCycles.GleasonTrotterLinearLaws
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.ScaledPowerInterval
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+module
+
+public import DirectedCycles.ScaledPowerInterval
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise Topology

@@ -1,4 +1,8 @@
-import DirectedCycles.LogarithmicBounds
+module
+
+public import DirectedCycles.LogarithmicBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
