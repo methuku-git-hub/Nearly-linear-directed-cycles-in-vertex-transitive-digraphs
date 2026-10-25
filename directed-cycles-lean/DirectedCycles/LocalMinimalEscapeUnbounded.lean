@@ -1,5 +1,9 @@
-import DirectedCycles.LocalUltraproductEscape
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalUltraproductEscape
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

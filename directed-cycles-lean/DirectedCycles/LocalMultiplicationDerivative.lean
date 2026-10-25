@@ -1,5 +1,9 @@
-import DirectedCycles.DifferentiableDoubling
-import DirectedCycles.ContDiffQuadraticRemainder
+module
+
+public import DirectedCycles.DifferentiableDoubling
+public import DirectedCycles.ContDiffQuadraticRemainder
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

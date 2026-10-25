@@ -1,6 +1,10 @@
-import DirectedCycles.LocalSmoothModelData
-import DirectedCycles.LocalProgressionInductionProperty
-import DirectedCycles.SmoothLocalExponentialChart
+module
+
+public import DirectedCycles.LocalSmoothModelData
+public import DirectedCycles.LocalProgressionInductionProperty
+public import DirectedCycles.SmoothLocalExponentialChart
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

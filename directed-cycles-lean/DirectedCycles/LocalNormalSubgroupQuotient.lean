@@ -1,7 +1,11 @@
-import DirectedCycles.LocalGroupCongruence
-import DirectedCycles.LocalDivision
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalTwoProducts
+module
+
+public import DirectedCycles.LocalGroupCongruence
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalTwoProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

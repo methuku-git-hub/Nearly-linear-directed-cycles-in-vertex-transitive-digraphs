@@ -1,8 +1,12 @@
-import DirectedCycles.LocalEscapePowerCutoff
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalUltraproductEscape
-import DirectedCycles.LocalInternalSetLogic
-import DirectedCycles.CompactPowerTrapping
+module
+
+public import DirectedCycles.LocalEscapePowerCutoff
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalUltraproductEscape
+public import DirectedCycles.LocalInternalSetLogic
+public import DirectedCycles.CompactPowerTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

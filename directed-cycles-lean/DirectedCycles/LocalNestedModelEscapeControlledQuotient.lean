@@ -1,6 +1,10 @@
-import DirectedCycles.LocalUniformEscapeControlledQuotient
-import DirectedCycles.LocalLargeIndexModels
-import DirectedCycles.LocalQuotientEscapeControlledLifts
+module
+
+public import DirectedCycles.LocalUniformEscapeControlledQuotient
+public import DirectedCycles.LocalLargeIndexModels
+public import DirectedCycles.LocalQuotientEscapeControlledLifts
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

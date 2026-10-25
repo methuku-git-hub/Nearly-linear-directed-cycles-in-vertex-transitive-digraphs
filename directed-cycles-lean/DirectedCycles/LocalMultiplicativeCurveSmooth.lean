@@ -1,6 +1,10 @@
-import DirectedCycles.LocalMultiplicativeCurveDerivative
-import DirectedCycles.LocalCurveDerivativeEquation
-import DirectedCycles.AutonomousCurveSmoothness
+module
+
+public import DirectedCycles.LocalMultiplicativeCurveDerivative
+public import DirectedCycles.LocalCurveDerivativeEquation
+public import DirectedCycles.AutonomousCurveSmoothness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

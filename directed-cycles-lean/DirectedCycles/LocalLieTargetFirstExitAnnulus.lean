@@ -1,5 +1,9 @@
-import DirectedCycles.LocalToLocalShortProgressionModel
-import DirectedCycles.LocalExponentialCurveAnnulus
+module
+
+public import DirectedCycles.LocalToLocalShortProgressionModel
+public import DirectedCycles.LocalExponentialCurveAnnulus
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalNormalWindowUltraRelation
-import DirectedCycles.LocalCongruenceUltraHom
-import DirectedCycles.LocalCongruenceTransport
+module
+
+public import DirectedCycles.LocalNormalWindowUltraRelation
+public import DirectedCycles.LocalCongruenceUltraHom
+public import DirectedCycles.LocalCongruenceTransport
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

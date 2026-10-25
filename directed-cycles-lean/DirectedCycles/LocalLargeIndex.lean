@@ -1,6 +1,10 @@
-import DirectedCycles.LocalUltraproductMaps
-import DirectedCycles.LocalUltraproductDomain
-import Mathlib.Order.Filter.Ultrafilter.Basic
+module
+
+public import DirectedCycles.LocalUltraproductMaps
+public import DirectedCycles.LocalUltraproductDomain
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

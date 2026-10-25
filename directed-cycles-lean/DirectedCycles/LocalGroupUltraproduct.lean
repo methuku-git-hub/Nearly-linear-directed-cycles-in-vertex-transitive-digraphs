@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupAlgebra
-import Mathlib.Order.Filter.Basic
+module
+
+public import DirectedCycles.LocalGroupAlgebra
+public import Mathlib.Order.Filter.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

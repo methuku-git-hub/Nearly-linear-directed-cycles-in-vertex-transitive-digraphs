@@ -1,5 +1,9 @@
-import DirectedCycles.LocalLieTargetFirstExitAnnulus
-import DirectedCycles.LocalToLocalScaledCurve
+module
+
+public import DirectedCycles.LocalLieTargetFirstExitAnnulus
+public import DirectedCycles.LocalToLocalScaledCurve
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

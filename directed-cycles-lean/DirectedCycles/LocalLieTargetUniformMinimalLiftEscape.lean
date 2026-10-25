@@ -1,7 +1,11 @@
-import DirectedCycles.LocalLieTargetComponentLeastLiftNoInfinitesimal
-import DirectedCycles.LocalLargeIndexModels
-import DirectedCycles.FiniteUniformDomination
-import DirectedCycles.LocalZeroEscapeSubgroup
+module
+
+public import DirectedCycles.LocalLieTargetComponentLeastLiftNoInfinitesimal
+public import DirectedCycles.LocalLargeIndexModels
+public import DirectedCycles.FiniteUniformDomination
+public import DirectedCycles.LocalZeroEscapeSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalInternalImages
-import Mathlib.Topology.Compactness.Compact
+module
+
+public import DirectedCycles.LocalInternalImages
+public import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

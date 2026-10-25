@@ -1,8 +1,12 @@
-import DirectedCycles.LocalEscapePowerCutoff
-import DirectedCycles.LocalPowerSegmentCompression
-import DirectedCycles.LocalUltraproductEscape
-import DirectedCycles.LocalEscapeNSS
-import DirectedCycles.LocalGroupHom
+module
+
+public import DirectedCycles.LocalEscapePowerCutoff
+public import DirectedCycles.LocalPowerSegmentCompression
+public import DirectedCycles.LocalUltraproductEscape
+public import DirectedCycles.LocalEscapeNSS
+public import DirectedCycles.LocalGroupHom
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

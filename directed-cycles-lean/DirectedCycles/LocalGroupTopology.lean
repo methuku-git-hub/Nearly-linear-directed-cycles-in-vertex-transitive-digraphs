@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGroupAlgebra
-import Mathlib.Topology.Algebra.Group.Basic
-import Mathlib.Topology.Constructions
+module
+
+public import DirectedCycles.LocalGroupAlgebra
+public import Mathlib.Topology.Algebra.Group.Basic
+public import Mathlib.Topology.Constructions
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

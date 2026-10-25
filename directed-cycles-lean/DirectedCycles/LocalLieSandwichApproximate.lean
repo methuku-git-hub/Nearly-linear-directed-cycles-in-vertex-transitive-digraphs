@@ -1,8 +1,12 @@
-import DirectedCycles.LocalCoordinateApproximateCover
-import DirectedCycles.LieExponentialWordControl
-import DirectedCycles.LieExponentialDifferenceBound
-import DirectedCycles.UniformScaledBallCover
-import DirectedCycles.LocalWordPowerMaps
+module
+
+public import DirectedCycles.LocalCoordinateApproximateCover
+public import DirectedCycles.LieExponentialWordControl
+public import DirectedCycles.LieExponentialDifferenceBound
+public import DirectedCycles.UniformScaledBallCover
+public import DirectedCycles.LocalWordPowerMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

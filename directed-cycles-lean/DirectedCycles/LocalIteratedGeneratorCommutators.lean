@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralQuotientData
-import DirectedCycles.LocalMinimalEscape
-import DirectedCycles.LeftGeneratorCommutators
+module
+
+public import DirectedCycles.LocalCentralQuotientData
+public import DirectedCycles.LocalMinimalEscape
+public import DirectedCycles.LeftGeneratorCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

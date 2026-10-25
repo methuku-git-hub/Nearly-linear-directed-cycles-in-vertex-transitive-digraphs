@@ -1,6 +1,10 @@
-import DirectedCycles.AutonomousCurveUniqueness
-import DirectedCycles.LocalCurveDerivativeEquation
-import Mathlib.Analysis.Calculus.ContDiff.Deriv
+module
+
+public import DirectedCycles.AutonomousCurveUniqueness
+public import DirectedCycles.LocalCurveDerivativeEquation
+public import Mathlib.Analysis.Calculus.ContDiff.Deriv
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

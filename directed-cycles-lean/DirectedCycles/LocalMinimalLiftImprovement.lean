@@ -1,5 +1,9 @@
-import DirectedCycles.LocalQuotientMinimalLift
-import DirectedCycles.LocalCorrectedPowerSegment
+module
+
+public import DirectedCycles.LocalQuotientMinimalLift
+public import DirectedCycles.LocalCorrectedPowerSegment
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

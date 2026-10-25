@@ -1,12 +1,16 @@
-import DirectedCycles.LocalLeastLiftGeometricContradiction
-import DirectedCycles.LocalDoubledFirstExit
-import DirectedCycles.LocalQuadrupledFirstExit
-import DirectedCycles.LocalProjectedLiftAndExitKernel
-import DirectedCycles.LocalMinimalLiftKernel
-import DirectedCycles.LocalFirstExitOrder
-import DirectedCycles.LocalCentralCorrectionContradiction
-import DirectedCycles.LieCentralCurveAlignment
-import DirectedCycles.LocalNestedEscapeRatio
+module
+
+public import DirectedCycles.LocalLeastLiftGeometricContradiction
+public import DirectedCycles.LocalDoubledFirstExit
+public import DirectedCycles.LocalQuadrupledFirstExit
+public import DirectedCycles.LocalProjectedLiftAndExitKernel
+public import DirectedCycles.LocalMinimalLiftKernel
+public import DirectedCycles.LocalFirstExitOrder
+public import DirectedCycles.LocalCentralCorrectionContradiction
+public import DirectedCycles.LieCentralCurveAlignment
+public import DirectedCycles.LocalNestedEscapeRatio
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,4 +1,8 @@
-import DirectedCycles.LocalIteratedGeneratorCommutators
+module
+
+public import DirectedCycles.LocalIteratedGeneratorCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

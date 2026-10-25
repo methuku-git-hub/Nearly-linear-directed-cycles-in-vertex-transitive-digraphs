@@ -1,4 +1,8 @@
-import DirectedCycles.LocalMultiplicativeCurveUniqueness
+module
+
+public import DirectedCycles.LocalMultiplicativeCurveUniqueness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

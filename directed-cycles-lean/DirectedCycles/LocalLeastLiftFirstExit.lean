@@ -1,6 +1,10 @@
-import DirectedCycles.LocalQuotientMinimalLift
-import DirectedCycles.LocalQuadrupledFirstExit
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalQuotientMinimalLift
+public import DirectedCycles.LocalQuadrupledFirstExit
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

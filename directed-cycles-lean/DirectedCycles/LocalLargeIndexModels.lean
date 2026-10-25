@@ -1,6 +1,10 @@
-import DirectedCycles.LocalLargeIndex
-import DirectedCycles.LocalScaledPowers
-import DirectedCycles.LocalCentralQuotientData
+module
+
+public import DirectedCycles.LocalLargeIndex
+public import DirectedCycles.LocalScaledPowers
+public import DirectedCycles.LocalCentralQuotientData
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

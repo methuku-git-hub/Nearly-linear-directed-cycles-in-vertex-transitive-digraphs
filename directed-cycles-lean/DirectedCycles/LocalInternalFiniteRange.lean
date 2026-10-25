@@ -1,5 +1,9 @@
-import DirectedCycles.LocalInternalImages
-import Mathlib.Data.Fintype.EquivFin
+module
+
+public import DirectedCycles.LocalInternalImages
+public import Mathlib.Data.Fintype.EquivFin
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

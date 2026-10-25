@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNormalizedProgressionStep
-import DirectedCycles.LocalSmoothModelZeroDimension
+module
+
+public import DirectedCycles.LocalNormalizedProgressionStep
+public import DirectedCycles.LocalSmoothModelZeroDimension
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

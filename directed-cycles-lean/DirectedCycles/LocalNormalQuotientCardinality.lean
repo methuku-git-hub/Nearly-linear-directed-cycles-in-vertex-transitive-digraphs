@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNormalSubgroupQuotient
-import DirectedCycles.LocalApproximateRestriction
+module
+
+public import DirectedCycles.LocalNormalSubgroupQuotient
+public import DirectedCycles.LocalApproximateRestriction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupTopology
-import Mathlib.Geometry.Manifold.ContMDiff.Defs
+module
+
+public import DirectedCycles.LocalGroupTopology
+public import Mathlib.Geometry.Manifold.ContMDiff.Defs
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalUltraproductMaps
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalUltraproductMaps
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

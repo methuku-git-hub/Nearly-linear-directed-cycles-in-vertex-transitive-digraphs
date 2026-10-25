@@ -1,6 +1,10 @@
-import DirectedCycles.LocalWordPowers
-import DirectedCycles.EscapeSublevelPowers
-import DirectedCycles.WordBallBump
+module
+
+public import DirectedCycles.LocalWordPowers
+public import DirectedCycles.EscapeSublevelPowers
+public import DirectedCycles.WordBallBump
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

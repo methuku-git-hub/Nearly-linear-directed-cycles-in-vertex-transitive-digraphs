@@ -1,7 +1,11 @@
-import DirectedCycles.LocalLieTargetFirstExitCurve
-import DirectedCycles.LocalExponentialNestedScales
-import DirectedCycles.LocalToLocalInnerExitUnbounded
-import DirectedCycles.LocalToLocalNestedSegmentComparison
+module
+
+public import DirectedCycles.LocalLieTargetFirstExitCurve
+public import DirectedCycles.LocalExponentialNestedScales
+public import DirectedCycles.LocalToLocalInnerExitUnbounded
+public import DirectedCycles.LocalToLocalNestedSegmentComparison
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

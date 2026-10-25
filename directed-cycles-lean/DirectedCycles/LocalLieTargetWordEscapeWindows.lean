@@ -1,5 +1,9 @@
-import DirectedCycles.LocalWordContainmentEscape
-import DirectedCycles.LocalLieModelWordDomains
+module
+
+public import DirectedCycles.LocalWordContainmentEscape
+public import DirectedCycles.LocalLieModelWordDomains
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

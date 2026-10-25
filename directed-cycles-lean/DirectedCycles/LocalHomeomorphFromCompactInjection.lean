@@ -1,5 +1,9 @@
-import Mathlib.Topology.OpenPartialHomeomorph.Basic
-import Mathlib.Topology.Compactness.LocallyCompact
+module
+
+public import Mathlib.Topology.OpenPartialHomeomorph.Basic
+public import Mathlib.Topology.Compactness.LocallyCompact
+
+@[expose] public section
 
 set_option autoImplicit false
 open Set Filter Topology

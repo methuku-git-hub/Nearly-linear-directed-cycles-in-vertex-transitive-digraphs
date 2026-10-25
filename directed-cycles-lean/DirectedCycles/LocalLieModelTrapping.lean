@@ -1,7 +1,11 @@
-import DirectedCycles.LieStrongTrappingWindows
-import DirectedCycles.LocalConjugateWordDomains
-import DirectedCycles.LocalConjugateMaps
-import DirectedCycles.LocalEscapeMaps
+module
+
+public import DirectedCycles.LieStrongTrappingWindows
+public import DirectedCycles.LocalConjugateWordDomains
+public import DirectedCycles.LocalConjugateMaps
+public import DirectedCycles.LocalEscapeMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff
