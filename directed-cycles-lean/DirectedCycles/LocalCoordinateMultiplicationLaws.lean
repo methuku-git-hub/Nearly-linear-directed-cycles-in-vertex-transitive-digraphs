@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGroupAlgebra
-import Mathlib.Topology.OpenPartialHomeomorph.Composition
-import Mathlib.Analysis.Normed.Module.Basic
+module
+
+public import DirectedCycles.LocalGroupAlgebra
+public import Mathlib.Topology.OpenPartialHomeomorph.Composition
+public import Mathlib.Analysis.Normed.Module.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

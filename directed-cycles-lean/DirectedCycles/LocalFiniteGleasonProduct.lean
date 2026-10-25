@@ -1,10 +1,14 @@
-import DirectedCycles.LocalNormalizedDerivativeBounds
-import DirectedCycles.LocalOptimalEscapeBump
-import DirectedCycles.LocalGleasonBootstrapCore
-import DirectedCycles.LocalRestrictedCostWords
-import DirectedCycles.LocalWordBallBump
-import DirectedCycles.LocalEscapeDerivativeBound
-import DirectedCycles.LocalSubgroupTransport
+module
+
+public import DirectedCycles.LocalNormalizedDerivativeBounds
+public import DirectedCycles.LocalOptimalEscapeBump
+public import DirectedCycles.LocalGleasonBootstrapCore
+public import DirectedCycles.LocalRestrictedCostWords
+public import DirectedCycles.LocalWordBallBump
+public import DirectedCycles.LocalEscapeDerivativeBound
+public import DirectedCycles.LocalSubgroupTransport
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,4 +1,8 @@
-import DirectedCycles.LocalProductSwap
+module
+
+public import DirectedCycles.LocalProductSwap
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

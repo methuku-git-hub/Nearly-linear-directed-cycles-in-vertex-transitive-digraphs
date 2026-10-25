@@ -1,5 +1,9 @@
-import DirectedCycles.LocalExponentialRadialLaw
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.LocalExponentialRadialLaw
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

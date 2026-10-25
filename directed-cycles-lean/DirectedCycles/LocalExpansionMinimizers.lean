@@ -1,5 +1,9 @@
-import DirectedCycles.LocalTranslateEnergy
-import DirectedCycles.ExpansionMinimizers
+module
+
+public import DirectedCycles.LocalTranslateEnergy
+public import DirectedCycles.ExpansionMinimizers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalRelationCurveGermUniqueness
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalGroupReversal
+module
+
+public import DirectedCycles.LocalRelationCurveGermUniqueness
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalGroupReversal
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalDivision
-import DirectedCycles.FiniteGroupDerivatives
+module
+
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.FiniteGroupDerivatives
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

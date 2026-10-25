@@ -1,6 +1,10 @@
-import DirectedCycles.LocalConjugationHom
-import DirectedCycles.LocalEscapeTrapping
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalConjugationHom
+public import DirectedCycles.LocalEscapeTrapping
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.SmoothLocalExponentialChart
-import DirectedCycles.AdditionDerivativeNormBound
+module
+
+public import DirectedCycles.SmoothLocalExponentialChart
+public import DirectedCycles.AdditionDerivativeNormBound
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

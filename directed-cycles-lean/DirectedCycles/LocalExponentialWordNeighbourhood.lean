@@ -1,6 +1,10 @@
-import DirectedCycles.LocalExponentialWordControl
-import DirectedCycles.LocalExponentialBallTopology
-import DirectedCycles.LocalToLocalModelWordDomains
+module
+
+public import DirectedCycles.LocalExponentialWordControl
+public import DirectedCycles.LocalExponentialBallTopology
+public import DirectedCycles.LocalToLocalModelWordDomains
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

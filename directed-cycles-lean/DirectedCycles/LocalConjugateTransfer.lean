@@ -1,6 +1,10 @@
-import DirectedCycles.LocalConjugates
-import DirectedCycles.LocalUltraproductProducts
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalConjugates
+public import DirectedCycles.LocalUltraproductProducts
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

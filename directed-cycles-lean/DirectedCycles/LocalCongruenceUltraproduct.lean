@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGroupCongruence
-import DirectedCycles.LocalUltraproductMaps
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalGroupCongruence
+public import DirectedCycles.LocalUltraproductMaps
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

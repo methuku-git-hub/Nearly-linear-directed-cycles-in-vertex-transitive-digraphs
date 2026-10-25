@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralEquivalence
-import DirectedCycles.LocalGroupUltraproduct
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalCentralEquivalence
+public import DirectedCycles.LocalGroupUltraproduct
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

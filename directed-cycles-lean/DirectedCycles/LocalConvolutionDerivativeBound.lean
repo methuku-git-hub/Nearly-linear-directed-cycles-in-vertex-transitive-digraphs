@@ -1,5 +1,9 @@
-import DirectedCycles.LocalConvolutionTranslation
-import DirectedCycles.LocalTaylorEstimate
+module
+
+public import DirectedCycles.LocalConvolutionTranslation
+public import DirectedCycles.LocalTaylorEstimate
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

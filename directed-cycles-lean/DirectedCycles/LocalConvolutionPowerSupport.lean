@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNormalizedDerivativeBounds
-import DirectedCycles.LocalApproximatePowerCard
+module
+
+public import DirectedCycles.LocalNormalizedDerivativeBounds
+public import DirectedCycles.LocalApproximatePowerCard
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGroupAlgebra
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalGroupAlgebra
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

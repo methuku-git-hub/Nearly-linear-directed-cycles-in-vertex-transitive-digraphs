@@ -1,5 +1,9 @@
-import DirectedCycles.LocalExponentialProductBounds
-import DirectedCycles.LocalExponentialRadialLaw
+module
+
+public import DirectedCycles.LocalExponentialProductBounds
+public import DirectedCycles.LocalExponentialRadialLaw
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

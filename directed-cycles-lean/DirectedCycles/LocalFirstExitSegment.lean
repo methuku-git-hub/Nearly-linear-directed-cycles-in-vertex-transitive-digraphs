@@ -1,6 +1,10 @@
-import DirectedCycles.LocalMinimalEscape
-import DirectedCycles.LocalPowerExtension
-import DirectedCycles.LocalProductCompression
+module
+
+public import DirectedCycles.LocalMinimalEscape
+public import DirectedCycles.LocalPowerExtension
+public import DirectedCycles.LocalProductCompression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

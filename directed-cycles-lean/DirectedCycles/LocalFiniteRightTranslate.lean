@@ -1,6 +1,10 @@
-import DirectedCycles.LocalDivision
-import DirectedCycles.LocalTripleProducts
-import Mathlib.Data.Set.Finite.Basic
+module
+
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.LocalTripleProducts
+public import Mathlib.Data.Set.Finite.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

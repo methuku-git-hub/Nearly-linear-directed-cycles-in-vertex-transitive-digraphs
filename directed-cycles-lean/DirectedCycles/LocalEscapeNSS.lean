@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalEscapeNorm
+module
+
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalEscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

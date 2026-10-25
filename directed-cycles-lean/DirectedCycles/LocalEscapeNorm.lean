@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupProducts
-import Mathlib.Algebra.Order.Archimedean.Basic
+module
+
+public import DirectedCycles.LocalGroupProducts
+public import Mathlib.Algebra.Order.Archimedean.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import DirectedCycles.LocalConjugates
-import DirectedCycles.LocalWordPowerIteration
-import DirectedCycles.LocalWordPowerMonotonicity
-import DirectedCycles.LocalTripleProducts
+module
+
+public import DirectedCycles.LocalConjugates
+public import DirectedCycles.LocalWordPowerIteration
+public import DirectedCycles.LocalWordPowerMonotonicity
+public import DirectedCycles.LocalTripleProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

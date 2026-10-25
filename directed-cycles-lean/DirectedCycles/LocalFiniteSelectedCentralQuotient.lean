@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalCentralSet
-import DirectedCycles.LocalCentralQuotientData
-import DirectedCycles.LocalFiniteEscapeNeighbourhoods
+module
+
+public import DirectedCycles.StrongLocalCentralSet
+public import DirectedCycles.LocalCentralQuotientData
+public import DirectedCycles.LocalFiniteEscapeNeighbourhoods
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

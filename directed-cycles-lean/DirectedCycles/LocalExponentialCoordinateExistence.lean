@@ -1,6 +1,10 @@
-import DirectedCycles.UniformLocalEndpointDerivative
-import DirectedCycles.UniformLocalCurveScaling
-import Mathlib.Analysis.Calculus.InverseFunctionTheorem.FDeriv
+module
+
+public import DirectedCycles.UniformLocalEndpointDerivative
+public import DirectedCycles.UniformLocalCurveScaling
+public import Mathlib.Analysis.Calculus.InverseFunctionTheorem.FDeriv
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

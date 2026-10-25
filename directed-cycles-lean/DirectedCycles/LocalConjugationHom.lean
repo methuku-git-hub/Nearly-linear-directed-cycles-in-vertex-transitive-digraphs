@@ -1,7 +1,11 @@
-import DirectedCycles.LocalConjugates
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalProductRestriction
-import DirectedCycles.LocalEscapeMaps
+module
+
+public import DirectedCycles.LocalConjugates
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalProductRestriction
+public import DirectedCycles.LocalEscapeMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

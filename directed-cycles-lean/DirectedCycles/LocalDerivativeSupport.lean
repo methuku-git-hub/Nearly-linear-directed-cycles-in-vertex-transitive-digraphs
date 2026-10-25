@@ -1,5 +1,9 @@
-import DirectedCycles.LocalConvolutionTranslation
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalConvolutionTranslation
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

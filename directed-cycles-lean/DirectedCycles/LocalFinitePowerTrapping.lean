@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNormGrowthNSS
-import DirectedCycles.LocalPowerSegment
+module
+
+public import DirectedCycles.LocalNormGrowthNSS
+public import DirectedCycles.LocalPowerSegment
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.LocalGroupAlgebra

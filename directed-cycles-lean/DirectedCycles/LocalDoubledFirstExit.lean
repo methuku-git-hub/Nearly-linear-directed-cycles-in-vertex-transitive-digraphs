@@ -1,8 +1,12 @@
-import DirectedCycles.LocalApproximateGroups
-import DirectedCycles.LocalFirstExitSegment
-import DirectedCycles.LocalPowerSegmentDouble
-import DirectedCycles.LocalWordPowerIteration
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalApproximateGroups
+public import DirectedCycles.LocalFirstExitSegment
+public import DirectedCycles.LocalPowerSegmentDouble
+public import DirectedCycles.LocalWordPowerIteration
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

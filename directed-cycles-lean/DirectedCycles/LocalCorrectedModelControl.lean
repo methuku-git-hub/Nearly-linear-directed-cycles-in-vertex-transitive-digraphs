@@ -1,9 +1,13 @@
-import DirectedCycles.LocalDoubledCurveRealization
-import DirectedCycles.LocalClosedScaledExponentLimit
-import DirectedCycles.LocalNestedSegmentComparison
-import DirectedCycles.BoundedSignedRatioLimit
-import DirectedCycles.LocalUniformSegmentMembership
-import DirectedCycles.LieExponentialCurve
+module
+
+public import DirectedCycles.LocalDoubledCurveRealization
+public import DirectedCycles.LocalClosedScaledExponentLimit
+public import DirectedCycles.LocalNestedSegmentComparison
+public import DirectedCycles.BoundedSignedRatioLimit
+public import DirectedCycles.LocalUniformSegmentMembership
+public import DirectedCycles.LieExponentialCurve
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

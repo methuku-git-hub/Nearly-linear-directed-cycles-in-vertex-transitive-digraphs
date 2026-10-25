@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCommutingProducts
-import DirectedCycles.LocalCommutingPowers
-import DirectedCycles.LocalAdditivePowerSegment
+module
+
+public import DirectedCycles.LocalCommutingProducts
+public import DirectedCycles.LocalCommutingPowers
+public import DirectedCycles.LocalAdditivePowerSegment
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

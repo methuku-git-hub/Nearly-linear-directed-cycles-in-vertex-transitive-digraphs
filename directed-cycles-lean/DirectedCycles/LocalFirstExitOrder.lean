@@ -1,7 +1,11 @@
-import DirectedCycles.LocalPowerSegment
-import DirectedCycles.LocalEscapeNSS
-import DirectedCycles.LocalDivision
-import DirectedCycles.NestedTangentScaleBounds
+module
+
+public import DirectedCycles.LocalPowerSegment
+public import DirectedCycles.LocalEscapeNSS
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.NestedTangentScaleBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

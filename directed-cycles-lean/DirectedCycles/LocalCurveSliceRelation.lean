@@ -1,7 +1,11 @@
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalCurveSmallPreimage
-import DirectedCycles.LocalExponentialWordNeighbourhood
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalCurveSmallPreimage
+public import DirectedCycles.LocalExponentialWordNeighbourhood
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff
