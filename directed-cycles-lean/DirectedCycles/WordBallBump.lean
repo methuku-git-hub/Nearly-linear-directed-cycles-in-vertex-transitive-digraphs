@@ -1,4 +1,8 @@
-import DirectedCycles.NormSetBump
+module
+
+public import DirectedCycles.NormSetBump
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

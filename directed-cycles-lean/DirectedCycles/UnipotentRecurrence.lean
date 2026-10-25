@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.Algebra.Module.Equiv.Basic
-import Mathlib.LinearAlgebra.Span.Basic
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Algebra.Module.Equiv.Basic
+public import Mathlib.LinearAlgebra.Span.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

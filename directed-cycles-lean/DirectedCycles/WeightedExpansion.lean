@@ -1,5 +1,9 @@
-import DirectedCycles.PartitionCounting
-import DirectedCycles.NormalOrbits
+module
+
+public import DirectedCycles.PartitionCounting
+public import DirectedCycles.NormalOrbits
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

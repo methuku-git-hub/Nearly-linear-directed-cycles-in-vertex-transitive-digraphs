@@ -1,5 +1,9 @@
-import DirectedCycles.NormalNeighbourhoodDensity
-import DirectedCycles.ApproximatePowerCovers
+module
+
+public import DirectedCycles.NormalNeighbourhoodDensity
+public import DirectedCycles.ApproximatePowerCovers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

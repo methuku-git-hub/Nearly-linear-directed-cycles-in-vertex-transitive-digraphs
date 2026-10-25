@@ -1,5 +1,9 @@
-import DirectedCycles.NonzeroVectorComplement
-import Mathlib.LinearAlgebra.Dimension.Constructions
+module
+
+public import DirectedCycles.NonzeroVectorComplement
+public import Mathlib.LinearAlgebra.Dimension.Constructions
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteSmallNormalNeighbourhoods
+module
+
+public import DirectedCycles.FiniteSmallNormalNeighbourhoods
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise
