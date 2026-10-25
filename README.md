@@ -2,6 +2,8 @@
 
 **Bowen Li and Abhishek Methuku**
 
+**First publicly released: 24 October 2026**
+
 [Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) ·
 [Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·
 [Download](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1) ·
