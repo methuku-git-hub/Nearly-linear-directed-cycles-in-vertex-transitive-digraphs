@@ -58,7 +58,7 @@ is permitted in Solution or its proof dependencies. On Linux with `bwrap`
 (bubblewrap) installed, also run:
 
 ```sh
-./scripts/verify-comparator.sh
+bash scripts/verify-comparator.sh
 ```
 
 This script follows Palomar's template at commit

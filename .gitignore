@@ -3,3 +3,6 @@ __pycache__/
 *.pyc
 reproduction/
 .lake/
+
+# Generated uncompressed graph; publish its lossless gzip form.
+directed-cycles-lean/verification/main-constant-closure.json

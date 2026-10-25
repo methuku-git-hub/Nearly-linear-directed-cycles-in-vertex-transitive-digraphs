@@ -4,10 +4,12 @@
 
 **First publicly released: 24 October 2026**
 
-**Palomar preparation branch:** The sources here are being ported to Lean
-4.35.0 for Palomar's statement comparison and independent kernel checks.
-The earlier certificate applies to release v1.0.1. It does not certify this
-port, and no Palomar verification or registration is claimed at this stage.
+**Palomar preparation branch:** This project uses Lean 4.35.0 and includes
+an independent statement, a proved solution, and the pinned full Palomar
+verification workflow. Check the [current evidence](directed-cycles-lean/verification/README.md)
+and the Actions run for the exact commit. The earlier certificate applies
+only to release v1.0.1; adding submission files does not establish Palomar
+verification or registration.
 
 [Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) ·
 [Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·
@@ -46,7 +48,7 @@ refer to this exact snapshot, identified by SHA-256 in
 The earlier public [arXiv version 2](https://arxiv.org/abs/2607.05807v2), dated
 19 August 2026, is titled *Long directed cycles in vertex-transitive digraphs*
 and states a lower bound of $\Omega(\sqrt n)$. The near-linear
-statement certified here belongs to the revised manuscript archived above.
+statement in this formalization belongs to the revised manuscript archived above.
 The historical certificate applies to the v1.0.1 sources and pinned dependencies.
 Release v1.0.1 adopts the new title throughout the manuscript, PDF metadata,
 project documentation, and blueprint, with a fresh certificate. The Lean
@@ -81,8 +83,9 @@ Comparator must check the same declaration name and type and allow only
 The [Palomar workflow](.github/workflows/palomar-preflight.yml) invokes the
 registry's complete pinned mechanical pipeline in Linux. A passing preflight,
 registry verification, editorial review, and registration are separate stages.
-This branch currently claims none of those outcomes. See
-[`PALOMAR.md`](PALOMAR.md) for submission paths and the verification procedure.
+The full workflow report for the exact commit records its mechanical outcome;
+it does not itself register a project. See [`PALOMAR.md`](PALOMAR.md) for
+submission paths and the verification procedure.
 
 ## Reproduce the verification
 
@@ -99,7 +102,7 @@ lake exe cache get
 lake build
 lake build Palomar
 # Linux with bubblewrap installed:
-./scripts/verify-comparator.sh
+bash scripts/verify-comparator.sh
 ```
 
 The archive-integrity script checks only the historical release package.
@@ -126,7 +129,7 @@ verification can require substantial time, disk space, and memory.
 | --- | --- |
 | [Detailed project README](directed-cycles-lean/README.md) | Proof route, repaired arguments, and verification details |
 | [Dependency blueprint](directed-cycles-lean/blueprint/index.html) | Navigable import graph; download and open locally |
-| [Constant dependency graph](directed-cycles-lean/verification/historical-v1.0.1/main-constant-closure.json) | Historical v1.0.1 theorem dependency graph; regeneration pending |
+| [Constant dependency graph](directed-cycles-lean/verification/main-constant-closure.json.gz) | Complete Lean 4.35 theorem dependency graph, losslessly compressed |
 | [Manuscript correspondence](directed-cycles-lean/blueprint/manuscript-map.json) | Source statements and their Lean declarations |
 | [Certified source archive](release/theorem-1-5-lean-certified.zip) · [SHA-256](release/SHA256SUMS) | Original source package, certificate, and evidence |
 
