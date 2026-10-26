@@ -4,12 +4,17 @@
 
 **First publicly released: 24 October 2026**
 
-**Palomar preparation branch:** This project uses Lean 4.35.0 and includes
+**Palomar verification branch:** This project uses Lean 4.35.0 and includes
 an independent statement, a proved solution, and the pinned full Palomar
 verification workflow. Check the [current evidence](directed-cycles-lean/verification/README.md)
 and the Actions run for the exact commit. The earlier certificate applies
 only to release v1.0.1; adding submission files does not establish Palomar
 verification or registration.
+
+The submitted commit `16f43c7731a2d973e989c5e9006b62088dd3068d` passed
+[Palomar mechanical verification](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/40162833371)
+on 25 October 2026. This is separate from editorial approval and registration.
+Later commits require their own passing preflight; see [the evidence record](PALOMAR.md#recorded-mechanical-verification).
 
 [Manuscript snapshot](directed-cycles-lean/manuscript/source.tex) ·
 [Lean proof](directed-cycles-lean/DirectedCycles/Theorem15.lean) ·

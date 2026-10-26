@@ -5,6 +5,21 @@ release certificate, a successful mechanical preflight, editorial review,
 and permanent registry publication are distinct outcomes. No Palomar result
 is claimed until a linked report for the exact commit records it.
 
+## Recorded mechanical verification
+
+The public commit `16f43c7731a2d973e989c5e9006b62088dd3068d` passed both the
+[full project preflight](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/actions/runs/40160159378)
+and [Palomar's mechanical verification for submission 9pdru5dwljmt](https://github.com/PalomarRegistry/PalomarSubmission/actions/runs/40162833371)
+on 25 October 2026. The preflight report records no errors or warnings and
+acceptance by Lean, NanoDa, and con-ron. Those reports certify the identified
+snapshot, not later commits. They do not establish editorial approval or
+permanent registry registration.
+
+The 26 October audit corrects provenance and documentation only. All Lean
+sources, the Challenge and Solution statements, the comparator configuration,
+the manuscript, and dependency pins are unchanged. A new public commit still
+requires a passing full preflight before it is used for a new submission.
+
 ## Statement and proof
 
 The selected Lake project is `directed-cycles-lean/`.
@@ -37,8 +52,10 @@ needed. The archived manuscript text is unchanged.
 Release v1.0.1 and `release/theorem-1-5-lean-certified.zip` preserve the earlier
 Lean 4.34 sources and certificate. Evidence copied from that release is
 labelled historical in `directed-cycles-lean/verification/historical-v1.0.1/`.
-It does not certify the port. The blueprint remains pending until regenerated
-from current verification output.
+It does not certify the port. The current port's certificate and generated
+blueprint are in `directed-cycles-lean/verification/certificate.json` and
+`directed-cycles-lean/blueprint/`. Their hashes identify their exact inputs;
+they are distinct from Palomar's mechanical reports.
 
 ## Reproduce checks
 
@@ -63,7 +80,11 @@ bash scripts/verify-comparator.sh
 
 This script follows Palomar's template at commit
 `2891de4c48955af824969a263d31b25e7a9a1406`. It invokes the Comparator bundled
-with the selected toolchain and registers its NanoDa and con-ron checkers.
+with the selected toolchain and registers its bundled NanoDa and con-ron
+checkers. This is a supplemental local check. The full registry pipeline also
+authenticates and isolates the Challenge, runs positive and negative controls,
+checks source and metadata requirements, and may use a maintainer-pinned
+con-ron update. The standalone script is not equivalent to that full pipeline.
 
 The complete mechanical preflight is the GitHub Actions workflow
 `.github/workflows/palomar-preflight.yml`. It pins both the reusable workflow
