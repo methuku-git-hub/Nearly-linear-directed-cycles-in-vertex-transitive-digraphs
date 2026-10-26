@@ -59,6 +59,31 @@ sources:
     id: "arXiv:2609.38135"
     location: "https://arxiv.org/abs/2609.38135"
     note: "Undirected work identified by the revised manuscript as the basis of its directed adaptation."
+  - title: "The structure of approximate groups"
+    authors: ["Emmanuel Breuillard", "Ben Green", "Terence Tao"]
+    type: "paper"
+    relationship: "adapts"
+    id: "arXiv:1110.5008v2; doi:10.1007/s10240-012-0043-9"
+    location: "https://arxiv.org/abs/1110.5008v2"
+    note: >-
+      This is the BGT source named throughout the structural development and
+      blueprint. The formalization proves the finite coset-nilprogression
+      consequence used by the graph argument through approximate-group models,
+      escape estimates, and local Lie dimension induction. The blueprint records
+      replacements and restrictions, including the absence of a claim to the
+      general local-group globalization theorem or every BGT normal-form statement.
+  - title: "Freiman's theorem in an arbitrary nilpotent group"
+    authors: ["Matthew C. H. Tointon"]
+    type: "paper"
+    relationship: "adapts"
+    id: "arXiv:1211.3989v3; Proc. London Math. Soc. 109 (2014), 318–352"
+    location: "https://arxiv.org/abs/1211.3989v3"
+    note: >-
+      The finite multilinear-image and normal-envelope arguments are identified
+      in the Lean source as adaptations of Propositions 6.1 and 7.3. The
+      development uses finite Sylow decomposition and relative-height induction.
+      It does not claim the full general Proposition 7.2, whose unused route is
+      retained in blueprint/replaced-general-multihom-envelope.json as history.
 
 related_formalizations: []
 
@@ -116,8 +141,10 @@ review:
   notes: >-
     The maintainer has directed the task and reviewed project presentation.
     Automated statement audits and kernel checks are recorded for the
-    earlier release. These are not human mathematical peer review and do
-    not establish Palomar verification or registration of this adaptation.
+    Lean 4.34 release and the Lean 4.35 port. These are not independent human
+    mathematical peer review. Palomar mechanical outcomes apply only to the
+    exact commit identified by their reports; they do not establish editorial
+    approval or registration. See ../PALOMAR.md for the public evidence.
 
 alignment:
   namespace: "DirectedCycles"
@@ -126,7 +153,7 @@ alignment:
       lean: "DirectedCycles.nearly_linear_directed_cycles"
       module: "Solution"
       status: "adapted"
-      note: "Explicit-statement wrapper of DirectedCycles.theorem_1_5; Palomar comparison pending."
+      note: "Explicit-statement wrapper of DirectedCycles.theorem_1_5. The outcome for each exact public commit is recorded separately in ../PALOMAR.md."
 
 acknowledgements: >-
   Lean and Mathlib contributors and OpenAI Codex. Existing notices for
