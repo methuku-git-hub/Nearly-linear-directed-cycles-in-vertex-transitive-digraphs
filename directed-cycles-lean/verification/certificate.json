@@ -1,6 +1,6 @@
 {
   "status": "MAIN_THEOREM_AND_CLOSURE_KERNEL_VERIFIED",
-  "checked_at_utc": "2026-10-25T03:42:30.319620+00:00",
+  "checked_at_utc": "2026-10-26T15:14:11.639749+00:00",
   "source_sha256": "ec10beaeb937736b36c081a4ca7fb25b1b1ea34f8a614acda7a4ee45cded9543",
   "lean_version": "Lean (version 4.35.0, arm64-apple-darwin24.6.0, commit eb6cafb7290e8bd5f2937522d8d804f58f02bafc, Release)",
   "packages": [
@@ -385768,7 +385768,7 @@
     "DirectedCycles/WordSteps.lean": "876330c73090496b1665339a51ce859bd852fb432e169a1217505ca5adc89ca0",
     "DirectedCycles/ZeroEscapeSubgroup.lean": "15d4559a347975c3a6775a552fcfd87e1d5b4a6a1bfb2c78be1be676b325a091",
     "DirectedCycles.lean": "082d0209cc3ddf1d8cc182d06f2959578479d6d225f4114d6f76cc436b81f271",
-    "README.md": "7216fed601b0d1327a307a3ec42259fdb5e28b46734cf3c843064645e14f389a",
+    "README.md": "7c85c13318f6dbec3766be30c8594ac945e95f7aae2da57b5b4027f428317471",
     "Solution.lean": "d9498f823b61bdaa4fa106000d5f44dbc5c5cd7a4d2995d9bad8588898cc064d",
     "blueprint/dependencies.json": "3a1a2fc18bd9ac546e0a22afd4ee22024c212aa1a922168f74c96b34d20b288f",
     "blueprint/graph.dot": "e540aa8c02bfa3c104460aa8fad883730d41af6c0b3182c7ae811a1475b650e7",
@@ -385781,7 +385781,7 @@
     "blueprint/replaced-prime-chain-route.json": "55d991d2066f63d73f7350cc2eb6bc3223142b2e7d276eaa39f8a861824a4f06",
     "blueprint/source-statements-not-used.json": "723861e5b6de51887eb7f046fb2ffd090424fa8479f0f90d8936b41a63896baf",
     "comparator.json": "1b2a6bd53a0853aa8b096b705bbe396b2a9e679f14ab47218fdeda758ba3b321",
-    "formalization.yaml": "385c7324ab0e0cfaf69199bddaf185925d0a1cf72ea91885f2e6c60beb50560c",
+    "formalization.yaml": "fcf344bf7c2a4652c5a8c2606b8c52dea49fc3b624590b938017a4cf2a9e9202",
     "lake-manifest.json": "1597a874396d413c18cb12c58dbe4293ac5fa45451014d29761ec2ef2a515e8c",
     "lakefile.lean": "55e94eb243fbbf464dc7507740a5d4b29ccaf3504d9b7e17c1e0c0826a90cd18",
     "lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
@@ -385790,7 +385790,7 @@
     "scripts/Replay.lean": "e75a8228856bebcd81f5678b5837b752058c133c525923191cc0f6f03de125bf",
     "scripts/build_blueprint.py": "f665733a0f0b6215d875e0109c4e73e8f9a9f0263e305dc0362a7618138e6fd9",
     "scripts/render_blueprint.py": "8073fd9483aa6685df243ef8ba4dd80e0dbefd842471441afd1b01a59d13843d",
-    "scripts/verify-comparator.sh": "4fefa0e6c779448143b3164f56e96c3b6f719de67da335fa445127ab55f9b1e2",
+    "scripts/verify-comparator.sh": "f04cef2544ccfc7cbf13d52b85917e89b69dfaf3533531ce6dc7807174e24769",
     "scripts/verify.py": "c4fee614d1fa884c9125b05d5ef1db9a36b8c0737ba9260d8f6d83e5fb306001"
   },
   "evidence_files": {
