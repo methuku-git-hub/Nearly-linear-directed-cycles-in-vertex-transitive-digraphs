@@ -9,9 +9,7 @@
 [Download](https://github.com/methuku-git-hub/Nearly-linear-directed-cycles-in-vertex-transitive-digraphs/releases/tag/v1.0.1) ·
 [Verification](#verification)
 
-This Lean project formalizes the near-linear directed-cycle theorem
-(Theorem 1.5) in the archived revised manuscript and every dependency of its
-Lean proof:
+Formalization of the theorem by Bowen Li and Abhishek Methuku showing that:
 
 > For every real $\varepsilon > 0$, there exists $n_0$ such that every
 > connected vertex-transitive digraph on $n \ge n_0$ vertices contains a
@@ -49,7 +47,7 @@ proof files and mathematical manuscript text are unchanged from v1.0.0.
 
 The scope is Theorem 1.5 and its actual proof dependencies. Theorem 1.3 and
 Section 8 (the perimeter-gap construction) are outside this formalization.
-The Lean proof includes repaired arguments and replacement lemmas, documented
+The Lean proof and its manuscript correspondence are documented
 in the [project README](directed-cycles-lean/README.md) and
 [blueprint](directed-cycles-lean/blueprint/dependencies.json).
 [Unused stronger source statements](directed-cycles-lean/blueprint/source-statements-not-used.json)
@@ -107,14 +105,14 @@ performing a new kernel replay.
 
 | Resource | Contents |
 | --- | --- |
-| [Detailed project README](directed-cycles-lean/README.md) | Proof route, repaired arguments, and verification details |
+| [Detailed project README](directed-cycles-lean/README.md) | Proof route, manuscript correspondence, and verification details |
 | [Dependency blueprint](directed-cycles-lean/blueprint/index.html) | Navigable import graph; download and open locally |
 | [Constant dependency graph](directed-cycles-lean/verification/main-constant-closure.json) | The main theorem's actual transitive dependencies |
 | [Manuscript correspondence](directed-cycles-lean/blueprint/manuscript-map.json) | Source statements and their Lean declarations |
 | [Certified source archive](release/theorem-1-5-lean-certified.zip) · [SHA-256](release/SHA256SUMS) | Original source package, certificate, and evidence |
 
 The formalization covers Theorem 1.5 and its actual dependency closure.
-Proof repairs and the scope of the literature inputs are explained in the
+Proof details and the scope of the literature inputs are explained in the
 project README. The blueprint's import graph includes helper modules; the
 constant graph records dependencies of the proof itself.
 
