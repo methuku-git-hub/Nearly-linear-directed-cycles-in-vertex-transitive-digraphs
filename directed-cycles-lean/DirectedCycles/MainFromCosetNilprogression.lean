@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteCosetNilprogressionInput
-import DirectedCycles.MainFromLargeModel
+module
+
+public import DirectedCycles.FiniteCosetNilprogressionInput
+public import DirectedCycles.MainFromLargeModel
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

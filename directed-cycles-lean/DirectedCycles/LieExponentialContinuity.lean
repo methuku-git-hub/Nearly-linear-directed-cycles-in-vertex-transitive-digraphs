@@ -1,4 +1,8 @@
-import DirectedCycles.LieUniformExponentialCurves
+module
+
+public import DirectedCycles.LieUniformExponentialCurves
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

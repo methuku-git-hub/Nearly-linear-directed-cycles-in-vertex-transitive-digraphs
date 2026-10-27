@@ -1,8 +1,12 @@
-import DirectedCycles.LocalOrderedGrid
-import DirectedCycles.LocalSignedPrefix
-import DirectedCycles.LocalCentralProductGrid
-import DirectedCycles.LocalShortSignedProperness
-import DirectedCycles.LocalIteratedGeneratorCommutators
+module
+
+public import DirectedCycles.LocalOrderedGrid
+public import DirectedCycles.LocalSignedPrefix
+public import DirectedCycles.LocalCentralProductGrid
+public import DirectedCycles.LocalShortSignedProperness
+public import DirectedCycles.LocalIteratedGeneratorCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

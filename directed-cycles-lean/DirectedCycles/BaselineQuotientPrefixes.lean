@@ -1,4 +1,8 @@
-import DirectedCycles.CyclicBaselineWords
+module
+
+public import DirectedCycles.CyclicBaselineWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

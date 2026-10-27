@@ -1,5 +1,9 @@
-import DirectedCycles.OneParameterKernelGap
-import DirectedCycles.LocalQuotientSeparation
+module
+
+public import DirectedCycles.OneParameterKernelGap
+public import DirectedCycles.LocalQuotientSeparation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

@@ -1,4 +1,8 @@
-import DirectedCycles.ReturnPathFamily
+module
+
+public import DirectedCycles.ReturnPathFamily
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

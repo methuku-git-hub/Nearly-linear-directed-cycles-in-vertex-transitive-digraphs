@@ -1,5 +1,9 @@
-import DirectedCycles.FullCosetSpanning
-import DirectedCycles.TranslatedConsecutivePowers
+module
+
+public import DirectedCycles.FullCosetSpanning
+public import DirectedCycles.TranslatedConsecutivePowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

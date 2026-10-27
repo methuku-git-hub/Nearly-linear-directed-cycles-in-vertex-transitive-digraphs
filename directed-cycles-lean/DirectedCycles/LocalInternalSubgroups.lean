@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

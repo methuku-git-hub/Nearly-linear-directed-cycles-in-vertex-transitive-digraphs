@@ -1,6 +1,10 @@
-import DirectedCycles.CycleLift
-import DirectedCycles.ActionCoordinates
-import DirectedCycles.NormalPartitions
+module
+
+public import DirectedCycles.CycleLift
+public import DirectedCycles.ActionCoordinates
+public import DirectedCycles.NormalPartitions
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

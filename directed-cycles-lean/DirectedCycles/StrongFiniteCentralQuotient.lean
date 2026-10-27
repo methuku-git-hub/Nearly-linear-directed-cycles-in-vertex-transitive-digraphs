@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteCentralQuotient
-import DirectedCycles.StrongEscapeEstimates
+module
+
+public import DirectedCycles.FiniteCentralQuotient
+public import DirectedCycles.StrongEscapeEstimates
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

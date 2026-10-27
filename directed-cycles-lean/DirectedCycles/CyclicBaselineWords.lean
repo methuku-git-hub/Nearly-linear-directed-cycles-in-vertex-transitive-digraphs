@@ -1,4 +1,8 @@
-import DirectedCycles.CoordinateNormalization
+module
+
+public import DirectedCycles.CoordinateNormalization
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

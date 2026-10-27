@@ -1,5 +1,9 @@
-import DirectedCycles.TerminalMultihomImage
-import DirectedCycles.RelativeSeriesQuotients
+module
+
+public import DirectedCycles.TerminalMultihomImage
+public import DirectedCycles.RelativeSeriesQuotients
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

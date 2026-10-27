@@ -1,5 +1,9 @@
-import DirectedCycles.TruncatedExpansion
-import Mathlib.GroupTheory.OrderOfElement
+module
+
+public import DirectedCycles.TruncatedExpansion
+public import Mathlib.GroupTheory.OrderOfElement
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

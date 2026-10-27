@@ -1,4 +1,8 @@
-import DirectedCycles.ExpansionTemplate
+module
+
+public import DirectedCycles.ExpansionTemplate
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

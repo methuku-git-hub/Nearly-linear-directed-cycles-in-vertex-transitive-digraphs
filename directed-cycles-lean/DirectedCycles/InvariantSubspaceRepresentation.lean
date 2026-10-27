@@ -1,5 +1,9 @@
-import DirectedCycles.NormedRingUnitsNSS
-import Mathlib.Analysis.Normed.Module.FiniteDimension
+module
+
+public import DirectedCycles.NormedRingUnitsNSS
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

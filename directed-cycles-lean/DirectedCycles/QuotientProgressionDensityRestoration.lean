@@ -1,4 +1,8 @@
-import DirectedCycles.CosetProgressionQuotientLift
+module
+
+public import DirectedCycles.CosetProgressionQuotientLift
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

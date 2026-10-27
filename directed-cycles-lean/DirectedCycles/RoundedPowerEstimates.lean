@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonMetricTopology
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import DirectedCycles.GleasonMetricTopology
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

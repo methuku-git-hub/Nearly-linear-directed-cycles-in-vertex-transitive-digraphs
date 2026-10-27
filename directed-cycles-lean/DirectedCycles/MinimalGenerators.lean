@@ -1,6 +1,10 @@
-import DirectedCycles.CayleyWords
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.Order.Minimal
+module
+
+public import DirectedCycles.CayleyWords
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.Order.Minimal
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

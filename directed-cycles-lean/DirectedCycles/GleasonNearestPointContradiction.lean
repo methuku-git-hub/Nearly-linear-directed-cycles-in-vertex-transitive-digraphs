@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonExponentialSmallSpeed
+module
+
+public import DirectedCycles.GleasonExponentialSmallSpeed
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

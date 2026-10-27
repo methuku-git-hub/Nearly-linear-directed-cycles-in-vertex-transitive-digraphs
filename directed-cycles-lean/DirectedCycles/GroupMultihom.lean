@@ -1,4 +1,8 @@
-import DirectedCycles.PGroupUnionWidth
+module
+
+public import DirectedCycles.PGroupUnionWidth
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

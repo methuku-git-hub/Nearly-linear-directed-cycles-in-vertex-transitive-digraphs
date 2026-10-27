@@ -1,6 +1,10 @@
-import DirectedCycles.WeightedWordNorm
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.MeasureTheory.Constructions.BorelSpace.Order
+module
+
+public import DirectedCycles.WeightedWordNorm
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.MeasureTheory.Constructions.BorelSpace.Order
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,6 +1,10 @@
-import DirectedCycles.CollisionLoads
-import DirectedCycles.PathSupports
-import DirectedCycles.Shortening
+module
+
+public import DirectedCycles.CollisionLoads
+public import DirectedCycles.PathSupports
+public import DirectedCycles.Shortening
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

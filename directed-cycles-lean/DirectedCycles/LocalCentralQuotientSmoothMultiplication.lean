@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralQuotientSliceProjection
-import DirectedCycles.LocalCentralQuotientSliceSection
-import DirectedCycles.LocalSmoothMultiplicationFunction
+module
+
+public import DirectedCycles.LocalCentralQuotientSliceProjection
+public import DirectedCycles.LocalCentralQuotientSliceSection
+public import DirectedCycles.LocalSmoothMultiplicationFunction
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,6 +1,10 @@
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Topology.Compactness.Compact
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Topology.Compactness.Compact
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

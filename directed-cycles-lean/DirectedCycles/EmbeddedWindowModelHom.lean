@@ -1,5 +1,9 @@
-import DirectedCycles.GlobalWindowModelHom
-import DirectedCycles.InternalFiniteAlong
+module
+
+public import DirectedCycles.GlobalWindowModelHom
+public import DirectedCycles.InternalFiniteAlong
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

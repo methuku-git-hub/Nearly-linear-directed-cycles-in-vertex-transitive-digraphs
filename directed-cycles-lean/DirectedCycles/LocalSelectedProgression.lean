@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedProgressionInterval
-import DirectedCycles.LocalShortProgressionModel
+module
+
+public import DirectedCycles.LocalSignedProgressionInterval
+public import DirectedCycles.LocalShortProgressionModel
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

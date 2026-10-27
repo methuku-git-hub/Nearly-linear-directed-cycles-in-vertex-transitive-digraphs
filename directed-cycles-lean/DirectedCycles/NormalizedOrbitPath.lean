@@ -1,5 +1,9 @@
-import DirectedCycles.OrbitWalkPaths
-import DirectedCycles.TranslatedReturnPaths
+module
+
+public import DirectedCycles.OrbitWalkPaths
+public import DirectedCycles.TranslatedReturnPaths
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalWordPowers
-import Mathlib.Data.Finset.Lattice.Fold
+module
+
+public import DirectedCycles.LocalWordPowers
+public import Mathlib.Data.Finset.Lattice.Fold
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

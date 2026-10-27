@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonTrotterExistence
+module
+
+public import DirectedCycles.GleasonTrotterExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

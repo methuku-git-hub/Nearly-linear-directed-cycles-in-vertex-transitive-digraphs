@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalEscapeNorm
-import DirectedCycles.LocalGroupCongruence
+module
+
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalEscapeNorm
+public import DirectedCycles.LocalGroupCongruence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

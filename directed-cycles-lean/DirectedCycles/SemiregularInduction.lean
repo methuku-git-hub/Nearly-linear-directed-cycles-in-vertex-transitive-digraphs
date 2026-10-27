@@ -1,7 +1,11 @@
-import DirectedCycles.LargeReturnBound
-import DirectedCycles.SemiregularOrbitCycles
-import DirectedCycles.SemiregularContraction
-import DirectedCycles.SmallKernelLength
+module
+
+public import DirectedCycles.LargeReturnBound
+public import DirectedCycles.SemiregularOrbitCycles
+public import DirectedCycles.SemiregularContraction
+public import DirectedCycles.SmallKernelLength
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

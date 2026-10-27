@@ -1,6 +1,10 @@
-import DirectedCycles.LocalOrderedWords
-import DirectedCycles.SignedCoordinateBox
-import DirectedCycles.LocalWordProgressionMaps
+module
+
+public import DirectedCycles.LocalOrderedWords
+public import DirectedCycles.SignedCoordinateBox
+public import DirectedCycles.LocalWordProgressionMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

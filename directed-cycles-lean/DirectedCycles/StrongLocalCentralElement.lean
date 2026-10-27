@@ -1,6 +1,10 @@
-import DirectedCycles.LocalMinimalEscape
-import DirectedCycles.StrongLocalEscapeEstimates
-import DirectedCycles.LocalPowerExtension
+module
+
+public import DirectedCycles.LocalMinimalEscape
+public import DirectedCycles.StrongLocalEscapeEstimates
+public import DirectedCycles.LocalPowerExtension
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -4,6 +4,8 @@ package directedCycles where
   moreLeanArgs := #["-DautoImplicit=false"]
 require mathlib from git
   "https://github.com/leanprover-community/mathlib4.git" @
-  "5ed2965256430c3649e86755f9576b54eca72435"
+  "56a005855ea17e0b0958f73ec801ae140b0a1679"
 @[default_target]
 lean_lib DirectedCycles
+lean_lib Palomar where
+  roots := #[`Challenge, `Solution]

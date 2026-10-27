@@ -1,6 +1,10 @@
-import DirectedCycles.LocalApproximateFiniteTransfer
-import DirectedCycles.LocalFiniteProductCard
-import Mathlib.Data.Set.Card
+module
+
+public import DirectedCycles.LocalApproximateFiniteTransfer
+public import DirectedCycles.LocalFiniteProductCard
+public import Mathlib.Data.Set.Card
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

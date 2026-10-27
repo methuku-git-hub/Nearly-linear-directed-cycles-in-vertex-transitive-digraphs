@@ -1,4 +1,8 @@
-import DirectedCycles.CompactNSSCurve
+module
+
+public import DirectedCycles.CompactNSSCurve
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

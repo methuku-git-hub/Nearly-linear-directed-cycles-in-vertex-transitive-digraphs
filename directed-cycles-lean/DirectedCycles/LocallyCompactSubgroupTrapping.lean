@@ -1,5 +1,9 @@
-import DirectedCycles.ShrinkingCyclicWordFamily
-import DirectedCycles.GleasonYamabeCompactInput
+module
+
+public import DirectedCycles.ShrinkingCyclicWordFamily
+public import DirectedCycles.GleasonYamabeCompactInput
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

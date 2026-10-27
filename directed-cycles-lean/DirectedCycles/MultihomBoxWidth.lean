@@ -1,6 +1,10 @@
-import DirectedCycles.MultihomPartialEvaluation
-import DirectedCycles.MultihomGeneration
-import DirectedCycles.FiniteNormalProducts
+module
+
+public import DirectedCycles.MultihomPartialEvaluation
+public import DirectedCycles.MultihomGeneration
+public import DirectedCycles.FiniteNormalProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,5 +1,9 @@
-import DirectedCycles.RegularizedEscapeDistance
-import Mathlib.Data.Finset.Max
+module
+
+public import DirectedCycles.RegularizedEscapeDistance
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

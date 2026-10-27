@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedProgression
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalSignedProgression
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

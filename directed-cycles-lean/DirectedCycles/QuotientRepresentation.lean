@@ -1,5 +1,9 @@
-import DirectedCycles.CocycleDifferences
-import Mathlib.LinearAlgebra.Quotient.Basic
+module
+
+public import DirectedCycles.CocycleDifferences
+public import Mathlib.LinearAlgebra.Quotient.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

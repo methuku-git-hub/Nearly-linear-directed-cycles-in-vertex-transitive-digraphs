@@ -1,6 +1,10 @@
-import DirectedCycles.LocalUltraproductDomain
-import Mathlib.Order.Filter.AtTopBot.Basic
-import Mathlib.Data.Finset.Max
+module
+
+public import DirectedCycles.LocalUltraproductDomain
+public import Mathlib.Order.Filter.AtTopBot.Basic
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

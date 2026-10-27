@@ -1,5 +1,9 @@
-import DirectedCycles.LocalMultiplicativeGermUniqueness
-import DirectedCycles.LocalGroupAlgebra
+module
+
+public import DirectedCycles.LocalMultiplicativeGermUniqueness
+public import DirectedCycles.LocalGroupAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

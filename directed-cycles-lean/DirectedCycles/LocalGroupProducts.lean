@@ -1,4 +1,8 @@
-import DirectedCycles.LocalGroupAlgebra
+module
+
+public import DirectedCycles.LocalGroupAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

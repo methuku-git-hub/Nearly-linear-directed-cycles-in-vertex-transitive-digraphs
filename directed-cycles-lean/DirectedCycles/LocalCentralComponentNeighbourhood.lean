@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralModelNeighbourhood
-import DirectedCycles.LocalCentralQuotientUltraHom
+module
+
+public import DirectedCycles.LocalCentralModelNeighbourhood
+public import DirectedCycles.LocalCentralQuotientUltraHom
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

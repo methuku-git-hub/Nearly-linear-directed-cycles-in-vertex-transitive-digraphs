@@ -1,5 +1,9 @@
-import DirectedCycles.LocalInternalSubgroups
-import DirectedCycles.LocalSubgroupTransport
+module
+
+public import DirectedCycles.LocalInternalSubgroups
+public import DirectedCycles.LocalSubgroupTransport
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

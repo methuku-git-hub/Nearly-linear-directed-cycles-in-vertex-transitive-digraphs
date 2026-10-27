@@ -1,6 +1,10 @@
-import DirectedCycles.LocalConjugates
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalTranslationComposition
+module
+
+public import DirectedCycles.LocalConjugates
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalTranslationComposition
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.TerminalSubgroupMap
-import DirectedCycles.MultihomShortGenerators
-import DirectedCycles.AbelianizationShortGenerators
+module
+
+public import DirectedCycles.TerminalSubgroupMap
+public import DirectedCycles.MultihomShortGenerators
+public import DirectedCycles.AbelianizationShortGenerators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

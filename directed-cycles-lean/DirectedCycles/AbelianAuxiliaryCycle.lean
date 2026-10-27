@@ -1,7 +1,11 @@
-import DirectedCycles.AbelianNormalClosure
-import DirectedCycles.SubsingletonLayers
-import DirectedCycles.AuxiliaryLayerBound
-import DirectedCycles.ActualFixedFibres
+module
+
+public import DirectedCycles.AbelianNormalClosure
+public import DirectedCycles.SubsingletonLayers
+public import DirectedCycles.AuxiliaryLayerBound
+public import DirectedCycles.ActualFixedFibres
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

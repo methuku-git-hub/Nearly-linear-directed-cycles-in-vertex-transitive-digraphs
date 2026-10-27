@@ -1,7 +1,11 @@
-import DirectedCycles.GlobalGoodModelSymmetricSandwich
-import DirectedCycles.GlobalGoodLieModelExistence
-import DirectedCycles.CompactSubgroupPowerWindow
-import DirectedCycles.InternalFiniteCoverTransfer
+module
+
+public import DirectedCycles.GlobalGoodModelSymmetricSandwich
+public import DirectedCycles.GlobalGoodLieModelExistence
+public import DirectedCycles.CompactSubgroupPowerWindow
+public import DirectedCycles.InternalFiniteCoverTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

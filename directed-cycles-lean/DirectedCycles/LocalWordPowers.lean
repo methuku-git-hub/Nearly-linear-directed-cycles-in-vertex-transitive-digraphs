@@ -1,5 +1,9 @@
-import DirectedCycles.LocalProductInversion
-import DirectedCycles.LocalUltraproductDomain
+module
+
+public import DirectedCycles.LocalProductInversion
+public import DirectedCycles.LocalUltraproductDomain
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

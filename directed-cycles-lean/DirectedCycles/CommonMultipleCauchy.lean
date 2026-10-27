@@ -1,5 +1,9 @@
-import Mathlib.Topology.MetricSpace.Cauchy
-import Mathlib.Analysis.SpecificLimits.Basic
+module
+
+public import Mathlib.Topology.MetricSpace.Cauchy
+public import Mathlib.Analysis.SpecificLimits.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

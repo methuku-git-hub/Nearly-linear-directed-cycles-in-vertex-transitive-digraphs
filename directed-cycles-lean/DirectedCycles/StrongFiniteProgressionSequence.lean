@@ -1,5 +1,9 @@
-import DirectedCycles.StrongFiniteEnlargedNSSRestoration
-import DirectedCycles.GlobalNSSProgressionSequence
+module
+
+public import DirectedCycles.StrongFiniteEnlargedNSSRestoration
+public import DirectedCycles.GlobalNSSProgressionSequence
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1200000

@@ -1,5 +1,9 @@
-import DirectedCycles.ElementNormalClosure
-import DirectedCycles.CocycleExtension
+module
+
+public import DirectedCycles.ElementNormalClosure
+public import DirectedCycles.CocycleExtension
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

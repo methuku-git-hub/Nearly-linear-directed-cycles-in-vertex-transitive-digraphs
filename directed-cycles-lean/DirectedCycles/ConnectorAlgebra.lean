@@ -1,5 +1,9 @@
-import DirectedCycles.ElementCocycle
-import DirectedCycles.RepresentationEquiv
+module
+
+public import DirectedCycles.ElementCocycle
+public import DirectedCycles.RepresentationEquiv
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

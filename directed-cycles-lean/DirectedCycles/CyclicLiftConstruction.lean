@@ -1,4 +1,8 @@
-import DirectedCycles.AuxiliaryGroupIndex
+module
+
+public import DirectedCycles.AuxiliaryGroupIndex
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

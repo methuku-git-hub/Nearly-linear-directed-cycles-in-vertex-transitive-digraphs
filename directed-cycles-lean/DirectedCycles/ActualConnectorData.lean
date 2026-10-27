@@ -1,6 +1,10 @@
-import DirectedCycles.ConnectorPositions
-import DirectedCycles.SlotCoordinateMembership
-import DirectedCycles.CyclicAuxiliaryGraph
+module
+
+public import DirectedCycles.ConnectorPositions
+public import DirectedCycles.SlotCoordinateMembership
+public import DirectedCycles.CyclicAuxiliaryGraph
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import Mathlib.Topology.Sets.VietorisTopology
-import Mathlib.Topology.Algebra.Group.ClosedSubgroup
-import Mathlib.Algebra.Group.Subgroup.Pointwise
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Sets.VietorisTopology
+public import Mathlib.Topology.Algebra.Group.ClosedSubgroup
+public import Mathlib.Algebra.Group.Subgroup.Pointwise
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open TopologicalSpace Filter

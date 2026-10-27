@@ -1,4 +1,9 @@
-import DirectedCycles.SubgroupNSSBasics
+module
+
+public import DirectedCycles.SubgroupNSSBasics
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

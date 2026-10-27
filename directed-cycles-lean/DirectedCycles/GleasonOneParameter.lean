@@ -1,7 +1,11 @@
-import DirectedCycles.GleasonPowerPrefix
-import DirectedCycles.GleasonMetricTopology
-import Mathlib.Topology.Algebra.Group.CompactOpen
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import DirectedCycles.GleasonPowerPrefix
+public import DirectedCycles.GleasonMetricTopology
+public import Mathlib.Topology.Algebra.Group.CompactOpen
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

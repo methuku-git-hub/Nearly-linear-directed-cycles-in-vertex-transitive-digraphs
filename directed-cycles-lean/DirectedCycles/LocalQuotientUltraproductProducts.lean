@@ -1,4 +1,8 @@
-import DirectedCycles.LocalQuotientUltraproduct
+module
+
+public import DirectedCycles.LocalQuotientUltraproduct
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

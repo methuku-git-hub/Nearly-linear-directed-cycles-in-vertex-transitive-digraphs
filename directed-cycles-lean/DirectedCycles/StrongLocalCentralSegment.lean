@@ -1,7 +1,11 @@
-import DirectedCycles.StrongLocalCentralElement
-import DirectedCycles.LocalFirstExitSegment
-import DirectedCycles.LocalPowerSegmentDouble
-import DirectedCycles.LocalWordPowerIteration
+module
+
+public import DirectedCycles.StrongLocalCentralElement
+public import DirectedCycles.LocalFirstExitSegment
+public import DirectedCycles.LocalPowerSegmentDouble
+public import DirectedCycles.LocalWordPowerIteration
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

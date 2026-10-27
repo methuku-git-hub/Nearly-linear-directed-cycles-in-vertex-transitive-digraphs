@@ -1,6 +1,10 @@
-import DirectedCycles.LocalFactorDistance
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalFiniteTranslations
+module
+
+public import DirectedCycles.LocalFactorDistance
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalFiniteTranslations
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,4 +1,8 @@
-import DirectedCycles.StrongApproximateGroups
+module
+
+public import DirectedCycles.StrongApproximateGroups
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

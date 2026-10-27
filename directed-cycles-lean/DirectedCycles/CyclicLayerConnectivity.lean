@@ -1,4 +1,8 @@
-import DirectedCycles.CyclicLayerWords
+module
+
+public import DirectedCycles.CyclicLayerWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

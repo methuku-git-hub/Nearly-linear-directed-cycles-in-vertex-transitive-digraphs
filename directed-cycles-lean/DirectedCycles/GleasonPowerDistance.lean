@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonPowerProduct
+module
+
+public import DirectedCycles.GleasonPowerProduct
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

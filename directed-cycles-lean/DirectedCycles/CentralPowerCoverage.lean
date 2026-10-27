@@ -1,4 +1,8 @@
-import DirectedCycles.CentralCommutators
+module
+
+public import DirectedCycles.CentralCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement Classical

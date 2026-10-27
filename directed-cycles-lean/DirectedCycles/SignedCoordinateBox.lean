@@ -1,6 +1,10 @@
-import Mathlib.Data.Int.Interval
-import Mathlib.Data.Fintype.Pi
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import Mathlib.Data.Int.Interval
+public import Mathlib.Data.Fintype.Pi
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

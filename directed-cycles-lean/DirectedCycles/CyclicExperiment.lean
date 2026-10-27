@@ -1,7 +1,11 @@
-import DirectedCycles.OrbitRouteSampler
-import DirectedCycles.UniformMarginals
-import DirectedCycles.PathSupports
-import DirectedCycles.Shortening
+module
+
+public import DirectedCycles.OrbitRouteSampler
+public import DirectedCycles.UniformMarginals
+public import DirectedCycles.PathSupports
+public import DirectedCycles.Shortening
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

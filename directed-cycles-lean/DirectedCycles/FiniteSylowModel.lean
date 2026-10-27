@@ -1,6 +1,10 @@
-import DirectedCycles.PrimeCharacters
-import Mathlib.GroupTheory.Sylow
-import Mathlib.GroupTheory.NoncommPiCoprod
+module
+
+public import DirectedCycles.PrimeCharacters
+public import Mathlib.GroupTheory.Sylow
+public import Mathlib.GroupTheory.NoncommPiCoprod
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

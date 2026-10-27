@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteGroupDerivatives
-import Mathlib.Algebra.Group.Pointwise.Set.Basic
+module
+
+public import DirectedCycles.FiniteGroupDerivatives
+public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

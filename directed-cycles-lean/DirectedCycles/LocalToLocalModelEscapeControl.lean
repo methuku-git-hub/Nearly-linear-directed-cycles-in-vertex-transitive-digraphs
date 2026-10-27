@@ -1,5 +1,9 @@
-import DirectedCycles.LocalModelEscapeControl
-import DirectedCycles.LocalEscapeMaps
+module
+
+public import DirectedCycles.LocalModelEscapeControl
+public import DirectedCycles.LocalEscapeMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

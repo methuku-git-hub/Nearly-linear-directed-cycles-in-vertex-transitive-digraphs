@@ -1,6 +1,10 @@
-import DirectedCycles.GeneratorCommutatorNilpotence
-import DirectedCycles.AbelianShortGeneration
-import Mathlib.Data.List.Count
+module
+
+public import DirectedCycles.GeneratorCommutatorNilpotence
+public import DirectedCycles.AbelianShortGeneration
+public import Mathlib.Data.List.Count
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise commutatorElement

@@ -1,4 +1,8 @@
-import DirectedCycles.AbelianPathExtension
+module
+
+public import DirectedCycles.AbelianPathExtension
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

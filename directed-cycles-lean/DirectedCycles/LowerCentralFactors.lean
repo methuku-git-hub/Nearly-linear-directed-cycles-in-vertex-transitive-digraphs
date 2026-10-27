@@ -1,7 +1,11 @@
-import DirectedCycles.CentralCommutators
-import DirectedCycles.Subquotients
-import DirectedCycles.SeriesCounts
-import Mathlib.GroupTheory.Nilpotent
+module
+
+public import DirectedCycles.CentralCommutators
+public import DirectedCycles.Subquotients
+public import DirectedCycles.SeriesCounts
+public import Mathlib.GroupTheory.Nilpotent
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical commutatorElement

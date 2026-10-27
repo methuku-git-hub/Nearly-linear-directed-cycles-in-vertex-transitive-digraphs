@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalApproximateGroups
-import DirectedCycles.LocalFiniteGleasonCommutator
-import DirectedCycles.LocalSubgroupWords
+module
+
+public import DirectedCycles.StrongLocalApproximateGroups
+public import DirectedCycles.LocalFiniteGleasonCommutator
+public import DirectedCycles.LocalSubgroupWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

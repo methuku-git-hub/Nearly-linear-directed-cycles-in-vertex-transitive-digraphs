@@ -1,4 +1,8 @@
-import DirectedCycles.DensityPowerArithmetic
+module
+
+public import DirectedCycles.DensityPowerArithmetic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

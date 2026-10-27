@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteStructuralAlgebra
-import DirectedCycles.CoreQuotientEmbedding
-import DirectedCycles.SchreierBallGrowth
+module
+
+public import DirectedCycles.FiniteStructuralAlgebra
+public import DirectedCycles.CoreQuotientEmbedding
+public import DirectedCycles.SchreierBallGrowth
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

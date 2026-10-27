@@ -1,6 +1,10 @@
-import DirectedCycles.LocalLieFirstExitCurve
-import DirectedCycles.LieNestedEscapeScales
-import DirectedCycles.LocalInnerExitUnbounded
+module
+
+public import DirectedCycles.LocalLieFirstExitCurve
+public import DirectedCycles.LieNestedEscapeScales
+public import DirectedCycles.LocalInnerExitUnbounded
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.SingleRoundProducts
-import DirectedCycles.TemplateEdgeCondition
+module
+
+public import DirectedCycles.SingleRoundProducts
+public import DirectedCycles.TemplateEdgeCondition
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

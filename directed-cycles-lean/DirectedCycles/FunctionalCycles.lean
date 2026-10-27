@@ -1,4 +1,8 @@
-import DirectedCycles.StrongCycleExistence
+module
+
+public import DirectedCycles.StrongCycleExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

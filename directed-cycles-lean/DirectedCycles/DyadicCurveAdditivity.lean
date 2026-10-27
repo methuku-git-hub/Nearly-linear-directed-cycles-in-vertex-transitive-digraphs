@@ -1,4 +1,8 @@
-import DirectedCycles.DyadicCurveLimit
+module
+
+public import DirectedCycles.DyadicCurveLimit
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

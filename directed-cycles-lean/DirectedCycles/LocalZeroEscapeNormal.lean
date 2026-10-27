@@ -1,8 +1,12 @@
-import DirectedCycles.LocalZeroEscapeSubgroup
-import DirectedCycles.LocalNormalThickening
-import DirectedCycles.LocalSubgroupConjugation
-import DirectedCycles.LocalSubgroupTransport
-import DirectedCycles.LocalWindowNSS
+module
+
+public import DirectedCycles.LocalZeroEscapeSubgroup
+public import DirectedCycles.LocalNormalThickening
+public import DirectedCycles.LocalSubgroupConjugation
+public import DirectedCycles.LocalSubgroupTransport
+public import DirectedCycles.LocalWindowNSS
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCommutatorWordConstruction
-import DirectedCycles.LocalWordProgressionMaps
+module
+
+public import DirectedCycles.LocalCommutatorWordConstruction
+public import DirectedCycles.LocalWordProgressionMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

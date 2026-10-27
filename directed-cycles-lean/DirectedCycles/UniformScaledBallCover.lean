@@ -1,5 +1,9 @@
-import Mathlib.Analysis.Normed.Module.FiniteDimension
-import Mathlib.Tactic
+module
+
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonOneParameterCompact
-import DirectedCycles.OneParameterOperations
+module
+
+public import DirectedCycles.GleasonOneParameterCompact
+public import DirectedCycles.OneParameterOperations
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

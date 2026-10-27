@@ -1,7 +1,11 @@
-import DirectedCycles.LocalZeroEscapeNormal
-import DirectedCycles.LocalNormalQuotientCardinality
-import DirectedCycles.LocalWordPowerMonotonicity
-import DirectedCycles.LocalCongruenceDivision
+module
+
+public import DirectedCycles.LocalZeroEscapeNormal
+public import DirectedCycles.LocalNormalQuotientCardinality
+public import DirectedCycles.LocalWordPowerMonotonicity
+public import DirectedCycles.LocalCongruenceDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

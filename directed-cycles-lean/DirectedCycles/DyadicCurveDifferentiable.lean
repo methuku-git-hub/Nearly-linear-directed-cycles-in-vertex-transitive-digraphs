@@ -1,5 +1,9 @@
-import DirectedCycles.DyadicLinearApproximation
-import DirectedCycles.QuadraticCurveDerivative
+module
+
+public import DirectedCycles.DyadicLinearApproximation
+public import DirectedCycles.QuadraticCurveDerivative
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

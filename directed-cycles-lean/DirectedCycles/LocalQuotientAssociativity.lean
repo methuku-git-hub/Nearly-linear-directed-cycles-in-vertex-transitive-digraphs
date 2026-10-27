@@ -1,4 +1,8 @@
-import DirectedCycles.LocalQuotientOperations
+module
+
+public import DirectedCycles.LocalQuotientOperations
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

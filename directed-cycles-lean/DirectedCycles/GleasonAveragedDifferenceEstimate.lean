@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonAdjointBounds
-import DirectedCycles.GleasonExponentialConjugateFactors
-import DirectedCycles.GleasonExponentialProducts
+module
+
+public import DirectedCycles.GleasonAdjointBounds
+public import DirectedCycles.GleasonExponentialConjugateFactors
+public import DirectedCycles.GleasonExponentialProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

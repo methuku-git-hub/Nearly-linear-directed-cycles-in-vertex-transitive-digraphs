@@ -1,4 +1,8 @@
-import DirectedCycles.CayleyWords
+module
+
+public import DirectedCycles.CayleyWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

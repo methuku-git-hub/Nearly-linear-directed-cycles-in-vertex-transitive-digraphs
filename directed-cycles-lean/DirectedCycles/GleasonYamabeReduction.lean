@@ -1,6 +1,10 @@
-import DirectedCycles.NSSSubquotientFromTrapping
-import DirectedCycles.LieQuotientData
-import DirectedCycles.LieGroupNSS
+module
+
+public import DirectedCycles.NSSSubquotientFromTrapping
+public import DirectedCycles.LieQuotientData
+public import DirectedCycles.LieGroupNSS
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

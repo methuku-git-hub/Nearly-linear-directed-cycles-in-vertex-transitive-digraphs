@@ -1,5 +1,9 @@
-import DirectedCycles.SemiregularCycles
-import DirectedCycles.StabilizerRemovalGraph
+module
+
+public import DirectedCycles.SemiregularCycles
+public import DirectedCycles.StabilizerRemovalGraph
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

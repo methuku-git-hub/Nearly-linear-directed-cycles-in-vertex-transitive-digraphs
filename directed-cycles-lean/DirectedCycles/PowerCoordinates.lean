@@ -1,9 +1,13 @@
-import DirectedCycles.Basic
-import DirectedCycles.SeriesCounts
-import Mathlib.Algebra.Group.Subgroup.Finsupp
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.GroupTheory.Rank
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import DirectedCycles.Basic
+public import DirectedCycles.SeriesCounts
+public import Mathlib.Algebra.Group.Subgroup.Finsupp
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.GroupTheory.Rank
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

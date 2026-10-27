@@ -1,7 +1,11 @@
-import DirectedCycles.LocalEscapeNSS
-import DirectedCycles.LocalConjugates
-import DirectedCycles.LocalUltraproductEscape
-import Mathlib.Data.Finset.Max
+module
+
+public import DirectedCycles.LocalEscapeNSS
+public import DirectedCycles.LocalConjugates
+public import DirectedCycles.LocalUltraproductEscape
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

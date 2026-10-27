@@ -1,7 +1,11 @@
-import DirectedCycles.ElementNormalClosure
-import Mathlib.Algebra.Module.Hom
-import Mathlib.LinearAlgebra.FiniteDimensional.Basic
-import Mathlib.GroupTheory.SpecificGroups.Cyclic
+module
+
+public import DirectedCycles.ElementNormalClosure
+public import Mathlib.Algebra.Module.Hom
+public import Mathlib.LinearAlgebra.FiniteDimensional.Basic
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

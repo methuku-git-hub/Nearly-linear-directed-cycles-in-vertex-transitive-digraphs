@@ -1,7 +1,11 @@
-import DirectedCycles.LocalAdditivePowerSegment
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalWordPowerMonotonicity
+module
+
+public import DirectedCycles.LocalAdditivePowerSegment
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalWordPowerMonotonicity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

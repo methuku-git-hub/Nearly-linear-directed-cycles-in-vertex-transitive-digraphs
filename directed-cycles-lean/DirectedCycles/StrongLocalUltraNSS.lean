@@ -1,7 +1,11 @@
-import DirectedCycles.StrongLocalUltraEscape
-import DirectedCycles.LocalPowerTrappingTransfer
-import DirectedCycles.LocalZeroEscapeNormal
-import DirectedCycles.LocalProductDomainTransfer
+module
+
+public import DirectedCycles.StrongLocalUltraEscape
+public import DirectedCycles.LocalPowerTrappingTransfer
+public import DirectedCycles.LocalZeroEscapeNormal
+public import DirectedCycles.LocalProductDomainTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

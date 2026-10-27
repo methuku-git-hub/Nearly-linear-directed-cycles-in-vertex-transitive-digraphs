@@ -1,5 +1,9 @@
-import DirectedCycles.LocalExponentialCurveGerm
-import DirectedCycles.LocalRadialRestrictedNormControl
+module
+
+public import DirectedCycles.LocalExponentialCurveGerm
+public import DirectedCycles.LocalRadialRestrictedNormControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

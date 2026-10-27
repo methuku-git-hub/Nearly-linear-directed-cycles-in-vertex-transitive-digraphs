@@ -1,5 +1,9 @@
-import DirectedCycles.AbelianShortGeneration
-import Mathlib.GroupTheory.Abelianization.Defs
+module
+
+public import DirectedCycles.AbelianShortGeneration
+public import Mathlib.GroupTheory.Abelianization.Defs
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

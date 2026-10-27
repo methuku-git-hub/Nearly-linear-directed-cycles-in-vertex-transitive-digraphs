@@ -1,7 +1,11 @@
-import DirectedCycles.GleasonTrotterParameterLaws
-import DirectedCycles.GleasonOneParameterSpeed
-import DirectedCycles.LocalPowerCurveAdditive
-import DirectedCycles.ContinuousLocalCurveExtension
+module
+
+public import DirectedCycles.GleasonTrotterParameterLaws
+public import DirectedCycles.GleasonOneParameterSpeed
+public import DirectedCycles.LocalPowerCurveAdditive
+public import DirectedCycles.ContinuousLocalCurveExtension
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.CompactNSSCurve
-import DirectedCycles.CentralLiftRounding
+module
+
+public import DirectedCycles.CompactNSSCurve
+public import DirectedCycles.CentralLiftRounding
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

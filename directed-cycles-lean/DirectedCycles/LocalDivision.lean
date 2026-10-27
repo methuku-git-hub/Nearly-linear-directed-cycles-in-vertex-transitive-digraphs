@@ -1,4 +1,8 @@
-import DirectedCycles.LocalGroupReversal
+module
+
+public import DirectedCycles.LocalGroupReversal
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

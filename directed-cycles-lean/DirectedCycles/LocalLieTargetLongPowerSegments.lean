@@ -1,6 +1,10 @@
-import DirectedCycles.LocalToLocalModelPowerLifting
-import DirectedCycles.LocalExponentialRadialLaw
-import Mathlib.Analysis.Normed.Module.RCLike.Real
+module
+
+public import DirectedCycles.LocalToLocalModelPowerLifting
+public import DirectedCycles.LocalExponentialRadialLaw
+public import Mathlib.Analysis.Normed.Module.RCLike.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

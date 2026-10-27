@@ -1,5 +1,9 @@
-import DirectedCycles.ArcOrbits
-import DirectedCycles.Matching
+module
+
+public import DirectedCycles.ArcOrbits
+public import DirectedCycles.Matching
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

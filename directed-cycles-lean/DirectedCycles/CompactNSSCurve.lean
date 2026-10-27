@@ -1,5 +1,9 @@
-import DirectedCycles.CompactPowerTrapping
-import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+module
+
+public import DirectedCycles.CompactPowerTrapping
+public import Mathlib.Topology.MetricSpace.Pseudo.Lemmas
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

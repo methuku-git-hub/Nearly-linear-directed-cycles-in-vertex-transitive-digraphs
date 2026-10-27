@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonCoordinateProductError
-import DirectedCycles.GleasonCoordinateLowerBound
+module
+
+public import DirectedCycles.GleasonCoordinateProductError
+public import DirectedCycles.GleasonCoordinateLowerBound
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

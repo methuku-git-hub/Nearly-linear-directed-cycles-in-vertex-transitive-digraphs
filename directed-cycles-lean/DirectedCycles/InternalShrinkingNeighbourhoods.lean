@@ -1,5 +1,9 @@
-import DirectedCycles.UltraproductConjugation
-import DirectedCycles.ShrinkingGroupNeighbourhoods
+module
+
+public import DirectedCycles.UltraproductConjugation
+public import DirectedCycles.ShrinkingGroupNeighbourhoods
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

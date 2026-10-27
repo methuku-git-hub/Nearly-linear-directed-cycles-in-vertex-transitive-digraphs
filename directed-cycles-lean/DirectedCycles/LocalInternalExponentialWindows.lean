@@ -1,5 +1,9 @@
-import DirectedCycles.LocalInternalSymmetricSandwich
-import DirectedCycles.LieExponentialBallTopology
+module
+
+public import DirectedCycles.LocalInternalSymmetricSandwich
+public import DirectedCycles.LieExponentialBallTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

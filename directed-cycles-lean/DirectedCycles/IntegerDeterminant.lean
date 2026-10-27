@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.LinearAlgebra.Matrix.Adjugate
-import Mathlib.LinearAlgebra.Matrix.AbsoluteValue
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.LinearAlgebra.Matrix.Adjugate
+public import Mathlib.LinearAlgebra.Matrix.AbsoluteValue
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

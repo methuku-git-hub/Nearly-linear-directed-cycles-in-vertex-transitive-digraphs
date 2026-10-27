@@ -1,8 +1,12 @@
-import DirectedCycles.SmoothLocalDifferenceCells
-import DirectedCycles.FiniteCoverRepresentatives
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalDivision
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.SmoothLocalDifferenceCells
+public import DirectedCycles.FiniteCoverRepresentatives
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,0 +1,6 @@
+{
+  "baseline": "f7db03c2fb8274f9a2d87efca66c6ed7aeadc0c1",
+  "compared_project_files": 1220,
+  "comparison": "Ignore module headers, public-section annotations, import lines, and blank lines; compare remaining text exactly. This is source comparison, not a proof check.",
+  "changed_proof_body_files": []
+}

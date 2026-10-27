@@ -1,4 +1,8 @@
-import DirectedCycles.TruncatedFunctor
+module
+
+public import DirectedCycles.TruncatedFunctor
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped MonoidAlgebra

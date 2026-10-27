@@ -1,7 +1,11 @@
-import DirectedCycles.LocalRestrictedProductNorm
-import DirectedCycles.LocalFactorBump
-import DirectedCycles.LocalEscapeMaps
-import Mathlib.Data.Finset.Max
+module
+
+public import DirectedCycles.LocalRestrictedProductNorm
+public import DirectedCycles.LocalFactorBump
+public import DirectedCycles.LocalEscapeMaps
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalApproximateGroups
-import DirectedCycles.LocalProductSplits
-import DirectedCycles.LocalTwoProducts
+module
+
+public import DirectedCycles.StrongLocalApproximateGroups
+public import DirectedCycles.LocalProductSplits
+public import DirectedCycles.LocalTwoProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

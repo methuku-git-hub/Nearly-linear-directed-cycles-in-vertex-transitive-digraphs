@@ -1,6 +1,10 @@
-import DirectedCycles.ActualConnectorData
-import DirectedCycles.BaselineClosureCongruence
-import DirectedCycles.ConnectorDensityIndex
+module
+
+public import DirectedCycles.ActualConnectorData
+public import DirectedCycles.BaselineClosureCongruence
+public import DirectedCycles.ConnectorDensityIndex
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LieCurveCoordinateComparison
-import DirectedCycles.LocalNestedSegmentComparison
+module
+
+public import DirectedCycles.LieCurveCoordinateComparison
+public import DirectedCycles.LocalNestedSegmentComparison
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

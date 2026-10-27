@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteGroupConvolution
-import Mathlib.Analysis.Normed.Module.Basic
+module
+
+public import DirectedCycles.FiniteGroupConvolution
+public import Mathlib.Analysis.Normed.Module.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

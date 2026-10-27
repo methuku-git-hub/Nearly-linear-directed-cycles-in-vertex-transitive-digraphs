@@ -1,5 +1,9 @@
-import DirectedCycles.UltraproductSubgroups
-import DirectedCycles.InternalSetLogic
+module
+
+public import DirectedCycles.UltraproductSubgroups
+public import DirectedCycles.InternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

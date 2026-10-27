@@ -1,4 +1,8 @@
-import DirectedCycles.MinimalEscapeWindow
+module
+
+public import DirectedCycles.MinimalEscapeWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

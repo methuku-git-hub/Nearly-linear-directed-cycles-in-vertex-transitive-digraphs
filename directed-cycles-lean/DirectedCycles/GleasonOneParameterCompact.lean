@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonOneParameterWindow
+module
+
+public import DirectedCycles.GleasonOneParameterWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

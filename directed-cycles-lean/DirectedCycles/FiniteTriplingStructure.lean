@@ -1,7 +1,11 @@
-import DirectedCycles.FiniteStructure
-import DirectedCycles.ActionBallCardinality
-import DirectedCycles.ActionBallPaths
-import DirectedCycles.PolynomialCrossing
+module
+
+public import DirectedCycles.FiniteStructure
+public import DirectedCycles.ActionBallCardinality
+public import DirectedCycles.ActionBallPaths
+public import DirectedCycles.PolynomialCrossing
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

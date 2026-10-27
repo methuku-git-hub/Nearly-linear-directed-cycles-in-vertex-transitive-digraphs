@@ -1,6 +1,10 @@
-import DirectedCycles.HaarEscapeBootstrap
-import DirectedCycles.CompactNSSWordWindow
-import DirectedCycles.HaarFiniteTrapping
+module
+
+public import DirectedCycles.HaarEscapeBootstrap
+public import DirectedCycles.CompactNSSWordWindow
+public import DirectedCycles.HaarFiniteTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

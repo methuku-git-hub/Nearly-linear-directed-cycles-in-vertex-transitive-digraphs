@@ -1,8 +1,12 @@
-import DirectedCycles.LocalScaledPowers
-import DirectedCycles.LocalPowerSegmentMaps
-import DirectedCycles.LocalCurveExtension
-import DirectedCycles.LocalInternalSetLogic
-import DirectedCycles.ScaledPowerInterval
+module
+
+public import DirectedCycles.LocalScaledPowers
+public import DirectedCycles.LocalPowerSegmentMaps
+public import DirectedCycles.LocalCurveExtension
+public import DirectedCycles.LocalInternalSetLogic
+public import DirectedCycles.ScaledPowerInterval
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

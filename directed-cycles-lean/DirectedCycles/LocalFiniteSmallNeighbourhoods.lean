@@ -1,8 +1,12 @@
-import DirectedCycles.LocalDenseAlmostPeriods
-import DirectedCycles.LocalExpansionMinimizers
-import DirectedCycles.LocalAlmostPeriodPowers
-import DirectedCycles.LocalPackingCover
-import DirectedCycles.LocalApproximatePowerCard
+module
+
+public import DirectedCycles.LocalDenseAlmostPeriods
+public import DirectedCycles.LocalExpansionMinimizers
+public import DirectedCycles.LocalAlmostPeriodPowers
+public import DirectedCycles.LocalPackingCover
+public import DirectedCycles.LocalApproximatePowerCard
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

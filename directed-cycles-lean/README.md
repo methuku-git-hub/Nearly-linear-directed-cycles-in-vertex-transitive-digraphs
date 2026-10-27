@@ -2,6 +2,13 @@
 
 Lean formalization and verification of Theorem 1.5.
 
+**Palomar verification branch.** This branch uses Lean 4.35.0. Historical
+Lean 4.34 evidence is labelled in `verification/historical-v1.0.1/`; it does
+not certify the changed sources. See `../PALOMAR.md` for the independent
+statement, Comparator configuration, and full mechanical preflight.
+Mechanical results apply to the exact commit linked there; editorial review
+and registry registration are separate stages.
+
 The unconditional proof is `DirectedCycles.theorem_1_5` in
 `DirectedCycles/Theorem15.lean`. Its type is `DirectedCycles.MainTheorem`.
 **The current certification status is recorded in `verification/certificate.json`
@@ -55,6 +62,15 @@ containment to the fourth power. The ultrafilter counterexample argument gives
 uniform finite constants. The finite algebra, normal-orbit structure, and
 directed-cycle construction then prove the main theorem.
 
+The structural development adapts Breuillard, Green and Tao's
+[*The structure of approximate groups*](https://arxiv.org/abs/1110.5008v2),
+referred to as BGT in the source, and finite consequences of Tointon's
+[*Freiman's theorem in an arbitrary nilpotent group*](https://arxiv.org/abs/1211.3989v3).
+Their roles and the restricted statements actually proved are recorded in
+`formalization.yaml` and the blueprint. Historical comments describing an input
+as open record earlier development stages; current status is determined by the
+actual proved declarations and the current certificate's dependency closure.
+
 Other proof repairs include exact retained-position and intersection control
 for the return walks, a full tensor interpolation argument valid with torsion,
 and finite prime-field character counting in place of an unnecessary stronger
@@ -69,10 +85,11 @@ assertions are not silently promoted to proved theorems. Theorem 1.3 and Section
 - `blueprint/index.html`: navigable, generated project import graph, with library
   imports grouped. Import edges intentionally include helpers unused by the
   final proof term.
-- `verification/main-constant-closure.json`: the transitive graph extracted from
+- `verification/main-constant-closure.json.gz`: the losslessly compressed transitive graph extracted from
   the main theorem's actual kernel constants, traversing types, bodies,
   inductive declarations, constructors, and recursor rules. Inductive metadata
   can create cycles. It includes library declarations and definitions.
+  Decompress it with `gzip -dc verification/main-constant-closure.json.gz`.
 - `blueprint/manuscript-map.json`: source statements and corresponding Lean
   declarations, with scope qualifications. Consult the actual Lean types.
 - `blueprint/historical-planned-dependencies.json`: the old plan, retained as
@@ -82,7 +99,8 @@ assertions are not silently promoted to proved theorems. Theorem 1.3 and Section
   environment replay. Historical partial reports are explicitly archived.
 
 The only permitted foundational axioms are Lean's standard `propext`,
-`Classical.choice`, and `Quot.sound`. The checker rejects `sorryAx` and every
+`Classical.choice`, and `Quot.sound`. The one `sorry` in `Challenge.lean` is a deliberate statement-only placeholder;
+that file is not imported by the proof. The checker rejects `sorryAx` and every
 other axiom in the main closure and project theorems. It also rejects unsafe
 constants in the main closure and proof escapes in mathematical source files.
 The independent closure traversal is compared with Lean's cached axiom audit.
@@ -94,9 +112,9 @@ proof verification.
 
 ## Reproduce
 
-Requirements: Lean 4.34.0 (commit
-`293d5d0c0c3f3dded4688b3ccd6a33939ac5102b`), Git, and Python 3. Mathlib is pinned
-to `5ed2965256430c3649e86755f9576b54eca72435`; all transitive package revisions
+Requirements: Lean 4.35.0 (commit
+`eb6cafb7290e8bd5f2937522d8d804f58f02bafc`), Git, and Python 3. Mathlib is pinned
+to `56a005855ea17e0b0958f73ec801ae140b0a1679`; all transitive package revisions
 are pinned in `lake-manifest.json`. With `elan`, `lean-toolchain` selects Lean.
 From this directory run:
 

@@ -1,4 +1,8 @@
-import DirectedCycles.LocalZeroEscapeSubgroup
+module
+
+public import DirectedCycles.LocalZeroEscapeSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.ChosenLiftInput
-import DirectedCycles.RoundSpanning
+module
+
+public import DirectedCycles.ChosenLiftInput
+public import DirectedCycles.RoundSpanning
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

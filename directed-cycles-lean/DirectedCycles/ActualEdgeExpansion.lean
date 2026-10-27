@@ -1,5 +1,9 @@
-import DirectedCycles.ActualCycleExpansion
-import DirectedCycles.TemplateEdgeCondition
+module
+
+public import DirectedCycles.ActualCycleExpansion
+public import DirectedCycles.TemplateEdgeCondition
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

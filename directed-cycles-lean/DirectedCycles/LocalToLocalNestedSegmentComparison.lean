@@ -1,6 +1,10 @@
-import DirectedCycles.LocalToLocalClosedScaledExponentLimit
-import DirectedCycles.LocalNestedSegmentComparison
-import DirectedCycles.ShortProgressionModelImage
+module
+
+public import DirectedCycles.LocalToLocalClosedScaledExponentLimit
+public import DirectedCycles.LocalNestedSegmentComparison
+public import DirectedCycles.ShortProgressionModelImage
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

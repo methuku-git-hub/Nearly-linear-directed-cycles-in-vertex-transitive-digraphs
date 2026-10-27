@@ -1,6 +1,10 @@
-import DirectedCycles.ZeroEscapeSubgroup
-import DirectedCycles.EscapeNormHomomorphisms
-import DirectedCycles.ApproximateSubgroupRestriction
+module
+
+public import DirectedCycles.ZeroEscapeSubgroup
+public import DirectedCycles.EscapeNormHomomorphisms
+public import DirectedCycles.ApproximateSubgroupRestriction
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

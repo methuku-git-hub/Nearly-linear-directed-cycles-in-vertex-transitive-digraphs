@@ -1,6 +1,10 @@
-import DirectedCycles.LocalProjectedEscapeKernel
-import DirectedCycles.LocalNegligibleEscapePower
-import DirectedCycles.LocalCentralQuotientUltraHom
+module
+
+public import DirectedCycles.LocalProjectedEscapeKernel
+public import DirectedCycles.LocalNegligibleEscapePower
+public import DirectedCycles.LocalCentralQuotientUltraHom
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

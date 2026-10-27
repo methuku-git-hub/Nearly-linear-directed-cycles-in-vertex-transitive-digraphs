@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonOneParameter
-import Mathlib.Topology.MetricSpace.Equicontinuity
-import Mathlib.Topology.UniformSpace.CompleteSeparated
+module
+
+public import DirectedCycles.GleasonOneParameter
+public import Mathlib.Topology.MetricSpace.Equicontinuity
+public import Mathlib.Topology.UniformSpace.CompleteSeparated
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

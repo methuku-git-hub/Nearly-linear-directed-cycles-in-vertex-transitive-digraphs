@@ -1,5 +1,9 @@
-import DirectedCycles.PrimeCharacters
-import Mathlib.LinearAlgebra.Dimension.Finrank
+module
+
+public import DirectedCycles.PrimeCharacters
+public import Mathlib.LinearAlgebra.Dimension.Finrank
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

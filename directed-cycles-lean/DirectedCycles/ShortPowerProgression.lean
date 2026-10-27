@@ -1,5 +1,9 @@
-import DirectedCycles.ShortPowerReturns
-import DirectedCycles.LocalQuotientWindow
+module
+
+public import DirectedCycles.ShortPowerReturns
+public import DirectedCycles.LocalQuotientWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

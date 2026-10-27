@@ -1,5 +1,9 @@
-import DirectedCycles.CompactWordLimitSelection
-import DirectedCycles.ClosedWordPowers
+module
+
+public import DirectedCycles.CompactWordLimitSelection
+public import DirectedCycles.ClosedWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open TopologicalSpace Filter

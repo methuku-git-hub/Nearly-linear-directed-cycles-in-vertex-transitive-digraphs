@@ -1,5 +1,9 @@
-import DirectedCycles.BaselineHamiltonian
-import DirectedCycles.NilpotentCycleBounds
+module
+
+public import DirectedCycles.BaselineHamiltonian
+public import DirectedCycles.NilpotentCycleBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

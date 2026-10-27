@@ -1,5 +1,9 @@
-import DirectedCycles.LocalModelPowerLifting
-import DirectedCycles.ConnectedSmallPowers
+module
+
+public import DirectedCycles.LocalModelPowerLifting
+public import DirectedCycles.ConnectedSmallPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

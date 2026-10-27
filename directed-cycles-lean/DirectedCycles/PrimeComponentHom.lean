@@ -1,5 +1,9 @@
-import DirectedCycles.PrimeCharacters
-import Mathlib.GroupTheory.NoncommPiCoprod
+module
+
+public import DirectedCycles.PrimeCharacters
+public import Mathlib.GroupTheory.NoncommPiCoprod
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

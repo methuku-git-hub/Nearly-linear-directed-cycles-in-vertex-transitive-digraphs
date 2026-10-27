@@ -1,7 +1,11 @@
-import DirectedCycles.LieCentralSmoothQuotient
-import DirectedCycles.SmoothLocalCompactNSS
-import DirectedCycles.LocalQuotientSeparation
-import DirectedCycles.CompactQuotientSourceWindow
+module
+
+public import DirectedCycles.LieCentralSmoothQuotient
+public import DirectedCycles.SmoothLocalCompactNSS
+public import DirectedCycles.LocalQuotientSeparation
+public import DirectedCycles.CompactQuotientSourceWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

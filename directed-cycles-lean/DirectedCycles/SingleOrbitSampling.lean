@@ -1,5 +1,9 @@
-import DirectedCycles.JoiningConnections
-import DirectedCycles.SingleOrbitPaths
+module
+
+public import DirectedCycles.JoiningConnections
+public import DirectedCycles.SingleOrbitPaths
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalExponentialProductBounds
-import DirectedCycles.LocalExponentialWordBoundRel
-import DirectedCycles.LieExponentialWordControl
+module
+
+public import DirectedCycles.LocalExponentialProductBounds
+public import DirectedCycles.LocalExponentialWordBoundRel
+public import DirectedCycles.LieExponentialWordControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

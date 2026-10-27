@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonMetricBasics
-import Mathlib.Topology.MetricSpace.Cauchy
-import Mathlib.Topology.UniformSpace.Compact
+module
+
+public import DirectedCycles.GleasonMetricBasics
+public import Mathlib.Topology.MetricSpace.Cauchy
+public import Mathlib.Topology.UniformSpace.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

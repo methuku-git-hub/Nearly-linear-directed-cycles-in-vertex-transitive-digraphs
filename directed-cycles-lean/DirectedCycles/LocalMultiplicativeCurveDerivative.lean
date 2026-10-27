@@ -1,5 +1,9 @@
-import DirectedCycles.LocalMultiplicationDerivative
-import DirectedCycles.DyadicCurveDifferentiable
+module
+
+public import DirectedCycles.LocalMultiplicationDerivative
+public import DirectedCycles.DyadicCurveDifferentiable
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

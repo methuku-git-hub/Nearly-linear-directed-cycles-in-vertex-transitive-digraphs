@@ -1,4 +1,9 @@
-import DirectedCycles.FiniteAlmostPeriods
+module
+
+public import DirectedCycles.FiniteAlmostPeriods
+public import Mathlib.Combinatorics.Additive.RuzsaCovering
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

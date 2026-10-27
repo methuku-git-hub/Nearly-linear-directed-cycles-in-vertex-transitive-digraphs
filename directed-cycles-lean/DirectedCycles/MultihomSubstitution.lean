@@ -1,4 +1,8 @@
-import DirectedCycles.TerminalCommutatorMaps
+module
+
+public import DirectedCycles.TerminalCommutatorMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

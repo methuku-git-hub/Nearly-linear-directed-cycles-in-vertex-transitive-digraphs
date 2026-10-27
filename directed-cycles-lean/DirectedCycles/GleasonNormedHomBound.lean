@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonMetricTopology
-import DirectedCycles.NormalizedPowerScale
-import DirectedCycles.NormedAlgebraPowerPrefix
+module
+
+public import DirectedCycles.GleasonMetricTopology
+public import DirectedCycles.NormalizedPowerScale
+public import DirectedCycles.NormedAlgebraPowerPrefix
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

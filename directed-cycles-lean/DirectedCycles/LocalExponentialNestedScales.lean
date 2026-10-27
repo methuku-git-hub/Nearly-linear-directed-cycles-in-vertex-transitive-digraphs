@@ -1,5 +1,9 @@
-import DirectedCycles.LocalExponentialCurveAnnulus
-import DirectedCycles.NestedTangentScaleBounds
+module
+
+public import DirectedCycles.LocalExponentialCurveAnnulus
+public import DirectedCycles.NestedTangentScaleBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

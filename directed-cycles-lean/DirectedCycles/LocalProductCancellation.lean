@@ -1,5 +1,9 @@
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalTwoProducts
+module
+
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalTwoProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

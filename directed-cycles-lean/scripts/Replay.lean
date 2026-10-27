@@ -1,4 +1,8 @@
-import LeanChecker
+module
+
+public import LeanChecker
+
+@[expose] public section
 
 /-!
 Replay exactly the same kernel checks as the bundled `leanchecker`, one module

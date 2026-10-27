@@ -1,6 +1,10 @@
-import DirectedCycles.ScaledUltraproductPowers
-import Mathlib.Topology.Algebra.OpenSubgroup
-import Mathlib.Topology.Connected.Clopen
+module
+
+public import DirectedCycles.ScaledUltraproductPowers
+public import Mathlib.Topology.Algebra.OpenSubgroup
+public import Mathlib.Topology.Connected.Clopen
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

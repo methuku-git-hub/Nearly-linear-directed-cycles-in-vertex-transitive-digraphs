@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonTrotterRefinement
-import DirectedCycles.CommonMultipleCauchy
-import Mathlib.Topology.UniformSpace.UniformApproximation
+module
+
+public import DirectedCycles.GleasonTrotterRefinement
+public import DirectedCycles.CommonMultipleCauchy
+public import Mathlib.Topology.UniformSpace.UniformApproximation
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

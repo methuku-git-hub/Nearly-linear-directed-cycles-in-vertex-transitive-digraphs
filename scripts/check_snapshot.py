@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Check the published snapshot's bytes; does not run Lean or issue a certificate."""
+"""Check the historical v1.0.1 archive; does not certify the current Lean port."""
 import hashlib
 import json
 from pathlib import Path, PurePosixPath
@@ -45,15 +45,8 @@ def check(root=ROOT):
     package = json.loads(archive_files["PACKAGE.json"])
     require(set(archive_files) == set(package["files"]) | {"PACKAGE.json"},
             "Package inventory differs from archive")
-    present = set()
-    for path in snapshot.rglob("*"):
-        require(not path.is_symlink(), f"Symlink in snapshot: {path}")
-        if path.is_file():
-            name = path.relative_to(snapshot).as_posix()
-            present.add(name)
-            require(name in archive_files, f"Extra snapshot file: {name}")
-            require(path.read_bytes() == archive_files[name], f"Changed snapshot file: {name}")
-    require(present == set(archive_files), "Missing expanded snapshot files")
+    # Current sources are a Lean 4.35 port. The immutable release archive is
+    # deliberately checked on its own, without asserting byte identity with it.
     for name, expected in package["files"].items():
         safe_name(name)
         require(digest(archive_files[name]) == expected, f"Package hash differs: {name}")
@@ -88,5 +81,5 @@ if __name__ == "__main__":
     except (OSError, KeyError, ValueError, zipfile.BadZipFile) as error:
         print(f"SNAPSHOT INTEGRITY FAILED: {error}", file=sys.stderr)
         sys.exit(1)
-    print(f"Snapshot integrity passed: {count} files match the certified archive.")
-    print("This checked recorded evidence and hashes; it did not rerun Lean.")
+    print(f"Historical v1.0.1 archive integrity passed: {count} files checked.")
+    print("This did not rebuild or certify the current sources or run Palomar.")

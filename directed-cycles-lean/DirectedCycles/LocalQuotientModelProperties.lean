@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCongruenceDescent
-import Mathlib.Topology.Compactness.Compact
+module
+
+public import DirectedCycles.LocalCongruenceDescent
+public import Mathlib.Topology.Compactness.Compact
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

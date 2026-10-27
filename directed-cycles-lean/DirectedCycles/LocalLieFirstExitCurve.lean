@@ -1,6 +1,10 @@
-import DirectedCycles.LocalFirstExitTangent
-import DirectedCycles.LocalScaledModel
-import DirectedCycles.LieOneParameterNonzero
+module
+
+public import DirectedCycles.LocalFirstExitTangent
+public import DirectedCycles.LocalScaledModel
+public import DirectedCycles.LieOneParameterNonzero
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

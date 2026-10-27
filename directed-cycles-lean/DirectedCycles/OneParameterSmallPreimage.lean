@@ -1,4 +1,8 @@
-import DirectedCycles.CentralCurveLocalNormal
+module
+
+public import DirectedCycles.CentralCurveLocalNormal
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

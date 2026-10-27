@@ -1,5 +1,9 @@
-import DirectedCycles.OrbitCycleWalk
-import DirectedCycles.CoordinateActions
+module
+
+public import DirectedCycles.OrbitCycleWalk
+public import DirectedCycles.CoordinateActions
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u v

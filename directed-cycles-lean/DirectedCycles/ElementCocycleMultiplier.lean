@@ -1,6 +1,10 @@
-import DirectedCycles.ElementPolynomialCocycle
-import DirectedCycles.NilpotentMultiplier
-import DirectedCycles.NilpotentSubgroupIndex
+module
+
+public import DirectedCycles.ElementPolynomialCocycle
+public import DirectedCycles.NilpotentMultiplier
+public import DirectedCycles.NilpotentSubgroupIndex
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

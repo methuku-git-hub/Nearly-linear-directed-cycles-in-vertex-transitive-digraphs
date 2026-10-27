@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteSmallNeighbourhoods
-import DirectedCycles.EscapeSublevelPowers
+module
+
+public import DirectedCycles.FiniteSmallNeighbourhoods
+public import DirectedCycles.EscapeSublevelPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

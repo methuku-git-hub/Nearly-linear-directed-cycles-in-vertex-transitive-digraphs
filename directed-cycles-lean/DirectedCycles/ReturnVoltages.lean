@@ -1,4 +1,8 @@
-import DirectedCycles.TreePotentials
+module
+
+public import DirectedCycles.TreePotentials
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import DirectedCycles.LocalWordPowers
-import Mathlib.Analysis.Normed.Module.Basic
-import Mathlib.Algebra.BigOperators.Group.List.Basic
-import Mathlib.Tactic
+module
+
+public import DirectedCycles.LocalWordPowers
+public import Mathlib.Analysis.Normed.Module.Basic
+public import Mathlib.Algebra.BigOperators.Group.List.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

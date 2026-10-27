@@ -1,6 +1,10 @@
-import DirectedCycles.TranslatedConsecutivePowers
-import DirectedCycles.BaselineClosureCongruence
-import DirectedCycles.BaselineQuotientPrefixes
+module
+
+public import DirectedCycles.TranslatedConsecutivePowers
+public import DirectedCycles.BaselineClosureCongruence
+public import DirectedCycles.BaselineQuotientPrefixes
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

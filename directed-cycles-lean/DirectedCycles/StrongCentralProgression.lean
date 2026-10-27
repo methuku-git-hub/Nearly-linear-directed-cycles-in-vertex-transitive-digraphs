@@ -1,6 +1,10 @@
-import DirectedCycles.StrongEscapeEstimates
-import DirectedCycles.MinimalEscapeWindow
-import DirectedCycles.ShortProgressionProperness
+module
+
+public import DirectedCycles.StrongEscapeEstimates
+public import DirectedCycles.MinimalEscapeWindow
+public import DirectedCycles.ShortProgressionProperness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

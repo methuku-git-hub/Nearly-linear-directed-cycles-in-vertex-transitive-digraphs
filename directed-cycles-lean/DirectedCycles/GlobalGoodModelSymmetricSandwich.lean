@@ -1,5 +1,9 @@
-import DirectedCycles.GlobalGoodLocallyCompactModel
-import DirectedCycles.InternalSetLogic
+module
+
+public import DirectedCycles.GlobalGoodLocallyCompactModel
+public import DirectedCycles.InternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise Topology

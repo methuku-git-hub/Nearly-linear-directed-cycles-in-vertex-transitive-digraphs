@@ -1,8 +1,12 @@
-import DirectedCycles.StrongLocalEscapeEstimates
-import DirectedCycles.StrongLocalWordEscape
-import DirectedCycles.LocalWordEscapeTransfer
-import DirectedCycles.LocalEscapeEstimateTransfer
-import DirectedCycles.LocalWordPowerTransfer
+module
+
+public import DirectedCycles.StrongLocalEscapeEstimates
+public import DirectedCycles.StrongLocalWordEscape
+public import DirectedCycles.LocalWordEscapeTransfer
+public import DirectedCycles.LocalEscapeEstimateTransfer
+public import DirectedCycles.LocalWordPowerTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

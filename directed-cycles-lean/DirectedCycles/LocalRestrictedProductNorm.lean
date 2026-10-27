@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupReversal
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
+module
+
+public import DirectedCycles.LocalGroupReversal
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

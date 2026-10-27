@@ -1,4 +1,8 @@
-import DirectedCycles.BaselineClosureCongruence
+module
+
+public import DirectedCycles.BaselineClosureCongruence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

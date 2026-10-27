@@ -1,5 +1,9 @@
-import DirectedCycles.CompactWordLimits
-import DirectedCycles.SubgroupNSSBasics
+module
+
+public import DirectedCycles.CompactWordLimits
+public import DirectedCycles.SubgroupNSSBasics
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalPowerSegment
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalUltraproductProducts
+module
+
+public import DirectedCycles.LocalPowerSegment
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalUltraproductProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

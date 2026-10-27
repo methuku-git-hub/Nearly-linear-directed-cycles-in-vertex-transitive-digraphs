@@ -1,8 +1,12 @@
-import DirectedCycles.LocalMinimalEscape
-import DirectedCycles.LocalSignedProgression
-import DirectedCycles.LocalPowerSegment
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalMinimalEscape
+public import DirectedCycles.LocalSignedProgression
+public import DirectedCycles.LocalPowerSegment
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

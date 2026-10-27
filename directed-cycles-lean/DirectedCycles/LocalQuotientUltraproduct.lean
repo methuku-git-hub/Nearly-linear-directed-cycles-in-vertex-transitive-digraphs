@@ -1,7 +1,11 @@
-import DirectedCycles.LocalQuotientData
-import DirectedCycles.WindowUltraproductEquiv
-import DirectedCycles.LocalUltraproductMaps
-import DirectedCycles.SurjectiveKernelEquiv
+module
+
+public import DirectedCycles.LocalQuotientData
+public import DirectedCycles.WindowUltraproductEquiv
+public import DirectedCycles.LocalUltraproductMaps
+public import DirectedCycles.SurjectiveKernelEquiv
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

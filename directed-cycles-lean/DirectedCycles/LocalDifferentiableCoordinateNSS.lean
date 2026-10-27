@@ -1,5 +1,9 @@
-import DirectedCycles.LocalFinitePowerTrapping
-import DirectedCycles.DifferentiableDoubling
+module
+
+public import DirectedCycles.LocalFinitePowerTrapping
+public import DirectedCycles.DifferentiableDoubling
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

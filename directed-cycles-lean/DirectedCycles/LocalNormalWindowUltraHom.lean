@@ -1,7 +1,11 @@
-import DirectedCycles.LocalNormalWindowQuotientUltra
-import DirectedCycles.LocalCongruenceDivision
-import DirectedCycles.LocalGroupMulEquiv
-import DirectedCycles.LocalApproximateSetImages
+module
+
+public import DirectedCycles.LocalNormalWindowQuotientUltra
+public import DirectedCycles.LocalCongruenceDivision
+public import DirectedCycles.LocalGroupMulEquiv
+public import DirectedCycles.LocalApproximateSetImages
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

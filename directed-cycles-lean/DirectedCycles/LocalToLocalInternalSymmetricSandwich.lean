@@ -1,5 +1,9 @@
-import DirectedCycles.LocalConjugateTransfer
-import DirectedCycles.LocalGroupHom
+module
+
+public import DirectedCycles.LocalConjugateTransfer
+public import DirectedCycles.LocalGroupHom
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.CosetNilprogression
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+module
+
+public import DirectedCycles.CosetNilprogression
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

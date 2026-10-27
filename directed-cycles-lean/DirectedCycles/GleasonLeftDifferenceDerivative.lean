@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonLeftDifferenceCoordinates
-import Mathlib.Analysis.Asymptotics.Lemmas
-import Mathlib.Analysis.Calculus.FDeriv.Mul
+module
+
+public import DirectedCycles.GleasonLeftDifferenceCoordinates
+public import Mathlib.Analysis.Asymptotics.Lemmas
+public import Mathlib.Analysis.Calculus.FDeriv.Mul
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology Asymptotics

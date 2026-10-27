@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteApproximateCounterexamples
-import DirectedCycles.UltraproductApproximateGroups
+module
+
+public import DirectedCycles.FiniteApproximateCounterexamples
+public import DirectedCycles.UltraproductApproximateGroups
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

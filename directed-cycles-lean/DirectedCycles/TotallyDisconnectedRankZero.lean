@@ -1,5 +1,9 @@
-import DirectedCycles.TotallyDisconnectedFiniteModel
-import DirectedCycles.RankZeroCosetNilprogression
+module
+
+public import DirectedCycles.TotallyDisconnectedFiniteModel
+public import DirectedCycles.RankZeroCosetNilprogression
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

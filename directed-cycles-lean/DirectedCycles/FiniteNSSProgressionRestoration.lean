@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteNSSQuotient
-import DirectedCycles.CosetProgressionQuotientLift
-import DirectedCycles.CosetProgressionImage
+module
+
+public import DirectedCycles.FiniteNSSQuotient
+public import DirectedCycles.CosetProgressionQuotientLift
+public import DirectedCycles.CosetProgressionImage
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

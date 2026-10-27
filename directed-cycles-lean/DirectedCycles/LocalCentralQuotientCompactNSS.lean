@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralQuotientOpenProjection
-import DirectedCycles.SmoothLocalCompactNSS
-import DirectedCycles.CompactQuotientSourceWindow
+module
+
+public import DirectedCycles.LocalCentralQuotientOpenProjection
+public import DirectedCycles.SmoothLocalCompactNSS
+public import DirectedCycles.CompactQuotientSourceWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

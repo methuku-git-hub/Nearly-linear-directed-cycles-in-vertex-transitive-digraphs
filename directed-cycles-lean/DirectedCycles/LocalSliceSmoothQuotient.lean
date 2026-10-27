@@ -1,7 +1,11 @@
-import DirectedCycles.LocalGroupSmoothness
-import DirectedCycles.LocalSliceSmoothInverse
-import DirectedCycles.LocalSliceSmoothMultiplication
-import DirectedCycles.LocalQuotientContinuity
+module
+
+public import DirectedCycles.LocalGroupSmoothness
+public import DirectedCycles.LocalSliceSmoothInverse
+public import DirectedCycles.LocalSliceSmoothMultiplication
+public import DirectedCycles.LocalQuotientContinuity
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

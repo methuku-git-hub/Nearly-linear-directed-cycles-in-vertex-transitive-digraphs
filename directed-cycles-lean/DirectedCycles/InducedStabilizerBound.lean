@@ -1,6 +1,10 @@
-import DirectedCycles.FreeQuotient
-import DirectedCycles.PermutationImage
-import DirectedCycles.NilpotentRanks
+module
+
+public import DirectedCycles.FreeQuotient
+public import DirectedCycles.PermutationImage
+public import DirectedCycles.NilpotentRanks
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

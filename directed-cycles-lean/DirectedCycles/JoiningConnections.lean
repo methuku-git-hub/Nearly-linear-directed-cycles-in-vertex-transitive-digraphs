@@ -1,9 +1,13 @@
-import DirectedCycles.CyclicExperiment
-import DirectedCycles.InvariantLoads
-import DirectedCycles.PathSamplingCore
-import DirectedCycles.RepeatedTours
-import DirectedCycles.SamplingArithmetic
-import DirectedCycles.WeakComponents
+module
+
+public import DirectedCycles.CyclicExperiment
+public import DirectedCycles.InvariantLoads
+public import DirectedCycles.PathSamplingCore
+public import DirectedCycles.RepeatedTours
+public import DirectedCycles.SamplingArithmetic
+public import DirectedCycles.WeakComponents
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

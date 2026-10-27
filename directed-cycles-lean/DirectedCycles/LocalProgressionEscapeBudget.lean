@@ -1,4 +1,8 @@
-import DirectedCycles.LocalSignedWords
+module
+
+public import DirectedCycles.LocalSignedWords
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

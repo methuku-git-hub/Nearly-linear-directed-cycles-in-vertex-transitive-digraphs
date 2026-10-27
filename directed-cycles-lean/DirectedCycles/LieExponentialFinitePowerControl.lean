@@ -1,5 +1,9 @@
-import DirectedCycles.DiscreteRadialNormControl
-import DirectedCycles.LieExponentialContinuity
+module
+
+public import DirectedCycles.DiscreteRadialNormControl
+public import DirectedCycles.LieExponentialContinuity
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

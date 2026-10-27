@@ -1,6 +1,10 @@
-import DirectedCycles.ActionBalls
-import Mathlib.GroupTheory.GroupAction.Quotient
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+module
+
+public import DirectedCycles.ActionBalls
+public import Mathlib.GroupTheory.GroupAction.Quotient
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,5 +1,9 @@
-import DirectedCycles.SeriesCounts
-import DirectedCycles.AbelianRank
+module
+
+public import DirectedCycles.SeriesCounts
+public import DirectedCycles.AbelianRank
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

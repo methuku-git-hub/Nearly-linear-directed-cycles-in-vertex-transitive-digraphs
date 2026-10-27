@@ -1,8 +1,12 @@
-import DirectedCycles.MeasurableEscapeBump
-import DirectedCycles.BoundedGleasonBootstrap
-import DirectedCycles.HaarWordWindowBump
-import DirectedCycles.FiniteConvolutionBounds
-import DirectedCycles.RemoveEscapeRegularization
+module
+
+public import DirectedCycles.MeasurableEscapeBump
+public import DirectedCycles.BoundedGleasonBootstrap
+public import DirectedCycles.HaarWordWindowBump
+public import DirectedCycles.FiniteConvolutionBounds
+public import DirectedCycles.RemoveEscapeRegularization
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

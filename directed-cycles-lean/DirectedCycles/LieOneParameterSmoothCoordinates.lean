@@ -1,7 +1,11 @@
-import DirectedCycles.LieCurveSmoothProductCoordinates
-import DirectedCycles.LieOneParameterSmooth
-import DirectedCycles.LieOneParameterNonzero
-import DirectedCycles.VectorComplementDimension
+module
+
+public import DirectedCycles.LieCurveSmoothProductCoordinates
+public import DirectedCycles.LieOneParameterSmooth
+public import DirectedCycles.LieOneParameterNonzero
+public import DirectedCycles.VectorComplementDimension
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,7 +1,11 @@
-import DirectedCycles.NilpotentRanks
-import DirectedCycles.NilpotentOrder
-import DirectedCycles.FreeQuotient
-import DirectedCycles.NormalClosureExponent
+module
+
+public import DirectedCycles.NilpotentRanks
+public import DirectedCycles.NilpotentOrder
+public import DirectedCycles.FreeQuotient
+public import DirectedCycles.NormalClosureExponent
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

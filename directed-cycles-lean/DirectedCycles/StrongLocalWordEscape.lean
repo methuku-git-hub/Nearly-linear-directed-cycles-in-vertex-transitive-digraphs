@@ -1,5 +1,9 @@
-import DirectedCycles.StrongLocalApproximateGroups
-import DirectedCycles.LocalWordEscape
+module
+
+public import DirectedCycles.StrongLocalApproximateGroups
+public import DirectedCycles.LocalWordEscape
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

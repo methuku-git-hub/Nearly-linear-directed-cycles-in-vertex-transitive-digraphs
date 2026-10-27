@@ -1,7 +1,11 @@
-import DirectedCycles.CommutatorQuotients
-import DirectedCycles.CommutatorWords
-import DirectedCycles.GroupMultihom
-import Mathlib.Data.List.Nodup
+module
+
+public import DirectedCycles.CommutatorQuotients
+public import DirectedCycles.CommutatorWords
+public import DirectedCycles.GroupMultihom
+public import Mathlib.Data.List.Nodup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

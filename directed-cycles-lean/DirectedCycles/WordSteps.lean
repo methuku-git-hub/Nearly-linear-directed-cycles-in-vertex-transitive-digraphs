@@ -1,4 +1,8 @@
-import DirectedCycles.CayleyWordTails
+module
+
+public import DirectedCycles.CayleyWordTails
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

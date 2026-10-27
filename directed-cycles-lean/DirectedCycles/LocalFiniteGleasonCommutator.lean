@@ -1,8 +1,12 @@
-import DirectedCycles.LocalConvolutionPowerSupport
-import DirectedCycles.LocalUnregularizedEscapeBump
-import DirectedCycles.LocalConjugateEscape
-import DirectedCycles.LocalCommutatorDerivative
-import DirectedCycles.LocalEscapeDerivativeBound
+module
+
+public import DirectedCycles.LocalConvolutionPowerSupport
+public import DirectedCycles.LocalUnregularizedEscapeBump
+public import DirectedCycles.LocalConjugateEscape
+public import DirectedCycles.LocalCommutatorDerivative
+public import DirectedCycles.LocalEscapeDerivativeBound
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonLeftDifferenceDerivative
-import Mathlib.Analysis.Calculus.FDeriv.OfCompLeft
+module
+
+public import DirectedCycles.GleasonLeftDifferenceDerivative
+public import Mathlib.Analysis.Calculus.FDeriv.OfCompLeft
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

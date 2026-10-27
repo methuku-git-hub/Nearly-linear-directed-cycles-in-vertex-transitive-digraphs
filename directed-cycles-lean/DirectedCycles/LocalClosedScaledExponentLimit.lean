@@ -1,6 +1,10 @@
-import DirectedCycles.LocalInfinitesimalPowers
-import DirectedCycles.LocalScaledPowers
-import DirectedCycles.ScaledExponentLimit
+module
+
+public import DirectedCycles.LocalInfinitesimalPowers
+public import DirectedCycles.LocalScaledPowers
+public import DirectedCycles.ScaledExponentLimit
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

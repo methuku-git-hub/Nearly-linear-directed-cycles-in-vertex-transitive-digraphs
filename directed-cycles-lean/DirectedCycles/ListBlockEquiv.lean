@@ -1,5 +1,9 @@
-import DirectedCycles.FlatMapPositions
-import Mathlib.Algebra.BigOperators.Fin
+module
+
+public import DirectedCycles.FlatMapPositions
+public import Mathlib.Algebra.BigOperators.Fin
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonSmoothDifferences
-import DirectedCycles.GleasonRestrictedCharts
-import Mathlib.Geometry.Manifold.IsManifold.Basic
+module
+
+public import DirectedCycles.GleasonSmoothDifferences
+public import DirectedCycles.GleasonRestrictedCharts
+public import Mathlib.Geometry.Manifold.IsManifold.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

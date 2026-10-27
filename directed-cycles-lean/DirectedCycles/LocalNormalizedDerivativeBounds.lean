@@ -1,6 +1,10 @@
-import DirectedCycles.LocalNormalizedConvolution
-import DirectedCycles.LocalConvolutionDerivativeBound
-import DirectedCycles.LocalDerivativeSupport
+module
+
+public import DirectedCycles.LocalNormalizedConvolution
+public import DirectedCycles.LocalConvolutionDerivativeBound
+public import DirectedCycles.LocalDerivativeSupport
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

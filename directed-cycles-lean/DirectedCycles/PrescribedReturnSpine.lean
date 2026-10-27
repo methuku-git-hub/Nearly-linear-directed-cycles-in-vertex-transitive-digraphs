@@ -1,5 +1,9 @@
-import DirectedCycles.PrescribedReturnVoltages
-import DirectedCycles.ReturnSpineExistence
+module
+
+public import DirectedCycles.PrescribedReturnVoltages
+public import DirectedCycles.ReturnSpineExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.InternalSubgroupTransfer
-import DirectedCycles.UltraproductInternalSets
+module
+
+public import DirectedCycles.InternalSubgroupTransfer
+public import DirectedCycles.UltraproductInternalSets
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

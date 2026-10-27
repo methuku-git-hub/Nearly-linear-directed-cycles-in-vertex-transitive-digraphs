@@ -1,5 +1,9 @@
-import DirectedCycles.LocalLemma
-import Mathlib.Logic.Equiv.Prod
+module
+
+public import DirectedCycles.LocalLemma
+public import Mathlib.Logic.Equiv.Prod
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

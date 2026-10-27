@@ -1,4 +1,8 @@
-import DirectedCycles.GeneratorCommutatorNilpotence
+module
+
+public import DirectedCycles.GeneratorCommutatorNilpotence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

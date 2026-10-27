@@ -1,5 +1,9 @@
-import DirectedCycles.NilpotentCycleBounds
-import DirectedCycles.TruncatedFunctor
+module
+
+public import DirectedCycles.NilpotentCycleBounds
+public import DirectedCycles.TruncatedFunctor
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

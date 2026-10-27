@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.Algebra.Algebra.Operations
-import Mathlib.Algebra.Module.LinearMap.End
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.Algebra.Algebra.Operations
+public import Mathlib.Algebra.Module.LinearMap.End
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

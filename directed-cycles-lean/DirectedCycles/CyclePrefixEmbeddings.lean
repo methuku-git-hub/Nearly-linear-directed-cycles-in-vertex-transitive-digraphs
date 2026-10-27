@@ -1,4 +1,8 @@
-import DirectedCycles.CayleyCycleLabels
+module
+
+public import DirectedCycles.CayleyCycleLabels
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

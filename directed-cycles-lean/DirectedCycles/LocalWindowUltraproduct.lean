@@ -1,5 +1,9 @@
-import DirectedCycles.LocalInternalImages
-import DirectedCycles.LocalGroupHom
+module
+
+public import DirectedCycles.LocalInternalImages
+public import DirectedCycles.LocalGroupHom
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

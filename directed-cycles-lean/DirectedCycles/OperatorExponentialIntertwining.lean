@@ -1,5 +1,9 @@
-import Mathlib.Analysis.SpecialFunctions.Exponential
-import Mathlib.Analysis.Normed.Operator.Bilinear
+module
+
+public import Mathlib.Analysis.SpecialFunctions.Exponential
+public import Mathlib.Analysis.Normed.Operator.Bilinear
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

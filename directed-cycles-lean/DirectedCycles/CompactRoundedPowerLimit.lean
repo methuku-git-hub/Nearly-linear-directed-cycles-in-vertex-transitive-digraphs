@@ -1,7 +1,11 @@
-import DirectedCycles.RoundedPowerEstimates
-import DirectedCycles.ContinuousLocalCurveExtension
-import DirectedCycles.GleasonOneParameterWindow
-import Mathlib.Order.Filter.Ultrafilter.Basic
+module
+
+public import DirectedCycles.RoundedPowerEstimates
+public import DirectedCycles.ContinuousLocalCurveExtension
+public import DirectedCycles.GleasonOneParameterWindow
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.LargeOrbitConstruction
-import DirectedCycles.LargeOrbitThresholds
+module
+
+public import DirectedCycles.LargeOrbitConstruction
+public import DirectedCycles.LargeOrbitThresholds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

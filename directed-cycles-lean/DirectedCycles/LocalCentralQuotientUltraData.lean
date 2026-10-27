@@ -1,7 +1,11 @@
-import DirectedCycles.LocalCentralQuotientData
-import DirectedCycles.LocalEquivalenceWindowUltra
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalWindowUltraproduct
+module
+
+public import DirectedCycles.LocalCentralQuotientData
+public import DirectedCycles.LocalEquivalenceWindowUltra
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalWindowUltraproduct
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

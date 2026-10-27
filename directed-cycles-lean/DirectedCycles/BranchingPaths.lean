@@ -1,5 +1,9 @@
-import DirectedCycles.PathBranching
-import DirectedCycles.PathPrefixes
+module
+
+public import DirectedCycles.PathBranching
+public import DirectedCycles.PathPrefixes
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

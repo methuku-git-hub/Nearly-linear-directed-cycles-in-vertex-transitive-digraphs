@@ -1,5 +1,9 @@
-import DirectedCycles.LocalMultiplicationDerivative
-import Mathlib.Analysis.Calculus.FDeriv.Comp
+module
+
+public import DirectedCycles.LocalMultiplicationDerivative
+public import Mathlib.Analysis.Calculus.FDeriv.Comp
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

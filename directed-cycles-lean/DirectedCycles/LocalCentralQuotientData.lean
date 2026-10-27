@@ -1,5 +1,9 @@
-import DirectedCycles.LocalWindowQuotientProperties
-import DirectedCycles.LocalCentralEquivalence
+module
+
+public import DirectedCycles.LocalWindowQuotientProperties
+public import DirectedCycles.LocalCentralEquivalence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

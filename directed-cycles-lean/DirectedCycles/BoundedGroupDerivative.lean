@@ -1,5 +1,9 @@
-import DirectedCycles.PointwiseGroupDerivative
-import DirectedCycles.EscapeNormTrapping
+module
+
+public import DirectedCycles.PointwiseGroupDerivative
+public import DirectedCycles.EscapeNormTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.EscapeSublevelPowers
-import DirectedCycles.ShortPowerProgression
-import DirectedCycles.LocalQuotientCancellation
+module
+
+public import DirectedCycles.EscapeSublevelPowers
+public import DirectedCycles.ShortPowerProgression
+public import DirectedCycles.LocalQuotientCancellation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

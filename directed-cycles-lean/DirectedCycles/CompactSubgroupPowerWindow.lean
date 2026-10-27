@@ -1,6 +1,10 @@
-import DirectedCycles.CompactTwoSidedWindow
-import DirectedCycles.ClosedWordPowers
-import Mathlib.Topology.Separation.Regular
+module
+
+public import DirectedCycles.CompactTwoSidedWindow
+public import DirectedCycles.ClosedWordPowers
+public import Mathlib.Topology.Separation.Regular
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

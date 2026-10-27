@@ -1,7 +1,11 @@
-import DirectedCycles.TemplateNoShortcut
-import DirectedCycles.ConnectorNonAStep
-import DirectedCycles.WordSteps
-import DirectedCycles.TemplateCycleRelation
+module
+
+public import DirectedCycles.TemplateNoShortcut
+public import DirectedCycles.ConnectorNonAStep
+public import DirectedCycles.WordSteps
+public import DirectedCycles.TemplateCycleRelation
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

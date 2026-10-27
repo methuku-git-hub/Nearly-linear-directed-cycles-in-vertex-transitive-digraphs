@@ -1,4 +1,8 @@
-import DirectedCycles.RetainedLayers
+module
+
+public import DirectedCycles.RetainedLayers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

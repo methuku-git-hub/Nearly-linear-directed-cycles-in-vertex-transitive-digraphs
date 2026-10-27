@@ -1,5 +1,9 @@
-import DirectedCycles.LieOneParameterExistence
-import DirectedCycles.LieOneParameterUniqueness
+module
+
+public import DirectedCycles.LieOneParameterExistence
+public import DirectedCycles.LieOneParameterUniqueness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

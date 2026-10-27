@@ -1,5 +1,9 @@
-import DirectedCycles.CyclicResiduePowers
-import DirectedCycles.CollisionConstraintDegree
+module
+
+public import DirectedCycles.CyclicResiduePowers
+public import DirectedCycles.CollisionConstraintDegree
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

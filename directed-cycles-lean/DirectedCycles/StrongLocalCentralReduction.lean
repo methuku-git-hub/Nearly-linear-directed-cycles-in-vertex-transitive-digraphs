@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalCentralCurve
-import DirectedCycles.LocalCentralQuotientModelAssembly
-import DirectedCycles.CentralCurveTopologicalQuotient
+module
+
+public import DirectedCycles.StrongLocalCentralCurve
+public import DirectedCycles.LocalCentralQuotientModelAssembly
+public import DirectedCycles.CentralCurveTopologicalQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

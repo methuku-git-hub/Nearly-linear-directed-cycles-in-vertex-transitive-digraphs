@@ -1,5 +1,9 @@
-import DirectedCycles.UltraproductInternalSets
-import Mathlib.Algebra.Order.Floor.Ring
+module
+
+public import DirectedCycles.UltraproductInternalSets
+public import Mathlib.Algebra.Order.Floor.Ring
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

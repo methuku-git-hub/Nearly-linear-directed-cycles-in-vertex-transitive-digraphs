@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonOneParameter
-import DirectedCycles.GleasonPowerDistance
+module
+
+public import DirectedCycles.GleasonOneParameter
+public import DirectedCycles.GleasonPowerDistance
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

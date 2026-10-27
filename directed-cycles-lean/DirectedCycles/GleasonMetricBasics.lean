@@ -1,4 +1,8 @@
-import DirectedCycles.NSSGleasonMetric
+module
+
+public import DirectedCycles.NSSGleasonMetric
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

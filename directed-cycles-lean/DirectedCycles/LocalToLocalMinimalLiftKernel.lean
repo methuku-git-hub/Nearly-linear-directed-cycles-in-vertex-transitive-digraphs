@@ -1,8 +1,12 @@
-import DirectedCycles.LocalQuotientMinimalLift
-import DirectedCycles.LocalToLocalModelPowerLifting
-import DirectedCycles.LocalUltraproductEscape
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalZeroEscapeSubgroup
+module
+
+public import DirectedCycles.LocalQuotientMinimalLift
+public import DirectedCycles.LocalToLocalModelPowerLifting
+public import DirectedCycles.LocalUltraproductEscape
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalZeroEscapeSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

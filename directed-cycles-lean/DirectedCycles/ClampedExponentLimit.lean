@@ -1,5 +1,9 @@
-import DirectedCycles.ClampedScaledExponent
-import DirectedCycles.ScaledExponentLimit
+module
+
+public import DirectedCycles.ClampedScaledExponent
+public import DirectedCycles.ScaledExponentLimit
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

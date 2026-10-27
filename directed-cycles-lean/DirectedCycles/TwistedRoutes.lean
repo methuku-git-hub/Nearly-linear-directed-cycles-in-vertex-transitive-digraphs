@@ -1,4 +1,8 @@
-import DirectedCycles.Paths
+module
+
+public import DirectedCycles.Paths
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

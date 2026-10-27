@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralSetUltraproduct
-import DirectedCycles.LocalCentralSetHomImage
-import DirectedCycles.LocalLieTargetEscapeNeighbourhood
+module
+
+public import DirectedCycles.LocalCentralSetUltraproduct
+public import DirectedCycles.LocalCentralSetHomImage
+public import DirectedCycles.LocalLieTargetEscapeNeighbourhood
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

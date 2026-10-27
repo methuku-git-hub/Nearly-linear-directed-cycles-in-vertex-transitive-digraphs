@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteSmallNeighbourhoods
-import DirectedCycles.UniformNormalCoreDensity
+module
+
+public import DirectedCycles.FiniteSmallNeighbourhoods
+public import DirectedCycles.UniformNormalCoreDensity
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

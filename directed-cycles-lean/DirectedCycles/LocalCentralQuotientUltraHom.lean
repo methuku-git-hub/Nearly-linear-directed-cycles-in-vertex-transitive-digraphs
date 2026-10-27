@@ -1,7 +1,11 @@
-import DirectedCycles.LocalCentralQuotientUltraProducts
-import DirectedCycles.LocalGroupMulEquiv
-import DirectedCycles.LocalEscapeMaps
-import DirectedCycles.LocalInternalImages
+module
+
+public import DirectedCycles.LocalCentralQuotientUltraProducts
+public import DirectedCycles.LocalGroupMulEquiv
+public import DirectedCycles.LocalEscapeMaps
+public import DirectedCycles.LocalInternalImages
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

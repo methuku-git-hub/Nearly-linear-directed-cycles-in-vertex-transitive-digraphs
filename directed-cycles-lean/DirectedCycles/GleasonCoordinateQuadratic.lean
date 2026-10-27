@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonExponentialBiLipschitz
-import DirectedCycles.GleasonLocalCoordinateLaw
+module
+
+public import DirectedCycles.GleasonExponentialBiLipschitz
+public import DirectedCycles.GleasonLocalCoordinateLaw
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.CosetProgressionPreimage
-import Mathlib.GroupTheory.Sylow
+module
+
+public import DirectedCycles.CosetProgressionPreimage
+public import Mathlib.GroupTheory.Sylow
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteNSSProgressionRestoration
+module
+
+public import DirectedCycles.FiniteNSSProgressionRestoration
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

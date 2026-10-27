@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonExponentialMap
-import Mathlib.Order.Filter.Ultrafilter.Basic
+module
+
+public import DirectedCycles.GleasonExponentialMap
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

@@ -1,8 +1,12 @@
-import DirectedCycles.LocalCoordinateMultiplicationLaws
-import DirectedCycles.LocalGroupSmoothness
-import Mathlib.Geometry.Manifold.Algebra.LieGroup
-import Mathlib.Geometry.Manifold.ContMDiff.Atlas
-import Mathlib.Geometry.Manifold.ContMDiff.NormedSpace
+module
+
+public import DirectedCycles.LocalCoordinateMultiplicationLaws
+public import DirectedCycles.LocalGroupSmoothness
+public import Mathlib.Geometry.Manifold.Algebra.LieGroup
+public import Mathlib.Geometry.Manifold.ContMDiff.Atlas
+public import Mathlib.Geometry.Manifold.ContMDiff.NormedSpace
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

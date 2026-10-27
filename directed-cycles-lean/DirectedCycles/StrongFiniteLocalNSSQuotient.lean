@@ -1,7 +1,11 @@
-import DirectedCycles.LocalNSSApproximateQuotient
-import DirectedCycles.FiniteEscapeNeighbourhoods
-import DirectedCycles.StrongEscapeEstimates
-import DirectedCycles.GlobalToLocalApproximate
+module
+
+public import DirectedCycles.LocalNSSApproximateQuotient
+public import DirectedCycles.FiniteEscapeNeighbourhoods
+public import DirectedCycles.StrongEscapeEstimates
+public import DirectedCycles.GlobalToLocalApproximate
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

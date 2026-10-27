@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteCosetNilprogressionInput
+module
+
+public import DirectedCycles.FiniteCosetNilprogressionInput
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,7 +1,11 @@
-import DirectedCycles.LocalLieTargetNestedFirstExitGeometry
-import DirectedCycles.LocalFirstExitOrder
-import DirectedCycles.LocalLieTargetCentralCorrectionContradiction
-import DirectedCycles.LocalLieTargetNestedEscapeRatio
+module
+
+public import DirectedCycles.LocalLieTargetNestedFirstExitGeometry
+public import DirectedCycles.LocalFirstExitOrder
+public import DirectedCycles.LocalLieTargetCentralCorrectionContradiction
+public import DirectedCycles.LocalLieTargetNestedEscapeRatio
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

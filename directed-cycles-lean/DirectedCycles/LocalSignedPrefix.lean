@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedWords
-import Mathlib.Data.Fin.VecNotation
+module
+
+public import DirectedCycles.LocalSignedWords
+public import Mathlib.Data.Fin.VecNotation
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

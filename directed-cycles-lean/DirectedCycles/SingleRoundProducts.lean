@@ -1,4 +1,8 @@
-import DirectedCycles.LayerWordReplacement
+module
+
+public import DirectedCycles.LayerWordReplacement
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

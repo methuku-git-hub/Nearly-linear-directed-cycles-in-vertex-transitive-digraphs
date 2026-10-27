@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSmoothModelStrongWindows
-import DirectedCycles.LocalExponentialBallTopology
+module
+
+public import DirectedCycles.LocalSmoothModelStrongWindows
+public import DirectedCycles.LocalExponentialBallTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

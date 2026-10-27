@@ -1,5 +1,9 @@
-import DirectedCycles.LocalToLocalBoundedScaledExponentLimit
-import DirectedCycles.LocalToLocalScaledCurve
+module
+
+public import DirectedCycles.LocalToLocalBoundedScaledExponentLimit
+public import DirectedCycles.LocalToLocalScaledCurve
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

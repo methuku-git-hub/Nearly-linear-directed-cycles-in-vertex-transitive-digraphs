@@ -1,4 +1,8 @@
-import DirectedCycles.EscapeNorm
+module
+
+public import DirectedCycles.EscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,7 +1,11 @@
-import DirectedCycles.LocalWindowNSS
-import DirectedCycles.LocalInternalSubgroups
-import DirectedCycles.LocalWindowUltraproduct
-import DirectedCycles.LocalPowerTrappingTransfer
+module
+
+public import DirectedCycles.LocalWindowNSS
+public import DirectedCycles.LocalInternalSubgroups
+public import DirectedCycles.LocalWindowUltraproduct
+public import DirectedCycles.LocalPowerTrappingTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

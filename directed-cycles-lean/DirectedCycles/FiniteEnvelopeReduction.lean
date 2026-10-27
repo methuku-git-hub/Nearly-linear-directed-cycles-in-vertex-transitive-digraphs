@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteStructuralAlgebra
-import DirectedCycles.ApproximateSubgroupRestriction
-import DirectedCycles.FiniteConjugateBound
+module
+
+public import DirectedCycles.FiniteStructuralAlgebra
+public import DirectedCycles.ApproximateSubgroupRestriction
+public import DirectedCycles.FiniteConjugateBound
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

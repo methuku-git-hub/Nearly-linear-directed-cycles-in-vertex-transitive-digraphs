@@ -1,8 +1,12 @@
-import DirectedCycles.NormalizedConvolution
-import DirectedCycles.OptimalEscapeBump
-import DirectedCycles.GleasonBootstrapCore
-import DirectedCycles.RemoveEscapeRegularization
-import DirectedCycles.WordBallBump
+module
+
+public import DirectedCycles.NormalizedConvolution
+public import DirectedCycles.OptimalEscapeBump
+public import DirectedCycles.GleasonBootstrapCore
+public import DirectedCycles.RemoveEscapeRegularization
+public import DirectedCycles.WordBallBump
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

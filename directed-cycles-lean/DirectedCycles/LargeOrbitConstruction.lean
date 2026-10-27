@@ -1,7 +1,11 @@
-import DirectedCycles.SingleOrbitSampling
-import DirectedCycles.PermutationImage
-import DirectedCycles.ShortConnections
-import DirectedCycles.LogarithmicBounds
+module
+
+public import DirectedCycles.SingleOrbitSampling
+public import DirectedCycles.PermutationImage
+public import DirectedCycles.ShortConnections
+public import DirectedCycles.LogarithmicBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

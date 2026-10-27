@@ -1,6 +1,10 @@
-import DirectedCycles.ConvolutionPowerSupport
-import DirectedCycles.UnregularizedEscapeBump
-import DirectedCycles.EscapeNormDerivatives
+module
+
+public import DirectedCycles.ConvolutionPowerSupport
+public import DirectedCycles.UnregularizedEscapeBump
+public import DirectedCycles.EscapeNormDerivatives
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

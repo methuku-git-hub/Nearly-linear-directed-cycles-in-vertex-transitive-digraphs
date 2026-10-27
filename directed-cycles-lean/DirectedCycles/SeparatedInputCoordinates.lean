@@ -1,5 +1,9 @@
-import DirectedCycles.SeparatedLiftInput
-import DirectedCycles.ActualCertifiedEdges
+module
+
+public import DirectedCycles.SeparatedLiftInput
+public import DirectedCycles.ActualCertifiedEdges
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected
-import Mathlib.Analysis.SpecialFunctions.Pow.Real
-import Mathlib.Logic.Equiv.Fin.Rotate
-import Mathlib.Tactic
+module
+
+public import Mathlib.Combinatorics.SimpleGraph.Connectivity.Connected
+public import Mathlib.Analysis.SpecialFunctions.Pow.Real
+public import Mathlib.Logic.Equiv.Fin.Rotate
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,9 +1,13 @@
-import DirectedCycles.LieExponentialWordControl
-import DirectedCycles.LieExponentialConjugationBound
-import DirectedCycles.LieExponentialFinitePowerControl
-import DirectedCycles.LieExponentialSymmetry
-import DirectedCycles.LocalGlobalWordPowers
-import DirectedCycles.LocalConjugates
+module
+
+public import DirectedCycles.LieExponentialWordControl
+public import DirectedCycles.LieExponentialConjugationBound
+public import DirectedCycles.LieExponentialFinitePowerControl
+public import DirectedCycles.LieExponentialSymmetry
+public import DirectedCycles.LocalGlobalWordPowers
+public import DirectedCycles.LocalConjugates
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

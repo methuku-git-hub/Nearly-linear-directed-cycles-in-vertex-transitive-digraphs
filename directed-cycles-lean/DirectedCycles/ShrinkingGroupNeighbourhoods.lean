@@ -1,5 +1,9 @@
-import Mathlib.Topology.Algebra.FilterBasis
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Algebra.FilterBasis
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

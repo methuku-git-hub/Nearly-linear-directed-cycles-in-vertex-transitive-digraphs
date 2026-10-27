@@ -1,5 +1,9 @@
-import DirectedCycles.LocalScaledModel
-import DirectedCycles.LocalSignedPowerCommutation
+module
+
+public import DirectedCycles.LocalScaledModel
+public import DirectedCycles.LocalSignedPowerCommutation
+
+@[expose] public section
 
 
 set_option autoImplicit false

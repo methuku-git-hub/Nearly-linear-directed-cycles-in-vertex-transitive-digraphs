@@ -1,4 +1,8 @@
-import DirectedCycles.DirectedBranchingExtension
+module
+
+public import DirectedCycles.DirectedBranchingExtension
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

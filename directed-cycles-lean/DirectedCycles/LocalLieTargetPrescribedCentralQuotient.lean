@@ -1,5 +1,9 @@
-import DirectedCycles.LocalLieTargetPrescribedWordWindows
-import DirectedCycles.LocalPrescribedCentralQuotient
+module
+
+public import DirectedCycles.LocalLieTargetPrescribedWordWindows
+public import DirectedCycles.LocalPrescribedCentralQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

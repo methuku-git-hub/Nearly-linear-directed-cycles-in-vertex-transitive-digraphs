@@ -1,5 +1,9 @@
-import DirectedCycles.LocalMultiplicativeCurveSmooth
-import Mathlib.Analysis.Calculus.ContDiff.Operations
+module
+
+public import DirectedCycles.LocalMultiplicativeCurveSmooth
+public import Mathlib.Analysis.Calculus.ContDiff.Operations
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

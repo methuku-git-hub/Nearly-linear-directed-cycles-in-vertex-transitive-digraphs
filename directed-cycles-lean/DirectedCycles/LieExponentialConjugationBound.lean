@@ -1,7 +1,11 @@
-import DirectedCycles.LieExponentialStrictDerivative
-import DirectedCycles.LieExponentialContinuity
-import DirectedCycles.LieIdentityCoordinateConjugation
-import DirectedCycles.IdentityDerivativeNormBounds
+module
+
+public import DirectedCycles.LieExponentialStrictDerivative
+public import DirectedCycles.LieExponentialContinuity
+public import DirectedCycles.LieIdentityCoordinateConjugation
+public import DirectedCycles.IdentityDerivativeNormBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

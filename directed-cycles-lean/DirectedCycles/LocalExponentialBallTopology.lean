@@ -1,5 +1,9 @@
-import DirectedCycles.LocalExponentialRadialLaw
-import Mathlib.Analysis.Normed.Module.FiniteDimension
+module
+
+public import DirectedCycles.LocalExponentialRadialLaw
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

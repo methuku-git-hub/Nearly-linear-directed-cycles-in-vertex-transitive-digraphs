@@ -1,6 +1,10 @@
-import DirectedCycles.PassiWords
-import DirectedCycles.AbelianQuotientBound
-import DirectedCycles.DenseBounds
+module
+
+public import DirectedCycles.PassiWords
+public import DirectedCycles.AbelianQuotientBound
+public import DirectedCycles.DenseBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

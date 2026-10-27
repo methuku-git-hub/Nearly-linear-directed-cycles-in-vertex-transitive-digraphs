@@ -1,7 +1,11 @@
-import DirectedCycles.LocalOrderedGrid
-import DirectedCycles.LocalSignedInverseWord
-import DirectedCycles.LocalIteratedGeneratorCommutators
-import DirectedCycles.LocalProductCompression
+module
+
+public import DirectedCycles.LocalOrderedGrid
+public import DirectedCycles.LocalSignedInverseWord
+public import DirectedCycles.LocalIteratedGeneratorCommutators
+public import DirectedCycles.LocalProductCompression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

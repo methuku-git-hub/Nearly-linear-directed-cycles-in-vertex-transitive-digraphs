@@ -1,5 +1,9 @@
-import DirectedCycles.LayerSlots
-import DirectedCycles.CyclicBaselineWords
+module
+
+public import DirectedCycles.LayerSlots
+public import DirectedCycles.CyclicBaselineWords
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

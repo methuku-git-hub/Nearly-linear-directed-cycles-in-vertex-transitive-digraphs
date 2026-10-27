@@ -1,5 +1,9 @@
-import DirectedCycles.LocalProductCompression
-import DirectedCycles.LocalEscapeNorm
+module
+
+public import DirectedCycles.LocalProductCompression
+public import DirectedCycles.LocalEscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

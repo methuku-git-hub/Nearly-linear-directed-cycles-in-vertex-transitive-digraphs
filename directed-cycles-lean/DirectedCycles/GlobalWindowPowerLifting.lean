@@ -1,5 +1,9 @@
-import DirectedCycles.LocalPowerSegmentRestriction
-import DirectedCycles.LocalGlobalWordPowers
+module
+
+public import DirectedCycles.LocalPowerSegmentRestriction
+public import DirectedCycles.LocalGlobalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.LocalGroupAlgebra

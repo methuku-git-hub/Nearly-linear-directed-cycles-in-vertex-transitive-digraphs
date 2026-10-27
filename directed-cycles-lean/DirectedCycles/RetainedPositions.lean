@@ -1,5 +1,9 @@
-import DirectedCycles.ListBlockEquiv
-import DirectedCycles.ConnectorPositions
+module
+
+public import DirectedCycles.ListBlockEquiv
+public import DirectedCycles.ConnectorPositions
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

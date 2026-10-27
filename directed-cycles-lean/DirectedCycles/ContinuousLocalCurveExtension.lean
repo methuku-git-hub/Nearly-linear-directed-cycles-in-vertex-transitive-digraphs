@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCurveExtension
-import DirectedCycles.GleasonOneParameter
-import Mathlib.Topology.Algebra.Group.Neighborhood
+module
+
+public import DirectedCycles.LocalCurveExtension
+public import DirectedCycles.GleasonOneParameter
+public import Mathlib.Topology.Algebra.Group.Neighborhood
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

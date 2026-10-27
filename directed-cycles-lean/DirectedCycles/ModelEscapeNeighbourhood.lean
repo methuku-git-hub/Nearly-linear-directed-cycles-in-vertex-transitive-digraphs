@@ -1,7 +1,11 @@
-import DirectedCycles.GroupUltraproduct
-import DirectedCycles.UltraproductInternalSets
-import DirectedCycles.EscapeSublevelPowers
-import Mathlib.Topology.Algebra.Group.Basic
+module
+
+public import DirectedCycles.GroupUltraproduct
+public import DirectedCycles.UltraproductInternalSets
+public import DirectedCycles.EscapeSublevelPowers
+public import Mathlib.Topology.Algebra.Group.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

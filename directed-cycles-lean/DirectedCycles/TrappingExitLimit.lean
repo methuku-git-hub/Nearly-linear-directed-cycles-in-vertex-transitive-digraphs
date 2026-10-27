@@ -1,5 +1,9 @@
-import DirectedCycles.TrappingExitSelection
-import DirectedCycles.CompactKernelCyclicWindow
+module
+
+public import DirectedCycles.TrappingExitSelection
+public import DirectedCycles.CompactKernelCyclicWindow
+
+@[expose] public section
 
 set_option autoImplicit false
 open TopologicalSpace Filter

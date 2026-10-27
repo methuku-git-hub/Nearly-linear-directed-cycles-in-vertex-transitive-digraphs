@@ -1,7 +1,11 @@
-import DirectedCycles.FiniteCoverRepresentatives
-import DirectedCycles.LocalApproximateSets
-import DirectedCycles.LocalConjugateWordDomains
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.FiniteCoverRepresentatives
+public import DirectedCycles.LocalApproximateSets
+public import DirectedCycles.LocalConjugateWordDomains
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

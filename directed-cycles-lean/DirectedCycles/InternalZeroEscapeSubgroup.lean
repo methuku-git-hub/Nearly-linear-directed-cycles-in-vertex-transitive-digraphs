@@ -1,5 +1,9 @@
-import DirectedCycles.ZeroEscapeSubgroup
-import DirectedCycles.UltraproductSubgroups
+module
+
+public import DirectedCycles.ZeroEscapeSubgroup
+public import DirectedCycles.UltraproductSubgroups
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGroupProducts
-import DirectedCycles.LocalQuotientCancellation
-import DirectedCycles.LocalGroupUltraproduct
+module
+
+public import DirectedCycles.LocalGroupProducts
+public import DirectedCycles.LocalQuotientCancellation
+public import DirectedCycles.LocalGroupUltraproduct
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

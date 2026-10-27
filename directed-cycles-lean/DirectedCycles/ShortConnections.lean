@@ -1,5 +1,9 @@
-import DirectedCycles.HeavyReach
-import DirectedCycles.Connections
+module
+
+public import DirectedCycles.HeavyReach
+public import DirectedCycles.Connections
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,4 +1,8 @@
-import DirectedCycles.ActionBallCardinality
+module
+
+public import DirectedCycles.ActionBallCardinality
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

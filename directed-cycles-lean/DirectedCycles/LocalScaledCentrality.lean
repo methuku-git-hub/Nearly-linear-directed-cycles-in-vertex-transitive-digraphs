@@ -1,6 +1,10 @@
-import DirectedCycles.LocalScaledModel
-import DirectedCycles.LocalSignedPowerCommutation
-import DirectedCycles.ScaledCurveCentrality
+module
+
+public import DirectedCycles.LocalScaledModel
+public import DirectedCycles.LocalSignedPowerCommutation
+public import DirectedCycles.ScaledCurveCentrality
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import DirectedCycles.Matching
-import Mathlib.Dynamics.PeriodicPts.Lemmas
+module
+
+public import DirectedCycles.Basic
+public import DirectedCycles.Matching
+public import Mathlib.Dynamics.PeriodicPts.Lemmas
+
+@[expose] public section
 
 set_option autoImplicit false
 

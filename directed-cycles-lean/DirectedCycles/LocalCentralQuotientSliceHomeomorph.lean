@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralQuotientData
-import DirectedCycles.LocalSliceQuotientHomeomorph
+module
+
+public import DirectedCycles.LocalCentralQuotientData
+public import DirectedCycles.LocalSliceQuotientHomeomorph
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

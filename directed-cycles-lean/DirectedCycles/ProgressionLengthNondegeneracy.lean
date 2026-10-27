@@ -1,5 +1,9 @@
-import DirectedCycles.ProgressionShrinkingArithmetic
-import Mathlib.Order.Filter.Finite
+module
+
+public import DirectedCycles.ProgressionShrinkingArithmetic
+public import Mathlib.Order.Filter.Finite
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

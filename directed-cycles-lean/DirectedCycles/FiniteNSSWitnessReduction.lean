@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteNSSProgressionRestoration
-import DirectedCycles.LocalZeroDimensionalProgression
+module
+
+public import DirectedCycles.FiniteNSSProgressionRestoration
+public import DirectedCycles.LocalZeroDimensionalProgression
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise BigOperators

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalEscapeNorm
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.LocalEscapeNorm
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

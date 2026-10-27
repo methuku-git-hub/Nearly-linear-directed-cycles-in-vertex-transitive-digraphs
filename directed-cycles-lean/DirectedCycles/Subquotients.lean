@@ -1,7 +1,11 @@
-import DirectedCycles.Basic
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.GroupTheory.Abelianization.Defs
-import Mathlib.GroupTheory.Rank
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.GroupTheory.Abelianization.Defs
+public import Mathlib.GroupTheory.Rank
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

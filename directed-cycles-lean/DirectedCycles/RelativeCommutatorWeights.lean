@@ -1,5 +1,9 @@
-import DirectedCycles.CommutatorWeights
-import DirectedCycles.RelativeCentralSeries
+module
+
+public import DirectedCycles.CommutatorWeights
+public import DirectedCycles.RelativeCentralSeries
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

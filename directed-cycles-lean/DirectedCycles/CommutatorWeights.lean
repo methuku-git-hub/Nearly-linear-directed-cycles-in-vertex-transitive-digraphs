@@ -1,4 +1,8 @@
-import DirectedCycles.LowerCentralFactors
+module
+
+public import DirectedCycles.LowerCentralFactors
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

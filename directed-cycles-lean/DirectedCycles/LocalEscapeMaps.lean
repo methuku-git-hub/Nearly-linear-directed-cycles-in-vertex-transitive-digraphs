@@ -1,6 +1,10 @@
-import DirectedCycles.LocalEscapeNorm
-import DirectedCycles.LocalProductInversion
-import DirectedCycles.EscapeNorm
+module
+
+public import DirectedCycles.LocalEscapeNorm
+public import DirectedCycles.LocalProductInversion
+public import DirectedCycles.EscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

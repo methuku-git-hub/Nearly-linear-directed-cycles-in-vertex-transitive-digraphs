@@ -1,6 +1,10 @@
-import DirectedCycles.PGroupGeneratingSubset
-import DirectedCycles.AbelianRank
-import DirectedCycles.FiniteNormalProducts
+module
+
+public import DirectedCycles.PGroupGeneratingSubset
+public import DirectedCycles.AbelianRank
+public import DirectedCycles.FiniteNormalProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

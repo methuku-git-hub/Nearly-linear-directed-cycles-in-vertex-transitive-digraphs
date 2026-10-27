@@ -1,4 +1,8 @@
-import DirectedCycles.LocalDoubledFirstExit
+module
+
+public import DirectedCycles.LocalDoubledFirstExit
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

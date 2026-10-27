@@ -1,4 +1,8 @@
-import DirectedCycles.SpanningAuxiliaryCycle
+module
+
+public import DirectedCycles.SpanningAuxiliaryCycle
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,4 +1,8 @@
-import DirectedCycles.LocalWordPowerMaps
+module
+
+public import DirectedCycles.LocalWordPowerMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

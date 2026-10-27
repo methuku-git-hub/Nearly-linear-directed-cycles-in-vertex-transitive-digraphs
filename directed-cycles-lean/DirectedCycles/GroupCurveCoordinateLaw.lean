@@ -1,5 +1,9 @@
-import Mathlib.Topology.Algebra.Group.Basic
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Algebra.Group.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

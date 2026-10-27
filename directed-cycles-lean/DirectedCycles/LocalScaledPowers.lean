@@ -1,6 +1,10 @@
-import DirectedCycles.LocalSignedPowers
-import DirectedCycles.LocalGroupUltraproduct
-import Mathlib.Order.Filter.Ultrafilter.Basic
+module
+
+public import DirectedCycles.LocalSignedPowers
+public import DirectedCycles.LocalGroupUltraproduct
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

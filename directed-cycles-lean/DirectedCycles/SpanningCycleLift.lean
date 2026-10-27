@@ -1,6 +1,10 @@
-import DirectedCycles.SpanningAuxiliaryCycle
-import DirectedCycles.LayerCycleExpansion
-import DirectedCycles.LiftCardinalities
+module
+
+public import DirectedCycles.SpanningAuxiliaryCycle
+public import DirectedCycles.LayerCycleExpansion
+public import DirectedCycles.LiftCardinalities
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

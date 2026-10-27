@@ -1,6 +1,10 @@
-import DirectedCycles.LocalEquivalenceWindow
-import DirectedCycles.LocalUltraBinaryRelation
-import DirectedCycles.LocalInternalSetLogic
+module
+
+public import DirectedCycles.LocalEquivalenceWindow
+public import DirectedCycles.LocalUltraBinaryRelation
+public import DirectedCycles.LocalInternalSetLogic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

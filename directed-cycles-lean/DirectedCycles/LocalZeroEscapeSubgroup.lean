@@ -1,6 +1,10 @@
-import DirectedCycles.LocalGlobalSubgroup
-import DirectedCycles.LocalEscapeMaps
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.LocalGlobalSubgroup
+public import DirectedCycles.LocalEscapeMaps
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

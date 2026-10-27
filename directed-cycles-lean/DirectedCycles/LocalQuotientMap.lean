@@ -1,5 +1,9 @@
-import DirectedCycles.LocalQuotientHom
-import DirectedCycles.LocalQuotientSeparation
+module
+
+public import DirectedCycles.LocalQuotientHom
+public import DirectedCycles.LocalQuotientSeparation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

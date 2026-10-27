@@ -1,8 +1,12 @@
-import DirectedCycles.LocalLieTargetSandwichApproximate
-import DirectedCycles.LocalLieTargetModelTrapping
-import DirectedCycles.LocalLieTargetInternalWindows
-import DirectedCycles.LocalLieModelWordDomains
-import DirectedCycles.LocalStrongFiniteTransfer
+module
+
+public import DirectedCycles.LocalLieTargetSandwichApproximate
+public import DirectedCycles.LocalLieTargetModelTrapping
+public import DirectedCycles.LocalLieTargetInternalWindows
+public import DirectedCycles.LocalLieModelWordDomains
+public import DirectedCycles.LocalStrongFiniteTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

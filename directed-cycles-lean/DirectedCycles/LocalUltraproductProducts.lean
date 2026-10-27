@@ -1,6 +1,10 @@
-import DirectedCycles.LocalProductSplits
-import DirectedCycles.LocalGroupUltraproduct
-import Mathlib.Order.Filter.Finite
+module
+
+public import DirectedCycles.LocalProductSplits
+public import DirectedCycles.LocalGroupUltraproduct
+public import Mathlib.Order.Filter.Finite
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

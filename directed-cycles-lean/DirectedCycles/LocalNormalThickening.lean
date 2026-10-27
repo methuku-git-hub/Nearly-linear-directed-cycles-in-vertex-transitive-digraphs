@@ -1,7 +1,11 @@
-import DirectedCycles.LocalNormalSubgroupQuotient
-import DirectedCycles.LocalSubgroupAction
-import DirectedCycles.LocalTripleProducts
-import DirectedCycles.LocalProductCompression
+module
+
+public import DirectedCycles.LocalNormalSubgroupQuotient
+public import DirectedCycles.LocalSubgroupAction
+public import DirectedCycles.LocalTripleProducts
+public import DirectedCycles.LocalProductCompression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

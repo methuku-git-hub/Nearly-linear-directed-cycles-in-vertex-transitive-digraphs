@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedWords
-import DirectedCycles.LocalProductInversion
+module
+
+public import DirectedCycles.LocalSignedWords
+public import DirectedCycles.LocalProductInversion
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import DirectedCycles.LocalApproximateSets
-import DirectedCycles.LocalInternalFiniteRange
-import DirectedCycles.LocalProductDomainTransfer
-import DirectedCycles.LocalWordPowerTransfer
+module
+
+public import DirectedCycles.LocalApproximateSets
+public import DirectedCycles.LocalInternalFiniteRange
+public import DirectedCycles.LocalProductDomainTransfer
+public import DirectedCycles.LocalWordPowerTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

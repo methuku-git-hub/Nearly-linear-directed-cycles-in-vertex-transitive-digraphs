@@ -1,4 +1,8 @@
-import DirectedCycles.BoundedWalks
+module
+
+public import DirectedCycles.BoundedWalks
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

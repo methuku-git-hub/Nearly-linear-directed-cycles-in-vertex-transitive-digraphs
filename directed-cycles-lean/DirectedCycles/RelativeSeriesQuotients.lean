@@ -1,5 +1,9 @@
-import DirectedCycles.NormalClosureCommutators
-import DirectedCycles.GroupMultihomOperations
+module
+
+public import DirectedCycles.NormalClosureCommutators
+public import DirectedCycles.GroupMultihomOperations
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

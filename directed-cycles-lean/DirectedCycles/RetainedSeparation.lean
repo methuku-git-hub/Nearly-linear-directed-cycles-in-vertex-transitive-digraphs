@@ -1,6 +1,10 @@
-import DirectedCycles.RetainedPositions
-import DirectedCycles.PowerCosetCoordinates
-import DirectedCycles.NormalizedRealization
+module
+
+public import DirectedCycles.RetainedPositions
+public import DirectedCycles.PowerCosetCoordinates
+public import DirectedCycles.NormalizedRealization
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,8 +1,12 @@
-import Mathlib.Analysis.InnerProductSpace.Spectrum
-import Mathlib.Analysis.Convex.Integral
-import Mathlib.MeasureTheory.Function.LocallyIntegrable
-import Mathlib.MeasureTheory.Measure.OpenPos
-import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Spectrum
+public import Mathlib.Analysis.Convex.Integral
+public import Mathlib.MeasureTheory.Function.LocallyIntegrable
+public import Mathlib.MeasureTheory.Measure.OpenPos
+public import Mathlib.MeasureTheory.Integral.Bochner.ContinuousLinearMap
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory InnerProductSpace

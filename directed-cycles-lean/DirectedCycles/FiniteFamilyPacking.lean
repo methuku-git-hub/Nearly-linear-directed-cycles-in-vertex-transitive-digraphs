@@ -1,4 +1,8 @@
-import DirectedCycles.FiniteFamilyOverlap
+module
+
+public import DirectedCycles.FiniteFamilyOverlap
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

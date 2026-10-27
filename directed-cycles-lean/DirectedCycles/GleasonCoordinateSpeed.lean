@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonCoordinates
+module
+
+public import DirectedCycles.GleasonCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

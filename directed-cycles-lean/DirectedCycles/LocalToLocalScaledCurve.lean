@@ -1,6 +1,10 @@
-import DirectedCycles.LocalToLocalInfinitesimalGenerator
-import DirectedCycles.LocalCurvePowerTrappingContinuity
-import DirectedCycles.LocalScaledModel
+module
+
+public import DirectedCycles.LocalToLocalInfinitesimalGenerator
+public import DirectedCycles.LocalCurvePowerTrappingContinuity
+public import DirectedCycles.LocalScaledModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,5 +1,9 @@
-import DirectedCycles.AbelianExponent
-import DirectedCycles.CyclicLayerRounds
+module
+
+public import DirectedCycles.AbelianExponent
+public import DirectedCycles.CyclicLayerRounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

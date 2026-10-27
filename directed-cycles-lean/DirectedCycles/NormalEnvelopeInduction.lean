@@ -1,6 +1,10 @@
-import DirectedCycles.RelativeSeriesQuotients
-import DirectedCycles.FiniteEnvelopeReduction
-import DirectedCycles.QuotientPowerContainment
+module
+
+public import DirectedCycles.RelativeSeriesQuotients
+public import DirectedCycles.FiniteEnvelopeReduction
+public import DirectedCycles.QuotientPowerContainment
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

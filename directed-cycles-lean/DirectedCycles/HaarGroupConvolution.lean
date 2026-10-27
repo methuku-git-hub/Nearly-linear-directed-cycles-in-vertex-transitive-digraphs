@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteGroupDerivatives
-import Mathlib.MeasureTheory.Group.Integral
-import Mathlib.MeasureTheory.Integral.Bochner.Set
+module
+
+public import DirectedCycles.FiniteGroupDerivatives
+public import Mathlib.MeasureTheory.Group.Integral
+public import Mathlib.MeasureTheory.Integral.Bochner.Set
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

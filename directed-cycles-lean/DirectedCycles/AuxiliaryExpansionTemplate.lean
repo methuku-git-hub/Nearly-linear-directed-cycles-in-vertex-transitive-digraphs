@@ -1,6 +1,10 @@
-import DirectedCycles.RetainedSlotLabels
-import DirectedCycles.RetainedSeparation
-import DirectedCycles.ExpansionTemplate
+module
+
+public import DirectedCycles.RetainedSlotLabels
+public import DirectedCycles.RetainedSeparation
+public import DirectedCycles.ExpansionTemplate
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.AbelianAuxiliaryCycle
-import DirectedCycles.SpanningLiftInput
-import DirectedCycles.LayerCycleExpansion
+module
+
+public import DirectedCycles.AbelianAuxiliaryCycle
+public import DirectedCycles.SpanningLiftInput
+public import DirectedCycles.LayerCycleExpansion
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

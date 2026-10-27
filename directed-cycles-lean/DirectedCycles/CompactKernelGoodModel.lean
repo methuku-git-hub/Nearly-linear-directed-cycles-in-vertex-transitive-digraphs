@@ -1,5 +1,9 @@
-import DirectedCycles.InternalGoodModel
-import DirectedCycles.CompactKernelQuotient
+module
+
+public import DirectedCycles.InternalGoodModel
+public import DirectedCycles.CompactKernelQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

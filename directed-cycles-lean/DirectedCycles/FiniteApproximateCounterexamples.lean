@@ -1,4 +1,8 @@
-import DirectedCycles.CosetModelBounds
+module
+
+public import DirectedCycles.CosetModelBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

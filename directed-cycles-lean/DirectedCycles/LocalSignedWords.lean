@@ -1,7 +1,11 @@
-import DirectedCycles.LocalBoundedCostProducts
-import DirectedCycles.LocalEscapeMaps
-import Mathlib.Data.List.Count
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+module
+
+public import DirectedCycles.LocalBoundedCostProducts
+public import DirectedCycles.LocalEscapeMaps
+public import Mathlib.Data.List.Count
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

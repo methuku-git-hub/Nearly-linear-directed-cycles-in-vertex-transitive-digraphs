@@ -1,6 +1,10 @@
-import DirectedCycles.HaarWordWindowBump
-import DirectedCycles.PointwiseGroupDerivative
-import DirectedCycles.FiniteConvolutionBounds
+module
+
+public import DirectedCycles.HaarWordWindowBump
+public import DirectedCycles.PointwiseGroupDerivative
+public import DirectedCycles.FiniteConvolutionBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

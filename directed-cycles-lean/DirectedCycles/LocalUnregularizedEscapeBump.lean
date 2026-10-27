@@ -1,4 +1,8 @@
-import DirectedCycles.LocalOptimalEscapeBump
+module
+
+public import DirectedCycles.LocalOptimalEscapeBump
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

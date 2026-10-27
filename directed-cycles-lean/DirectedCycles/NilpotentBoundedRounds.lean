@@ -1,6 +1,10 @@
-import DirectedCycles.NilpotentOrder
-import DirectedCycles.ElementNormalClosure
-import DirectedCycles.CyclicLayerRounds
+module
+
+public import DirectedCycles.NilpotentOrder
+public import DirectedCycles.ElementNormalClosure
+public import DirectedCycles.CyclicLayerRounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

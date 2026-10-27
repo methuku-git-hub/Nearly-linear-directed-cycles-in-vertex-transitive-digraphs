@@ -1,4 +1,8 @@
-import DirectedCycles.LocalIntegralCurveMultiplication
+module
+
+public import DirectedCycles.LocalIntegralCurveMultiplication
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

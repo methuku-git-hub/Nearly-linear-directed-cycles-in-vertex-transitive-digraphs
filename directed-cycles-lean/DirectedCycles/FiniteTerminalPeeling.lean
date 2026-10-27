@@ -1,7 +1,11 @@
-import DirectedCycles.TerminalWidthShortGenerators
-import DirectedCycles.CommutatorMapNaturality
-import DirectedCycles.CentralRankQuotient
-import DirectedCycles.NormalEnvelopeInduction
+module
+
+public import DirectedCycles.TerminalWidthShortGenerators
+public import DirectedCycles.CommutatorMapNaturality
+public import DirectedCycles.CentralRankQuotient
+public import DirectedCycles.NormalEnvelopeInduction
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

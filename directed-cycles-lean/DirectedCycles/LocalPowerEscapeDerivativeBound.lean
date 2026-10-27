@@ -1,5 +1,9 @@
-import DirectedCycles.LocalTaylorEstimate
-import DirectedCycles.LocalUltraproductEscape
+module
+
+public import DirectedCycles.LocalTaylorEstimate
+public import DirectedCycles.LocalUltraproductEscape
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

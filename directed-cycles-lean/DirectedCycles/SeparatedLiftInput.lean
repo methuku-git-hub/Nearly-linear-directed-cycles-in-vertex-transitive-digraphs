@@ -1,7 +1,11 @@
-import DirectedCycles.CyclePrefixEmbeddings
-import DirectedCycles.CycleRunResidueChoice
-import DirectedCycles.ReturnCollisionOffsets
-import DirectedCycles.ActualRunResidueCoordinates
+module
+
+public import DirectedCycles.CyclePrefixEmbeddings
+public import DirectedCycles.CycleRunResidueChoice
+public import DirectedCycles.ReturnCollisionOffsets
+public import DirectedCycles.ActualRunResidueCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.QuotientPowerTrapping
-import DirectedCycles.QuotientProgressionDensityRestoration
+module
+
+public import DirectedCycles.QuotientPowerTrapping
+public import DirectedCycles.QuotientProgressionDensityRestoration
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,4 +1,8 @@
-import DirectedCycles.HaarFiniteTrapping
+module
+
+public import DirectedCycles.HaarFiniteTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

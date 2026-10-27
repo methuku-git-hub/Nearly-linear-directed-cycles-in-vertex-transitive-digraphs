@@ -1,5 +1,9 @@
-import DirectedCycles.OrbitCycleWalk
-import DirectedCycles.CayleyCycleLabels
+module
+
+public import DirectedCycles.OrbitCycleWalk
+public import DirectedCycles.CayleyCycleLabels
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

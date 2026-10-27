@@ -1,7 +1,11 @@
-import Mathlib.Topology.Algebra.FilterBasis
-import Mathlib.Topology.Compactness.Compact
-import Mathlib.Order.Filter.Ultrafilter.Basic
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Algebra.FilterBasis
+public import Mathlib.Topology.Compactness.Compact
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

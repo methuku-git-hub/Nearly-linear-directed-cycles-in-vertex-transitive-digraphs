@@ -1,6 +1,10 @@
-import DirectedCycles.LocalScaledModel
-import DirectedCycles.LocalConnectedPowerSegments
-import DirectedCycles.LocalMinimalEscapeUnbounded
+module
+
+public import DirectedCycles.LocalScaledModel
+public import DirectedCycles.LocalConnectedPowerSegments
+public import DirectedCycles.LocalMinimalEscapeUnbounded
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

@@ -1,6 +1,10 @@
-import DirectedCycles.MultihomSubstitution
-import DirectedCycles.LeftCommutatorGeneration
-import DirectedCycles.MultihomSubgroupWidth
+module
+
+public import DirectedCycles.MultihomSubstitution
+public import DirectedCycles.LeftCommutatorGeneration
+public import DirectedCycles.MultihomSubgroupWidth
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

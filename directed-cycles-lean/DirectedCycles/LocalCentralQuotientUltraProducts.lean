@@ -1,4 +1,8 @@
-import DirectedCycles.LocalCentralQuotientUltraEquiv
+module
+
+public import DirectedCycles.LocalCentralQuotientUltraEquiv
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

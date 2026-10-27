@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.LinearAlgebra.FreeModule.PID
-import Mathlib.GroupTheory.Rank
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.LinearAlgebra.FreeModule.PID
+public import Mathlib.GroupTheory.Rank
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonAdjointRiemannSum
+module
+
+public import DirectedCycles.GleasonAdjointRiemannSum
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

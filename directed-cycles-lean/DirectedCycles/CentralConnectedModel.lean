@@ -1,7 +1,11 @@
-import DirectedCycles.ConnectedScaledModel
-import DirectedCycles.ScaledCurveCentrality
-import DirectedCycles.UniformCentralEscape
-import DirectedCycles.ModelEscapeNeighbourhood
+module
+
+public import DirectedCycles.ConnectedScaledModel
+public import DirectedCycles.ScaledCurveCentrality
+public import DirectedCycles.UniformCentralEscape
+public import DirectedCycles.ModelEscapeNeighbourhood
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

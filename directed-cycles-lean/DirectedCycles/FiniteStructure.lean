@@ -1,7 +1,11 @@
-import DirectedCycles.Paths
-import DirectedCycles.DigraphAutomorphismGroup
-import DirectedCycles.PermutationImage
-import DirectedCycles.NilpotentRanks
+module
+
+public import DirectedCycles.Paths
+public import DirectedCycles.DigraphAutomorphismGroup
+public import DirectedCycles.PermutationImage
+public import DirectedCycles.NilpotentRanks
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

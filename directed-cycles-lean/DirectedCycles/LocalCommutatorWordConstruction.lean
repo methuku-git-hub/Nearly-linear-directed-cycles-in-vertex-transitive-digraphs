@@ -1,4 +1,8 @@
-import DirectedCycles.LocalCommutatorWordBounds
+module
+
+public import DirectedCycles.LocalCommutatorWordBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

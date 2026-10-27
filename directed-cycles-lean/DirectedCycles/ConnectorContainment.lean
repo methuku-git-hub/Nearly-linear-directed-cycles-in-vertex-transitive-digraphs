@@ -1,5 +1,9 @@
-import DirectedCycles.ConnectorAlgebra
-import DirectedCycles.OrbitDifferenceSpan
+module
+
+public import DirectedCycles.ConnectorAlgebra
+public import DirectedCycles.OrbitDifferenceSpan
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

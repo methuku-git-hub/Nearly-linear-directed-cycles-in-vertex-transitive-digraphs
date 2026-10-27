@@ -1,6 +1,10 @@
-import DirectedCycles.OrbitRouteSampler
-import DirectedCycles.CollisionLoads
-import DirectedCycles.EulerSequence
+module
+
+public import DirectedCycles.OrbitRouteSampler
+public import DirectedCycles.CollisionLoads
+public import DirectedCycles.EulerSequence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

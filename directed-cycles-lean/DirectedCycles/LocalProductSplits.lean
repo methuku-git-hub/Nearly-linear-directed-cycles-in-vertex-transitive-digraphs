@@ -1,4 +1,8 @@
-import DirectedCycles.LocalGroupProducts
+module
+
+public import DirectedCycles.LocalGroupProducts
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

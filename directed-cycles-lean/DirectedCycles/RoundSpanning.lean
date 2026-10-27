@@ -1,5 +1,9 @@
-import DirectedCycles.RoundCycleExpansion
-import DirectedCycles.FullCosetSpanning
+module
+
+public import DirectedCycles.RoundCycleExpansion
+public import DirectedCycles.FullCosetSpanning
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

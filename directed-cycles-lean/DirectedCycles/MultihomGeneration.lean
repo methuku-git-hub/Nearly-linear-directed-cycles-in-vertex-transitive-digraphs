@@ -1,4 +1,8 @@
-import DirectedCycles.GroupMultihomOperations
+module
+
+public import DirectedCycles.GroupMultihomOperations
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.GroupMultihom

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralQuotientSliceHomeomorph
-import Mathlib.Analysis.Normed.Module.FiniteDimension
-import Mathlib.Topology.Homeomorph.Lemmas
+module
+
+public import DirectedCycles.LocalCentralQuotientSliceHomeomorph
+public import Mathlib.Analysis.Normed.Module.FiniteDimension
+public import Mathlib.Topology.Homeomorph.Lemmas
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

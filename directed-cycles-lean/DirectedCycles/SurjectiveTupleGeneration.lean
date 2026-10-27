@@ -1,4 +1,8 @@
-import DirectedCycles.CosetNilprogression
+module
+
+public import DirectedCycles.CosetNilprogression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

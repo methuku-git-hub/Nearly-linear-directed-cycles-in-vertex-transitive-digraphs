@@ -3,6 +3,7 @@
 import argparse
 import datetime
 import hashlib
+import gzip
 import json
 import os
 from pathlib import Path
@@ -14,8 +15,8 @@ from build_blueprint import build as build_blueprint
 
 ROOT = Path(__file__).resolve().parents[1]
 ALLOWED = {'propext', 'Classical.choice', 'Quot.sound'}
-MATHLIB_REV = '5ed2965256430c3649e86755f9576b54eca72435'
-LEAN_COMMIT = '293d5d0c0c3f3dded4688b3ccd6a33939ac5102b'
+MATHLIB_REV = '56a005855ea17e0b0958f73ec801ae140b0a1679'
+LEAN_COMMIT = 'eb6cafb7290e8bd5f2937522d8d804f58f02bafc'
 
 
 def sha(path):
@@ -151,7 +152,7 @@ def main():
     if sha(ROOT/'manuscript/source.tex') != provenance['sha256']:
         raise RuntimeError('Changed manuscript snapshot')
     lean_version=run(['lean','--version'],'lean-version').strip()
-    if '4.34.0' not in lean_version or LEAN_COMMIT not in lean_version:
+    if '4.35.0' not in lean_version or LEAN_COMMIT not in lean_version:
         raise RuntimeError('Wrong Lean version or compiler commit')
     packages=package_state()
     run(['lake','build'],'build')
@@ -169,6 +170,8 @@ def main():
         raise RuntimeError('No unconditional theorem of the exact requested type')
     if set(target['axioms'])-ALLOWED: raise RuntimeError('Unexpected main theorem axiom')
     closure=json.loads(closure_path.read_text()); closure_rows=validate_closure(closure)
+    compressed_closure=closure_path.with_suffix('.json.gz')
+    compressed_closure.write_bytes(gzip.compress(closure_path.read_bytes(), mtime=0))
     if set(closure['axioms']) != set(target['axioms']):
         raise RuntimeError('Cached axiom audit disagrees with direct closure traversal')
     graph=build_blueprint(declarations,closure);nodes=validate_graph(graph)
@@ -178,7 +181,7 @@ def main():
     save_graph(graph)
     expected={'DirectedCycles','Mathlib.Combinatorics.Hall.Finite'}
     expected.update('DirectedCycles.'+p.stem for p in (ROOT/'DirectedCycles').glob('*.lean'))
-    root_imports=re.findall(r'^import ([A-Za-z0-9_.]+)$',(ROOT/'DirectedCycles.lean').read_text(),re.M)
+    root_imports=re.findall(r'^(?:public )?import ([A-Za-z0-9_.]+)$',(ROOT/'DirectedCycles.lean').read_text(),re.M)
     project_modules=expected-{'DirectedCycles','Mathlib.Combinatorics.Hall.Finite'}
     if set(root_imports)!=project_modules or len(root_imports)!=len(project_modules):
         raise RuntimeError('Root does not import every project module exactly once')
@@ -196,7 +199,9 @@ def main():
         main_theorem=target,allowed_foundational_axioms=sorted(ALLOWED),
         project_theorems_audited=sum(n.startswith('DirectedCycles.') for n in declarations),
         exact_constant_closure_count=len(closure_rows),exact_constant_closure_sha256=sha(closure_path),
-        exact_constant_closure='verification/main-constant-closure.json',
+        exact_constant_closure='verification/main-constant-closure.json.gz',
+        exact_constant_closure_encoding='gzip',
+        exact_constant_closure_compressed_sha256=sha(compressed_closure),
         dependency_inventory_complete=True,sequential_module_replay_passed=args.partial,
         replayed_modules=sorted(replayed),project_modules_imported_by_root=sorted(project_modules),
         fresh_dependency_closure_replay_passed=False,independent_kernel=False,
@@ -220,7 +225,7 @@ def main():
         filename='partial-report.json'
     report['files']=hashes(sorted(p for p in ROOT.rglob('*') if p.is_file() and p.name != '.DS_Store' and
         not {'.lake','.git','verification','__pycache__'}.intersection(p.relative_to(ROOT).parts)))
-    report['evidence_files']=hashes([verification/n for n in ['lean-version.log','build.log','axioms.log','main-constant-closure.json']+(['kernel-replay.log'] if args.partial else [])]+([verification/'kernel-fresh-closure.log'] if args.certify else []))
+    report['evidence_files']=hashes([verification/n for n in ['lean-version.log','build.log','axioms.log','main-constant-closure.json.gz']+(['kernel-replay.log'] if args.partial else [])]+([verification/'kernel-fresh-closure.log'] if args.certify else []))
     report['checker_binary_sha256']=sha(Path(shutil.which('lean')).resolve().parent/'leanchecker')
     temporary=verification/(filename+'.tmp');temporary.write_text(json.dumps(report,indent=2)+'\n');temporary.replace(verification/filename)
     print('Main theorem and imported dependency closure passed fresh kernel replay.' if args.certify else 'Partial replay passed; no certificate issued.',flush=True)

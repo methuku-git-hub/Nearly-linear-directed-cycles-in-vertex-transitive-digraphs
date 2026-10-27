@@ -1,6 +1,10 @@
-import DirectedCycles.HaarNormalizedBump
-import DirectedCycles.MeasurableUnregularizedBump
-import DirectedCycles.BoundedDerivativeCommutator
+module
+
+public import DirectedCycles.HaarNormalizedBump
+public import DirectedCycles.MeasurableUnregularizedBump
+public import DirectedCycles.BoundedDerivativeCommutator
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

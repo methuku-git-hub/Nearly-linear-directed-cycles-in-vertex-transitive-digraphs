@@ -1,4 +1,8 @@
-import DirectedCycles.GroupUltraproduct
+module
+
+public import DirectedCycles.GroupUltraproduct
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

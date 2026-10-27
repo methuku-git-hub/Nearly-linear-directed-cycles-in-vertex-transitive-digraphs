@@ -1,5 +1,9 @@
-import DirectedCycles.TranslatedReturnPaths
-import DirectedCycles.ReturnCycleExpansion
+module
+
+public import DirectedCycles.TranslatedReturnPaths
+public import DirectedCycles.ReturnCycleExpansion
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

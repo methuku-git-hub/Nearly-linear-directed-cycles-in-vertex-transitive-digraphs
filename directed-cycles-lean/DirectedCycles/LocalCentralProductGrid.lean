@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCentralQuotientData
-import DirectedCycles.LocalDivision
-import Mathlib.Data.Fintype.Card
+module
+
+public import DirectedCycles.LocalCentralQuotientData
+public import DirectedCycles.LocalDivision
+public import Mathlib.Data.Fintype.Card
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

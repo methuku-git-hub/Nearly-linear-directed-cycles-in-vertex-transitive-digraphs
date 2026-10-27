@@ -1,4 +1,8 @@
-import DirectedCycles.LocalProductSplits
+module
+
+public import DirectedCycles.LocalProductSplits
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

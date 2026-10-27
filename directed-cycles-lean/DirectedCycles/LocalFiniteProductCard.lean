@@ -1,4 +1,8 @@
-import DirectedCycles.LocalApproximateGroups
+module
+
+public import DirectedCycles.LocalApproximateGroups
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

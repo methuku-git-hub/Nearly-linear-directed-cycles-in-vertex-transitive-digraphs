@@ -1,4 +1,8 @@
-import DirectedCycles.ElementNormalClosure
+module
+
+public import DirectedCycles.ElementNormalClosure
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

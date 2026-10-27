@@ -1,5 +1,9 @@
-import DirectedCycles.CayleyInductionStep
-import DirectedCycles.LayerInductionStep
+module
+
+public import DirectedCycles.CayleyInductionStep
+public import DirectedCycles.LayerInductionStep
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

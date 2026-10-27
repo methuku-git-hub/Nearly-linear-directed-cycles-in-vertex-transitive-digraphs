@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralEquivalence
-import DirectedCycles.LocalGroupHom
+module
+
+public import DirectedCycles.LocalCentralEquivalence
+public import DirectedCycles.LocalGroupHom
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

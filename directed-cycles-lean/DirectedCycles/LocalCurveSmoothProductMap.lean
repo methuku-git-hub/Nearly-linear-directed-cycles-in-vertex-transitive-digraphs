@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCurveProductDerivative
-import DirectedCycles.SmoothInverseNeighbourhood
+module
+
+public import DirectedCycles.LocalCurveProductDerivative
+public import DirectedCycles.SmoothInverseNeighbourhood
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

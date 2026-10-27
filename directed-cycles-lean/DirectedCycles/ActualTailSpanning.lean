@@ -1,6 +1,10 @@
-import DirectedCycles.ActualFixedFibres
-import DirectedCycles.FullCosetSpanning
-import DirectedCycles.ConsecutiveNormalFibres
+module
+
+public import DirectedCycles.ActualFixedFibres
+public import DirectedCycles.FullCosetSpanning
+public import DirectedCycles.ConsecutiveNormalFibres
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

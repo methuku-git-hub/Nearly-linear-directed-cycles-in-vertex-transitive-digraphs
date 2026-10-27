@@ -1,4 +1,8 @@
-import DirectedCycles.HaarEscapeBootstrap
+module
+
+public import DirectedCycles.HaarEscapeBootstrap
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

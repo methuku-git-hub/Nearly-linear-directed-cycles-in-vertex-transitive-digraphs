@@ -1,4 +1,8 @@
-import DirectedCycles.LeftGeneratorCommutators
+module
+
+public import DirectedCycles.LeftGeneratorCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

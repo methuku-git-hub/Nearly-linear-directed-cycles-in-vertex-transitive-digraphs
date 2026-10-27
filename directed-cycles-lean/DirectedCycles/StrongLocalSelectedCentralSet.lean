@@ -1,5 +1,9 @@
-import DirectedCycles.StrongLocalCentralSet
-import DirectedCycles.LocalSelectedProgression
+module
+
+public import DirectedCycles.StrongLocalCentralSet
+public import DirectedCycles.LocalSelectedProgression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

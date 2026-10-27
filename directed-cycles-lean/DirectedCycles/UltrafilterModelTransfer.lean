@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteApproximateCounterexamples
-import Mathlib.Order.Filter.Ultrafilter.Basic
+module
+
+public import DirectedCycles.FiniteApproximateCounterexamples
+public import Mathlib.Order.Filter.Ultrafilter.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

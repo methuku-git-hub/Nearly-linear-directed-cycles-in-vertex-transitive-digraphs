@@ -1,7 +1,11 @@
-import DirectedCycles.OpenSubgroupGoodModel
-import DirectedCycles.OpenSubgroupLieGroup
-import DirectedCycles.ConnectedModelRestriction
-import Mathlib.Analysis.Normed.Module.Convex
+module
+
+public import DirectedCycles.OpenSubgroupGoodModel
+public import DirectedCycles.OpenSubgroupLieGroup
+public import DirectedCycles.ConnectedModelRestriction
+public import Mathlib.Analysis.Normed.Module.Convex
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralComponentNeighbourhood
-import DirectedCycles.LocalToLocalCentralModelNeighbourhood
+module
+
+public import DirectedCycles.LocalCentralComponentNeighbourhood
+public import DirectedCycles.LocalToLocalCentralModelNeighbourhood
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

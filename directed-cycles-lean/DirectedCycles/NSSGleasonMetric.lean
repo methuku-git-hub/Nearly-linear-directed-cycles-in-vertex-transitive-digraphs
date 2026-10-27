@@ -1,6 +1,10 @@
-import DirectedCycles.LocallyCompactEscapeCommutator
-import DirectedCycles.EscapeWordMetricEscape
-import DirectedCycles.GleasonYamabeReduction
+module
+
+public import DirectedCycles.LocallyCompactEscapeCommutator
+public import DirectedCycles.EscapeWordMetricEscape
+public import DirectedCycles.GleasonYamabeReduction
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

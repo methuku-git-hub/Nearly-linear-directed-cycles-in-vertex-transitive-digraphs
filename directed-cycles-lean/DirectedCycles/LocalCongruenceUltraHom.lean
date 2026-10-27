@@ -1,6 +1,10 @@
-import DirectedCycles.LocalCongruenceUltraproduct
-import DirectedCycles.LocalInternalImages
-import DirectedCycles.LocalEscapeMaps
+module
+
+public import DirectedCycles.LocalCongruenceUltraproduct
+public import DirectedCycles.LocalInternalImages
+public import DirectedCycles.LocalEscapeMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

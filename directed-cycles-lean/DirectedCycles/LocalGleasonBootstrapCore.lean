@@ -1,6 +1,10 @@
-import DirectedCycles.LocalOptimalEscapeBump
-import DirectedCycles.LocalPowerEscapeDerivativeBound
-import DirectedCycles.ScalarBootstrap
+module
+
+public import DirectedCycles.LocalOptimalEscapeBump
+public import DirectedCycles.LocalPowerEscapeDerivativeBound
+public import DirectedCycles.ScalarBootstrap
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

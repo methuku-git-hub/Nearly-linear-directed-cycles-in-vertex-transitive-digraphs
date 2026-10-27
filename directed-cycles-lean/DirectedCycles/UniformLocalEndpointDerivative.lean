@@ -1,5 +1,9 @@
-import DirectedCycles.ParameterIntegralEndpointDerivative
-import DirectedCycles.UniformLocalOneParameterExistence
+module
+
+public import DirectedCycles.ParameterIntegralEndpointDerivative
+public import DirectedCycles.UniformLocalOneParameterExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

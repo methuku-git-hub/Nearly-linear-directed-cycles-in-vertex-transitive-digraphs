@@ -1,4 +1,8 @@
-import Mathlib.Analysis.InnerProductSpace.Spectrum
+module
+
+public import Mathlib.Analysis.InnerProductSpace.Spectrum
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

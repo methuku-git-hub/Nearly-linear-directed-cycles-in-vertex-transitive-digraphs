@@ -1,5 +1,9 @@
-import DirectedCycles.UltraproductInternalSets
-import DirectedCycles.EscapeNorm
+module
+
+public import DirectedCycles.UltraproductInternalSets
+public import DirectedCycles.EscapeNorm
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

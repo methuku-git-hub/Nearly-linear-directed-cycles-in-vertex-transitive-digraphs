@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonIncrementComparison
+module
+
+public import DirectedCycles.GleasonIncrementComparison
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,4 +1,8 @@
-import DirectedCycles.ParameterIntegralCurveLipschitz
+module
+
+public import DirectedCycles.ParameterIntegralCurveLipschitz
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

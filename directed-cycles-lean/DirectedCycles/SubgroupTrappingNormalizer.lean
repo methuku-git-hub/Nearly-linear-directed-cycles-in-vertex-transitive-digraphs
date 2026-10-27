@@ -1,7 +1,11 @@
-import DirectedCycles.SubgroupNSSBasics
-import Mathlib.Algebra.Group.Subgroup.Basic
-import Mathlib.Algebra.Group.Pointwise.Set.Basic
-import Mathlib.Tactic
+module
+
+public import DirectedCycles.SubgroupNSSBasics
+public import Mathlib.Algebra.Group.Subgroup.Basic
+public import Mathlib.Algebra.Group.Pointwise.Set.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

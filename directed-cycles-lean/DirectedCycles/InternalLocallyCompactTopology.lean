@@ -1,9 +1,13 @@
-import DirectedCycles.ApproximateRootChains
-import DirectedCycles.UltraproductFiniteCovers
-import DirectedCycles.InternalTranslateSaturation
-import DirectedCycles.ShrinkingTopologyCompactness
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Algebra.Group.Subgroup.Pointwise
+module
+
+public import DirectedCycles.ApproximateRootChains
+public import DirectedCycles.UltraproductFiniteCovers
+public import DirectedCycles.InternalTranslateSaturation
+public import DirectedCycles.ShrinkingTopologyCompactness
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Algebra.Group.Subgroup.Pointwise
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

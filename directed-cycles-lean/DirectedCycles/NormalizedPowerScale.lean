@@ -1,6 +1,10 @@
-import Mathlib.Algebra.Order.Floor.Ring
-import Mathlib.Topology.Instances.Real.Lemmas
-import Mathlib.Tactic
+module
+
+public import Mathlib.Algebra.Order.Floor.Ring
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

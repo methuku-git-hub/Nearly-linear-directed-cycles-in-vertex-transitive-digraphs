@@ -1,5 +1,9 @@
-import DirectedCycles.GroupRingKernel
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import DirectedCycles.GroupRingKernel
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped MonoidAlgebra

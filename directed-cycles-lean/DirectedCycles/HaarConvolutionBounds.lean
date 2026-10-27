@@ -1,4 +1,8 @@
-import DirectedCycles.HaarGroupConvolution
+module
+
+public import DirectedCycles.HaarGroupConvolution
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

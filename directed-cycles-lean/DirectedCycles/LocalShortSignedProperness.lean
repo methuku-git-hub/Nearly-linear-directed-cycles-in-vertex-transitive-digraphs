@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedPowers
-import DirectedCycles.LocalPowerPeriod
+module
+
+public import DirectedCycles.LocalSignedPowers
+public import DirectedCycles.LocalPowerPeriod
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

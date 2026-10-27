@@ -1,5 +1,9 @@
-import Mathlib.Topology.Algebra.IsUniformGroup.Defs
-import Mathlib.Topology.Metrizable.Uniformity
+module
+
+public import Mathlib.Topology.Algebra.IsUniformGroup.Defs
+public import Mathlib.Topology.Metrizable.Uniformity
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

@@ -1,7 +1,11 @@
-import DirectedCycles.CompactSubgroupTrapping
-import DirectedCycles.CompactKernelAmbientWindow
-import DirectedCycles.TrappedSubgroupsInKernel
-import DirectedCycles.SubgroupTrappingNormalizer
+module
+
+public import DirectedCycles.CompactSubgroupTrapping
+public import DirectedCycles.CompactKernelAmbientWindow
+public import DirectedCycles.TrappedSubgroupsInKernel
+public import DirectedCycles.SubgroupTrappingNormalizer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

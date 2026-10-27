@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalLieModelExistence
-import DirectedCycles.LocalCompactModelCover
-import DirectedCycles.LocalFiniteCoverTransfer
+module
+
+public import DirectedCycles.StrongLocalLieModelExistence
+public import DirectedCycles.LocalCompactModelCover
+public import DirectedCycles.LocalFiniteCoverTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

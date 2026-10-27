@@ -1,4 +1,8 @@
-import DirectedCycles.UniformFinite
+module
+
+public import DirectedCycles.UniformFinite
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

@@ -1,4 +1,8 @@
-import DirectedCycles.LocalProjectedEscapeKernel
+module
+
+public import DirectedCycles.LocalProjectedEscapeKernel
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

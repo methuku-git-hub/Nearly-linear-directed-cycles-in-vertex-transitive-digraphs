@@ -1,5 +1,9 @@
-import DirectedCycles.CosetNilprogression
-import DirectedCycles.LeftGeneratorCommutators
+module
+
+public import DirectedCycles.CosetNilprogression
+public import DirectedCycles.LeftGeneratorCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

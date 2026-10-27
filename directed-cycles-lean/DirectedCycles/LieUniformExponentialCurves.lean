@@ -1,5 +1,9 @@
-import DirectedCycles.LocalLieCurveExponential
-import DirectedCycles.UniformLocalOneParameterExistence
+module
+
+public import DirectedCycles.LocalLieCurveExponential
+public import DirectedCycles.UniformLocalOneParameterExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteConvolutionBounds
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+module
+
+public import DirectedCycles.FiniteConvolutionBounds
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

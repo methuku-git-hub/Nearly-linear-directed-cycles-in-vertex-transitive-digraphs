@@ -1,6 +1,10 @@
-import DirectedCycles.WordBallBump
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.MeasureTheory.Function.LocallyIntegrable
+module
+
+public import DirectedCycles.WordBallBump
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.MeasureTheory.Function.LocallyIntegrable
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

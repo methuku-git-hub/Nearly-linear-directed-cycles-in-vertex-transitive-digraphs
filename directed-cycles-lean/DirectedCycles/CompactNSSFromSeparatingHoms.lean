@@ -1,5 +1,9 @@
-import DirectedCycles.NSSTargetMaps
-import DirectedCycles.NSSSubquotientFromTrapping
+module
+
+public import DirectedCycles.NSSTargetMaps
+public import DirectedCycles.NSSSubquotientFromTrapping
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

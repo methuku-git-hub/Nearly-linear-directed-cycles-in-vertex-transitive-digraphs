@@ -1,6 +1,10 @@
-import DirectedCycles.TotallyDisconnectedGoodModel
-import DirectedCycles.RelativeInternalSubgroups
-import DirectedCycles.InternalFiniteCoverTransfer
+module
+
+public import DirectedCycles.TotallyDisconnectedGoodModel
+public import DirectedCycles.RelativeInternalSubgroups
+public import DirectedCycles.InternalFiniteCoverTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

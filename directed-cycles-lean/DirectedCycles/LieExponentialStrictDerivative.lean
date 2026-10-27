@@ -1,6 +1,10 @@
-import DirectedCycles.UniformLocalEndpointDerivative
-import DirectedCycles.LieCoordinateCurveRealization
-import DirectedCycles.LieIdentityCoordinateMultiplication
+module
+
+public import DirectedCycles.UniformLocalEndpointDerivative
+public import DirectedCycles.LieCoordinateCurveRealization
+public import DirectedCycles.LieIdentityCoordinateMultiplication
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalConvolutionNorm
-import DirectedCycles.LocalApproximateCube
-import DirectedCycles.FiniteConvolutionBounds
+module
+
+public import DirectedCycles.LocalConvolutionNorm
+public import DirectedCycles.LocalApproximateCube
+public import DirectedCycles.FiniteConvolutionBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

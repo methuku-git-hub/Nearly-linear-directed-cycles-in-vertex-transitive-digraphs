@@ -1,5 +1,9 @@
-import DirectedCycles.LocalNormalWindowUltraproduct
-import DirectedCycles.LocalCongruenceUltraproduct
+module
+
+public import DirectedCycles.LocalNormalWindowUltraproduct
+public import DirectedCycles.LocalCongruenceUltraproduct
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

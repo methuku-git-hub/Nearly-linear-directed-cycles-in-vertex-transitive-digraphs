@@ -1,4 +1,8 @@
-import DirectedCycles.ElementCocycle
+module
+
+public import DirectedCycles.ElementCocycle
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement

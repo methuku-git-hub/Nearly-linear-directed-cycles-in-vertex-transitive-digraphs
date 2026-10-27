@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSmoothMultiplicationFunction
-import DirectedCycles.SmoothLocalIdentityCoordinates
+module
+
+public import DirectedCycles.LocalSmoothMultiplicationFunction
+public import DirectedCycles.SmoothLocalIdentityCoordinates
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

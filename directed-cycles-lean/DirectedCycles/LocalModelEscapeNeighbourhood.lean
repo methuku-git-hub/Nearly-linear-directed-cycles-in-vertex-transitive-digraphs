@@ -1,7 +1,11 @@
-import DirectedCycles.LocalModelPowerLifting
-import DirectedCycles.LocalUltraproductEscape
-import DirectedCycles.LocalInternalSetLogic
-import Mathlib.Topology.Algebra.Group.Basic
+module
+
+public import DirectedCycles.LocalModelPowerLifting
+public import DirectedCycles.LocalUltraproductEscape
+public import DirectedCycles.LocalInternalSetLogic
+public import Mathlib.Topology.Algebra.Group.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

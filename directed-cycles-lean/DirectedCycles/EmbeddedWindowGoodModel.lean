@@ -1,5 +1,9 @@
-import DirectedCycles.EmbeddedWindowModelHom
-import DirectedCycles.InternalGoodModel
+module
+
+public import DirectedCycles.EmbeddedWindowModelHom
+public import DirectedCycles.InternalGoodModel
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

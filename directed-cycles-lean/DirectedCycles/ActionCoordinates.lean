@@ -1,4 +1,8 @@
-import DirectedCycles.FreeQuotient
+module
+
+public import DirectedCycles.FreeQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

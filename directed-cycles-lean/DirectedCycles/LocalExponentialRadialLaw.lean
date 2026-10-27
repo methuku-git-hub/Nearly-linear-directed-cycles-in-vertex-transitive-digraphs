@@ -1,5 +1,9 @@
-import DirectedCycles.SmoothLocalExponentialChart
-import DirectedCycles.LocalAdditivePowerSegment
+module
+
+public import DirectedCycles.SmoothLocalExponentialChart
+public import DirectedCycles.LocalAdditivePowerSegment
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

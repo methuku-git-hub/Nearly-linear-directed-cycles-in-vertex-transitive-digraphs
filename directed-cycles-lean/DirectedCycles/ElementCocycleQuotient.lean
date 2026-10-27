@@ -1,6 +1,10 @@
-import DirectedCycles.CocycleDescent
-import DirectedCycles.ElementCocycleGeneration
-import DirectedCycles.ConjugationNilpotence
+module
+
+public import DirectedCycles.CocycleDescent
+public import DirectedCycles.ElementCocycleGeneration
+public import DirectedCycles.ConjugationNilpotence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

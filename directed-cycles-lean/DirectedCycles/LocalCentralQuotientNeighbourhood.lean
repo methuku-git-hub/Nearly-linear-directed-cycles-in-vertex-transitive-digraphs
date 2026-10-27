@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralQuotientData
-import DirectedCycles.LocalExponentialWordNeighbourhood
+module
+
+public import DirectedCycles.LocalCentralQuotientData
+public import DirectedCycles.LocalExponentialWordNeighbourhood
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

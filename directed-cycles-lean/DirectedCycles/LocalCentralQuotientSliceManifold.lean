@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralQuotientSliceHomeomorph
-import Mathlib.Geometry.Manifold.IsManifold.Basic
+module
+
+public import DirectedCycles.LocalCentralQuotientSliceHomeomorph
+public import Mathlib.Geometry.Manifold.IsManifold.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

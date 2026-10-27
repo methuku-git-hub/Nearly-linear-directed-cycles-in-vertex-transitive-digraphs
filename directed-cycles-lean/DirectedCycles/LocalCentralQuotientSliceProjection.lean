@@ -1,4 +1,8 @@
-import DirectedCycles.LocalCentralQuotientSliceChartSmoothness
+module
+
+public import DirectedCycles.LocalCentralQuotientSliceChartSmoothness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

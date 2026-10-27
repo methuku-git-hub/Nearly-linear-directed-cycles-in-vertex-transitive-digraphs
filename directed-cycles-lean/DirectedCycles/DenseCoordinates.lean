@@ -1,6 +1,10 @@
-import DirectedCycles.DenseBinomial
-import DirectedCycles.TruncatedExpansion
-import DirectedCycles.TranslateAveraging
+module
+
+public import DirectedCycles.DenseBinomial
+public import DirectedCycles.TruncatedExpansion
+public import DirectedCycles.TranslateAveraging
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

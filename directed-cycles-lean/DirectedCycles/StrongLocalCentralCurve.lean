@@ -1,9 +1,13 @@
-import DirectedCycles.StrongLocalCentralSegment
-import DirectedCycles.StrongLocalSelectedCentralSet
-import DirectedCycles.LocalConnectedScaledModel
-import DirectedCycles.LocalModelEscapeNeighbourhood
-import DirectedCycles.LocalScaledCentrality
-import DirectedCycles.LocalProductDomainTransfer
+module
+
+public import DirectedCycles.StrongLocalCentralSegment
+public import DirectedCycles.StrongLocalSelectedCentralSet
+public import DirectedCycles.LocalConnectedScaledModel
+public import DirectedCycles.LocalModelEscapeNeighbourhood
+public import DirectedCycles.LocalScaledCentrality
+public import DirectedCycles.LocalProductDomainTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

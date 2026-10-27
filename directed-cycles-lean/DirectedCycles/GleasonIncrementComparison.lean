@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonMetricBasics
-import Mathlib.Topology.MetricSpace.Pseudo.Basic
+module
+
+public import DirectedCycles.GleasonMetricBasics
+public import Mathlib.Topology.MetricSpace.Pseudo.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

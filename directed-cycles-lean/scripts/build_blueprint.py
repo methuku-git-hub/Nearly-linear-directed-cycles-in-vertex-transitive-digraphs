@@ -17,8 +17,8 @@ def build(declarations, closure):
     for mod, path in sources.items():
         deps = []
         for line in path.read_text().splitlines():
-            if line.startswith('import '):
-                match = re.fullmatch(r'import ([A-Za-z0-9_.]+)\s*', line)
+            if re.match(r'^(?:public )?import ', line):
+                match = re.fullmatch(r'(?:public )?import ([A-Za-z0-9_.]+)\s*', line)
                 if not match:
                     raise RuntimeError(f'Unparsed import: {path}: {line}')
                 deps.append(match[1])
@@ -89,7 +89,7 @@ def build(declarations, closure):
     graph = dict(schema_version=2, target='thm:main', source_sha256=source_hash,
         main_theorem_verified=False, certificate_eligible=False, dependency_inventory_complete=True,
         graph_kind='Project source-import DAG with grouped external imports; over-approximation of the actual theorem dependency closure',
-        exact_constant_graph='../verification/main-constant-closure.json',
+        exact_constant_graph='../verification/main-constant-closure.json.gz',
         manuscript_map='manuscript-map.json', archived_planned_graph='historical-planned-dependencies.json',
         scope_note='The finite structural theorem and local Lie dimension induction supply the formerly open inputs. General local-group globalization and Lie third-theorem alternatives are not used or claimed proved. Historic planned dependencies are retained separately with their original status. Theorem 1.3 and Section 8 are outside this task.',
         proof_replacements=historical['proof_replacements'] + [dict(source='BGT local dimension induction', replacement='Complete induction on the dimension of the actual smooth local target, including its zero-dimensional base; no local-to-global Lie identification is assumed.')],

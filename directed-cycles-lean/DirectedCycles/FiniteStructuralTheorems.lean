@@ -1,6 +1,10 @@
-import DirectedCycles.FiniteCosetNilprogressionTheorem
-import DirectedCycles.MainFromLargeModel
-import DirectedCycles.FiniteCosetNilprogressionInput
+module
+
+public import DirectedCycles.FiniteCosetNilprogressionTheorem
+public import DirectedCycles.MainFromLargeModel
+public import DirectedCycles.FiniteCosetNilprogressionInput
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

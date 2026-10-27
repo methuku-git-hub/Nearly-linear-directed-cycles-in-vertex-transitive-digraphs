@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupProducts
-import DirectedCycles.LocalQuotientOperations
+module
+
+public import DirectedCycles.LocalGroupProducts
+public import DirectedCycles.LocalQuotientOperations
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

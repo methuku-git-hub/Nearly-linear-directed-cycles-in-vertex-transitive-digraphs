@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralProgressionFamily
-import DirectedCycles.LocalShortProgressionModel
+module
+
+public import DirectedCycles.LocalCentralProgressionFamily
+public import DirectedCycles.LocalShortProgressionModel
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

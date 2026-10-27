@@ -1,5 +1,9 @@
-import DirectedCycles.LocalShortProgressionModel
-import DirectedCycles.LieCurveCoordinateComparison
+module
+
+public import DirectedCycles.LocalShortProgressionModel
+public import DirectedCycles.LieCurveCoordinateComparison
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

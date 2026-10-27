@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonProductCoordinateFactorization
-import DirectedCycles.GleasonCoordinateIdentityDerivative
+module
+
+public import DirectedCycles.GleasonProductCoordinateFactorization
+public import DirectedCycles.GleasonCoordinateIdentityDerivative
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

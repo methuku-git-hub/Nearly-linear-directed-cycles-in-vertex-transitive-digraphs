@@ -1,6 +1,10 @@
-import DirectedCycles.LocalQuotientMinimalLift
-import DirectedCycles.LocalEscapeNSS
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LocalQuotientMinimalLift
+public import DirectedCycles.LocalEscapeNSS
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

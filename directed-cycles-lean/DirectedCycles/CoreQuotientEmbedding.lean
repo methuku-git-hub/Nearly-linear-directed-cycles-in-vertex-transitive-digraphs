@@ -1,5 +1,9 @@
-import DirectedCycles.FiniteProductRanks
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import DirectedCycles.FiniteProductRanks
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

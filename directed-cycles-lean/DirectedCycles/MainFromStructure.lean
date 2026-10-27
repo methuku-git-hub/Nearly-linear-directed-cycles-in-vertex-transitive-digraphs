@@ -1,9 +1,13 @@
-import DirectedCycles.FiniteStructure
-import DirectedCycles.BoundedStabilizerCycles
-import DirectedCycles.LargeOrbits
-import DirectedCycles.SmallOrbitArithmetic
-import DirectedCycles.EpsilonReduction
-import DirectedCycles.Thresholds
+module
+
+public import DirectedCycles.FiniteStructure
+public import DirectedCycles.BoundedStabilizerCycles
+public import DirectedCycles.LargeOrbits
+public import DirectedCycles.SmallOrbitArithmetic
+public import DirectedCycles.EpsilonReduction
+public import DirectedCycles.Thresholds
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.LocalClosedScaledExponentLimit
-import DirectedCycles.ShortProgressionModelImage
+module
+
+public import DirectedCycles.LocalClosedScaledExponentLimit
+public import DirectedCycles.ShortProgressionModelImage
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

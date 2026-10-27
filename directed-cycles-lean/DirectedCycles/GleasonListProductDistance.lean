@@ -1,4 +1,8 @@
-import DirectedCycles.GleasonMetricBasics
+module
+
+public import DirectedCycles.GleasonMetricBasics
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.GleasonMetricData

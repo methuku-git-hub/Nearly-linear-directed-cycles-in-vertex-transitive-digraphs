@@ -1,5 +1,9 @@
-import DirectedCycles.AugmentationPowerSpan
-import DirectedCycles.CocycleExtension
+module
+
+public import DirectedCycles.AugmentationPowerSpan
+public import DirectedCycles.CocycleExtension
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped MonoidAlgebra

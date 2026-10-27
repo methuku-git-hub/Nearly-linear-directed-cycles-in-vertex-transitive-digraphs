@@ -1,5 +1,9 @@
-import DirectedCycles.LocalQuotientCancellation
-import DirectedCycles.UltraproductLocalNormal
+module
+
+public import DirectedCycles.LocalQuotientCancellation
+public import DirectedCycles.UltraproductLocalNormal
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

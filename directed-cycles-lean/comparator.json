@@ -1,0 +1,6 @@
+{
+  "challenge_module": "Challenge",
+  "solution_module": "Solution",
+  "theorem_names": ["DirectedCycles.nearly_linear_directed_cycles"],
+  "permitted_axioms": ["propext", "Classical.choice", "Quot.sound"]
+}

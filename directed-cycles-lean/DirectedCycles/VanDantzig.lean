@@ -1,5 +1,9 @@
-import DirectedCycles.CompactOpenStabilizer
-import DirectedCycles.TotallyDisconnectedNeighbourhoods
+module
+
+public import DirectedCycles.CompactOpenStabilizer
+public import DirectedCycles.TotallyDisconnectedNeighbourhoods
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology

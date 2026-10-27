@@ -1,5 +1,9 @@
-import DirectedCycles.MeasurableWordWindowBump
-import DirectedCycles.HaarConvolutionBounds
+module
+
+public import DirectedCycles.MeasurableWordWindowBump
+public import DirectedCycles.HaarConvolutionBounds
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

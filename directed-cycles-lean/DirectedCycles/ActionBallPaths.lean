@@ -1,5 +1,9 @@
-import DirectedCycles.ActionBalls
-import DirectedCycles.BoundedWalks
+module
+
+public import DirectedCycles.ActionBalls
+public import DirectedCycles.BoundedWalks
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

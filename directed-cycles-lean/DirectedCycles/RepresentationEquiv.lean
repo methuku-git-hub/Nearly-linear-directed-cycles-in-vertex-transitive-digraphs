@@ -1,5 +1,9 @@
-import DirectedCycles.QuotientRepresentation
-import DirectedCycles.UnipotentRecurrence
+module
+
+public import DirectedCycles.QuotientRepresentation
+public import DirectedCycles.UnipotentRecurrence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

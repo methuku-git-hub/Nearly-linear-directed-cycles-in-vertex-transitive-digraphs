@@ -1,8 +1,12 @@
-import DirectedCycles.FiniteEscapeNeighbourhoods
-import DirectedCycles.UniformCentralEscape
-import DirectedCycles.LocalApproximateQuotient
-import DirectedCycles.LocalQuotientCardinality
-import DirectedCycles.ShortProgressionProperness
+module
+
+public import DirectedCycles.FiniteEscapeNeighbourhoods
+public import DirectedCycles.UniformCentralEscape
+public import DirectedCycles.LocalApproximateQuotient
+public import DirectedCycles.LocalQuotientCardinality
+public import DirectedCycles.ShortProgressionProperness
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

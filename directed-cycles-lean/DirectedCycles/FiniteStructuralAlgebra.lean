@@ -1,6 +1,10 @@
-import DirectedCycles.InducedStabilizerBound
-import DirectedCycles.NilpotentQuotientImages
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+module
+
+public import DirectedCycles.InducedStabilizerBound
+public import DirectedCycles.NilpotentQuotientImages
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

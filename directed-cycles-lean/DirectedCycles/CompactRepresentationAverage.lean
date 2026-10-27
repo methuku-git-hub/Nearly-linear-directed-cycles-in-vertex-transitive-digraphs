@@ -1,6 +1,10 @@
-import DirectedCycles.CompactRankOneAverage
-import DirectedCycles.CompactSpectralDetection
-import Mathlib.MeasureTheory.Group.Integral
+module
+
+public import DirectedCycles.CompactRankOneAverage
+public import DirectedCycles.CompactSpectralDetection
+public import Mathlib.MeasureTheory.Group.Integral
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory InnerProductSpace

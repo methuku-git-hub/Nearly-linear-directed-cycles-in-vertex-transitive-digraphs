@@ -1,5 +1,9 @@
-import DirectedCycles.Augmentation
-import Mathlib.Algebra.MonoidAlgebra.MapDomain
+module
+
+public import DirectedCycles.Augmentation
+public import Mathlib.Algebra.MonoidAlgebra.MapDomain
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped MonoidAlgebra

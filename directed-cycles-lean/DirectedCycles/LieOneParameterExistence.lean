@@ -1,7 +1,11 @@
-import DirectedCycles.LieIdentityCoordinateMultiplication
-import DirectedCycles.SmoothLocalOneParameterExistence
-import DirectedCycles.LocalCurveExtension
-import DirectedCycles.LieOneParameterSmooth
+module
+
+public import DirectedCycles.LieIdentityCoordinateMultiplication
+public import DirectedCycles.SmoothLocalOneParameterExistence
+public import DirectedCycles.LocalCurveExtension
+public import DirectedCycles.LieOneParameterSmooth
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

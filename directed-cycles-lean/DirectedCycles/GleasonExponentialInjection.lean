@@ -1,6 +1,10 @@
-import DirectedCycles.GleasonOneParameterCompact
-import DirectedCycles.GleasonPowerDistance
-import Mathlib.Topology.DenseEmbedding
+module
+
+public import DirectedCycles.GleasonOneParameterCompact
+public import DirectedCycles.GleasonPowerDistance
+public import Mathlib.Topology.DenseEmbedding
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

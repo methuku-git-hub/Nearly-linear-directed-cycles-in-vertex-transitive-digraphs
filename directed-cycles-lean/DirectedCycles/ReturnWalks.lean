@@ -1,4 +1,8 @@
-import DirectedCycles.ReturnVoltages
+module
+
+public import DirectedCycles.ReturnVoltages
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

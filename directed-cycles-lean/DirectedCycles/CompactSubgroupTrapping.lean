@@ -1,6 +1,10 @@
-import DirectedCycles.SubgroupNSSBasics
-import Mathlib.Topology.Compactness.LocallyCompact
-import Mathlib.Topology.Algebra.Group.Subgroup
+module
+
+public import DirectedCycles.SubgroupNSSBasics
+public import Mathlib.Topology.Compactness.LocallyCompact
+public import Mathlib.Topology.Algebra.Group.Subgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

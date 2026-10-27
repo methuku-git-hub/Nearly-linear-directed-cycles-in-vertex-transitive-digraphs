@@ -1,5 +1,9 @@
-import DirectedCycles.EscapeNorm
-import Mathlib.Data.Finset.Max
+module
+
+public import DirectedCycles.EscapeNorm
+public import Mathlib.Data.Finset.Max
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.SeparatedInputExpansion
-import DirectedCycles.SeparatedReturnCollisions
-import DirectedCycles.ReturnEdgePaths
+module
+
+public import DirectedCycles.SeparatedInputExpansion
+public import DirectedCycles.SeparatedReturnCollisions
+public import DirectedCycles.ReturnEdgePaths
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

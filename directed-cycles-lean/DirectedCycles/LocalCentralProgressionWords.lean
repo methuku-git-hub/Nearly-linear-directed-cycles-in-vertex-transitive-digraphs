@@ -1,6 +1,10 @@
-import DirectedCycles.LocalOrderedGrid
-import DirectedCycles.LocalControlledGeneratorLifts
-import DirectedCycles.LocalProgressionEscapeBudget
+module
+
+public import DirectedCycles.LocalOrderedGrid
+public import DirectedCycles.LocalControlledGeneratorLifts
+public import DirectedCycles.LocalProgressionEscapeBudget
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

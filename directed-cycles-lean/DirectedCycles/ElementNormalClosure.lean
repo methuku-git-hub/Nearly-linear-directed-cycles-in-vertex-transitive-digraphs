@@ -1,7 +1,11 @@
-import DirectedCycles.CommutatorWeights
-import DirectedCycles.NilpotentGeneration
-import DirectedCycles.RelativeCentralSeries
-import Mathlib.GroupTheory.SpecificGroups.Cyclic.Basic
+module
+
+public import DirectedCycles.CommutatorWeights
+public import DirectedCycles.NilpotentGeneration
+public import DirectedCycles.RelativeCentralSeries
+public import Mathlib.GroupTheory.SpecificGroups.Cyclic.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped commutatorElement Classical

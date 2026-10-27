@@ -1,7 +1,11 @@
-import Mathlib.Combinatorics.Hall.Finite
-import Mathlib.Combinatorics.Enumerative.DoubleCounting
-import Mathlib.GroupTheory.GroupAction.Basic
-import Mathlib.Tactic
+module
+
+public import Mathlib.Combinatorics.Hall.Finite
+public import Mathlib.Combinatorics.Enumerative.DoubleCounting
+public import Mathlib.GroupTheory.GroupAction.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 

@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.GroupTheory.Rank
-import Mathlib.GroupTheory.QuotientGroup.Basic
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.GroupTheory.Rank
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

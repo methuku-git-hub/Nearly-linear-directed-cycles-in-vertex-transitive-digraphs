@@ -1,5 +1,9 @@
-import DirectedCycles.LocalCentralProperProgression
-import DirectedCycles.LocalAmbientCentralCommutators
+module
+
+public import DirectedCycles.LocalCentralProperProgression
+public import DirectedCycles.LocalAmbientCentralCommutators
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

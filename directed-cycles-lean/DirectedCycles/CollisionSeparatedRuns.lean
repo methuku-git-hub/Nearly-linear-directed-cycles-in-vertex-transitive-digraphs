@@ -1,6 +1,10 @@
-import DirectedCycles.SeparatedRunChoice
-import DirectedCycles.CollisionConstraintDegree
-import DirectedCycles.RunSeparation
+module
+
+public import DirectedCycles.SeparatedRunChoice
+public import DirectedCycles.CollisionConstraintDegree
+public import DirectedCycles.RunSeparation
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

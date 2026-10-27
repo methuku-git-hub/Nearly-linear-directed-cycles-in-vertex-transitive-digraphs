@@ -1,5 +1,9 @@
-import DirectedCycles.PrescribedTreePotentials
-import DirectedCycles.ReturnVoltages
+module
+
+public import DirectedCycles.PrescribedTreePotentials
+public import DirectedCycles.ReturnVoltages
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

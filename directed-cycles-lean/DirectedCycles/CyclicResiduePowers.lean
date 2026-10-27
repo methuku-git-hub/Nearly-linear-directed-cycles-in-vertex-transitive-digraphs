@@ -1,5 +1,9 @@
-import DirectedCycles.PowerCosetCoordinates
-import Mathlib.Data.ZMod.Basic
+module
+
+public import DirectedCycles.PowerCosetCoordinates
+public import Mathlib.Data.ZMod.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

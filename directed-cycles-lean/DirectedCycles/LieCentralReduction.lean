@@ -1,9 +1,13 @@
-import DirectedCycles.StrongLocalCentralData
-import DirectedCycles.LocalCentralGeneratorEscape
-import DirectedCycles.LieCentralCompactNSSQuotient
-import DirectedCycles.LiePrescribedEscapeQuotient
-import DirectedCycles.LocalCentralComponentNeighbourhood
-import DirectedCycles.LieExponentialBallTopology
+module
+
+public import DirectedCycles.StrongLocalCentralData
+public import DirectedCycles.LocalCentralGeneratorEscape
+public import DirectedCycles.LieCentralCompactNSSQuotient
+public import DirectedCycles.LiePrescribedEscapeQuotient
+public import DirectedCycles.LocalCentralComponentNeighbourhood
+public import DirectedCycles.LieExponentialBallTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise Manifold ContDiff

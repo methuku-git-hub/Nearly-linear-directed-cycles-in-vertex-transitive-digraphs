@@ -1,4 +1,8 @@
-import DirectedCycles.TrailEdges
+module
+
+public import DirectedCycles.TrailEdges
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Classical

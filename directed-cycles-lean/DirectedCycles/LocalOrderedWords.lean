@@ -1,8 +1,12 @@
-import DirectedCycles.LocalSignedWords
-import DirectedCycles.LocalSignedPowers
-import DirectedCycles.LocalProductInversion
-import Mathlib.Algebra.BigOperators.Fin
-import Mathlib.Data.List.OfFn
+module
+
+public import DirectedCycles.LocalSignedWords
+public import DirectedCycles.LocalSignedPowers
+public import DirectedCycles.LocalProductInversion
+public import Mathlib.Algebra.BigOperators.Fin
+public import Mathlib.Data.List.OfFn
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

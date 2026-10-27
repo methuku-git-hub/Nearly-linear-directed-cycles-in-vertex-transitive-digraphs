@@ -1,4 +1,8 @@
-import DirectedCycles.RegularizedEscapeDistance
+module
+
+public import DirectedCycles.RegularizedEscapeDistance
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.GlobalFourthPowerProgressionSequence
-import DirectedCycles.UltrafilterModelTransfer
+module
+
+public import DirectedCycles.GlobalFourthPowerProgressionSequence
+public import DirectedCycles.UltrafilterModelTransfer
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 1000000

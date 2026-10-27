@@ -1,6 +1,10 @@
-import DirectedCycles.LocalProgressionEscapeBudget
-import DirectedCycles.LocalControlledGeneratorLifts
-import DirectedCycles.LocalWordProgressionMaps
+module
+
+public import DirectedCycles.LocalProgressionEscapeBudget
+public import DirectedCycles.LocalControlledGeneratorLifts
+public import DirectedCycles.LocalWordProgressionMaps
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

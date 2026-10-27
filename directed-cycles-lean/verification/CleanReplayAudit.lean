@@ -1,15 +1,24 @@
-import DirectedCycles
-import Lean.Util.CollectAxioms
+module
+
+public import DirectedCycles
+public import Lean.Util.CollectAxioms
+
+@[expose] public section
 open Lean Elab Term Meta
 set_option maxHeartbeats 0 in
 run_elab do
-  let env ← getEnv
-  let name := `DirectedCycles.theorem_1_5
-  let some (.thmInfo ci) := env.find? name | throwError "Missing main theorem"
-  let same ← isDefEq ci.type (mkConst `DirectedCycles.MainTheorem)
-  unless same do throwError "Wrong main theorem type"
-  let axioms ← collectAxioms name
-  logInfo m!"MAIN_JSON {Json.mkObj [("theorem_present",toJson true),("exact_target_type",toJson same),("axioms",toJson (axioms.map Name.toString))] |>.compress}"
+  let axiomEnv ← getEnv
+  -- Inspect full proof data rather than the public module interface.
+  let fullEnv ← importModules #[{ module := `DirectedCycles }] {}
+    (loadExts := false) (level := .private)
+  withEnv fullEnv do
+    let env ← getEnv
+    let name := `DirectedCycles.theorem_1_5
+    let some (.thmInfo ci) := env.find? name | throwError "Missing main theorem"
+    let same ← isDefEq ci.type (mkConst `DirectedCycles.MainTheorem)
+    unless same do throwError "Wrong main theorem type"
+    let axioms ← withEnv axiomEnv (collectAxioms name)
+    logInfo m!"MAIN_JSON {Json.mkObj [("theorem_present",toJson true),("exact_target_type",toJson same),("axioms",toJson (axioms.map Name.toString))] |>.compress}"
 namespace Verification
 
 /-- Dependencies of types, bodies, and inductive/recursor metadata. -/
@@ -41,38 +50,42 @@ end Verification
 
 set_option maxHeartbeats 0 in
 run_elab do
-  let env ← getEnv
-  let root := `DirectedCycles.theorem_1_5
-  let mut pending := #[root]
-  let mut seen : NameSet := {}
-  let mut rows : Array Json := #[]
-  let mut axioms : Array String := #[]
-  while !pending.isEmpty do
-    let name := pending.back!
-    pending := pending.pop
-    if seen.contains name then continue
-    seen := seen.insert name
-    let some ci := env.checked.get.find? name | throwError "Missing closure constant {name}"
-    if ci.isUnsafe then throwError "Unsafe constant in main closure: {name}"
-    let deps := Verification.dependencies ci
-    pending := pending ++ deps
-    let modName := match env.getModuleIdxFor? name with
-      | some i => (env.header.moduleNames[i.toNat]?.getD .anonymous).toString
-      | none => "[current audit]"
-    if let .axiomInfo _ := ci then axioms := axioms.push name.toString
-    rows := rows.push (Json.mkObj [
-      ("name", toJson name.toString),
-      ("kind", toJson (Verification.kind ci)),
-      ("module", toJson modName),
-      ("dependencies", toJson (deps.map Name.toString))])
-  let row := Json.mkObj [
-    ("root", toJson root.toString),
-    ("scope", toJson "Transitive kernel constants in types, proof/definition bodies, inductive declarations, constructors and recursor rules. Inductive metadata may create cycles."),
-    ("complete", toJson true),
-    ("axioms", toJson (axioms.qsort (· < ·))),
-    ("declarations", toJson rows)]
-  IO.FS.writeFile "verification/main-constant-closure.json" (row.compress ++ "\n")
-  logInfo m!"CLOSURE_JSON {Json.mkObj [("count",toJson rows.size),("complete",toJson true),("axioms",toJson axioms)] |>.compress}"
+  -- Inspect full proof data rather than the public module interface.
+  let fullEnv ← importModules #[{ module := `DirectedCycles }] {}
+    (loadExts := false) (level := .private)
+  withEnv fullEnv do
+    let env ← getEnv
+    let root := `DirectedCycles.theorem_1_5
+    let mut pending := #[root]
+    let mut seen : NameSet := {}
+    let mut rows : Array Json := #[]
+    let mut axioms : Array String := #[]
+    while !pending.isEmpty do
+      let name := pending.back!
+      pending := pending.pop
+      if seen.contains name then continue
+      seen := seen.insert name
+      let some ci := env.checked.get.find? name | throwError "Missing closure constant {name}"
+      if ci.isUnsafe then throwError "Unsafe constant in main closure: {name}"
+      let deps := Verification.dependencies ci
+      pending := pending ++ deps
+      let modName := match env.getModuleIdxFor? name with
+        | some i => (env.header.moduleNames[i.toNat]?.getD .anonymous).toString
+        | none => "[current audit]"
+      if let .axiomInfo _ := ci then axioms := axioms.push name.toString
+      rows := rows.push (Json.mkObj [
+        ("name", toJson name.toString),
+        ("kind", toJson (Verification.kind ci)),
+        ("module", toJson modName),
+        ("dependencies", toJson (deps.map Name.toString))])
+    let row := Json.mkObj [
+      ("root", toJson root.toString),
+      ("scope", toJson "Transitive kernel constants in types, proof/definition bodies, inductive declarations, constructors and recursor rules. Inductive metadata may create cycles."),
+      ("complete", toJson true),
+      ("axioms", toJson (axioms.qsort (· < ·))),
+      ("declarations", toJson rows)]
+    IO.FS.writeFile "verification/main-constant-closure.json" (row.compress ++ "\n")
+    logInfo m!"CLOSURE_JSON {Json.mkObj [("count",toJson rows.size),("complete",toJson true),("axioms",toJson axioms)] |>.compress}"
 
 -- Independently spell out the requested quantifiers, graph hypotheses and bound.
 example : ∀ ε : ℝ, 0 < ε → ∃ n₀ : ℕ, ∀ n : ℕ, n₀ ≤ n →

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalFiniteTranslations
-import DirectedCycles.FiniteGroupConvolution
-import DirectedCycles.LocalWordPowers
+module
+
+public import DirectedCycles.LocalFiniteTranslations
+public import DirectedCycles.FiniteGroupConvolution
+public import DirectedCycles.LocalWordPowers
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

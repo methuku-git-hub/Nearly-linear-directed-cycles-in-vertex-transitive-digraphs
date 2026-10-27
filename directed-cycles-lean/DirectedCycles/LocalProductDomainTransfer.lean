@@ -1,5 +1,9 @@
-import DirectedCycles.LocalWordPowerTransfer
-import DirectedCycles.LocalUltraproductProductExistence
+module
+
+public import DirectedCycles.LocalWordPowerTransfer
+public import DirectedCycles.LocalUltraproductProductExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

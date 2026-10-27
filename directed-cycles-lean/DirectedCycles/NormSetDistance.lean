@@ -1,5 +1,9 @@
-import DirectedCycles.WeightedWordNorm
-import Mathlib.Data.Finset.Lattice.Fold
+module
+
+public import DirectedCycles.WeightedWordNorm
+public import Mathlib.Data.Finset.Lattice.Fold
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

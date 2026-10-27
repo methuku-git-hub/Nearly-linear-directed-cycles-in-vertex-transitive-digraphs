@@ -1,5 +1,9 @@
-import DirectedCycles.NilpotentCycles
-import DirectedCycles.CayleyStrongConnectivity
+module
+
+public import DirectedCycles.NilpotentCycles
+public import DirectedCycles.CayleyStrongConnectivity
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

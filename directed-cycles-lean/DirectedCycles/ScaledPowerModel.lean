@@ -1,6 +1,10 @@
-import DirectedCycles.ScaledPowerClosure
-import DirectedCycles.ScaledPowerInterval
-import DirectedCycles.CompactNSSCurve
+module
+
+public import DirectedCycles.ScaledPowerClosure
+public import DirectedCycles.ScaledPowerInterval
+public import DirectedCycles.CompactNSSCurve
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise Topology

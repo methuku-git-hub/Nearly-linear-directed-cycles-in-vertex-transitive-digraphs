@@ -1,5 +1,9 @@
-import DirectedCycles.LocalGroupUltraproduct
-import Mathlib.Data.List.OfFn
+module
+
+public import DirectedCycles.LocalGroupUltraproduct
+public import Mathlib.Data.List.OfFn
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

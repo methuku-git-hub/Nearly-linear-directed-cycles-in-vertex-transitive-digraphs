@@ -1,9 +1,13 @@
-import DirectedCycles.FiniteCoverRepresentatives
-import DirectedCycles.LocalGroupHom
-import DirectedCycles.LocalDivision
-import DirectedCycles.LocalWordPowers
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Tactic
+module
+
+public import DirectedCycles.FiniteCoverRepresentatives
+public import DirectedCycles.LocalGroupHom
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.LocalWordPowers
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

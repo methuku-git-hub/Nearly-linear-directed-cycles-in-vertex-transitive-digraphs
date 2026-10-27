@@ -1,5 +1,9 @@
-import DirectedCycles.LocalSignedPowers
-import DirectedCycles.LocalAdditivePowerSegment
+module
+
+public import DirectedCycles.LocalSignedPowers
+public import DirectedCycles.LocalAdditivePowerSegment
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

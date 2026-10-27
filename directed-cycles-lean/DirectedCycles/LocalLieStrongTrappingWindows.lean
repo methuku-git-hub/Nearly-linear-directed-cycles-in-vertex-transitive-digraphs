@@ -1,6 +1,10 @@
-import DirectedCycles.LocalExponentialConjugationError
-import DirectedCycles.LocalExponentialPowerTest
-import DirectedCycles.LocalExponentialWordControl
+module
+
+public import DirectedCycles.LocalExponentialConjugationError
+public import DirectedCycles.LocalExponentialPowerTest
+public import DirectedCycles.LocalExponentialWordControl
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

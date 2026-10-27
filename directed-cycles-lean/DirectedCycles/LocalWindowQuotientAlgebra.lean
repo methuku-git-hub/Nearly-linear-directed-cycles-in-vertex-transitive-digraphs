@@ -1,6 +1,10 @@
-import DirectedCycles.LocalWindowAssociativity
-import DirectedCycles.LocalDivision
-import DirectedCycles.LocalGroupHom
+module
+
+public import DirectedCycles.LocalWindowAssociativity
+public import DirectedCycles.LocalDivision
+public import DirectedCycles.LocalGroupHom
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

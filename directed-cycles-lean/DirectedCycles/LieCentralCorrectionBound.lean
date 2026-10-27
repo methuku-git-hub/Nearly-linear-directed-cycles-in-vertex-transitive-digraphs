@@ -1,5 +1,9 @@
-import DirectedCycles.LieExponentialCurve
-import DirectedCycles.CentralLiftBoundedRounding
+module
+
+public import DirectedCycles.LieExponentialCurve
+public import DirectedCycles.CentralLiftBoundedRounding
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

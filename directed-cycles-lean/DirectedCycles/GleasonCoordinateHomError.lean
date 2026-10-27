@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonCoordinateProductError
-import DirectedCycles.GleasonNormedHomLipschitz
+module
+
+public import DirectedCycles.GleasonCoordinateProductError
+public import DirectedCycles.GleasonNormedHomLipschitz
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.GleasonLieAlgebra

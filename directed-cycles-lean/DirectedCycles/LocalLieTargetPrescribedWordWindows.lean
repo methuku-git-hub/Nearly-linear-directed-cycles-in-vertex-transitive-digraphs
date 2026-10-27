@@ -1,7 +1,11 @@
-import DirectedCycles.LargeStrongLocalLieTargetModelExistence
-import DirectedCycles.LocalLieTargetWordEscapeWindows
-import DirectedCycles.LocalFiniteWindowNormalization
-import DirectedCycles.LocalDivision
+module
+
+public import DirectedCycles.LargeStrongLocalLieTargetModelExistence
+public import DirectedCycles.LocalLieTargetWordEscapeWindows
+public import DirectedCycles.LocalFiniteWindowNormalization
+public import DirectedCycles.LocalDivision
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

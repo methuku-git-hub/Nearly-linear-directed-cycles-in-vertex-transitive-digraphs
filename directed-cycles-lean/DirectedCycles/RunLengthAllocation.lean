@@ -1,4 +1,8 @@
-import DirectedCycles.Basic
+module
+
+public import DirectedCycles.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

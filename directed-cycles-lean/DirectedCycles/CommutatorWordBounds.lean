@@ -1,4 +1,8 @@
-import DirectedCycles.CommutatorWords
+module
+
+public import DirectedCycles.CommutatorWords
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise commutatorElement

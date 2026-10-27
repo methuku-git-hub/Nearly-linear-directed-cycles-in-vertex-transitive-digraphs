@@ -1,6 +1,10 @@
-import DirectedCycles.LieQuotientData
-import DirectedCycles.ConnectedLieGoodModel
-import DirectedCycles.GoodModelFiniteCover
+module
+
+public import DirectedCycles.LieQuotientData
+public import DirectedCycles.ConnectedLieGoodModel
+public import DirectedCycles.GoodModelFiniteCover
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Manifold ContDiff

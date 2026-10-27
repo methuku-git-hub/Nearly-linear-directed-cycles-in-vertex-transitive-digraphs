@@ -1,7 +1,11 @@
-import Mathlib.Topology.Algebra.Group.Basic
-import Mathlib.Topology.Instances.Real.Lemmas
-import Mathlib.Topology.Sequences
-import Mathlib.Tactic
+module
+
+public import Mathlib.Topology.Algebra.Group.Basic
+public import Mathlib.Topology.Instances.Real.Lemmas
+public import Mathlib.Topology.Sequences
+public import Mathlib.Tactic
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter Topology

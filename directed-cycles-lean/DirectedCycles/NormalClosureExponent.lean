@@ -1,6 +1,10 @@
-import DirectedCycles.Basic
-import Mathlib.GroupTheory.Abelianization.Defs
-import Mathlib.GroupTheory.OrderOfElement
+module
+
+public import DirectedCycles.Basic
+public import Mathlib.GroupTheory.Abelianization.Defs
+public import Mathlib.GroupTheory.OrderOfElement
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

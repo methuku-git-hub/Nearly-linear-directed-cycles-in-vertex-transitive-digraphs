@@ -1,5 +1,9 @@
-import DirectedCycles.LocalPowerSegment
-import DirectedCycles.LocalProductCompression
+module
+
+public import DirectedCycles.LocalPowerSegment
+public import DirectedCycles.LocalProductCompression
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

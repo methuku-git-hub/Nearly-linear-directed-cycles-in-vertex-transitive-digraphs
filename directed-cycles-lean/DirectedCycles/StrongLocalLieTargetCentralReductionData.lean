@@ -1,6 +1,10 @@
-import DirectedCycles.StrongLocalLieTargetCentralCurve
-import DirectedCycles.LocalToLocalModelCentralImage
-import DirectedCycles.SmoothLocalCentralQuotient
+module
+
+public import DirectedCycles.StrongLocalLieTargetCentralCurve
+public import DirectedCycles.LocalToLocalModelCentralImage
+public import DirectedCycles.SmoothLocalCentralQuotient
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

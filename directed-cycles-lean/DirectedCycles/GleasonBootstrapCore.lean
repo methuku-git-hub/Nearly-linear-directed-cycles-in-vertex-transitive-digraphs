@@ -1,6 +1,10 @@
-import DirectedCycles.RegularizedEscapeDistance
-import DirectedCycles.ScalarBootstrap
-import DirectedCycles.PowerEscapeDerivativeBound
+module
+
+public import DirectedCycles.RegularizedEscapeDistance
+public import DirectedCycles.ScalarBootstrap
+public import DirectedCycles.PowerEscapeDerivativeBound
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

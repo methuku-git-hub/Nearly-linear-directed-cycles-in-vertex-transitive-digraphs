@@ -1,5 +1,9 @@
-import DirectedCycles.CyclicWordExit
-import DirectedCycles.TrappingLimitSubgroup
+module
+
+public import DirectedCycles.CyclicWordExit
+public import DirectedCycles.TrappingLimitSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

@@ -1,6 +1,10 @@
-import DirectedCycles.BallCardinalityGrowth
-import Mathlib.Algebra.Group.Subgroup.Pointwise
-import Mathlib.GroupTheory.Index
+module
+
+public import DirectedCycles.BallCardinalityGrowth
+public import Mathlib.Algebra.Group.Subgroup.Pointwise
+public import Mathlib.GroupTheory.Index
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

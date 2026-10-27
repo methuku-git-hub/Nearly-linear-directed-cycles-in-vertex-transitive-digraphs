@@ -1,5 +1,9 @@
-import DirectedCycles.DensityPowerArithmetic
-import Mathlib.GroupTheory.Index
+module
+
+public import DirectedCycles.DensityPowerArithmetic
+public import Mathlib.GroupTheory.Index
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,5 +1,9 @@
-import DirectedCycles.GroupUltraproduct
-import DirectedCycles.LocalGroupUltraproduct
+module
+
+public import DirectedCycles.GroupUltraproduct
+public import DirectedCycles.LocalGroupUltraproduct
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,7 +1,11 @@
-import DirectedCycles.GlobalWindowPowerLifting
-import DirectedCycles.LocalGlobalApproximateConversion
-import DirectedCycles.StrongLocalApproximateGroups
-import DirectedCycles.StrongApproximateGroups
+module
+
+public import DirectedCycles.GlobalWindowPowerLifting
+public import DirectedCycles.LocalGlobalApproximateConversion
+public import DirectedCycles.StrongLocalApproximateGroups
+public import DirectedCycles.StrongApproximateGroups
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 600000

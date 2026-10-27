@@ -1,4 +1,8 @@
-import DirectedCycles.LocalApproximateUltra
+module
+
+public import DirectedCycles.LocalApproximateUltra
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

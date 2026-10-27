@@ -1,9 +1,13 @@
-import DirectedCycles.SmoothLocalCoordinateLawAtIdentity
-import DirectedCycles.LocalRelationCurveCoordinates
-import DirectedCycles.LocalRelationCurveGermUniqueness
-import DirectedCycles.LocalMultiplicativeCurveDerivative
-import DirectedCycles.LocalMultiplicativeCurveUniqueness
-import DirectedCycles.LocalExponentialRadialLaw
+module
+
+public import DirectedCycles.SmoothLocalCoordinateLawAtIdentity
+public import DirectedCycles.LocalRelationCurveCoordinates
+public import DirectedCycles.LocalRelationCurveGermUniqueness
+public import DirectedCycles.LocalMultiplicativeCurveDerivative
+public import DirectedCycles.LocalMultiplicativeCurveUniqueness
+public import DirectedCycles.LocalExponentialRadialLaw
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

@@ -1,9 +1,13 @@
-import DirectedCycles.PrimeBudget
-import DirectedCycles.SpanningCycleLift
-import DirectedCycles.CyclicGeneratorCycle
-import DirectedCycles.PrimeCutoffFactors
-import DirectedCycles.PrimeLossArithmetic
-import DirectedCycles.NilpotentRanks
+module
+
+public import DirectedCycles.PrimeBudget
+public import DirectedCycles.SpanningCycleLift
+public import DirectedCycles.CyclicGeneratorCycle
+public import DirectedCycles.PrimeCutoffFactors
+public import DirectedCycles.PrimeLossArithmetic
+public import DirectedCycles.NilpotentRanks
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

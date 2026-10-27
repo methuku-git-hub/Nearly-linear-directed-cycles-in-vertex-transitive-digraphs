@@ -1,6 +1,10 @@
-import DirectedCycles.CompactFiniteRepresentation
-import DirectedCycles.CompactRegularRepresentation
-import Mathlib.MeasureTheory.Measure.Haar.Basic
+module
+
+public import DirectedCycles.CompactFiniteRepresentation
+public import DirectedCycles.CompactRegularRepresentation
+public import Mathlib.MeasureTheory.Measure.Haar.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 open MeasureTheory

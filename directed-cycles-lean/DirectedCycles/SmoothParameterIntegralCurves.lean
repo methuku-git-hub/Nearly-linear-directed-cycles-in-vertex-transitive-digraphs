@@ -1,5 +1,9 @@
-import DirectedCycles.SmoothLocalIntegralCurve
-import Mathlib.Analysis.Calculus.MeanValue
+module
+
+public import DirectedCycles.SmoothLocalIntegralCurve
+public import Mathlib.Analysis.Calculus.MeanValue
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

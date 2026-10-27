@@ -1,8 +1,12 @@
-import DirectedCycles.AuxiliaryLayerBound
-import DirectedCycles.LayerCycleExpansion
-import DirectedCycles.AuxiliaryGroupIndex
-import DirectedCycles.DensityRecurrence
-import DirectedCycles.LiftCardinalities
+module
+
+public import DirectedCycles.AuxiliaryLayerBound
+public import DirectedCycles.LayerCycleExpansion
+public import DirectedCycles.AuxiliaryGroupIndex
+public import DirectedCycles.DensityRecurrence
+public import DirectedCycles.LiftCardinalities
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

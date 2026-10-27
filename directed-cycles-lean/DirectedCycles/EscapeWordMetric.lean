@@ -1,4 +1,8 @@
-import DirectedCycles.EscapeWordGauge
+module
+
+public import DirectedCycles.EscapeWordGauge
+
+@[expose] public section
 
 set_option autoImplicit false
 open Filter

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalApproximateGroups
-import DirectedCycles.LocalGlobalWordPowers
-import DirectedCycles.SymmetricApproximateCover
+module
+
+public import DirectedCycles.LocalApproximateGroups
+public import DirectedCycles.LocalGlobalWordPowers
+public import DirectedCycles.SymmetricApproximateCover
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

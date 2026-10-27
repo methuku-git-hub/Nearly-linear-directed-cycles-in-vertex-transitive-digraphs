@@ -1,5 +1,9 @@
-import DirectedCycles.SchreierBallGrowth
-import Mathlib.Algebra.Group.Subgroup.Pointwise
+module
+
+public import DirectedCycles.SchreierBallGrowth
+public import Mathlib.Algebra.Group.Subgroup.Pointwise
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

@@ -1,5 +1,9 @@
-import DirectedCycles.NormalizedBaseline
-import DirectedCycles.NormalizedLayerGeneration
+module
+
+public import DirectedCycles.NormalizedBaseline
+public import DirectedCycles.NormalizedLayerGeneration
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

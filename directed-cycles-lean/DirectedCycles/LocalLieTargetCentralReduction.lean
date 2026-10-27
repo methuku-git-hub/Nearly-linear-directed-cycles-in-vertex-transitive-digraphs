@@ -1,9 +1,13 @@
-import DirectedCycles.StrongLocalLieTargetCentralReductionData
-import DirectedCycles.LocalToLocalCentralGeneratorEscape
-import DirectedCycles.LocalCentralQuotientCompactNSS
-import DirectedCycles.LocalLieTargetPrescribedEscapeQuotient
-import DirectedCycles.LocalToLocalCentralComponentNeighbourhood
-import DirectedCycles.LocalExponentialBallTopology
+module
+
+public import DirectedCycles.StrongLocalLieTargetCentralReductionData
+public import DirectedCycles.LocalToLocalCentralGeneratorEscape
+public import DirectedCycles.LocalCentralQuotientCompactNSS
+public import DirectedCycles.LocalLieTargetPrescribedEscapeQuotient
+public import DirectedCycles.LocalToLocalCentralComponentNeighbourhood
+public import DirectedCycles.LocalExponentialBallTopology
+
+@[expose] public section
 
 set_option autoImplicit false
 set_option maxHeartbeats 800000

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalApproximateGroups
-import DirectedCycles.LocalGlobalWordPowers
-import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+module
+
+public import DirectedCycles.LocalApproximateGroups
+public import DirectedCycles.LocalGlobalWordPowers
+public import Mathlib.Combinatorics.Additive.ApproximateSubgroup
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

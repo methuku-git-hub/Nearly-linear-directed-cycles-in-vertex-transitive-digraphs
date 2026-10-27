@@ -1,5 +1,9 @@
-import DirectedCycles.CyclicLayerWords
-import DirectedCycles.StrongCycleExistence
+module
+
+public import DirectedCycles.CyclicLayerWords
+public import DirectedCycles.StrongCycleExistence
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

@@ -1,6 +1,10 @@
-import DirectedCycles.LocalWordWitnessImage
-import DirectedCycles.LocalGeneratorCommutatorRestriction
-import DirectedCycles.LocalProgressionInductionProperty
+module
+
+public import DirectedCycles.LocalWordWitnessImage
+public import DirectedCycles.LocalGeneratorCommutatorRestriction
+public import DirectedCycles.LocalProgressionInductionProperty
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles.LocalGroupAlgebra

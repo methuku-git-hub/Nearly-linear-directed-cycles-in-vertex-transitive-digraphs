@@ -1,4 +1,8 @@
-import DirectedCycles.SubgroupIndexFactors
+module
+
+public import DirectedCycles.SubgroupIndexFactors
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

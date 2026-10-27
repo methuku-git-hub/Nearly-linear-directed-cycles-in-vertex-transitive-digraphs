@@ -1,5 +1,9 @@
-import DirectedCycles.LowerCentralFactors
-import DirectedCycles.SubgroupSeries
+module
+
+public import DirectedCycles.LowerCentralFactors
+public import DirectedCycles.SubgroupSeries
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

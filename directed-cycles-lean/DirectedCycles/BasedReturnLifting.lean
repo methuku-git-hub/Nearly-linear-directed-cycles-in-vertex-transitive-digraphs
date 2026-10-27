@@ -1,7 +1,11 @@
-import DirectedCycles.SeparatedInputReturnLift
-import DirectedCycles.NormalizedOrbitPath
-import DirectedCycles.PrescribedReturnSpine
-import DirectedCycles.AuxiliaryGroupIndex
+module
+
+public import DirectedCycles.SeparatedInputReturnLift
+public import DirectedCycles.NormalizedOrbitPath
+public import DirectedCycles.PrescribedReturnSpine
+public import DirectedCycles.AuxiliaryGroupIndex
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

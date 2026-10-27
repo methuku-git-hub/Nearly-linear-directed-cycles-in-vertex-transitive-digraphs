@@ -1,4 +1,8 @@
-import DirectedCycles.TruncatedDescent
+module
+
+public import DirectedCycles.TruncatedDescent
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

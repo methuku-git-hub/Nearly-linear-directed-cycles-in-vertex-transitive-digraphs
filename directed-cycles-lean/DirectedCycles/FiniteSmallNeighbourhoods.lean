@@ -1,5 +1,9 @@
-import DirectedCycles.DenseAlmostPeriods
-import DirectedCycles.ExpansionMinimizers
+module
+
+public import DirectedCycles.DenseAlmostPeriods
+public import DirectedCycles.ExpansionMinimizers
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

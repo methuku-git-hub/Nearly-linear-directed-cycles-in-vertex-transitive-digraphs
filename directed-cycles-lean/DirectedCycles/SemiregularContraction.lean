@@ -1,5 +1,9 @@
-import DirectedCycles.VoltageContraction
-import DirectedCycles.ActionOrbitWalks
+module
+
+public import DirectedCycles.VoltageContraction
+public import DirectedCycles.ActionOrbitWalks
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u v

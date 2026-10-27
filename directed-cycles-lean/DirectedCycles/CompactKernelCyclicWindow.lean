@@ -1,5 +1,9 @@
-import DirectedCycles.CompactSubgroupPowerWindow
-import DirectedCycles.CompactNSSApproximation
+module
+
+public import DirectedCycles.CompactSubgroupPowerWindow
+public import DirectedCycles.CompactNSSApproximation
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

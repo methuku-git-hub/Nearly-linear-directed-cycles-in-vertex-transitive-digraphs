@@ -1,4 +1,8 @@
-import DirectedCycles.SemiregularInduction
+module
+
+public import DirectedCycles.SemiregularInduction
+
+@[expose] public section
 
 set_option autoImplicit false
 universe u

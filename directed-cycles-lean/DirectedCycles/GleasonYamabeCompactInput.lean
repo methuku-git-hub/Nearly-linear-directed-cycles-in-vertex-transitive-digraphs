@@ -1,5 +1,9 @@
-import DirectedCycles.CompactNSSApproximation
-import DirectedCycles.GleasonYamabeReduction
+module
+
+public import DirectedCycles.CompactNSSApproximation
+public import DirectedCycles.GleasonYamabeReduction
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

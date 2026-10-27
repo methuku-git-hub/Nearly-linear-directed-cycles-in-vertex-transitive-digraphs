@@ -1,4 +1,8 @@
-import DirectedCycles.LocalWindowQuotientAlgebra
+module
+
+public import DirectedCycles.LocalWindowQuotientAlgebra
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

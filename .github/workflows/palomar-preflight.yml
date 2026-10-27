@@ -1,0 +1,22 @@
+name: Palomar full mechanical preflight
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  palomar-preflight:
+    uses: PalomarRegistry/PalomarSubmission/.github/workflows/submission.yml@c02bbeaed888df45c4e28c4e99dba540ad21552a
+    with:
+      repository: ${{ github.repository }}
+      commit: ${{ github.event.pull_request.head.sha || github.sha }}
+      pipeline_commit: c02bbeaed888df45c4e28c4e99dba540ad21552a
+      request_id: directed1501
+      mode: full
+      execution_profile: palomar-standard-v1
+      options: >-
+        {"project_path":"directed-cycles-lean","comparator_config_path":"directed-cycles-lean/comparator.json","formalization_metadata_path":"directed-cycles-lean/formalization.yaml","authorization_relationship":"I am a responsible author or maintainer"}

@@ -1,5 +1,9 @@
-import DirectedCycles.GleasonApproximateProduct
-import DirectedCycles.GleasonCoordinateProductError
+module
+
+public import DirectedCycles.GleasonApproximateProduct
+public import DirectedCycles.GleasonCoordinateProductError
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped BigOperators

@@ -1,5 +1,9 @@
-import DirectedCycles.ActionBallCardinality
-import DirectedCycles.ShortSchreierGeneration
+module
+
+public import DirectedCycles.ActionBallCardinality
+public import DirectedCycles.ShortSchreierGeneration
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

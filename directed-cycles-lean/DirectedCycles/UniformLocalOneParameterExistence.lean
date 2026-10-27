@@ -1,7 +1,11 @@
-import DirectedCycles.SmoothParameterIntegralCurves
-import DirectedCycles.UniformIntegralCurveMultiplication
-import DirectedCycles.UniformOperatorFieldLipschitz
-import DirectedCycles.LocalInvariantOperatorField
+module
+
+public import DirectedCycles.SmoothParameterIntegralCurves
+public import DirectedCycles.UniformIntegralCurveMultiplication
+public import DirectedCycles.UniformOperatorFieldLipschitz
+public import DirectedCycles.LocalInvariantOperatorField
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology ContDiff

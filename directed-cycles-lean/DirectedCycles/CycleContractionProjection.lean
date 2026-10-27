@@ -1,4 +1,8 @@
-import DirectedCycles.CycleConnectivity
+module
+
+public import DirectedCycles.CycleConnectivity
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

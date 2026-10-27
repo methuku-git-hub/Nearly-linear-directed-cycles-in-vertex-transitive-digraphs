@@ -1,5 +1,9 @@
-import DirectedCycles.VanDantzig
-import DirectedCycles.InternalGoodModel
+module
+
+public import DirectedCycles.VanDantzig
+public import DirectedCycles.InternalGoodModel
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Pointwise

@@ -1,5 +1,9 @@
-import DirectedCycles.NilpotentSpanning
-import Mathlib.LinearAlgebra.Quotient.Basic
+module
+
+public import DirectedCycles.NilpotentSpanning
+public import Mathlib.LinearAlgebra.Quotient.Basic
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

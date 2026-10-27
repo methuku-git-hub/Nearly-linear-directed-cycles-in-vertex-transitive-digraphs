@@ -1,9 +1,13 @@
-import DirectedCycles.SmoothLocalIdentityChart
-import DirectedCycles.SmoothLocalCoordinateDomain
-import DirectedCycles.LocalCurveCoordinateNonzeroTangent
-import DirectedCycles.SmoothLocalCurveRegularity
-import DirectedCycles.LocalCurveSmoothProductMap
-import DirectedCycles.VectorComplementDimension
+module
+
+public import DirectedCycles.SmoothLocalIdentityChart
+public import DirectedCycles.SmoothLocalCoordinateDomain
+public import DirectedCycles.LocalCurveCoordinateNonzeroTangent
+public import DirectedCycles.SmoothLocalCurveRegularity
+public import DirectedCycles.LocalCurveSmoothProductMap
+public import DirectedCycles.VectorComplementDimension
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Topology Manifold ContDiff

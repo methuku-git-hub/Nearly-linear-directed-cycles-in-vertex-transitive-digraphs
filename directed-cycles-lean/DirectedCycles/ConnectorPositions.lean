@@ -1,6 +1,10 @@
-import DirectedCycles.CyclicLiftSlots
-import DirectedCycles.FlatMapPositions
-import DirectedCycles.BaselineQuotientPrefixes
+module
+
+public import DirectedCycles.CyclicLiftSlots
+public import DirectedCycles.FlatMapPositions
+public import DirectedCycles.BaselineQuotientPrefixes
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles

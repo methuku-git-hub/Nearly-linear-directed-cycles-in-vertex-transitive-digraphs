@@ -1,7 +1,11 @@
-import DirectedCycles.LocalQuotientAssociativity
-import DirectedCycles.LocalGroupTopology
-import Mathlib.Topology.Algebra.Group.Pointwise
-import Mathlib.Topology.Constructions.SumProd
+module
+
+public import DirectedCycles.LocalQuotientAssociativity
+public import DirectedCycles.LocalGroupTopology
+public import Mathlib.Topology.Algebra.Group.Pointwise
+public import Mathlib.Topology.Constructions.SumProd
+
+@[expose] public section
 
 set_option autoImplicit false
 open scoped Pointwise

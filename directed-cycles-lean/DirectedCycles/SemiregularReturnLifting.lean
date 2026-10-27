@@ -1,5 +1,9 @@
-import DirectedCycles.BasedReturnLifting
-import DirectedCycles.ActionOrbitWalks
+module
+
+public import DirectedCycles.BasedReturnLifting
+public import DirectedCycles.ActionOrbitWalks
+
+@[expose] public section
 
 set_option autoImplicit false
 namespace DirectedCycles
