@@ -3,14 +3,12 @@ version: "v0.4"
 project:
   name: "Nearly linear directed cycles in vertex-transitive digraphs"
   description: >-
-    Formalization of the near-linear directed-cycle theorem: for every real
-    epsilon greater than zero, all sufficiently large finite connected
-    vertex-transitive loopless digraphs on n vertices contain a simple directed
-    cycle of length at least n^(1-epsilon). Connectedness means connectedness
-    of the underlying undirected graph; cycles of length two are allowed.
-    This is Theorem 1.5 of the archived revised manuscript by Bowen Li and
-    Abhishek Methuku, with repaired arguments and replacement lemmas in its
-    proof dependencies. It does not assert Hamiltonicity.
+    Formalization of the theorem by Bowen Li and Abhishek Methuku showing
+    that, for every real epsilon greater than zero, all sufficiently large
+    finite connected vertex-transitive loopless digraphs on n vertices contain
+    a simple directed cycle of length at least n^(1-epsilon). Connectedness
+    means connectedness of the underlying undirected graph; cycles of length
+    two are allowed.
   authors:
     - "Abhishek Methuku"
   license: "Apache-2.0"
